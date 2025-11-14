@@ -1,40 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { Card } from "@/components/ui/card";
-import { 
-  Heart, 
-  TrendingUp, 
-  Award, 
-  Clock, 
-  Target, 
-  CheckCircle2,
-  Star,
-  Share2,
-  Gift,
-  Users,
-  Zap,
-  ChevronDown
-} from "lucide-react";
+import { Heart, TrendingUp, Award, Clock, Target, CheckCircle2, Star, Share2, Gift, Users, Zap, ChevronDown } from "lucide-react";
 import heroImage from "@/assets/hero-pets.jpg";
 import testimonial1 from "@/assets/testimonial-1.jpg";
 import testimonial2 from "@/assets/testimonial-2.jpg";
 import testimonial3 from "@/assets/testimonial-3.jpg";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 const Index = () => {
   const navigate = useNavigate();
-
   const scrollToQuiz = () => {
     navigate("/quiz");
   };
-
-  return (
-    <div className="min-h-screen bg-gradient-warm">
+  return <div className="min-h-screen bg-gradient-warm">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero opacity-20" />
@@ -67,19 +45,12 @@ const Index = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <Button
-                  size="lg"
-                  onClick={scrollToQuiz}
-                  className="text-xl px-12 py-8 h-auto shadow-medium hover:shadow-soft transition-all duration-300 hover-scale"
-                >
+                <Button size="lg" onClick={scrollToQuiz} className="text-xl px-12 py-8 h-auto shadow-medium hover:shadow-soft transition-all duration-300 hover-scale">
                   🎯 Começar Quiz Grátis
                 </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  onClick={() => document.getElementById('como-funciona')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-xl px-12 py-8 h-auto"
-                >
+                <Button size="lg" variant="outline" onClick={() => document.getElementById('como-funciona')?.scrollIntoView({
+                behavior: 'smooth'
+              })} className="text-xl px-12 py-8 h-auto">
                   Como Funciona
                 </Button>
               </div>
@@ -103,25 +74,11 @@ const Index = () => {
             {/* Right image */}
             <div className="relative animate-in fade-in slide-in-from-right duration-700 delay-200">
               <div className="rounded-3xl overflow-hidden shadow-medium hover-scale transition-all duration-500">
-                <img
-                  src={heroImage}
-                  alt="Pets felizes juntos"
-                  className="w-full h-auto object-cover"
-                />
+                <img src={heroImage} alt="Pets felizes juntos" className="w-full h-auto object-cover" />
               </div>
               
               {/* Stats badge */}
-              <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl p-6 shadow-medium border-4 border-background">
-                <div className="flex items-center gap-3">
-                  <div className="bg-accent text-accent-foreground rounded-full p-3">
-                    <Users className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-foreground">10k+</div>
-                    <div className="text-sm text-muted-foreground">Tutores felizes</div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -295,19 +252,13 @@ const Index = () => {
             <Card className="p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 duration-700">
               <div className="space-y-4">
                 <div className="flex gap-1 mb-2">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
                 </div>
                 <p className="text-foreground italic">
                   "Me emocionei com o resultado! Descobri que sou Herói do Lar e as dicas me ajudaram muito a melhorar ainda mais. Meu Thor está mais feliz!"
                 </p>
                 <div className="flex items-center gap-4 pt-4 border-t border-border">
-                  <img 
-                    src={testimonial1} 
-                    alt="Juliana com seu cachorro"
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
+                  <img src={testimonial1} alt="Juliana com seu cachorro" className="w-12 h-12 rounded-full object-cover" />
                   <div>
                     <div className="font-bold text-foreground">Juliana M.</div>
                     <div className="text-sm text-muted-foreground">Tutora de Golden</div>
@@ -319,19 +270,13 @@ const Index = () => {
             <Card className="p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
               <div className="space-y-4">
                 <div className="flex gap-1 mb-2">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
                 </div>
                 <p className="text-foreground italic">
                   "Adorei! O quiz é super completo e as perguntas fazem sentido. Compartilhei minha imagem no Instagram e meus amigos adoraram!"
                 </p>
                 <div className="flex items-center gap-4 pt-4 border-t border-border">
-                  <img 
-                    src={testimonial2} 
-                    alt="Carlos com seu gato"
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
+                  <img src={testimonial2} alt="Carlos com seu gato" className="w-12 h-12 rounded-full object-cover" />
                   <div>
                     <div className="font-bold text-foreground">Carlos R.</div>
                     <div className="text-sm text-muted-foreground">Tutor de Gato</div>
@@ -343,19 +288,13 @@ const Index = () => {
             <Card className="p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400">
               <div className="space-y-4">
                 <div className="flex gap-1 mb-2">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
                 </div>
                 <p className="text-foreground italic">
                   "Valeu cada centavo! As dicas personalizadas mudaram minha rotina com a Nina. Agora sei exatamente onde melhorar. Score 92! 🎉"
                 </p>
                 <div className="flex items-center gap-4 pt-4 border-t border-border">
-                  <img 
-                    src={testimonial3} 
-                    alt="Amanda com seu beagle"
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
+                  <img src={testimonial3} alt="Amanda com seu beagle" className="w-12 h-12 rounded-full object-cover" />
                   <div>
                     <div className="font-bold text-foreground">Amanda S.</div>
                     <div className="text-sm text-muted-foreground">Tutora de Beagle</div>
@@ -509,12 +448,7 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-            <Button
-              size="lg"
-              variant="secondary"
-              onClick={scrollToQuiz}
-              className="text-2xl px-16 py-10 h-auto shadow-medium hover:shadow-soft transition-all duration-300 hover-scale"
-            >
+            <Button size="lg" variant="secondary" onClick={scrollToQuiz} className="text-2xl px-16 py-10 h-auto shadow-medium hover:shadow-soft transition-all duration-300 hover-scale">
               🎯 Começar Quiz Grátis Agora
             </Button>
           </div>
@@ -550,8 +484,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
