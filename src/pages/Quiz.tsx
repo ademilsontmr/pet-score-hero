@@ -159,8 +159,9 @@ const Quiz = () => {
               <Button
                 key={`q${currentQuestion}-opt${index}`}
                 onClick={() => handleAnswer(option.points)}
+                onClickCapture={(e) => e.currentTarget.blur()}
                 variant="outline"
-                className="w-full h-auto py-4 md:py-5 px-4 md:px-6 text-left justify-start hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 text-sm md:text-base rounded-xl leading-relaxed"
+                className="w-full h-auto py-4 md:py-5 px-4 md:px-6 text-left justify-start hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 text-sm md:text-base rounded-xl leading-relaxed touch-manipulation"
               >
                 {option.text}
               </Button>
