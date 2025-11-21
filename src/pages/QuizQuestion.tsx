@@ -1,10 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { QUESTIONS } from "@/types/quiz";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, Loader2 } from "lucide-react";
 
 const QuizQuestion = () => {
     const navigate = useNavigate();
@@ -13,25 +13,30 @@ const QuizQuestion = () => {
 
     const currentQuestion = questionNumber ? parseInt(questionNumber) - 1 : 0;
     const answers = (location.state?.answers as number[]) || [];
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         document.title = `Pergunta ${currentQuestion + 1} | PetScore`;
     }, [currentQuestion]);
 
     const handleAnswer = (points: number) => {
+        setIsLoading(true);
+
         const newAnswers = [...answers];
         newAnswers[currentQuestion] = points;
 
         const newScore = newAnswers.reduce((sum, pts) => sum + pts, 0);
 
-        if (currentQuestion < QUESTIONS.length - 1) {
-            navigate(`/quiz/${currentQuestion + 2}`, {
-                state: { answers: newAnswers },
-                replace: true
-            });
-        } else {
-            navigate("/partial-result", { state: { score: newScore } });
-        }
+        setTimeout(() => {
+            if (currentQuestion < QUESTIONS.length - 1) {
+                navigate(`/quiz/${currentQuestion + 2}`, {
+                    state: { answers: newAnswers },
+                    replace: true
+                });
+            } else {
+                navigate("/partial-result", { state: { score: newScore } });
+            }
+        }, 400);
     };
 
     const handleBack = () => {
@@ -45,6 +50,21 @@ const QuizQuestion = () => {
 
     const question = QUESTIONS[currentQuestion];
     const progress = ((currentQuestion + 1) / QUESTIONS.length) * 100;
+
+    if (isLoading) {
+        return (
+            <div className="min-h-screen bg-gradient-warm py-8 px-4 flex items-center justify-center">
+                <Card className="p-12 shadow-medium">
+                    <div className="flex flex-col items-center gap-4">
+                        <Loader2 className="w-12 h-12 animate-spin text-primary" />
+                        <p className="text-lg font-medium text-muted-foreground">
+                            Carregando próxima pergunta...
+                        </p>
+                    </div>
+                </Card>
+            </div>
+        );
+    }
 
     return (
         <div className="min-h-screen bg-gradient-warm py-8 px-4">
