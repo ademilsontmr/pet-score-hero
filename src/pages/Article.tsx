@@ -585,6 +585,454 @@ const articles = {
                 </div>
             </div>
         )
+    },
+    "srd-vira-lata": {
+        title: "SRD (Vira-Lata): A História e a Alma do Cão Mais Amado do Brasil",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Eles estão em todas as esquinas, em todos os memes e, principalmente, em milhões de lares brasileiros. O Vira-Lata, ou tecnicamente SRD (Sem Raça Definida), é a verdadeira face do cão nacional. Mas não se engane: por trás da "falta de pedigree" existe uma história evolutiva fascinante e uma personalidade que conquista qualquer um.
+                </p>
+                <p>
+                    Ser um SRD não é ser "menos"; é ser um sobrevivente. É carregar no DNA a diversidade genética que garante resistência, inteligência e uma capacidade de adaptação única. Neste artigo, vamos celebrar a nobreza desse cão que, de "vira-lata", virou o "vira-luxo" de muitas famílias.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Origem: A Seleção Natural em Ação</h2>
+                <p>
+                    Ao contrário das raças puras, criadas pelo homem para funções específicas (caça, guarda, pastoreio), o SRD foi moldado pela própria natureza. Sua origem remonta aos primeiros cães que acompanhavam os colonizadores e que, ao longo dos séculos, se misturaram livremente.
+                </p>
+                <p>
+                    Essa "sopa genética" resultou em animais extremamente rústicos. A seleção natural favoreceu os mais espertos (para conseguir comida), os mais saudáveis (para resistir a doenças) e os mais simpáticos (para conquistar a ajuda humana). O vira-lata caramelo, por exemplo, é um fenômeno genético: essa cor é dominante e está ligada a um temperamento dócil e sociável.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Personalidade: O Malandro Amigo</h2>
+                <p>
+                    Se existe uma palavra que define o SRD é: <strong>gratidão</strong>. Quem adota um cão resgatado relata uma conexão profunda, como se o animal soubesse que foi salvo.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Inteligência de Rua:</strong> Eles aprendem rápido, muitas vezes apenas observando. São mestres em ler a linguagem corporal humana.</li>
+                    <li><strong>Sociabilidade:</strong> Geralmente se dão bem com outros cães e pessoas, pois a sobrevivência nas ruas exigia diplomacia.</li>
+                    <li><strong>Lealdade:</strong> São extremamente apegados à família.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Saúde de Ferro?</h2>
+                <p>
+                    Existe o mito de que vira-latas nunca adoecem. É verdade que a variabilidade genética os protege de muitas doenças hereditárias comuns em raças puras (como displasia ou problemas cardíacos específicos). Porém, eles precisam dos mesmos cuidados: vacinas, vermífugos e boa alimentação. Um SRD bem cuidado pode viver facilmente 15, 16 anos ou mais!
+                </p>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">O Vira-Lata é para você?</h3>
+                    <p className="text-lg mb-6">
+                        Se você quer um cão único (literalmente, não existe outro igual), companheiro e cheio de história, a resposta é sim. Adotar é um ato de amor.
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Descubra se você está pronto para adotar
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "shih-tzu": {
+        title: "Shih Tzu: O Pequeno Leão que Conquistou o Mundo",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Não é à toa que o Shih Tzu é uma das raças mais populares do Brasil. Com sua carinha amassada, olhos expressivos e pelagem exuberante, ele parece um bicho de pelúcia vivo. Mas não se deixe enganar pela aparência delicada: por trás desse "cão de colo" existe uma história de realeza e uma personalidade forte e divertida.
+                </p>
+                <p>
+                    Seu nome significa "Cão Leão" em chinês, e ele foi criado para ser exatamente o que é hoje: um companheiro leal, devotado e que adora estar perto de seus humanos.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Origem: Dos Palácios Proibidos para o Seu Sofá</h2>
+                <p>
+                    A história do Shih Tzu é milenar. Eles foram desenvolvidos na China, provavelmente cruzando o Lhasa Apso (do Tibet) com o Pequinês. Durante séculos, viveram exclusivamente dentro dos muros da Cidade Proibida, como animais sagrados da realeza chinesa.
+                </p>
+                <p>
+                    Eles eram tão valiosos que os imperadores se recusavam a vendê-los ou trocá-los. A raça quase foi extinta durante a Revolução Chinesa, mas alguns exemplares foram salvos e levados para a Inglaterra, dando origem a todos os Shih Tzus que conhecemos hoje.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Personalidade: Amor em Forma de Cão</h2>
+                <p>
+                    O Shih Tzu não foi criado para caçar, nem para guardar, nem para pastorear. Ele foi criado para <strong>amar</strong>.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>O "Cão Sombra":</strong> Ele vai te seguir até no banheiro. Ele precisa de companhia humana para ser feliz.</li>
+                    <li><strong>Adaptável:</strong> É o cão perfeito para apartamentos. Não precisa de muito espaço e se contenta com brincadeiras dentro de casa e passeios curtos.</li>
+                    <li><strong>Teimosia:</strong> Sim, eles podem ser um pouco teimosos na hora do adestramento. Paciência e reforço positivo (petiscos!) são a chave.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Cuidados Essenciais</h2>
+                <p>
+                    A beleza tem um preço: manutenção. O pelo do Shih Tzu embola fácil e precisa de escovação diária ou tosa frequente (a tosa "bebê" é a favorita dos brasileiros). Além disso, seus olhos grandes são sensíveis e o focinho curto exige cuidado com o calor excessivo.
+                </p>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Shih Tzu é a sua cara?</h3>
+                    <p className="text-lg mb-6">
+                        Se você quer um amigo para todas as horas e não se importa em cuidar de pelos, ele é perfeito. Mas será que você sabe tudo sobre os cuidados que ele precisa?
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Teste seus conhecimentos sobre raças
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "yorkshire-terrier": {
+        title: "Yorkshire Terrier: Um Grande Espírito num Corpo Pequeno",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Pequeno, elegante e com um laço na cabeça. É assim que vemos o Yorkshire Terrier hoje. Mas você sabia que esse "pet de madame" tem um passado operário e "casca grossa"? O Yorkie é a prova viva de que tamanho não é documento.
+                </p>
+                <p>
+                    Ele é um Terrier em cada centímetro: corajoso, ativo, curioso e cheio de atitude. É um cão que não sabe que é pequeno e encara o mundo de igual para igual.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Origem: Das Minas de Carvão aos Salões Vitorianos</h2>
+                <p>
+                    O Yorkie nasceu no condado de Yorkshire, na Inglaterra, durante a Revolução Industrial. Mas não em castelos. Ele foi criado por operários escoceses para uma missão dura: caçar ratos nas minas de carvão e nas fábricas têxteis.
+                </p>
+                <p>
+                    Seu tamanho pequeno permitia entrar em tocas e buracos, e sua bravura era lendária. Com o tempo, sua beleza e personalidade chamaram a atenção da alta sociedade vitoriana, e ele migrou do chão de fábrica para o colo das damas, tornando-se um símbolo de status.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Personalidade: O Pequeno Chefe</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Alerta:</strong> É um excelente cão de alarme. Nada passa despercebido por um Yorkie. Ele vai te avisar se uma folha cair na rua.</li>
+                    <li><strong>Vivaz:</strong> Adora brincar, correr e investigar. Não é um cão de ficar só dormindo no sofá o dia todo.</li>
+                    <li><strong>Protetor:</strong> É extremamente apegado ao dono e pode ser ciumento.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Cuidados Especiais</h2>
+                <p>
+                    Seu pelo é similar ao cabelo humano (não tem subpelo), o que é ótimo para alérgicos, mas exige escovação diária para não formar nós. A saúde bucal também é um ponto de atenção: Yorkies tendem a acumular muito tártaro, exigindo escovação dos dentes e limpeza veterinária regular.
+                </p>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Pronto para um Yorkie?</h3>
+                    <p className="text-lg mb-6">
+                        Ter um Yorkie é ter diversão garantida e um guarda-costas de 3kg. Mas você está preparado para essa energia toda?
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Descubra seu perfil de tutor
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "poodle": {
+        title: "Poodle: Muito Mais que um Penteado Bonito",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Quando pensamos em Poodle, logo vem à imagem da tosa pompom e de cães de circo. Mas o Poodle é, na verdade, uma das raças mais antigas, atléticas e inteligentes do mundo. Esqueça o estereótipo de "fútil". O Poodle é um gênio de quatro patas.
+                </p>
+                <p>
+                    Disponível em quatro tamanhos (Gigante, Médio, Anão e Toy), ele é versátil o suficiente para ser cão de guarda, cão de terapia, atleta de agility ou o melhor amigo do seu sofá.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Origem: O Caçador de Água</h2>
+                <p>
+                    O nome "Poodle" vem do alemão "Pudel", que significa "se jogar na água". Originalmente, ele era um cão de trabalho pesado: um recuperador de caça aquática (patos e aves) na Alemanha e França.
+                </p>
+                <p>
+                    Sabe a tosa clássica com pompons nas articulações? Não era moda! Era funcional: raspava-se o pelo para o cão nadar melhor, mas deixava-se tufos nas juntas e no peito para proteger os órgãos vitais e articulações da água gelada.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Personalidade: A Inteligência em Pessoa</h2>
+                <p>
+                    No ranking de inteligência canina de Stanley Coren, o Poodle ocupa o <strong>2º lugar</strong> (atrás apenas do Border Collie).
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Aprendizado Rápido:</strong> Eles aprendem comandos novos em poucas repetições. São fáceis de adestrar, mas também aprendem "coisas erradas" rápido se você bobear.</li>
+                    <li><strong>Empático:</strong> Eles têm uma capacidade incrível de "ler" o humor do dono. São excelentes cães de apoio emocional.</li>
+                    <li><strong>Ativo:</strong> Mesmo os pequenos (Toy) têm bastante energia e precisam de estímulo mental, não só físico.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Saúde e Pelagem</h2>
+                <p>
+                    A grande vantagem do Poodle é que ele não troca de pelo (o pelo cresce continuamente), sendo hipoalergênico. O lado "ruim" é que exige tosa profissional regular a cada 4-6 semanas. São cães longevos, vivendo frequentemente mais de 15 anos.
+                </p>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Um Poodle combina com você?</h3>
+                    <p className="text-lg mb-6">
+                        Se você quer um cão inteligente que interage com você o tempo todo, o Poodle é a escolha certa.
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Faça o quiz e veja se você acompanha o ritmo dele
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "spitz-alemao": {
+        title: "Spitz Alemão (Lulu): A Raposinha de Luxo",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    É impossível olhar para um Spitz Alemão Anão (popularmente conhecido como Lulu da Pomerânia) e não sorrir. Com sua juba de leão, carinha de raposa e atitude de gigante, ele conquistou o posto de "raça da moda" no Brasil.
+                </p>
+                <p>
+                    Mas não se deixe levar apenas pela fofura. O Spitz é uma raça primitiva, com instintos fortes e uma personalidade vibrante que exige um tutor dedicado.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Origem: Do Gelo ao Colo da Rainha</h2>
+                <p>
+                    O Spitz Alemão descende de grandes cães de trenó do Ártico (parentes do Husky e do Malamute). Sim, essa bolinha de 2kg tem sangue de cão de trabalho pesado!
+                </p>
+                <p>
+                    A raça foi diminuindo de tamanho na região da Pomerânia (entre Alemanha e Polônia). Mas o grande "boom" veio quando a Rainha Vitória da Inglaterra se apaixonou pela raça no século 19 e começou a criá-los em tamanhos menores. Onde a rainha vai, o povo segue, e o Lulu virou o cão de companhia definitivo.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Personalidade: Pequeno Ditador?</h2>
+                <p>
+                    O Spitz muitas vezes sofre da "Síndrome do Cão Pequeno": ele acha que é muito maior do que realmente é.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Corajoso:</strong> Ele não tem medo de desafiar cães dez vezes maiores que ele. O tutor precisa protegê-lo dessa ousadia.</li>
+                    <li><strong>Alerta:</strong> É um excelente cão de guarda (alarme). Late para qualquer barulho estranho.</li>
+                    <li><strong>Extrovertido:</strong> Adora ser o centro das atenções e fazer "graça".</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Cuidados com a Juba</h2>
+                <p>
+                    A pelagem dupla é sua marca registrada. Ela <strong>NUNCA</strong> deve ser tosada na máquina (tosa baixa), pois pode causar alopecia pós-tosa (o pelo não cresce mais). A manutenção exige escovação frequente, mas banhos não tão constantes para não ressecar a pele.
+                </p>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">O Lulu é o seu par ideal?</h3>
+                    <p className="text-lg mb-6">
+                        Beleza, atitude e lealdade. O Spitz tem tudo isso. Mas será que você sabe lidar com essa personalidade forte?
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Teste seu nível de tutor agora
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "bulldog-frances": {
+        title: "Bulldog Francês: O Palhaço Adorável",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Orelhas de morcego, cara amassada e um ronco que parece um motor de caminhão. O Bulldog Francês, ou "Frenchie", é uma figuraça. Não é à toa que ele explodiu em popularidade no Brasil e no mundo. Ele é o cão de companhia por excelência para a vida moderna.
+                </p>
+                <p>
+                    Mas não se deixe enganar pela cara de bravo (que ele não tem nada). O Frenchie é um comediante nato, criado para fazer você rir e esquecer dos problemas do dia a dia.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Origem: Da Inglaterra para a França (com Amor)</h2>
+                <p>
+                    Apesar do nome, suas raízes são inglesas. Durante a Revolução Industrial, as rendeiras de Nottingham (Inglaterra) tinham pequenos Bulldogs de colo como mascotes. Quando muitas delas migraram para a França em busca de trabalho, levaram seus cães.
+                </p>
+                <p>
+                    Em Paris, esses cãezinhos caíram nas graças da sociedade, dos artistas e da boemia. Foi lá que ganharam o nome "Bouledogue Français" e se tornaram um símbolo de charme e irreverência.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Personalidade: Um Grude Divertido</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Companheiro:</strong> Ele não quer correr uma maratona; ele quer ficar no sofá vendo Netflix com você. É um cão de baixa energia, ideal para apartamentos.</li>
+                    <li><strong>Silencioso:</strong> Late muito pouco. Geralmente só late se tiver algo realmente importante acontecendo (ou se a campainha tocar).</li>
+                    <li><strong>Teimoso:</strong> Ah, sim. Se ele não quiser andar, ele vira uma estátua de chumbo. O adestramento exige paciência e muitos petiscos.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Saúde: O Calcanhar de Aquiles</h2>
+                <p>
+                    Amar um Frenchie é estar preparado para cuidar de sua saúde. Por ser braquicefálico (focinho achatado), ele tem dificuldade para respirar e regular a temperatura.
+                </p>
+                <p>
+                    <strong>Atenção redobrada:</strong> Nunca exercite um Frenchie no calor forte! O risco de hipertermia é real e fatal. Além disso, problemas de coluna e alergias de pele são comuns na raça.
+                </p>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Você aguenta tanta fofura (e ronco)?</h3>
+                    <p className="text-lg mb-6">
+                        Ter um Frenchie é ter alegria garantida em casa. Mas exige responsabilidade financeira e cuidados específicos com a saúde.
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Descubra se você está pronto para um Frenchie
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "golden-retriever": {
+        title: "Golden Retriever: O Cão que Sorri com os Olhos",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Se a bondade tivesse uma forma física, ela seria um Golden Retriever. Dourado como o sol e com um coração que não cabe no peito, essa raça é sinônimo de família feliz. Não é exagero dizer que o Golden é um dos cães mais amáveis do planeta.
+                </p>
+                <p>
+                    Mas ele é muito mais que um rostinho bonito em comerciais de margarina. O Golden é um cão de trabalho incansável, inteligente e com uma vontade louca de agradar seus humanos.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Origem: O Sonho de Lord Tweedmouth</h2>
+                <p>
+                    A raça foi desenvolvida na Escócia, no século 19, por um nobre chamado Lord Tweedmouth. Ele queria o cão de caça perfeito: que fosse forte para nadar em águas geladas, tivesse faro apurado e, o mais importante, uma "boca macia" (soft mouth) para trazer a caça sem machucá-la.
+                </p>
+                <p>
+                    O resultado foi essa maravilha dourada que, hoje, troca a caça por bolinhas de tênis e chinelos.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Personalidade: Amigo de Todo Mundo</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Zero Agressividade:</strong> Um Golden é péssimo cão de guarda. Se um ladrão entrar, ele provavelmente vai mostrar onde está o cofre e pedir carinho na barriga.</li>
+                    <li><strong>Eterno Filhote:</strong> Eles demoram a amadurecer mentalmente. Prepare-se para ter um "bebezão" brincalhão por muitos anos.</li>
+                    <li><strong>Necessidade de Afeto:</strong> Eles não suportam solidão. Um Golden deixado sozinho no quintal é um cão profundamente infeliz (e destrutivo).</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Energia de Sobra</h2>
+                <p>
+                    Não se engane com a calma que eles mostram nos filmes. Goldens precisam de exercício! Caminhadas longas, natação e brincadeiras de buscar são essenciais para evitar que fiquem obesos e entediados.
+                </p>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">O Golden é o seu par perfeito?</h3>
+                    <p className="text-lg mb-6">
+                        Se você tem espaço, tempo e muito amor para dar, o Golden vai mudar sua vida para melhor.
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Faça o quiz e veja se você merece esse amor dourado
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "labrador-retriever": {
+        title: "Labrador Retriever: O Melhor Amigo do Mundo",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Por anos consecutivos, o Labrador foi eleito a raça mais popular do mundo. E não é difícil entender o porquê. Ele é o pacote completo: inteligente, versátil, carinhoso e robusto. É o cão que guia cegos, fareja drogas em aeroportos, resgata pessoas em escombros e, no fim do dia, dorme nos pés da cama das crianças.
+                </p>
+                <p>
+                    Diferente do seu "primo" Golden (que é mais sensível), o Labrador é mais "rústico" e "trator". Ele é pura alegria e força bruta.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Origem: O Pescador Canadense</h2>
+                <p>
+                    Apesar do nome, ele veio da Terra Nova (Canadá), não de Labrador. Originalmente, eram cães de pescadores. Sua função era pular nas águas geladas do Atlântico Norte para recuperar redes e peixes que escapavam.
+                </p>
+                <p>
+                    Isso explica sua pelagem impermeável, sua cauda grossa (que serve como leme ao nadar) e sua obsessão absoluta por água.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Personalidade: Fome de Vida (e de Comida)</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>O Estômago Sem Fundo:</strong> Labradores amam comer. Eles engolem qualquer coisa. O controle de peso é o maior desafio do tutor.</li>
+                    <li><strong>Inteligência Funcional:</strong> Eles amam trabalhar e aprender tarefas. Se você não der um "trabalho" para ele, ele vai inventar um (como roer o pé da mesa).</li>
+                    <li><strong>Amabilidade:</strong> Assim como o Golden, ama a todos. Mas é mais bruto nas brincadeiras, podendo derrubar crianças pequenas sem querer.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Cuidados</h2>
+                <p>
+                    Exercício, exercício e exercício. Um Labrador cansado é um Labrador comportado. E cuidado com a displasia coxofemoral: evite pisos lisos e escadas em excesso enquanto filhote.
+                </p>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Você tem energia para um Labrador?</h3>
+                    <p className="text-lg mb-6">
+                        Ele vai te tirar do sofá e te encher de babas. Se isso soa como o paraíso, ele é para você.
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Descubra se seu estilo de vida combina com ele
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "pinscher": {
+        title: "Pinscher: 50% Ódio, 50% Tremedeira (Brincadeira!)",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    O Pinscher Miniatura é uma instituição brasileira. Quem nunca viu esse pequeno "cão de guarda" latindo furiosamente no portão? A fama de "bravo" e "tremedeira" corre solta, mas é injusta.
+                </p>
+                <p>
+                    O Pinscher é, na verdade, um cão incompreendido. Ele é um animal de alta energia, corajoso e leal, muitas vezes tratado como bebê ou brinquedo, o que gera a tal agressividade por medo. Quando respeitado como cão, é um companheiro incrível.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Origem: Não é um Doberman Miniatura!</h2>
+                <p>
+                    Ao contrário do que muitos pensam, o Pinscher Miniatura <strong>NÃO</strong> é uma versão reduzida do Doberman. Na verdade, o Pinscher é uma raça muito mais antiga!
+                </p>
+                <p>
+                    Originário da Alemanha, ele era um cão de fazenda, usado para caçar ratos nos celeiros. Daí vem seu instinto de caça, sua atenção a movimentos rápidos e sua coragem de enfrentar animais maiores que ele.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Personalidade: O Rei da Casa</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Destemido:</strong> Ele realmente não tem noção do próprio tamanho. Ele vai defender o dono contra um Rottweiler se achar necessário.</li>
+                    <li><strong>Elétrico:</strong> É um cão ligado no 220v. Precisa de atividade mental e brincadeiras para não ficar estressado.</li>
+                    <li><strong>Apegado:</strong> Escolhe uma pessoa da casa para ser seu "idolo" e pode ser ciumento com ela.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Por que eles tremem?</h2>
+                <p>
+                    Pode ser frio (eles têm pouca gordura corporal e pelo curto), mas muitas vezes é pura excitação ou ansiedade. Pinschers sentem tudo com muita intensidade.
+                </p>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Você entende a alma de um Pinscher?</h3>
+                    <p className="text-lg mb-6">
+                        Eles precisam de liderança gentil e limites claros, não de colo o tempo todo. Você está pronto para esse desafio?
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Teste seus conhecimentos caninos
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "lhasa-apso": {
+        title: "Lhasa Apso: O Sentinela do Tibet",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Muitas vezes confundido com o Shih Tzu, o Lhasa Apso é uma raça com uma "vibe" totalmente diferente. Enquanto o Shih Tzu é um "cão de colo", o Lhasa é um cão místico, independente e reservado.
+                </p>
+                <p>
+                    Ele não está aqui para te agradar o tempo todo; ele está aqui para te proteger e te trazer sorte. Essa é a crença que o manteve isolado nas montanhas do Himalaia por séculos.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Origem: O Cão Sagrado</h2>
+                <p>
+                    Criado nos mosteiros budistas do Tibet, o Lhasa Apso tinha uma função nobre: ser o sentinela interno. Enquanto os enormes Dogues do Tibet guardavam o lado de fora, o Lhasa ficava dentro, latindo para avisar se algum intruso passasse.
+                </p>
+                <p>
+                    Os monges acreditavam que, quando morriam, suas almas podiam reencarnar nesses cães antes de atingir o Nirvana. Por isso, nunca eram vendidos, apenas presenteados como sinal de grande respeito e sorte (o Dalai Lama costumava presentear imperadores com Lhasas).
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Personalidade: Gato em Corpo de Cão?</h2>
+                <p>
+                    Muitos tutores dizem que o Lhasa tem personalidade felina.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Independente:</strong> Ele gosta de carinho, mas na hora que ELE quer. Não é um cão grudento. Fica bem sozinho em casa.</li>
+                    <li><strong>Desconfiado:</strong> Com estranhos, ele é reservado e observador. Não espere que ele pule no colo da visita logo de cara.</li>
+                    <li><strong>Teimoso:</strong> Ele tem mente própria. "Senta? Por que eu deveria sentar?". O adestramento exige persuasão.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Cuidados</h2>
+                <p>
+                    A pelagem longa e pesada é linda, mas trabalhosa. Escovação diária é lei. Mas, tirando isso, é um cão rústico e saudável, com uma das maiores expectativas de vida entre os cães (muitos passam dos 18 anos!).
+                </p>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">O Lhasa combina com seu estilo?</h3>
+                    <p className="text-lg mb-6">
+                        Se você quer um companheiro leal, mas que respeita seu espaço e não exige atenção 24h, o Lhasa é a escolha sábia.
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Descubra se você tem o perfil zen para um Lhasa
+                    </Button>
+                </div>
+            </div>
+        )
     }
 };
 

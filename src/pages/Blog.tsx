@@ -39,6 +39,56 @@ const Blog = () => {
             slug: "racas-populares-brasil",
             title: "As 10 Raças de Cães Mais Populares no Brasil",
             description: "Descubra quais são os cães favoritos dos brasileiros e veja se o seu melhor amigo está na lista!"
+        },
+        {
+            slug: "srd-vira-lata",
+            title: "SRD (Vira-Lata): A Alma do Cão Brasileiro",
+            description: "Conheça a história, a inteligência e o carisma do cão mais amado do país."
+        },
+        {
+            slug: "shih-tzu",
+            title: "Shih Tzu: O Pequeno Leão de Colo",
+            description: "Tudo sobre a raça que conquistou os apartamentos e corações do Brasil."
+        },
+        {
+            slug: "yorkshire-terrier",
+            title: "Yorkshire Terrier: Pequeno e Valente",
+            description: "Um cão de personalidade forte em uma embalagem pequena e elegante."
+        },
+        {
+            slug: "poodle",
+            title: "Poodle: Inteligência e Versatilidade",
+            description: "Descubra por que o Poodle é muito mais do que apenas um cão bonito."
+        },
+        {
+            slug: "spitz-alemao",
+            title: "Spitz Alemão (Lulu): A Raposinha de Luxo",
+            description: "Beleza, atitude e lealdade: conheça tudo sobre o Lulu da Pomerânia."
+        },
+        {
+            slug: "bulldog-frances",
+            title: "Bulldog Francês: O Palhaço Adorável",
+            description: "O companheiro perfeito para quem busca diversão e afeto em um cão compacto."
+        },
+        {
+            slug: "golden-retriever",
+            title: "Golden Retriever: O Cão que Sorri",
+            description: "A bondade em forma de cão. Saiba tudo sobre essa raça apaixonante."
+        },
+        {
+            slug: "labrador-retriever",
+            title: "Labrador Retriever: O Melhor Amigo do Mundo",
+            description: "Energia, inteligência e amor incondicional: o perfil do Labrador."
+        },
+        {
+            slug: "pinscher",
+            title: "Pinscher: Pequeno Grande Cão",
+            description: "Desmistificando a fama de bravo: conheça a verdadeira personalidade do Pinscher."
+        },
+        {
+            slug: "lhasa-apso",
+            title: "Lhasa Apso: O Sentinela do Tibet",
+            description: "Um cão místico, independente e leal. Descubra se ele combina com você."
         }
     ];
 
