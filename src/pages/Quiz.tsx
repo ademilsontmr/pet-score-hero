@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -8,55 +8,43 @@ import { ChevronLeft } from "lucide-react";
 
 const Quiz = () => {
   const navigate = useNavigate();
+  const { questionNumber } = useParams();
 
   useEffect(() => {
     document.title = "Quiz | PetScore";
   }, []);
 
-  const [quizStarted, setQuizStarted] = useState(false);
-  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const currentQuestion = questionNumber ? parseInt(questionNumber) - 1 : 0;
   const [totalScore, setTotalScore] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
-  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
 
-  // Reset selected answer AFTER question changes
-  useEffect(() => {
-    setSelectedAnswer(null);
-  }, [currentQuestion]);
+  const handleAnswer = (points: number) => {
+    const newAnswers = [...answers];
+    newAnswers[currentQuestion] = points;
+    setAnswers(newAnswers);
 
-  const handleAnswer = (points: number, index: number) => {
-    // Prevent multiple clicks
-    if (selectedAnswer !== null) return;
+    const newScore = newAnswers.reduce((sum, pts) => sum + pts, 0);
+    setTotalScore(newScore);
 
-    setSelectedAnswer(index);
-
-    setTimeout(() => {
-      const newAnswers = [...answers];
-      newAnswers[currentQuestion] = points;
-      setAnswers(newAnswers);
-
-      const newScore = newAnswers.reduce((sum, pts) => sum + pts, 0);
-      setTotalScore(newScore);
-
-      if (currentQuestion < QUESTIONS.length - 1) {
-        setCurrentQuestion(currentQuestion + 1);
-      } else {
-        // Quiz completed, go to partial result
-        navigate("/partial-result", { state: { score: newScore } });
-      }
-    }, 300);
+    if (currentQuestion < QUESTIONS.length - 1) {
+      navigate(`/quiz/${currentQuestion + 2}`);
+    } else {
+      // Quiz completed, go to partial result
+      navigate("/partial-result", { state: { score: newScore } });
+    }
   };
 
   const handleBack = () => {
     if (currentQuestion > 0) {
-      setCurrentQuestion(currentQuestion - 1);
+      navigate(`/quiz/${currentQuestion}`);
     }
   };
 
   const question = QUESTIONS[currentQuestion];
   const progress = ((currentQuestion + 1) / QUESTIONS.length) * 100;
 
-  if (!quizStarted) {
+  // Show intro screen if no question number in URL
+  if (!questionNumber) {
     return (
       <div className="min-h-screen bg-gradient-warm py-8 px-4 flex items-center justify-center">
         <div className="max-w-2xl w-full">
@@ -131,7 +119,7 @@ const Quiz = () => {
             </div>
 
             <Button
-              onClick={() => setQuizStarted(true)}
+              onClick={() => navigate("/quiz/1")}
               className="w-full text-base md:text-lg py-6 md:py-7 rounded-2xl bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all"
             >
               Começar Avaliação Oficial
@@ -170,13 +158,9 @@ const Quiz = () => {
             {question.options.map((option, index) => (
               <Button
                 key={index}
-                onClick={() => handleAnswer(option.points, index)}
+                onClick={() => handleAnswer(option.points)}
                 variant="outline"
-                className={`w-full h-auto py-4 md:py-5 px-4 md:px-6 text-left justify-start transition-all duration-300 text-sm md:text-base rounded-xl leading-relaxed ${selectedAnswer === index
-                  ? 'bg-primary text-primary-foreground border-primary'
-                  : 'hover:bg-primary hover:text-primary-foreground hover:border-primary'
-                  }`}
-                disabled={selectedAnswer !== null}
+                className="w-full h-auto py-4 md:py-5 px-4 md:px-6 text-left justify-start hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 text-sm md:text-base rounded-xl leading-relaxed"
               >
                 {option.text}
               </Button>
