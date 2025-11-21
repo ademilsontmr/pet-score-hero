@@ -17,6 +17,7 @@ const QuizQuestion = () => {
 
     useEffect(() => {
         document.title = `Pergunta ${currentQuestion + 1} | PetScore`;
+        setIsLoading(false); // Reset loading state when question changes
     }, [currentQuestion]);
 
     const handleAnswer = (points: number) => {
