@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useEffect, useRef } from "react";
 import { getQuizResult } from "@/types/quiz";
-import { Share2, Printer } from "lucide-react";
+import { Share2, Download } from "lucide-react";
 import { toast } from "sonner";
 
 const CompleteResult = () => {
@@ -761,11 +761,11 @@ const CompleteResult = () => {
               <Button
                 size="lg"
                 variant="outline"
-                onClick={handlePrint}
+                onClick={handleDownload}
                 className="text-lg px-8 py-6 h-auto shadow-md hover:shadow-lg transition-all border-2 border-primary/20 hover:bg-primary/5"
               >
-                <Printer className="mr-2 w-5 h-5" />
-                Imprimir
+                <Download className="mr-2 w-5 h-5" />
+                Salvar Imagem
               </Button>
 
               <Button
