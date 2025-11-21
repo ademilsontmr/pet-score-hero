@@ -36,7 +36,11 @@ const Quiz = () => {
       setTotalScore(newScore);
 
       if (currentQuestion < QUESTIONS.length - 1) {
-        setCurrentQuestion(currentQuestion + 1);
+        // Clear selection first, then change question
+        setSelectedAnswer(null);
+        setTimeout(() => {
+          setCurrentQuestion(currentQuestion + 1);
+        }, 0);
       } else {
         // Quiz completed, go to partial result
         navigate("/partial-result", { state: { score: newScore } });
