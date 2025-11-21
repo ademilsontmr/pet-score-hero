@@ -1,18 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate, Link } from "react-router-dom";
-import { ArrowLeft, BookOpen } from "lucide-react";
+import { ArrowLeft, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Blog = () => {
     const navigate = useNavigate();
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 10;
 
     useEffect(() => {
         document.title = "Blog | PetScore";
-    }, []);
+        window.scrollTo(0, 0);
+    }, [currentPage]);
 
     const articles = [
         {
@@ -117,6 +120,12 @@ const Blog = () => {
         }
     ];
 
+    const totalPages = Math.ceil(articles.length / itemsPerPage);
+    const currentArticles = articles.slice(
+        (currentPage - 1) * itemsPerPage,
+        currentPage * itemsPerPage
+    );
+
     return (
         <div className="min-h-screen bg-background flex flex-col">
             <Header />
@@ -139,7 +148,7 @@ const Blog = () => {
                     </section>
 
                     <div className="grid md:grid-cols-2 gap-6">
-                        {articles.map((article) => (
+                        {currentArticles.map((article) => (
                             <Link key={article.slug} to={`/blog/${article.slug}`}>
                                 <Card className="h-full p-6 hover:shadow-lg transition-all cursor-pointer border-border/50 hover:border-primary/50 group">
                                     <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
@@ -155,6 +164,28 @@ const Blog = () => {
                             </Link>
                         ))}
                     </div>
+
+                    {totalPages > 1 && (
+                        <div className="flex justify-center items-center gap-4 mt-12">
+                            <Button
+                                variant="outline"
+                                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                                disabled={currentPage === 1}
+                            >
+                                <ChevronLeft className="w-4 h-4 mr-2" /> Anterior
+                            </Button>
+                            <span className="text-muted-foreground font-medium">
+                                Página {currentPage} de {totalPages}
+                            </span>
+                            <Button
+                                variant="outline"
+                                onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+                                disabled={currentPage === totalPages}
+                            >
+                                Próxima <ChevronRight className="w-4 h-4 ml-2" />
+                            </Button>
+                        </div>
+                    )}
                 </div>
             </main>
             <Footer />
