@@ -14,13 +14,19 @@ const QuizQuestion = () => {
     const currentQuestion = questionNumber ? parseInt(questionNumber) - 1 : 0;
     const answers = (location.state?.answers as number[]) || [];
     const [isLoading, setIsLoading] = useState(false);
+    const [clickedIndex, setClickedIndex] = useState<number | null>(null);
 
     useEffect(() => {
         document.title = `Pergunta ${currentQuestion + 1} | PetScore`;
         setIsLoading(false); // Reset loading state when question changes
+        setClickedIndex(null); // Reset clicked state
+        console.log(`Question ${currentQuestion + 1} loaded, clickedIndex reset to null`);
     }, [currentQuestion]);
 
-    const handleAnswer = (points: number) => {
+    const handleAnswer = (points: number, index: number) => {
+        if (clickedIndex !== null) return; // Prevent multiple clicks
+
+        setClickedIndex(index);
         setIsLoading(true);
 
         const newAnswers = [...answers];
@@ -93,10 +99,11 @@ const QuizQuestion = () => {
                         {question.options.map((option, index) => (
                             <Button
                                 key={`q${currentQuestion}-opt${index}`}
-                                onClick={() => handleAnswer(option.points)}
+                                onClick={() => handleAnswer(option.points, index)}
                                 variant="outline"
+                                disabled={clickedIndex !== null}
                                 style={{ WebkitTapHighlightColor: 'transparent' }}
-                                className="w-full h-auto py-4 md:py-5 px-4 md:px-6 text-left justify-start hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 text-sm md:text-base rounded-xl leading-relaxed active:bg-transparent focus:bg-transparent"
+                                className="w-full h-auto py-4 md:py-5 px-4 md:px-6 text-left justify-start hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 text-sm md:text-base rounded-xl leading-relaxed active:bg-transparent focus:bg-transparent disabled:opacity-50"
                             >
                                 {option.text}
                             </Button>
