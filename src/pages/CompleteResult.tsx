@@ -757,12 +757,12 @@ const CompleteResult = () => {
               style={{ maxHeight: "500px" }}
             />
 
-            <div className="flex flex-col sm:flex-row gap-4 w-full justify-center items-center mt-6">
+            <div className="flex flex-col-reverse sm:flex-row gap-4 w-full justify-center items-center mt-6">
               <Button
                 size="lg"
                 variant="outline"
                 onClick={handleDownload}
-                className="w-full sm:w-auto text-lg px-8 py-7 h-auto rounded-2xl shadow-sm hover:shadow-md transition-all border-2 border-orange-100 bg-white text-orange-600 hover:bg-orange-50 hover:border-orange-200 group"
+                className="w-full sm:w-auto text-lg px-8 py-7 h-auto rounded-2xl shadow-sm hover:shadow-md transition-all border-2 border-orange-100 bg-white text-orange-600 hover:bg-orange-50 hover:text-orange-700 hover:border-orange-200 group"
               >
                 <Download className="mr-3 w-6 h-6 group-hover:scale-110 transition-transform" />
                 Salvar Imagem
