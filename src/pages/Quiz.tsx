@@ -19,12 +19,10 @@ const Quiz = () => {
   const [answers, setAnswers] = useState<number[]>([]);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
 
-  // Reset selected answer when question changes
-  useEffect(() => {
-    setSelectedAnswer(null);
-  }, [currentQuestion]);
-
   const handleAnswer = (points: number, index: number) => {
+    // Prevent multiple clicks
+    if (selectedAnswer !== null) return;
+
     setSelectedAnswer(index);
 
     setTimeout(() => {
@@ -35,12 +33,11 @@ const Quiz = () => {
       const newScore = newAnswers.reduce((sum, pts) => sum + pts, 0);
       setTotalScore(newScore);
 
+      // Reset selection and move to next question
+      setSelectedAnswer(null);
+
       if (currentQuestion < QUESTIONS.length - 1) {
-        // Clear selection first, then change question
-        setSelectedAnswer(null);
-        setTimeout(() => {
-          setCurrentQuestion(currentQuestion + 1);
-        }, 0);
+        setCurrentQuestion(currentQuestion + 1);
       } else {
         // Quiz completed, go to partial result
         navigate("/partial-result", { state: { score: newScore } });
