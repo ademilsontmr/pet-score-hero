@@ -12,11 +12,17 @@ const Quiz = () => {
   useEffect(() => {
     document.title = "Quiz | PetScore";
   }, []);
+
   const [quizStarted, setQuizStarted] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [totalScore, setTotalScore] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
+
+  // Reset selected answer when question changes
+  useEffect(() => {
+    setSelectedAnswer(null);
+  }, [currentQuestion]);
 
   const handleAnswer = (points: number, index: number) => {
     setSelectedAnswer(index);
@@ -31,7 +37,6 @@ const Quiz = () => {
 
       if (currentQuestion < QUESTIONS.length - 1) {
         setCurrentQuestion(currentQuestion + 1);
-        setSelectedAnswer(null); // Reset selection for next question
       } else {
         // Quiz completed, go to partial result
         navigate("/partial-result", { state: { score: newScore } });
