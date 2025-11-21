@@ -260,6 +260,7 @@ const PartialResult = () => {
                   }
                 }
 
+                window.scrollTo(0, 0);
                 navigate("/payment", { state: { score, petImage, petName, petGender, tutorName, tutorPhone } });
               }}
               className="w-full text-lg md:text-xl px-8 md:px-12 py-6 md:py-7 h-auto rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 bg-purple-600 hover:bg-purple-700"
