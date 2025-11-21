@@ -757,24 +757,24 @@ const CompleteResult = () => {
               style={{ maxHeight: "500px" }}
             />
 
-            <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 w-full justify-center items-center mt-6">
               <Button
                 size="lg"
                 variant="outline"
                 onClick={handleDownload}
-                className="text-lg px-8 py-6 h-auto shadow-md hover:shadow-lg transition-all border-2 border-primary/20 hover:bg-primary/5"
+                className="w-full sm:w-auto text-lg px-8 py-7 h-auto rounded-2xl shadow-sm hover:shadow-md transition-all border-2 border-orange-100 bg-white text-orange-600 hover:bg-orange-50 hover:border-orange-200 group"
               >
-                <Download className="mr-2 w-5 h-5" />
+                <Download className="mr-3 w-6 h-6 group-hover:scale-110 transition-transform" />
                 Salvar Imagem
               </Button>
 
               <Button
                 size="lg"
                 onClick={handleShare}
-                className="text-lg px-8 py-6 h-auto shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all bg-primary hover:bg-primary/90"
+                className="w-full sm:w-auto text-lg px-10 py-7 h-auto rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white border-0"
               >
-                <Share2 className="mr-2 w-5 h-5" />
-                Compartilhar
+                <Share2 className="mr-3 w-6 h-6 animate-pulse" />
+                Compartilhar Agora
               </Button>
             </div>
 
