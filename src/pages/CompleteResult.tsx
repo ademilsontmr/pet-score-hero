@@ -418,26 +418,6 @@ const CompleteResult = () => {
                 </div>
               </div>
             </div>
-
-            {/* Tips Section */}
-            <div className="bg-orange-50 border-2 border-orange-200 rounded-3xl p-6">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center">
-                  <span className="text-2xl">💡</span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-bold text-orange-800 text-lg mb-3">Próximos Passos Recomendados</h3>
-                  <ul className="space-y-2">
-                    {result.tips.map((tip, index) => (
-                      <li key={index} className="flex items-start gap-2 text-sm text-orange-900/80">
-                        <span className="text-orange-600 font-bold mt-0.5">•</span>
-                        <span className="leading-relaxed">{tip}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
           </div>
         </Card>
 
