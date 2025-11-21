@@ -84,7 +84,7 @@ const QuizQuestion = () => {
                 </div>
 
                 {/* Question Card */}
-                <Card className="p-6 md:p-8 shadow-medium animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <Card key={`question-${currentQuestion}`} className="p-6 md:p-8 shadow-medium animate-in fade-in slide-in-from-bottom-4 duration-500">
                     <h2 className="text-lg md:text-2xl font-bold text-foreground mb-6 md:mb-8 text-center leading-tight">
                         {question.question}
                     </h2>
@@ -92,10 +92,11 @@ const QuizQuestion = () => {
                     <div className="space-y-4">
                         {question.options.map((option, index) => (
                             <Button
-                                key={index}
+                                key={`q${currentQuestion}-opt${index}`}
                                 onClick={() => handleAnswer(option.points)}
                                 variant="outline"
-                                className="w-full h-auto py-4 md:py-5 px-4 md:px-6 text-left justify-start hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 text-sm md:text-base rounded-xl leading-relaxed"
+                                style={{ WebkitTapHighlightColor: 'transparent' }}
+                                className="w-full h-auto py-4 md:py-5 px-4 md:px-6 text-left justify-start hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 text-sm md:text-base rounded-xl leading-relaxed active:bg-transparent focus:bg-transparent"
                             >
                                 {option.text}
                             </Button>
