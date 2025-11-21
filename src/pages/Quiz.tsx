@@ -46,7 +46,7 @@ const Quiz = () => {
     return (
       <div className="min-h-screen bg-gradient-warm py-8 px-4 flex items-center justify-center">
         <div className="max-w-2xl w-full">
-          <Card className="p-8 md:p-10 shadow-medium animate-in fade-in zoom-in duration-500">
+          <Card className="p-6 md:p-10 shadow-medium animate-in fade-in zoom-in duration-500">
             <div className="text-center mb-8">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-2xl mb-4">
                 <span className="text-3xl">📋</span>
@@ -60,65 +60,65 @@ const Quiz = () => {
             </div>
 
             <div className="space-y-4 mb-8">
-              <div className="flex items-center gap-4 p-4 bg-red-50 rounded-2xl border border-red-100">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-2xl shadow-sm">🩺</div>
-                <div className="flex-1">
-                  <div className="flex justify-between items-center mb-1">
-                    <h3 className="font-bold text-red-900">Saúde Preventiva</h3>
-                    <span className="text-xs font-bold bg-red-200 text-red-800 px-2 py-1 rounded-full">30%</span>
+              <div className="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-red-50 rounded-2xl border border-red-100">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-xl flex items-center justify-center text-xl md:text-2xl shadow-sm flex-shrink-0">🩺</div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex justify-between items-center mb-1 gap-2">
+                    <h3 className="font-bold text-red-900 text-sm md:text-base">Saúde Preventiva</h3>
+                    <span className="text-xs font-bold bg-red-200 text-red-800 px-2 py-1 rounded-full flex-shrink-0">30%</span>
                   </div>
-                  <p className="text-sm text-red-700">Veterinário, vacinas, prevenção e emergências</p>
+                  <p className="text-xs md:text-sm text-red-700">Veterinário, vacinas, prevenção e emergências</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 bg-green-50 rounded-2xl border border-green-100">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-2xl shadow-sm">🥗</div>
-                <div className="flex-1">
-                  <div className="flex justify-between items-center mb-1">
-                    <h3 className="font-bold text-green-900">Nutrição e Hidratação</h3>
-                    <span className="text-xs font-bold bg-green-200 text-green-800 px-2 py-1 rounded-full">15%</span>
+              <div className="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-green-50 rounded-2xl border border-green-100">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-xl flex items-center justify-center text-xl md:text-2xl shadow-sm flex-shrink-0">🥗</div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex justify-between items-center mb-1 gap-2">
+                    <h3 className="font-bold text-green-900 text-sm md:text-base">Nutrição e Hidratação</h3>
+                    <span className="text-xs font-bold bg-green-200 text-green-800 px-2 py-1 rounded-full flex-shrink-0">15%</span>
                   </div>
-                  <p className="text-sm text-green-700">Qualidade da ração, água e petiscos</p>
+                  <p className="text-xs md:text-sm text-green-700">Qualidade da ração, água e petiscos</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 bg-blue-50 rounded-2xl border border-blue-100">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-2xl shadow-sm">🎾</div>
-                <div className="flex-1">
-                  <div className="flex justify-between items-center mb-1">
-                    <h3 className="font-bold text-blue-900">Bem-estar e Comportamento</h3>
-                    <span className="text-xs font-bold bg-blue-200 text-blue-800 px-2 py-1 rounded-full">25%</span>
+              <div className="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-blue-50 rounded-2xl border border-blue-100">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-xl flex items-center justify-center text-xl md:text-2xl shadow-sm flex-shrink-0">🎾</div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex justify-between items-center mb-1 gap-2">
+                    <h3 className="font-bold text-blue-900 text-sm md:text-base">Bem-estar e Comportamento</h3>
+                    <span className="text-xs font-bold bg-blue-200 text-blue-800 px-2 py-1 rounded-full flex-shrink-0">25%</span>
                   </div>
-                  <p className="text-sm text-blue-700">Exercícios, enriquecimento e socialização</p>
+                  <p className="text-xs md:text-sm text-blue-700">Exercícios, enriquecimento e socialização</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 bg-purple-50 rounded-2xl border border-purple-100">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-2xl shadow-sm">🛁</div>
-                <div className="flex-1">
-                  <div className="flex justify-between items-center mb-1">
-                    <h3 className="font-bold text-purple-900">Higiene e Cuidados</h3>
-                    <span className="text-xs font-bold bg-purple-200 text-purple-800 px-2 py-1 rounded-full">15%</span>
+              <div className="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-purple-50 rounded-2xl border border-purple-100">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-xl flex items-center justify-center text-xl md:text-2xl shadow-sm flex-shrink-0">🛁</div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex justify-between items-center mb-1 gap-2">
+                    <h3 className="font-bold text-purple-900 text-sm md:text-base">Higiene e Cuidados</h3>
+                    <span className="text-xs font-bold bg-purple-200 text-purple-800 px-2 py-1 rounded-full flex-shrink-0">15%</span>
                   </div>
-                  <p className="text-sm text-purple-700">Banho, dentes e ambiente seguro</p>
+                  <p className="text-xs md:text-sm text-purple-700">Banho, dentes e ambiente seguro</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 bg-orange-50 rounded-2xl border border-orange-100">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-2xl shadow-sm">🧡</div>
-                <div className="flex-1">
-                  <div className="flex justify-between items-center mb-1">
-                    <h3 className="font-bold text-orange-900">Vínculo e Afeto</h3>
-                    <span className="text-xs font-bold bg-orange-200 text-orange-800 px-2 py-1 rounded-full">15%</span>
+              <div className="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-orange-50 rounded-2xl border border-orange-100">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-xl flex items-center justify-center text-xl md:text-2xl shadow-sm flex-shrink-0">🧡</div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex justify-between items-center mb-1 gap-2">
+                    <h3 className="font-bold text-orange-900 text-sm md:text-base">Vínculo e Afeto</h3>
+                    <span className="text-xs font-bold bg-orange-200 text-orange-800 px-2 py-1 rounded-full flex-shrink-0">15%</span>
                   </div>
-                  <p className="text-sm text-orange-700">Tempo de qualidade e conexão emocional</p>
+                  <p className="text-xs md:text-sm text-orange-700">Tempo de qualidade e conexão emocional</p>
                 </div>
               </div>
             </div>
 
             <Button
               onClick={() => setQuizStarted(true)}
-              className="w-full text-lg py-6 bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all"
+              className="w-full text-base md:text-lg py-6 md:py-7 rounded-2xl bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all"
             >
               Começar Avaliação Oficial
             </Button>
@@ -147,8 +147,8 @@ const Quiz = () => {
 
 
         {/* Question Card */}
-        <Card className="p-8 shadow-medium animate-in fade-in slide-in-from-bottom-4 duration-500">
-          <h2 className="text-2xl font-bold text-foreground mb-8 text-center">
+        <Card className="p-6 md:p-8 shadow-medium animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <h2 className="text-lg md:text-2xl font-bold text-foreground mb-6 md:mb-8 text-center leading-tight">
             {question.question}
           </h2>
 
@@ -158,7 +158,7 @@ const Quiz = () => {
                 key={index}
                 onClick={() => handleAnswer(option.points)}
                 variant="outline"
-                className="w-full h-auto py-4 px-6 text-left justify-start hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 text-base"
+                className="w-full h-auto py-4 md:py-5 px-4 md:px-6 text-left justify-start hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 text-sm md:text-base rounded-xl leading-relaxed"
               >
                 {option.text}
               </Button>
