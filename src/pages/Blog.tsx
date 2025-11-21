@@ -89,6 +89,31 @@ const Blog = () => {
             slug: "lhasa-apso",
             title: "Lhasa Apso: O Sentinela do Tibet",
             description: "Um cão místico, independente e leal. Descubra se ele combina com você."
+        },
+        {
+            slug: "sinais-felicidade-pet",
+            title: "Como saber se meu cachorro é feliz? 7 sinais claros que ele te ama",
+            description: "Descubra se você está fazendo um bom trabalho e entenda a linguagem do amor canino."
+        },
+        {
+            slug: "ansiedade-separacao",
+            title: "Meu cachorro sente saudade? Entenda a Ansiedade de Separação",
+            description: "Não é manha, é pânico. Saiba identificar e tratar o sofrimento do seu pet quando você sai."
+        },
+        {
+            slug: "rotina-alimentacao",
+            title: "Quantas vezes devo alimentar meu cachorro? Guia Completo",
+            description: "Filhote, adulto ou idoso? Descubra a frequência ideal para garantir saúde e longevidade."
+        },
+        {
+            slug: "linguagem-amor",
+            title: "10 formas que seu pet diz 'Eu Te Amo' (e você não percebeu)",
+            description: "Do bocejo ao 'lean': aprenda a ler os gestos sutis de afeto do seu melhor amigo."
+        },
+        {
+            slug: "enriquecimento-ambiental",
+            title: "Seu pet está entediado? 8 brincadeiras baratas para fazer em casa",
+            description: "Transforme a rotina do seu cão e acabe com a destruição de móveis com dicas simples."
         }
     ];
 

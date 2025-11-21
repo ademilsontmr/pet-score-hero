@@ -1033,6 +1033,327 @@ const articles = {
                 </div>
             </div>
         )
+    },
+    "sinais-felicidade-pet": {
+        title: "Como saber se meu cachorro é feliz? 7 sinais claros que ele te ama",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Todo tutor já se fez essa pergunta pelo menos uma vez: "Será que meu cachorro é realmente feliz comigo?". A culpa materna/paterna bate forte, especialmente quando precisamos deixá-los sozinhos para trabalhar. Mas a verdade é que os cães são livros abertos. Eles nos dizem o tempo todo como se sentem, nós é que às vezes não sabemos ler.
+                </p>
+                <p>
+                    A felicidade canina não é sobre ter a cama mais cara ou o brinquedo importado. É sobre segurança, vínculo e necessidades atendidas. Confira os 7 sinais infalíveis de que você está fazendo um ótimo trabalho.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">1. O "Olhar Suave"</h2>
+                <p>
+                    Sabe quando seu cachorro te olha nos olhos e pisca devagar, com a expressão relaxada? Isso é um "abraço visual". A liberação de ocitocina (o hormônio do amor) acontece em ambos nesse momento. Se ele te olha assim, ele confia em você cegamente.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">2. Dormir de Barriga para Cima</h2>
+                <p>
+                    Na natureza, a barriga é a parte mais vulnerável de um animal. Expor a barriga é o sinal máximo de segurança e relaxamento. Se ele dorme "esparramado" no meio da sala, parabéns: ele se sente 100% seguro na sua casa.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">3. A Recepção Calorosa</h2>
+                <p>
+                    Não importa se você saiu por 5 minutos ou 5 horas, a festa é a mesma. O rabo abana (muitas vezes o corpo todo abana junto), ele traz brinquedos, ele "sorri". Essa alegria genuína ao te ver é o maior atestado de amor que existe.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">4. Ele te Procura Pela Casa</h2>
+                <p>
+                    Se ele te segue até o banheiro ou simplesmente deita no mesmo cômodo que você está, ele está praticando o "estar junto". Cães são animais sociais e a presença do líder da matilha (você) traz conforto.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">5. Apetite Saudável</h2>
+                <p>
+                    Um cão feliz e saudável come com gosto. A inapetência é frequentemente o primeiro sinal de depressão ou doença. Se ele faz a "dancinha da ração", é um ótimo sinal.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">6. Ele te "Convida" para Brincar</h2>
+                <p>
+                    A posição de "reverência" (bumbum para cima, patas dianteiras esticadas no chão) é o convite universal para a brincadeira. Cães tristes ou estressados não brincam.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">7. Suspiros Longos</h2>
+                <p>
+                    Sabe aquele suspiro fundo que ele dá antes de dormir? Se for acompanhado de olhos semi-cerrados, é um sinal fisiológico de contentamento profundo. É ele dizendo: "A vida é boa".
+                </p>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Mas será que você pode melhorar?</h3>
+                    <p className="text-lg mb-6">
+                        Amar é fácil, mas cuidar exige conhecimento. Você sabe se está atendendo todas as necessidades ocultas do seu pet?
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Descubra seu Petscore e veja se você é o tutor que ele merece
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "ansiedade-separacao": {
+        title: "Meu cachorro sente saudade quando eu saio? Entenda a Ansiedade de Separação",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Você fecha a porta de casa e ouve o choro. Ou volta do trabalho e encontra o sofá destruído e xixi no lugar errado. A primeira reação pode ser frustração ("ele fez de pirraça!"), mas a realidade é muito mais triste: seu cachorro pode estar sofrendo de Ansiedade de Separação.
+                </p>
+                <p>
+                    Não é manha, não é vingança. É pânico. Para alguns cães, ficar sozinho é a sensação de morte iminente. Vamos entender o que passa na cabeça deles e como ajudar.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">O Que é Ansiedade de Separação?</h2>
+                <p>
+                    É um distúrbio comportamental onde o cão entra em estado de angústia extrema quando afastado de suas figuras de apego. Os sinais clássicos são:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Vocalização excessiva:</strong> Latidos, uivos e choros contínuos assim que você sai.</li>
+                    <li><strong>Destruição:</strong> Roer portas, janelas ou móveis (tentativa desesperada de "cavar" uma saída para te encontrar).</li>
+                    <li><strong>Eliminação inapropriada:</strong> Xixi e cocô pela casa, mesmo em cães educados (causado pelo descontrole fisiológico do medo).</li>
+                    <li><strong>Sinais pré-saída:</strong> Ele começa a ficar agitado ou deprimido assim que você pega a chave ou calça o sapato.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Por que isso acontece?</h2>
+                <p>
+                    Cães são animais de matilha. Na natureza, ficar sozinho é perigoso. Além disso, a pandemia (onde ficamos 24h com eles) criou uma geração de "cães velcro" que nunca aprenderam a ficar sós. Mudanças bruscas de rotina ou de casa também são gatilhos.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Ajudar (O Que Fazer e O Que NÃO Fazer)</h2>
+
+                <h3 className="text-2xl font-semibold text-red-600 mt-6 mb-3">❌ O Erro Comum</h3>
+                <p>
+                    Fazer "festa" na saída e na chegada. Se você se despede com voz triste ("mamãe já volta, não chora") e volta fazendo um carnaval, você valida a ansiedade dele. Você confirma que sua saída é um evento dramático e sua volta é a única salvação.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-green-600 mt-6 mb-3">✅ A Estratégia Certa</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Saídas e Chegadas Neutras:</strong> Ignore o cão 15 minutos antes de sair e 15 minutos depois de chegar. Só dê atenção quando ele estiver calmo. Isso tira o peso emocional do evento.</li>
+                    <li><strong>Enriquecimento Ambiental:</strong> O cão precisa ter o que fazer. Deixe brinquedos recheáveis com comida congelada. Ele vai associar sua saída a algo gostoso (comer).</li>
+                    <li><strong>Treino de Indiferença:</strong> Pegue a chave, sente no sofá. Calce o sapato, vá até a cozinha. Mostre que esses sinais nem sempre significam que você vai sumir.</li>
+                </ul>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Seu pet sofre em silêncio?</h3>
+                    <p className="text-lg mb-6">
+                        Muitas vezes achamos que está tudo bem, mas o pet passa o dia em sofrimento. Identificar os sinais precoces é vital.
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Avalie o bem-estar emocional do seu pet agora
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "rotina-alimentacao": {
+        title: "Quantas vezes por dia devo alimentar meu cachorro? Guia por idade e porte",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    O pote está cheio, o cachorro come tudo em 30 segundos e te olha com aquela cara de "tem mais?". A dúvida é universal: será que estou dando comida de menos? Ou de mais? A alimentação é o pilar da saúde, e a frequência é tão importante quanto a qualidade.
+                </p>
+                <p>
+                    Deixar comida à vontade (ad libitum) é um erro grave que leva à obesidade e tédio. Cães precisam de rotina. O sistema digestivo deles agradece, e o comportamento também.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">1. Filhotes (2 a 6 meses): A Fase do Crescimento</h2>
+                <p>
+                    Filhotes são máquinas de queimar energia e construir tecidos. Eles têm estômagos pequenos, mas necessidades calóricas gigantes.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Frequência:</strong> 3 a 4 vezes ao dia.</li>
+                    <li><strong>Por que?</strong> Evita hipoglicemia (queda de açúcar) e não sobrecarrega o estômago, prevenindo vômitos.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">2. Adolescentes (6 a 12 meses)</h2>
+                <p>
+                    O crescimento desacelera. É hora de começar a criar a rotina de adulto.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Frequência:</strong> 2 a 3 vezes ao dia.</li>
+                    <li><strong>Dica:</strong> É nessa fase que muitos cães começam a ficar seletivos. Não ceda! Estabeleça horários. Se não comeu em 15 min, retire o pote.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">3. Adultos (1 a 7 anos)</h2>
+                <p>
+                    A manutenção. Aqui o objetivo é manter o peso ideal e a energia constante.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Frequência:</strong> 2 vezes ao dia (manhã e noite).</li>
+                    <li><strong>Por que não 1 vez?</strong> Comer um grande volume de uma só vez aumenta o risco de Torção Gástrica (especialmente em cães grandes), uma emergência fatal. Além disso, passar 24h em jejum pode causar vômitos de bile.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">4. Idosos (7+ anos)</h2>
+                <p>
+                    O metabolismo fica lento, a digestão mais difícil.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Frequência:</strong> 2 a 3 vezes ao dia (porções menores).</li>
+                    <li><strong>Atenção:</strong> Cães idosos podem precisar de rações mais palatáveis ou levemente umedecidas.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">A Regra de Ouro: Quantidade</h2>
+                <p>
+                    Siga a tabela da embalagem da ração, mas use-a como <strong>guia</strong>, não lei. Se seu cão está engordando (você não sente as costelas dele ao tocar), reduza 10%. Se está muito magro, aumente. E lembre-se: petiscos contam calorias!
+                </p>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Você está nutrindo ou apenas alimentando?</h3>
+                    <p className="text-lg mb-6">
+                        A nutrição vai muito além de encher o pote. Envolve escolha do alimento, manejo e observação. Quer saber se você é um expert em cuidados?
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Faça o Petscore e descubra seu nível
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "linguagem-amor": {
+        title: "Como o seu pet mostra amor? 10 formas carinhosas que talvez você nunca percebeu",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Nós humanos dizemos "eu te amo", damos flores e chocolates. Os cães? Bem, eles trazem um brinquedo babado, roubam sua meia ou encostam o bumbum na sua perna. A linguagem do amor canina é sutil, física e absolutamente encantadora.
+                </p>
+                <p>
+                    Muitas vezes, esperamos demonstrações humanas de afeto e perdemos os pequenos gestos diários de devoção que eles nos oferecem. Prepare-se para se derreter com essa lista.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">1. Encostar em você (O "Lean")</h2>
+                <p>
+                    Quando seu cachorro vem e apoia o peso do corpo dele contra sua perna, ele não está só descansando. É um abraço canino. Ele está dizendo: "Eu confio em você, você é meu pilar".
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">2. Trazer o brinquedo favorito</h2>
+                <p>
+                    Não é (só) porque ele quer brincar. Aquele brinquedo é a posse mais valiosa dele. Ao trazê-lo para você, ele está compartilhando seu tesouro. É uma oferta de paz e amor.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">3. Roubar suas roupas usadas</h2>
+                <p>
+                    Você chega e ele está dormindo em cima da sua camiseta suja ou com sua meia na boca. Nojento? Não, amoroso. Ele quer sentir o seu cheiro. O seu cheiro é o perfume favorito dele e traz segurança.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">4. Checar você pela casa</h2>
+                <p>
+                    Ele está na sala, você vai para o quarto. Dois minutos depois, ele aparece na porta, te olha e volta para a sala. Ele está fazendo a "ronda". Ele só queria garantir que você está bem e seguro.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">5. Lamber seu rosto</h2>
+                <p>
+                    É o beijo canino clássico, herdado dos lobos (filhotes lambem a boca da mãe). É um sinal de submissão, respeito e afeto.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">6. Bocejar quando você boceja</h2>
+                <p>
+                    Estudos mostram que o bocejo contagioso em cães é um sinal de empatia. Eles estão sintonizados com você emocionalmente.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">7. Levantar as sobrancelhas</h2>
+                <p>
+                    Cientistas descobriram que cães movem mais a sobrancelha esquerda quando veem seus donos, em comparação com estranhos. É uma micro-expressão de reconhecimento e alegria.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">8. Dormir no seu quarto</h2>
+                <p>
+                    Mesmo que não seja na cama. O fato de ele escolher dormir no mesmo ambiente que você mostra que você é a fonte de segurança dele durante o momento mais vulnerável (o sono).
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">9. Sorrir</h2>
+                <p>
+                    Sim, cães sorriem! Boca relaxada, levemente aberta, língua solta. É a cara da felicidade ao te ver.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">10. Deixar você tocar a cabeça dele</h2>
+                <p>
+                    Para muitos animais, uma mão vindo por cima da cabeça é ameaçador. Se ele fecha os olhos e curte seu carinho na cabeça, é confiança total.
+                </p>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">O amor é uma via de mão dupla</h3>
+                    <p className="text-lg mb-6">
+                        Ele te dá todos esses sinais. E você? Está retribuindo da forma que ele entende e precisa?
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Descubra se você é o melhor amigo do seu cão
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "enriquecimento-ambiental": {
+        title: "Seu pet está entediado? 8 brincadeiras baratas que melhoram o humor e a saúde",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Um cachorro entediado é um "arquiteto do caos". Ele vai roer o pé da mesa, cavar o sofá ou latir para o vento. E a culpa não é dele! Cães são animais inteligentes que precisam de "trabalho". Na natureza, eles passariam 80% do tempo caçando e explorando. Em casa, eles ganham comida no pote e dormem.
+                </p>
+                <p>
+                    A solução mágica chama-se <strong>Enriquecimento Ambiental</strong>. E a boa notícia: você não precisa gastar fortunas em pet shops. As melhores brincadeiras você faz com o que tem em casa.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">1. Caça ao Tesouro (Olfato)</h2>
+                <p>
+                    O olfato é o superpoder do cão. Cansar o nariz cansa mais que correr!
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Como fazer:</strong> Esconda grãos de ração ou petiscos pela casa (atrás da porta, embaixo do tapete, num canto do sofá). Dê o comando "busca!".</li>
+                    <li><strong>Benefício:</strong> Estimulação mental intensa e autonomia.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">2. A Garrafa Pet Mágica</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Como fazer:</strong> Pegue uma garrafa pet vazia, limpa e sem o anel da tampa. Faça alguns furos na lateral (que caibam a ração). Coloque a ração dentro e tampe.</li>
+                    <li><strong>O Desafio:</strong> O cão precisa rolar e bater na garrafa para a comida cair.</li>
+                    <li><strong>Benefício:</strong> Resolve o problema de cães que comem rápido demais e gasta energia.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">3. Caixa de Papelão Surpresa</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Como fazer:</strong> Pegue uma caixa de sapato ou de entrega. Encha com bolinhas de papel amassado, rolos de papel higiênico vazios e jogue petiscos no meio dessa bagunça.</li>
+                    <li><strong>O Desafio:</strong> Ele tem que "fuçar" para achar a comida.</li>
+                    <li><strong>Benefício:</strong> Simula o ato de vasculhar a natureza.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">4. Cubos de Gelo Recheados</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Como fazer:</strong> Congele pedaços de fruta (maçã, banana) ou caldo de carne natural (sem tempero!) em formas de gelo.</li>
+                    <li><strong>Benefício:</strong> Ótimo para dias quentes e para aliviar coceira na gengiva de filhotes.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">5. Toalha Enrolada</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Como fazer:</strong> Estique uma toalha velha. Espalhe ração. Enrole a toalha como um rocambole.</li>
+                    <li><strong>O Desafio:</strong> O cão precisa desenrolar com o focinho e patas para comer.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">6. Cabo de Guerra (Do jeito certo)</h2>
+                <p>
+                    Muitos acham que deixa o cão agressivo, mas é mentira. É um ótimo gasto de energia e vínculo. A regra é: se o dente encostar na sua mão, o jogo acaba. Você controla o início e o fim.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">7. Treino de Truques</h2>
+                <p>
+                    15 minutos ensinando "senta", "fica" ou "dá a pata" cansam mais que 1 hora de caminhada. O esforço cognitivo é enorme.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">8. Massagem Relaxante</h2>
+                <p>
+                    Enriquecimento também é sensorial. Uma massagem lenta nas orelhas e costas acalma cães ansiosos e fortalece o vínculo.
+                </p>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Seu cão é feliz ou apenas "existe"?</h3>
+                    <p className="text-lg mb-6">
+                        A diferença entre um cão que sobrevive e um cão que vive plenamente está nos detalhes da rotina. Você está proporcionando a melhor vida possível?
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Descubra seu nível de dedicação no Petscore
+                    </Button>
+                </div>
+            </div>
+        )
     }
 };
 
