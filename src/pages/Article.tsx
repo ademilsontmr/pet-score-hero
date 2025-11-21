@@ -466,6 +466,125 @@ const articles = {
                 </div>
             </div>
         )
+    },
+    "racas-populares-brasil": {
+        title: "As 10 Raças de Cães Mais Populares no Brasil: O Guia Definitivo",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    O Brasil é apaixonado por cães! Somos um dos países com a maior população canina do mundo. Seja em casas grandes ou apartamentos compactos, sempre há espaço para um (ou mais) companheiro de quatro patas. Mas você sabe quais são as raças que conquistaram de vez o coração dos brasileiros?
+                </p>
+                <p>
+                    Fizemos um levantamento completo das raças mais encontradas nos lares brasileiros. Do carisma único dos vira-latas à elegância dos Goldens, confira se o seu melhor amigo está na lista!
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">1. SRD (Sem Raça Definida) - O Famoso Vira-Lata</h2>
+                <p>
+                    O campeão absoluto! O vira-lata caramelo já é praticamente um símbolo nacional. Inteligentes, resistentes e cheios de personalidade, os cães sem raça definida (SRD) lideram com folga a preferência nacional.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Por que amamos:</strong> São únicos! Cada um tem uma aparência e personalidade exclusiva. Além disso, adotar um SRD é um ato de amor que salva vidas.</li>
+                    <li><strong>Curiosidade:</strong> Estudos indicam que SRDs tendem a viver mais por terem maior variabilidade genética.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">2. Shih Tzu</h2>
+                <p>
+                    O rei dos apartamentos. O Shih Tzu é extremamente popular no Brasil, especialmente nas grandes cidades.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Perfil:</strong> Dócil, afetuoso e adora colo. Não precisa de muito exercício físico, o que o torna perfeito para espaços menores.</li>
+                    <li><strong>Atenção:</strong> Seus pelos longos exigem escovação diária e tosa frequente.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">3. Yorkshire Terrier</h2>
+                <p>
+                    Pequeno no tamanho, mas gigante na personalidade. O "Yorkie" é um terrier valente e cheio de energia.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Perfil:</strong> Alerta, vivaz e muito apegado ao dono. É um excelente cão de alarme (late para avisar qualquer novidade).</li>
+                    <li><strong>Dica:</strong> Pode ser um pouco teimoso, então a socialização desde filhote é importante.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">4. Poodle</h2>
+                <p>
+                    Um clássico que nunca sai de moda. Seja o Toy, Mini ou Médio, o Poodle é sinônimo de inteligência.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Perfil:</strong> É considerada a segunda raça mais inteligente do mundo! Aprendem truques com facilidade incrível.</li>
+                    <li><strong>Vantagem:</strong> Soltam pouco pelo, sendo ótimos para pessoas alérgicas.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">5. Spitz Alemão (Lulu da Pomerânia)</h2>
+                <p>
+                    A "bolinha de pelos" que virou febre. Com sua aparência de ursinho, conquistou o Brasil rapidamente.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Perfil:</strong> Extrovertido, ativo e muito atento. Adora ser o centro das atenções.</li>
+                    <li><strong>Cuidado:</strong> Pode latir bastante se não for educado desde cedo.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">6. Bulldog Francês</h2>
+                <p>
+                    Com suas orelhas de morcego e cara amassada, o Frenchie é puro carisma.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Perfil:</strong> Palhaço, brincalhão e muito companheiro. Adora crianças e outros pets.</li>
+                    <li><strong>Saúde:</strong> Por ser braquicefálico (focinho curto), exige cuidados com o calor e respiração.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">7. Golden Retriever</h2>
+                <p>
+                    O "garoto propaganda" da família feliz. É impossível não sorrir perto de um Golden.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Perfil:</strong> Eterno filhote, gentil, paciente e ama água. É uma das raças mais dóceis do mundo.</li>
+                    <li><strong>Energia:</strong> Precisa de bastante exercício e espaço para gastar energia.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">8. Labrador Retriever</h2>
+                <p>
+                    Primo próximo do Golden, o Labrador é energia pura e apetite infinito.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Perfil:</strong> Amigável, ativo e muito guloso. Excelente cão de companhia e trabalho.</li>
+                    <li><strong>Atenção:</strong> Tendência à obesidade. Cuidado com os petiscos!</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">9. Pinscher</h2>
+                <p>
+                    O pequeno valente! Quem nunca conheceu um Pinscher que se achava um Doberman?
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Perfil:</strong> Destemido, elétrico e super protetor com seu tutor.</li>
+                    <li><strong>Mito:</strong> A fama de "bravo" muitas vezes vem da falta de limites e socialização, não da raça em si.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">10. Lhasa Apso</h2>
+                <p>
+                    Muitas vezes confundido com o Shih Tzu, o Lhasa tem uma personalidade mais independente.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Perfil:</strong> Calmo, observador e leal. Na origem (Tibet), eram cães sentinelas de templos.</li>
+                    <li><strong>Diferença:</strong> O focinho é um pouco mais longo que o do Shih Tzu e a personalidade é mais reservada com estranhos.</li>
+                </ul>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Qual é a raça do seu amor?</h3>
+                    <p className="text-lg mb-6">
+                        Não importa se é de raça ou vira-lata, grande ou pequeno. O que importa é o amor incondicional que eles nos dão todos os dias. Cada cão é um indivíduo único com suas próprias necessidades e peculiaridades.
+                    </p>
+                    <div className="bg-background p-6 rounded-xl shadow-sm border border-primary/20">
+                        <h4 className="font-bold text-foreground mb-2">Você conhece tudo sobre o seu cão?</h4>
+                        <p className="text-muted-foreground mb-4">
+                            Será que você está cuidando dele da maneira ideal para o perfil dele? Faça nosso quiz e descubra se você é o tutor que seu pet merece!
+                        </p>
+                        <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                            👉 Fazer o Quiz Agora
+                        </Button>
+                    </div>
+                </div>
+            </div>
+        )
     }
 };
 

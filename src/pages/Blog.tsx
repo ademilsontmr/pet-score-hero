@@ -34,6 +34,11 @@ const Blog = () => {
             slug: "gatos-felizes",
             title: "Gatos Felizes: O Segredo da Gatificação",
             description: "Como adaptar sua casa para satisfazer os instintos naturais do seu felino."
+        },
+        {
+            slug: "racas-populares-brasil",
+            title: "As 10 Raças de Cães Mais Populares no Brasil",
+            description: "Descubra quais são os cães favoritos dos brasileiros e veja se o seu melhor amigo está na lista!"
         }
     ];
 
