@@ -16,21 +16,28 @@ const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [totalScore, setTotalScore] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
+  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
 
-  const handleAnswer = (points: number) => {
-    const newAnswers = [...answers];
-    newAnswers[currentQuestion] = points;
-    setAnswers(newAnswers);
+  const handleAnswer = (points: number, index: number) => {
+    setSelectedAnswer(index);
 
-    const newScore = newAnswers.reduce((sum, pts) => sum + pts, 0);
-    setTotalScore(newScore);
+    setTimeout(() => {
+      const newAnswers = [...answers];
+      newAnswers[currentQuestion] = points;
+      setAnswers(newAnswers);
 
-    if (currentQuestion < QUESTIONS.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
-    } else {
-      // Quiz completed, go to partial result
-      navigate("/partial-result", { state: { score: newScore } });
-    }
+      const newScore = newAnswers.reduce((sum, pts) => sum + pts, 0);
+      setTotalScore(newScore);
+
+      setSelectedAnswer(null);
+
+      if (currentQuestion < QUESTIONS.length - 1) {
+        setCurrentQuestion(currentQuestion + 1);
+      } else {
+        // Quiz completed, go to partial result
+        navigate("/partial-result", { state: { score: newScore } });
+      }
+    }, 300);
   };
 
   const handleBack = () => {
@@ -156,9 +163,13 @@ const Quiz = () => {
             {question.options.map((option, index) => (
               <Button
                 key={index}
-                onClick={() => handleAnswer(option.points)}
+                onClick={() => handleAnswer(option.points, index)}
                 variant="outline"
-                className="w-full h-auto py-4 md:py-5 px-4 md:px-6 text-left justify-start hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 text-sm md:text-base rounded-xl leading-relaxed"
+                className={`w-full h-auto py-4 md:py-5 px-4 md:px-6 text-left justify-start transition-all duration-300 text-sm md:text-base rounded-xl leading-relaxed ${selectedAnswer === index
+                    ? 'bg-primary text-primary-foreground border-primary'
+                    : 'hover:bg-primary hover:text-primary-foreground hover:border-primary'
+                  }`}
+                disabled={selectedAnswer !== null}
               >
                 {option.text}
               </Button>
