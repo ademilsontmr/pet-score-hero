@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -16,15 +16,19 @@ const Quiz = () => {
     index: number;
   } | null>(null);
   const [isProcessingAnswer, setIsProcessingAnswer] = useState(false);
+  const [questionKey, setQuestionKey] = useState(0);
 
   useEffect(() => {
     document.title = showIntro ? "Quiz | PetScore" : `Pergunta ${currentQuestion + 1} | PetScore`;
   }, [showIntro, currentQuestion]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // Reset seleção e processamento ao trocar de pergunta
+    // useLayoutEffect garante que o reset acontece ANTES da renderização visual
     setSelectedOption(null);
     setIsProcessingAnswer(false);
+    // Incrementar questionKey força React a recriar todos os componentes
+    setQuestionKey(prev => prev + 1);
   }, [currentQuestion]);
 
   const handleStart = () => {
@@ -45,7 +49,11 @@ const Quiz = () => {
     newAnswers[currentQuestion] = points;
     setAnswers(newAnswers);
 
-    // Move to next question and reset clickedIndex
+    // Reset estado ANTES de mudar a pergunta para evitar que o estado seja mantido
+    setSelectedOption(null);
+    setIsProcessingAnswer(false);
+
+    // Move to next question
     if (currentQuestion < QUESTIONS.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
@@ -168,20 +176,26 @@ const Quiz = () => {
         </div>
 
         {/* Question Card */}
-        <Card key={`question-${currentQuestion}`} className="p-6 md:p-8 shadow-medium animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <Card key={`question-${currentQuestion}-${questionKey}`} className="p-6 md:p-8 shadow-medium animate-in fade-in slide-in-from-bottom-4 duration-500">
           <h2 className="text-lg md:text-2xl font-bold text-foreground mb-6 md:mb-8 text-center leading-tight">
             {question.question}
           </h2>
 
-          <div className="space-y-4">
+          <div className="space-y-4" key={`options-${currentQuestion}-${questionKey}`}>
             {question.options.map((option, index) => {
-              const isSelected =
-                selectedOption?.question === currentQuestion &&
-                selectedOption.index === index;
+              // Só mostra como selecionado se:
+              // 1. selectedOption não for null
+              // 2. A pergunta do selectedOption for exatamente a pergunta atual
+              // 3. O índice do selectedOption for exatamente o índice atual
+              const isSelected = Boolean(
+                selectedOption &&
+                selectedOption.question === currentQuestion &&
+                selectedOption.index === index
+              );
 
               return (
                 <Button
-                  key={`q${currentQuestion}-opt${index}`}
+                  key={`q${currentQuestion}-opt${index}-${questionKey}`}
                   onClick={() => handleAnswer(option.points, index)}
                   variant={isSelected ? "default" : "outline"}
                   disabled={isProcessingAnswer}
