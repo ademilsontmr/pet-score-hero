@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -17,8 +17,9 @@ const Quiz = () => {
     document.title = showIntro ? "Quiz | PetScore" : `Pergunta ${currentQuestion + 1} | PetScore`;
   }, [showIntro, currentQuestion]);
 
-  useEffect(() => {
-    // Reset clickedIndex quando a pergunta muda
+  useLayoutEffect(() => {
+    // Reset clickedIndex quando a pergunta muda - garante que nenhuma alternativa apareça selecionada
+    // useLayoutEffect garante que o reset acontece antes da renderização visual
     setClickedIndex(null);
   }, [currentQuestion]);
 
@@ -37,7 +38,10 @@ const Quiz = () => {
     newAnswers[currentQuestion] = points;
     setAnswers(newAnswers);
 
+    // Move to next question and reset clickedIndex
     if (currentQuestion < QUESTIONS.length - 1) {
+      // Reset clickedIndex immediately before changing question
+      setClickedIndex(null);
       setCurrentQuestion(currentQuestion + 1);
     } else {
       const newScore = newAnswers.reduce((sum, pts) => sum + pts, 0);
@@ -165,18 +169,26 @@ const Quiz = () => {
           </h2>
 
           <div className="space-y-4">
-            {question.options.map((option, index) => (
-              <Button
-                key={`q${currentQuestion}-opt${index}`}
-                onClick={() => handleAnswer(option.points, index)}
-                variant="outline"
-                disabled={clickedIndex !== null}
-                style={{ WebkitTapHighlightColor: 'transparent' }}
-                className="w-full h-auto py-4 md:py-5 px-4 md:px-6 text-left justify-start hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 text-sm md:text-base rounded-xl leading-relaxed active:bg-transparent focus:bg-transparent disabled:opacity-50"
-              >
-                {option.text}
-              </Button>
-            ))}
+            {question.options.map((option, index) => {
+              const isSelected = clickedIndex === index;
+              
+              return (
+                <Button
+                  key={`q${currentQuestion}-opt${index}`}
+                  onClick={() => handleAnswer(option.points, index)}
+                  variant={isSelected ? "default" : "outline"}
+                  disabled={clickedIndex !== null}
+                  style={{ WebkitTapHighlightColor: 'transparent' }}
+                  className={`w-full h-auto py-4 md:py-5 px-4 md:px-6 text-left justify-start transition-all duration-300 text-sm md:text-base rounded-xl leading-relaxed ${
+                    isSelected
+                      ? "bg-primary text-primary-foreground border-primary"
+                      : "hover:bg-primary hover:text-primary-foreground hover:border-primary active:bg-transparent focus:bg-transparent"
+                  } ${clickedIndex !== null && !isSelected ? "opacity-50" : ""}`}
+                >
+                  {option.text}
+                </Button>
+              );
+            })}
           </div>
         </Card>
 
