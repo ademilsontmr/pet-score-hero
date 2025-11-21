@@ -224,7 +224,7 @@ const Quiz = () => {
             <div className="mt-6">
               <Button
                 onClick={handleNext}
-                className="w-full text-base md:text-lg py-6 md:py-7 rounded-2xl bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all"
+                className="w-full text-base md:text-lg py-6 md:py-7 rounded-2xl bg-green-600 hover:bg-green-700 text-white shadow-lg hover:shadow-xl transition-all"
               >
                 {currentQuestion < QUESTIONS.length - 1 ? "Próxima" : "Finalizar"}
               </Button>
