@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useEffect, useRef } from "react";
 import { getQuizResult } from "@/types/quiz";
-import { Share2 } from "lucide-react";
+import { Share2, Printer } from "lucide-react";
 import { toast } from "sonner";
 
 const CompleteResult = () => {
@@ -299,6 +299,64 @@ const CompleteResult = () => {
       }
     });
   };
+
+  const handleShare = async () => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    canvas.toBlob(async (blob) => {
+      if (!blob) return;
+
+      const file = new File([blob], `pet-score-${score}.png`, { type: "image/png" });
+
+      if (navigator.share && navigator.canShare({ files: [file] })) {
+        try {
+          await navigator.share({
+            files: [file],
+            title: 'Meu PetScore 🐾',
+            text: `Meu pet ${petName} fez ${score} pontos no PetScore! Confira o seu também em petscore.com.br`,
+          });
+          toast.success("Compartilhado com sucesso!");
+        } catch (error) {
+          if ((error as any).name !== 'AbortError') {
+            console.error("Error sharing:", error);
+            handleDownload(); // Fallback
+          }
+        }
+      } else {
+        handleDownload();
+      }
+    });
+  };
+
+  const handlePrint = () => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const dataUrl = canvas.toDataURL();
+    const printWindow = window.open('', '_blank');
+    if (printWindow) {
+      printWindow.document.write(`
+          <html>
+            <head>
+              <title>PetScore - ${petName}</title>
+              <style>
+                body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f0f0f0; }
+                img { max-width: 100%; max-height: 100vh; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+                @media print { body { background: white; } img { box-shadow: none; } }
+              </style>
+            </head>
+            <body>
+              <img src="${dataUrl}" onload="setTimeout(() => { window.print(); window.close(); }, 500);" />
+            </body>
+          </html>
+        `);
+      printWindow.document.close();
+    } else {
+      toast.error("Permita popups para imprimir o certificado");
+    }
+  };
+
 
   const handlePrintPlanner = () => {
     window.print();
@@ -699,14 +757,26 @@ const CompleteResult = () => {
               style={{ maxHeight: "500px" }}
             />
 
-            <Button
-              size="lg"
-              onClick={handleDownload}
-              className="text-lg px-8 py-6 h-auto shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
-            >
-              <Share2 className="mr-2 w-5 h-5" />
-              Baixar e Compartilhar
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={handlePrint}
+                className="text-lg px-8 py-6 h-auto shadow-md hover:shadow-lg transition-all border-2 border-primary/20 hover:bg-primary/5"
+              >
+                <Printer className="mr-2 w-5 h-5" />
+                Imprimir
+              </Button>
+
+              <Button
+                size="lg"
+                onClick={handleShare}
+                className="text-lg px-8 py-6 h-auto shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all bg-primary hover:bg-primary/90"
+              >
+                <Share2 className="mr-2 w-5 h-5" />
+                Compartilhar
+              </Button>
+            </div>
 
             <p className="text-center text-sm text-muted-foreground">
               Marque @petscoreoficial para aparecer em nossos stories! 🐾
