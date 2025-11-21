@@ -42,14 +42,21 @@ const Quiz = () => {
   const handleAnswer = (points: number, index: number) => {
     if (isProcessingAnswer) return; // Prevent multiple clicks
 
+    // Apenas seleciona a alternativa, não avança automaticamente
     setSelectedOption({ question: currentQuestion, index });
-    setIsProcessingAnswer(true);
-
+    
+    // Salva a resposta imediatamente
     const newAnswers = [...answers];
     newAnswers[currentQuestion] = points;
     setAnswers(newAnswers);
+  };
 
-    // Reset estado ANTES de mudar a pergunta para evitar que o estado seja mantido
+  const handleNext = () => {
+    if (!selectedOption || selectedOption.question !== currentQuestion) return;
+    
+    setIsProcessingAnswer(true);
+
+    // Reset estado ANTES de mudar a pergunta
     setSelectedOption(null);
     setIsProcessingAnswer(false);
 
@@ -57,7 +64,7 @@ const Quiz = () => {
     if (currentQuestion < QUESTIONS.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
-      const newScore = newAnswers.reduce((sum, pts) => sum + pts, 0);
+      const newScore = answers.reduce((sum, pts) => sum + pts, 0);
       navigate("/partial-result", { state: { score: newScore } });
     }
   };
@@ -204,13 +211,25 @@ const Quiz = () => {
                     isSelected
                       ? "bg-primary text-primary-foreground border-primary"
                       : "hover:bg-primary hover:text-primary-foreground hover:border-primary active:bg-transparent focus:bg-transparent"
-                  } ${isProcessingAnswer && !isSelected ? "opacity-50" : ""}`}
+                  }`}
                 >
                   {option.text}
                 </Button>
               );
             })}
           </div>
+
+          {/* Next Button */}
+          {selectedOption && selectedOption.question === currentQuestion && (
+            <div className="mt-6">
+              <Button
+                onClick={handleNext}
+                className="w-full text-base md:text-lg py-6 md:py-7 rounded-2xl bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all"
+              >
+                {currentQuestion < QUESTIONS.length - 1 ? "Próxima" : "Finalizar"}
+              </Button>
+            </div>
+          )}
         </Card>
 
         {/* Back Button */}
