@@ -21,6 +21,8 @@ const PartialResult = () => {
   const [petImage, setPetImage] = useState<string | null>(null);
   const [petName, setPetName] = useState("");
   const [petGender, setPetGender] = useState<"male" | "female" | "">("");
+  const [tutorName, setTutorName] = useState("");
+  const [tutorPhone, setTutorPhone] = useState("");
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -200,9 +202,66 @@ const PartialResult = () => {
               </p>
             </div>
 
+            {/* Lead Capture Fields */}
+            <div className="space-y-4 mb-8 text-left max-w-md mx-auto">
+              <div>
+                <Label htmlFor="tutorName" className="text-purple-900 font-semibold mb-2 block">
+                  Seu Nome
+                </Label>
+                <Input
+                  id="tutorName"
+                  placeholder="Como você se chama?"
+                  value={tutorName}
+                  onChange={(e) => setTutorName(e.target.value)}
+                  className="bg-white border-purple-200 focus:border-purple-500 h-12"
+                />
+              </div>
+              <div>
+                <Label htmlFor="tutorPhone" className="text-purple-900 font-semibold mb-2 block">
+                  Seu WhatsApp
+                </Label>
+                <Input
+                  id="tutorPhone"
+                  placeholder="11 999999999"
+                  value={tutorPhone}
+                  onChange={(e) => {
+                    let value = e.target.value.replace(/\D/g, "");
+                    if (value.length > 11) value = value.slice(0, 11);
+                    if (value.length > 2) {
+                      value = `${value.slice(0, 2)} ${value.slice(2)}`;
+                    }
+                    setTutorPhone(value);
+                  }}
+                  maxLength={12}
+                  className="bg-white border-purple-200 focus:border-purple-500 h-12"
+                />
+              </div>
+            </div>
+
             <Button
               size="lg"
-              onClick={() => navigate("/payment", { state: { score, petImage, petName, petGender } })}
+              onClick={async () => {
+                // Save lead data silently (fire and forget to avoid blocking UX)
+                if (tutorName || tutorPhone) {
+                  try {
+                    fetch("/api/save-lead", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({
+                        name: tutorName,
+                        phone: tutorPhone,
+                        petName,
+                        petGender,
+                        score
+                      })
+                    });
+                  } catch (e) {
+                    console.error("Lead save error", e);
+                  }
+                }
+
+                navigate("/payment", { state: { score, petImage, petName, petGender, tutorName, tutorPhone } });
+              }}
               className="text-xl px-12 py-7 h-auto shadow-lg hover:shadow-xl transition-all duration-300 bg-purple-600 hover:bg-purple-700"
             >
               🧡 Ver meu Score Completo
