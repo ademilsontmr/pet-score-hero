@@ -23,8 +23,35 @@ const Payment = () => {
   }, [location.state, navigate]);
 
   const handlePayment = () => {
-    // Simulate payment - in real app, integrate payment gateway
-    navigate("/complete-result", { state: { score, paid: true, petImage, petName, petGender } });
+    // 1. Gerar UUID (rid)
+    const rid = crypto.randomUUID();
+
+    // 2. Salvar no localStorage
+    const paymentData = {
+      score,
+      petImage,
+      petName,
+      petGender,
+      paid: false, // Será atualizado após retorno
+      timestamp: new Date().getTime()
+    };
+    localStorage.setItem(`resultado_${rid}`, JSON.stringify(paymentData));
+
+    // 3. Redirecionar para InfinitePay com redirect_url apontando para nosso Worker
+    // O Worker validará o pagamento e redirecionará para o resultado final
+
+    const workerUrl = `${window.location.origin}/api/validate-payment?rid=${rid}`;
+
+    // Codifica a URL de redirecionamento para passar como parâmetro
+    const encodedRedirectUrl = encodeURIComponent(workerUrl);
+
+    // Link base da InfinitePay
+    const infinitePayUrl = "https://loja.infinitepay.io/bomqi/vhq1376-petscore";
+
+    // Adiciona metadata e redirect_url
+    // Nota: A estrutura de query params da InfinitePay pode variar. 
+    // Assumindo suporte padrão a metadata e redirect_url.
+    window.location.href = `${infinitePayUrl}?metadata[rid]=${rid}&redirect_url=${encodedRedirectUrl}`;
   };
 
   return (
@@ -124,6 +151,10 @@ const Payment = () => {
             >
               Desbloquear Resultado Completo
             </Button>
+
+            <p className="text-xs text-muted-foreground/80 italic">
+              Você será redirecionado para o pagamento seguro com a InfinitePay
+            </p>
 
             <p className="text-xs text-gray-500">
               Ao continuar, você concorda com nossos{" "}

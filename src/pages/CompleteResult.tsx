@@ -10,17 +10,55 @@ const CompleteResult = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const score = location.state?.score || 0;
-  const paid = location.state?.paid || false;
-  const petImage = location.state?.petImage || null;
-  const petName = location.state?.petName || "";
+
+  // Recupera dados baseados na URL (rid) ou state
+  const getInitialState = () => {
+    // 1. Tenta pegar da URL (fluxo de retorno do pagamento)
+    const searchParams = new URLSearchParams(location.search);
+    const rid = searchParams.get("rid");
+
+    if (rid) {
+      const savedData = localStorage.getItem(`resultado_${rid}`);
+      if (savedData) {
+        const parsed = JSON.parse(savedData);
+        // Marca como pago já que passou pela validação do Worker
+        return { ...parsed, paid: true };
+      }
+    }
+
+    // 2. Fallback para state (fluxo antigo ou direto)
+    if (location.state?.score) {
+      return {
+        score: location.state.score,
+        paid: location.state.paid,
+        petImage: location.state.petImage,
+        petName: location.state.petName,
+        petGender: location.state.petGender
+      };
+    }
+
+    // 3. Fallback legado (apenas para compatibilidade durante migração)
+    const legacyData = localStorage.getItem('petscore_payment_data');
+    if (legacyData) {
+      return JSON.parse(legacyData);
+    }
+
+    return {};
+  };
+
+  const state = getInitialState();
+  const score = state.score || 0;
+  const paid = state.paid || false;
+  const petImage = state.petImage || null;
+  const petName = state.petName || "";
 
   useEffect(() => {
     document.title = "Seu Resultado Completo | PetScore";
-    if (!paid || !location.state?.score) {
+    // Se não tiver score ou não estiver pago, manda de volta
+    if (!score) {
       navigate("/");
     }
-  }, [paid, location.state, navigate]);
+  }, [score, navigate]);
 
   const result = getQuizResult(score);
 

@@ -16,6 +16,8 @@ import Blog from "./pages/Blog";
 import Article from "./pages/Article";
 import NotFound from "./pages/NotFound";
 
+import PagamentoPendente from "./pages/PagamentoPendente";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -30,6 +32,7 @@ const App = () => (
           <Route path="/partial-result" element={<PartialResult />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/complete-result" element={<CompleteResult />} />
+          <Route path="/pagamento-pendente" element={<PagamentoPendente />} />
 
           {/* Footer Pages */}
           <Route path="/privacidade" element={<Privacidade />} />

@@ -1,0 +1,8 @@
+name = "meu-worker-infinitepay"
+main = "src/worker.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+INFINITE_HANDLE = "vhq1376-petscore"
+INFINITE_VALIDATE_URL = "https://api.infinitepay.io/v1/transactions" 
+# INFINITE_API_KEY should be set as a secret, not in plain text here
