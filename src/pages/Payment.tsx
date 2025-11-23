@@ -36,6 +36,7 @@ const Payment = () => {
       timestamp: new Date().getTime()
     };
     localStorage.setItem(`resultado_${rid}`, JSON.stringify(paymentData));
+    localStorage.setItem('latest_pending_rid', rid); // Backup para recuperação sem parâmetros
 
     // 3. Redirecionar para InfinitePay com redirect_url apontando para nosso Worker
     // O Worker validará o pagamento e redirecionará para o resultado final
