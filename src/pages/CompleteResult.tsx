@@ -54,11 +54,32 @@ const CompleteResult = () => {
 
   useEffect(() => {
     document.title = "Seu Resultado Completo | PetScore";
-    // Se não tiver score ou não estiver pago, manda de volta
-    if (!score) {
-      navigate("/");
-    }
-  }, [score, navigate]);
+  }, []);
+
+  if (!score) {
+    return (
+      <div className="min-h-screen bg-gradient-warm py-12 px-4 flex items-center justify-center">
+        <Card className="max-w-md w-full p-8 text-center shadow-medium">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-6">
+            <span className="text-3xl">⚠️</span>
+          </div>
+          <h1 className="text-2xl font-bold text-foreground mb-4">
+            Resultado não encontrado
+          </h1>
+          <p className="text-muted-foreground mb-8">
+            Não conseguimos recuperar o resultado do seu quiz.
+            <br />
+            <span className="text-xs font-mono bg-gray-100 p-1 rounded mt-2 block">
+              RID: {new URLSearchParams(location.search).get("rid") || "N/A"}
+            </span>
+          </p>
+          <Button onClick={() => navigate("/")} variant="outline">
+            Voltar ao Início
+          </Button>
+        </Card>
+      </div>
+    );
+  }
 
   const result = getQuizResult(score);
 
