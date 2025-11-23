@@ -40,7 +40,12 @@ const Payment = () => {
     // 3. Redirecionar para InfinitePay com redirect_url apontando para nosso Worker
     // O Worker validará o pagamento e redirecionará para o resultado final
 
-    const workerUrl = `${window.location.origin}/api/validate-payment?rid=${rid}`;
+    // Usa o domínio atual para o callback
+    const callbackBase = window.location.hostname.includes("localhost")
+      ? window.location.origin
+      : "https://petscore.com.br"; // Força domínio de produção se não for localhost
+
+    const workerUrl = `${callbackBase}/api/validate-payment?rid=${rid}`;
 
     // Codifica a URL de redirecionamento para passar como parâmetro
     const encodedRedirectUrl = encodeURIComponent(workerUrl);
@@ -49,8 +54,7 @@ const Payment = () => {
     const infinitePayUrl = "https://loja.infinitepay.io/bomqi/vhq1376-petscore";
 
     // Adiciona metadata e redirect_url
-    // Nota: A estrutura de query params da InfinitePay pode variar. 
-    // Assumindo suporte padrão a metadata e redirect_url.
+    // Importante: Passamos rid tanto no metadata quanto na query string do redirect_url para garantir
     window.location.href = `${infinitePayUrl}?metadata[rid]=${rid}&redirect_url=${encodedRedirectUrl}`;
   };
 
