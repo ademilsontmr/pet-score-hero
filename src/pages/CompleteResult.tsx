@@ -11,28 +11,8 @@ const CompleteResult = () => {
   const navigate = useNavigate();
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  // Recupera dados baseados na URL (rid) ou state
+  // Try to get state from location first, then localStorage
   const getInitialState = () => {
-    // 1. Tenta pegar da URL (fluxo de retorno do pagamento)
-    const searchParams = new URLSearchParams(location.search);
-    let rid = searchParams.get("rid");
-
-    // Fallback: Se não tem RID na URL, tenta recuperar o último pendente do localStorage
-    if (!rid) {
-      rid = localStorage.getItem('latest_pending_rid');
-    }
-
-    if (rid) {
-      const savedData = localStorage.getItem(`resultado_${rid}`);
-      if (savedData) {
-        const parsed = JSON.parse(savedData);
-        // Marca como pago já que passou pela validação do Worker OU é uma recuperação de sessão
-        // Nota: Em produção real, deveríamos revalidar o status se recuperado do storage sem passar pelo worker
-        return { ...parsed, paid: true };
-      }
-    }
-
-    // 2. Fallback para state (fluxo antigo ou direto)
     if (location.state?.score) {
       return {
         score: location.state.score,
@@ -43,7 +23,7 @@ const CompleteResult = () => {
       };
     }
 
-    // 3. Fallback legado (apenas para compatibilidade durante migração)
+    // Fallback legado (apenas para compatibilidade durante migração)
     const legacyData = localStorage.getItem('petscore_payment_data');
     if (legacyData) {
       return JSON.parse(legacyData);
@@ -60,7 +40,10 @@ const CompleteResult = () => {
 
   useEffect(() => {
     document.title = "Seu Resultado Completo | PetScore";
-  }, []);
+    if (!paid || !location.state?.score) {
+      navigate("/");
+    }
+  }, [paid, location.state, navigate]);
 
   if (!score) {
     return (
