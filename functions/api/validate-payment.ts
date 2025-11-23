@@ -47,11 +47,19 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
         }
     }
 
-    // 3. Redirecionamento
-    // Força o domínio de produção se possível, ou usa a origem da requisição
-    // Se estiver rodando em *.pages.dev, usa a origem. Se for custom domain, usa ele.
-    const targetHost = "https://petscore.com.br"; // Preferência pelo domínio final
-    const redirectBase = url.hostname.includes("localhost") ? url.origin : targetHost;
+    // 3. Redirecionar
+    // Usa a origem passada por parâmetro (para manter o usuário no mesmo domínio/subdomínio)
+    // Se não houver, usa a lógica de fallback anterior
+    const originParam = url.searchParams.get("origin");
+    const targetHost = "https://petscore.com.br";
+
+    let redirectBase = targetHost;
+
+    if (originParam) {
+        redirectBase = decodeURIComponent(originParam);
+    } else if (url.hostname.includes("localhost")) {
+        redirectBase = url.origin;
+    }
 
     if (isApproved) {
         return Response.redirect(`${redirectBase}/complete-result?rid=${rid}`, 302);

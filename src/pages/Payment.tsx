@@ -44,9 +44,11 @@ const Payment = () => {
     // Usa o domínio atual para o callback
     const callbackBase = window.location.hostname.includes("localhost")
       ? window.location.origin
-      : "https://petscore.com.br"; // Força domínio de produção se não for localhost
+      : "https://petscore.com.br"; // Fallback se não conseguir determinar
 
-    const workerUrl = `${callbackBase}/api/validate-payment?rid=${rid}`;
+    // Passa a origem atual para o worker saber para onde voltar
+    const currentOrigin = window.location.origin;
+    const workerUrl = `${callbackBase}/api/validate-payment?rid=${rid}&origin=${encodeURIComponent(currentOrigin)}`;
 
     // Codifica a URL de redirecionamento para passar como parâmetro
     const encodedRedirectUrl = encodeURIComponent(workerUrl);
