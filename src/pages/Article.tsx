@@ -6,6 +6,299 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const articles = {
+    "custo-cachorro-2025": {
+        title: "Quanto Custa Ter um Cachorro em 2025? Guia Completo de Despesas",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Antes de adotar ou comprar um cachorro, você precisa olhar para a planilha. O Brasil viveu reajustes importantes em ração, serviços veterinários e itens de higiene nos últimos dois anos, e muitos tutores subestimam o investimento real. Como veterinário e consultor de petshop, montei um raio X atualizado para 2025 com todos os custos fixos e variáveis de um cão saudável.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-4">1. Custos Fixos Mensais (2025)</h2>
+                <div className="grid md:grid-cols-3 gap-4">
+                    <div className="border border-border/60 rounded-2xl p-4 bg-card shadow-sm">
+                        <h3 className="text-xl font-semibold text-primary mb-2">Pequeno Porte</h3>
+                        <p className="text-muted-foreground text-sm">R$ 280 a R$ 420/mês</p>
+                    </div>
+                    <div className="border border-border/60 rounded-2xl p-4 bg-card shadow-sm">
+                        <h3 className="text-xl font-semibold text-primary mb-2">Médio Porte</h3>
+                        <p className="text-muted-foreground text-sm">R$ 420 a R$ 650/mês</p>
+                    </div>
+                    <div className="border border-border/60 rounded-2xl p-4 bg-card shadow-sm">
+                        <h3 className="text-xl font-semibold text-primary mb-2">Grande Porte</h3>
+                        <p className="text-muted-foreground text-sm">R$ 650 a R$ 1.050/mês</p>
+                    </div>
+                </div>
+                <p>O cálculo inclui ração Super Premium, vermífugo, antipulgas, banho/tosa, brinquedos de reposição e uma reserva veterinária.</p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-4">2. Despesas Anuais Obrigatórias</h2>
+                <ul className="list-disc pl-6 space-y-3">
+                    <li><strong>Vacinas (V8 + Raiva + Giárdia):</strong> R$ 350 a R$ 600 dependendo da clínica.</li>
+                    <li><strong>Check-up preventivo completo:</strong> Hemograma, bioquímicos e ultrassom custam entre R$ 800 e R$ 1.500.</li>
+                    <li><strong>Plano de emergência:</strong> Reserve pelo menos R$ 1.000/ano para imprevistos (cirurgias simples já passam desse valor).</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-4">3. Como Reduzir Sem Comprometer</h2>
+                <h3 className="text-2xl font-semibold text-foreground">✔️ Assinaturas inteligentes</h3>
+                <p>Petshops e marketplaces oferecem até 15% de desconto para entregas recorrentes de ração e tapetes higiênicos. Negocie pacotes.</p>
+                <h3 className="text-2xl font-semibold text-foreground">✔️ Fundo pet</h3>
+                <p>Separe um PIX automático assim que receber o salário. R$ 100 por mês já formam R$ 1.200 ao ano para urgências.</p>
+                <h3 className="text-2xl font-semibold text-foreground">✔️ Preventivo é mais barato</h3>
+                <p>Um ultrassom custa menos que uma cirurgia de emergência. Exames semestrais evitam gastos gigantescos.</p>
+
+                <div className="bg-primary/5 border border-primary/20 p-6 rounded-2xl">
+                    <h3 className="text-2xl font-bold text-primary mb-3">Planilha pronta para download</h3>
+                    <p className="text-muted-foreground">Baixe nossa planilha gratuita de custos e descubra se seu orçamento comporta um novo integrante.</p>
+                    <Button className="mt-4" onClick={() => window.location.href = "/quiz"}>
+                        Calcular meu orçamento pet
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "sinais-dor-cachorro": {
+        title: "7 Sinais de Dor Silenciosa no Seu Cachorro (e Como Agir Agora)",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Cães são especialistas em esconder dor. É instinto de sobrevivência: na natureza, demonstrar fraqueza pode ser fatal. Por isso, muitos tutores só percebem que algo está errado quando a dor já está avançada. Veja como identificar os sinais mais sutis e quando correr para o veterinário.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary">1. Mudança no ritmo de passeio</h2>
+                <p>Se ele começa a reduzir o passo, senta no meio do trajeto ou se recusa a subir escadas, há grande chance de dor articular.</p>
+
+                <h2 className="text-3xl font-bold text-primary">2. Lambidas insistentes</h2>
+                <p>Lamber sempre a mesma pata ou articulação é sinal de desconforto local. Pode indicar artrose, dor neuropática ou até ruptura de ligamento.</p>
+
+                <h2 className="text-3xl font-bold text-primary">3. Mudança de humor</h2>
+                <p>Um cão dócil pode rosnar quando você toca em uma região dolorida. Irritabilidade repentina merece investigação.</p>
+
+                <h3 className="text-2xl font-semibold text-foreground">Checklist rápido</h3>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li>Ofegar sem exercício?</li>
+                    <li>Ficar muito tempo deitado antes de levantar?</li>
+                    <li>Olhar para o tutor pedindo ajuda durante brincadeiras?</li>
+                </ul>
+
+                <div className="bg-orange-50 border border-orange-200 rounded-2xl p-6">
+                    <h3 className="text-2xl font-bold text-orange-700 mb-3">Quando procurar o veterinário imediatamente?</h3>
+                    <p className="text-muted-foreground">Se a dor vier acompanhada de vômitos, tremores, gemidos constantes ou dificuldade para urinar/defecar, vá ao pronto-atendimento. Analgésicos humanos são proibidos sem prescrição.</p>
+                </div>
+            </div>
+        )
+    },
+    "plantas-toxicas-pet": {
+        title: "Plantas Tóxicas para Cães e Gatos: 20 Vilãs que Estão na Sua Casa",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    O paisagismo indoor ganhou força, mas muitas plantas decorativas são perigosas para os pets. Eles mordiscam folhas por curiosidade ou para aliviar náuseas. Listei as espécies mais comuns nos lares brasileiros e os sintomas típicos de intoxicação.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary">Top 10 plantas proibidas</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Costela-de-adão:</strong> causa edema de língua e dificuldade para respirar.</li>
+                    <li><strong>Comigo-ninguém-pode:</strong> altamente irritante; provoca salivação intensa.</li>
+                    <li><strong>Lírios:</strong> uma folha pode levar gatos à falência renal.</li>
+                    <li><strong>Azaleia, antúrio, espada-de-são-jorge, samambaia-americana, jiboia, babosa e hortênsia.</strong></li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary">Sintomas de alerta</h2>
+                <p>Vômitos, diarreia, apatia, pupilas dilatadas, tremores, gengivas pálidas e feridas na boca são comuns. Fotografe a planta, leve o pet e a imagem ao veterinário e não provoque vômito sem orientação.</p>
+
+                <h2 className="text-3xl font-bold text-primary">Alternativas seguras</h2>
+                <div className="grid md:grid-cols-2 gap-4">
+                    <div className="bg-card border p-4 rounded-xl">
+                        <h3 className="font-semibold text-primary">Para casas com gatos</h3>
+                        <p>Babosa <em>sem látex</em>, capim-limão, orquídeas, camomila e manjericão são boas opções.</p>
+                    </div>
+                    <div className="bg-card border p-4 rounded-xl">
+                        <h3 className="font-semibold text-primary">Para quintais com cães</h3>
+                        <p>Lavanda, alecrim, bromélias e cactos sem espinhos são plantas seguras e aromáticas.</p>
+                    </div>
+                </div>
+            </div>
+        )
+    },
+    "calendario-vacinas-pet": {
+        title: "Calendário de Vacinas 2025: O que Cães e Gatos Precisam Tomar",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Vacina não é só para filhote. Adultos e idosos também precisam de reforços anuais para manter a imunidade alta. Veja o calendário atualizado com base nas diretrizes do Colégio Brasileiro de Medicina Veterinária (CBMV) e organize tudo no planner do seu pet.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary">Vacinas essenciais para cães</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>V8/V10:</strong> primeiras doses aos 45 dias, reforços a cada 21 dias até completar quatro aplicações. Depois, reforço anual.</li>
+                    <li><strong>Raiva:</strong> dose única a partir dos 4 meses com reforço anual obrigatório por lei.</li>
+                    <li><strong>Giárdia e Tosse dos Canis:</strong> indicadas para cães que frequentam creches, hotéis e parques; reforço anual ou semestral dependendo do produto.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary">Vacinas essenciais para gatos</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>V3/V4/V5:</strong> protegem contra rinotraqueíte, calicivirose, panleucopenia e clamidiose. Mesma lógica de filhote (3 a 4 doses) com reforço anual.</li>
+                    <li><strong>Raiva:</strong> anual, mesmo para gatos que não saem de casa.</li>
+                    <li><strong>Leucemia Felina (FeLV):</strong> indicada para gatos positivos ou com acesso à rua.</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground">Esquema resumido</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                    <div className="bg-card border border-border/50 rounded-2xl p-4">
+                        <h4 className="font-bold text-primary mb-2">Filhotes</h4>
+                        <p>Vacinas a cada 21 dias até 16 semanas + vermífugo quinzenal + antipulgas mensal.</p>
+                    </div>
+                    <div className="bg-card border border-border/50 rounded-2xl p-4">
+                        <h4 className="font-bold text-primary mb-2">Adultos e idosos</h4>
+                        <p>Reforço anual, check-up e avaliação odontológica. Idosos com doença crônica podem precisar de calendário individualizado.</p>
+                    </div>
+                </div>
+
+                <div className="bg-primary/5 border border-primary/30 p-6 rounded-2xl">
+                    <h3 className="text-2xl font-bold text-primary mb-2">Alerta de fake news</h3>
+                    <p>Vacinas NÃO causam autismo nem “baixa imunidade”. Os efeitos colaterais mais comuns são dor local e febre baixa por 24h. Reações graves são raras e controláveis.</p>
+                </div>
+
+                <p>Coloque lembretes no celular e peça para a clínica enviar SMS antes da data. A cada surto de raiva urbana, municípios voltam a registrar casos fatais. Vacinar é um ato de responsabilidade coletiva.</p>
+            </div>
+        )
+    },
+    "kit-emergencia-pet": {
+        title: "Kit de Emergência Pet: Lista Oficial da Veterinária para Salvar Vidas",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Acidentes acontecem em segundos. Ter um kit organizado reduz o tempo de resposta e pode evitar sequelas. Guarde tudo em uma bolsa identificada e deixe acessível para toda a família.
+                </p>
+                <h2 className="text-3xl font-bold text-primary">Itens obrigatórios</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Cartão do veterinário 24h</strong> + carteira de vacinação digital.</li>
+                    <li><strong>Mordaça ou faixa elástica:</strong> animais com dor podem morder.</li>
+                    <li>Soro fisiológico, gaze estéril, ataduras crepe e esparadrapo de tecido.</li>
+                    <li>Termômetro digital, luvas descartáveis e tesoura sem ponta.</li>
+                    <li>Seringa de 10 ml (sem agulha) para lavar feridas ou administrar água.</li>
+                </ul>
+                <h2 className="text-3xl font-bold text-primary">Medicamentos permitidos</h2>
+                <p>Use apenas com orientação veterinária, mas mantenha no kit: carvão ativado, antiemético prescrito e analgésico específico para pets. Nunca ofereça dipirona, paracetamol ou ibuprofeno por conta própria.</p>
+                <h3 className="text-2xl font-semibold text-foreground">Checklist impressa</h3>
+                <p>Inclua na bolsa uma ficha com peso, alergias, doenças pré-existentes e padrão respiratório normal do seu pet. Em emergências com terceiros (pet sitter, familiares), essa ficha ganha tempo precioso.</p>
+            </div>
+        )
+    },
+    "vermifugacao-pets": {
+        title: "Vermifugação de Cães e Gatos: Quando Dar, Qual Dose e Como Monitorar",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Vermes intestinais roubam nutrientes, causam vômitos, anemia e podem infectar humanos (zoonoses). Por isso, o protocolo precisa ser levado a sério.
+                </p>
+                <h2 className="text-3xl font-bold text-primary">Calendário recomendado</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Filhotes:</strong> dose aos 15 dias de vida e repetição a cada 15 dias até 3 meses.</li>
+                    <li><strong>Adultos:</strong> a cada 3 ou 4 meses, dependendo da exposição.</li>
+                    <li><strong>Gestantes:</strong> protocolo especial com produtos seguros (consulte o veterinário).</li>
+                </ul>
+                <h3 className="text-2xl font-semibold text-foreground">Tipos de vermífugos</h3>
+                <p>Comprimidos palatáveis, suspensões líquidas e pipetas spot-on. O produto precisa cobrir nematódeos, cestódeos e protozoários. Leia a bula e pese o pet no dia da aplicação.</p>
+                <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-green-800 mb-2">Dica do vet</h3>
+                    <p>Faça exame de fezes anual, mesmo com vermifugação em dia. Assim você confirma se o protocolo está eficaz e detecta giárdia ou coccidiose silenciosa.</p>
+                </div>
+            </div>
+        )
+    },
+    "ansiedade-gatos": {
+        title: "Ansiedade em Gatos: 8 Táticas para Controlar o Estresse Felino",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Gatos parecem independentes, mas mudanças sutis já disparam respostas de estresse. Xixi fora da caixa, vômitos frequentes e lambedura excessiva são pedidos de ajuda.
+                </p>
+                <h2 className="text-3xl font-bold text-primary">Principais gatilhos</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li>Caixa de areia suja ou em local barulhento.</li>
+                    <li>Falta de rotas verticais (prateleiras, arranhadores altos).</li>
+                    <li>Chegada de novos pets ou reformas em casa.</li>
+                </ul>
+                <h2 className="text-3xl font-bold text-primary">Plano de ação</h2>
+                <h3 className="text-2xl font-semibold text-foreground">Enriquecimento diário</h3>
+                <p>Use brinquedos caça, varinhas e alimentadores lentos. Sessões de 10 minutos duas vezes ao dia reduzem comportamentos destrutivos.</p>
+                <h3 className="text-2xl font-semibold text-foreground">Feromônios e fitoterápicos</h3>
+                <p>Difusores de feromônio facial sintético (Feliway) ajudam na adaptação. Fitoterápicos à base de passiflora e valeriana podem complementar, sempre com orientação veterinária.</p>
+                <p>Caso o gato se automutile, esconda por dias ou pare de comer, marque consulta com um veterinário comportamentalista para avaliar ansiolíticos específicos.</p>
+            </div>
+        )
+    },
+    "checkup-preventivo": {
+        title: "Check-up Preventivo: Exames Essenciais por Faixa Etária",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    A medicina veterinária evoluiu e hoje tratamos pets como membros da família. Programar check-ups evita diagnósticos tardios e amplia a longevidade.
+                </p>
+                <h2 className="text-3xl font-bold text-primary">Filhotes (0-12 meses)</h2>
+                <p>Hemograma, coproparasitológico e avaliação ortopédica para raças predispostas (ex.: displasia em Labradores).</p>
+                <h2 className="text-3xl font-bold text-primary">Adultos (1-6 anos)</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li>Hemograma + perfil renal e hepático.</li>
+                    <li>Ultrassom abdominal a cada 2 anos.</li>
+                    <li>Limpeza dental preventiva anual.</li>
+                </ul>
+                <h2 className="text-3xl font-bold text-primary">Sêniores (7+ anos)</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li>Check-up a cada 6 meses.</li>
+                    <li>Ultrassom, ecocardiograma, pressão arterial e dosagem de hormônios (T4, cortisol).</li>
+                </ul>
+                <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-blue-900 mb-2">Como economizar</h3>
+                    <p>Clínicas universitárias e planos de saúde pet oferecem pacotes com até 40% de desconto. Agende exames combinados no mesmo dia para reduzir estresse do animal.</p>
+                </div>
+            </div>
+        )
+    },
+    "superfoods-pet": {
+        title: "Superfoods para Pets: O Que Realmente Funciona (e o Que é Modinha)",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    “Superalimentos” viraram tendência nas prateleiras. Mas quais ingredientes têm respaldo científico para cães e gatos? Separei os campeões comprovados – e os que você pode ignorar.
+                </p>
+                <h2 className="text-3xl font-bold text-primary">Top 5 aprovados pelo vet</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Ômega-3 (óleo de peixe de águas frias):</strong> anti-inflamatório para articulações e pele.</li>
+                    <li><strong>Probióticos específicos para pets:</strong> equilibram a microbiota e fortalecem a imunidade.</li>
+                    <li><strong>Cúrcuma com pimenta-do-reino:</strong> potente antioxidante (dose mínima 15 mg/kg).</li>
+                    <li><strong>Mirtilo e cranberry:</strong> ricos em antocianinas; auxiliam no trato urinário.</li>
+                    <li><strong>Colágeno tipo II:</strong> reduz dor em cães com artrose leve.</li>
+                </ul>
+                <h3 className="text-2xl font-semibold text-foreground">Cuidado com modismos</h3>
+                <p>Vinagre de maçã, água alcalina e carvão ativado “detox” não têm evidência em pets. Em excesso, podem irritar o estômago ou alterar o pH sanguíneo.</p>
+                <p>Sempre introduza um ingrediente de cada vez por 7 dias e observe fezes, apetite e pele. Se houver vômito ou coceira, suspenda e procure o veterinário.</p>
+            </div>
+        )
+    },
+    "socializacao-filhote": {
+        title: "Socialização de Filhotes em 30 Dias: Roteiro do Adestrador",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Os primeiros 120 dias de vida definem como o cãozinho verá o mundo. Um filhote bem socializado cresce confiante e evita problemas comportamentais como agressividade e fobias.
+                </p>
+                <h2 className="text-3xl font-bold text-primary">Semana 1: Mundo seguro</h2>
+                <p>Apresente sons domésticos (aspirador, liquidificador) em volume baixo, manipule o filhote diariamente (patas, orelhas, boca) e ofereça petiscos calmamente.</p>
+                <h2 className="text-3xl font-bold text-primary">Semana 2: Pessoas diferentes</h2>
+                <p>Convide amigos com perfis variados (crianças calmas, adultos com barba, pessoas usando chapéu). Recompense cada interação positiva.</p>
+                <h2 className="text-3xl font-bold text-primary">Semana 3: Superfícies e objetos</h2>
+                <p>Deixe o filhote caminhar em tapetes, grama, piso liso e grades metálicas. Use brinquedos de texturas diferentes e introduza o peitoral.</p>
+                <h2 className="text-3xl font-bold text-primary">Semana 4: Passeios controlados</h2>
+                <p>Após liberação do veterinário, faça micro passeios de 5 minutos em locais tranquilos. Quando ele focar em você em ambientes externos, entregue petiscos especiais.</p>
+                <div className="bg-purple-50 border border-purple-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-purple-900 mb-2">Ferramenta bônus</h3>
+                    <p>Monte um “bingo de socialização” na geladeira com 20 experiências para ir marcando. Transforme o processo em jogo e envolva toda a família.</p>
+                </div>
+            </div>
+        )
+    },
     "caes-idosos": {
         title: "Como Cuidar de Cães Idosos: O Guia Completo do Veterinário",
         content: (

@@ -19,6 +19,56 @@ const Blog = () => {
 
     const articles = [
         {
+            slug: "custo-cachorro-2025",
+            title: "Quanto Custa Ter um Cachorro em 2025? Guia Completo",
+            description: "Planilha de gastos reais com ração, veterinário e imprevistos para cada porte."
+        },
+        {
+            slug: "sinais-dor-cachorro",
+            title: "7 Sinais de Dor Silenciosa no Seu Cachorro",
+            description: "Aprenda a identificar desconforto antes que vire emergência."
+        },
+        {
+            slug: "plantas-toxicas-pet",
+            title: "Plantas Tóxicas para Pets: Lista Completa",
+            description: "Descubra quais plantas comuns podem intoxicar cães e gatos em segundos."
+        },
+        {
+            slug: "calendario-vacinas-pet",
+            title: "Calendário de Vacinas 2025 para Cães e Gatos",
+            description: "Cronograma atualizado com reforços e doses extras recomendadas pelo CBMV."
+        },
+        {
+            slug: "kit-emergencia-pet",
+            title: "Kit de Emergência Pet: Itens que Salvam Vidas",
+            description: "Checklist da veterinária para agir rápido em acidentes, quedas ou intoxicações."
+        },
+        {
+            slug: "vermifugacao-pets",
+            title: "Vermífugo para Pets: Quando Dar e Qual Dose",
+            description: "Calendário completo de vermifugação para filhotes, adultos e gestantes."
+        },
+        {
+            slug: "ansiedade-gatos",
+            title: "Ansiedade em Gatos: 8 Táticas que Funcionam",
+            description: "Como reduzir estresse felino com enriquecimento, feromônios e rotina."
+        },
+        {
+            slug: "checkup-preventivo",
+            title: "Check-up Preventivo por Idade: Quais Exames Fazer",
+            description: "Saiba quais exames pedir para filhotes, adultos e pets sêniores."
+        },
+        {
+            slug: "superfoods-pet",
+            title: "Superfoods para Pets: O Que é Hype e O Que Funciona",
+            description: "Lista de ingredientes com evidência científica vs. moda passageira."
+        },
+        {
+            slug: "socializacao-filhote",
+            title: "Socialização de Filhotes em 30 Dias",
+            description: "Roteiro semanal para criar cães confiantes e equilibrados."
+        },
+        {
             slug: "caes-idosos",
             title: "Como Cuidar de Cães Idosos: O Guia Completo do Veterinário",
             description: "Descubra os cuidados essenciais para garantir qualidade de vida na melhor idade do seu pet."
