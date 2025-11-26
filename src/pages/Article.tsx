@@ -6,15 +6,15 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const articles = {
-    "custo-cachorro-2025": {
-        title: "Quanto Custa Ter um Cachorro em 2025? Guia Completo de Despesas",
+    "custo-cachorro-2026": {
+        title: "Quanto Custa Ter um Cachorro em 2026? Guia Completo de Despesas",
         content: (
             <div className="space-y-6 text-lg leading-relaxed">
                 <p className="drop-cap">
-                    Antes de adotar ou comprar um cachorro, você precisa olhar para a planilha. O Brasil viveu reajustes importantes em ração, serviços veterinários e itens de higiene nos últimos dois anos, e muitos tutores subestimam o investimento real. Como veterinário e consultor de petshop, montei um raio X atualizado para 2025 com todos os custos fixos e variáveis de um cão saudável.
+                    Antes de adotar ou comprar um cachorro, você precisa olhar para a planilha. O Brasil viveu reajustes importantes em ração, serviços veterinários e itens de higiene nos últimos dois anos, e muitos tutores subestimam o investimento real. Como veterinário e consultor de petshop, montei um raio X atualizado para 2026 com todos os custos fixos e variáveis de um cão saudável.
                 </p>
 
-                <h2 className="text-3xl font-bold text-primary mt-10 mb-4">1. Custos Fixos Mensais (2025)</h2>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-4">1. Custos Fixos Mensais (2026)</h2>
                 <div className="grid md:grid-cols-3 gap-4">
                     <div className="border border-border/60 rounded-2xl p-4 bg-card shadow-sm">
                         <h3 className="text-xl font-semibold text-primary mb-2">Pequeno Porte</h3>
@@ -121,7 +121,7 @@ const articles = {
         )
     },
     "calendario-vacinas-pet": {
-        title: "Calendário de Vacinas 2025: O que Cães e Gatos Precisam Tomar",
+        title: "Calendário de Vacinas 2026: O que Cães e Gatos Precisam Tomar",
         content: (
             <div className="space-y-6 text-lg leading-relaxed">
                 <p className="drop-cap">

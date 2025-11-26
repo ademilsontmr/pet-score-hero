@@ -19,8 +19,8 @@ const Blog = () => {
 
     const articles = [
         {
-            slug: "custo-cachorro-2025",
-            title: "Quanto Custa Ter um Cachorro em 2025? Guia Completo",
+            slug: "custo-cachorro-2026",
+            title: "Quanto Custa Ter um Cachorro em 2026? Guia Completo",
             description: "Planilha de gastos reais com ração, veterinário e imprevistos para cada porte."
         },
         {
@@ -35,7 +35,7 @@ const Blog = () => {
         },
         {
             slug: "calendario-vacinas-pet",
-            title: "Calendário de Vacinas 2025 para Cães e Gatos",
+            title: "Calendário de Vacinas 2026 para Cães e Gatos",
             description: "Cronograma atualizado com reforços e doses extras recomendadas pelo CBMV."
         },
         {
