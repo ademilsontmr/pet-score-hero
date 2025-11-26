@@ -90,6 +90,16 @@ const Payment = () => {
                 <p className="text-sm text-gray-600">Informações validadas por veterinários</p>
               </div>
             </div>
+
+            <div className="flex items-start gap-3">
+              <div className="flex-shrink-0 w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
+                <Check className="w-3 h-3 text-green-600" />
+              </div>
+              <div>
+                <p className="text-gray-800 font-medium">Planner Protocolo de Saúde Preventiva</p>
+                <p className="text-sm text-gray-600">Checklist completo para acompanhar vacinas, exames e vermífugos</p>
+              </div>
+            </div>
           </div>
         </Card>
 
