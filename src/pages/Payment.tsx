@@ -136,7 +136,7 @@ const Payment = () => {
             </Button>
 
             <p className="text-xs text-muted-foreground/80 italic">
-              Você será redirecionado para o pagamento seguro com a InfinitePay
+              Você será redirecionado para a tela de pagamento seguro com nosso parceiro e, após a confirmação, voltará automaticamente para ver seu resultado completo.
             </p>
 
             <p className="text-xs text-gray-500">
