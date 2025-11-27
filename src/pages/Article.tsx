@@ -2624,6 +2624,719 @@ const articles = {
                 </p>
             </div>
         )
+    },
+    "racao-natural-gatos-guia": {
+        title: "Ração Natural para Gatos: Benefícios e Como Escolher em 2026",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Ração natural para gatos é a tendência que veio para ficar. Livre de conservantes artificiais, corantes e grãos desnecessários, essas fórmulas respeitam a natureza carnívora dos felinos. Entenda os benefícios, marcas confiáveis e como fazer a transição.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">O Que é Ração Natural?</h2>
+                <p>
+                    Rações naturais usam ingredientes minimamente processados, sem subprodutos de origem duvidosa. A proteína vem de fontes identificadas (frango, salmão, cordeiro), não de "farinha de carne". Sem BHA, BHT ou etoxiquina (conservantes químicos).
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Principais Marcas no Brasil</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Guabi Natural</h3>
+                <p>
+                    Marca brasileira com fórmulas grain-free. Usa frango, salmão e batata-doce. Linha específica para gatos castrados e filhotes. Preço: R$ 80-120 por 1,5kg.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Farmina N&D</h3>
+                <p>
+                    Italiana, considerada premium. Fórmulas com 70% de proteína animal, frutas e vegetais. Linha Pumpkin (com abóbora) auxilia digestão. Preço: R$ 120-180 por 1,5kg.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Biofresh</h3>
+                <p>
+                    Nacional, boa relação custo-benefício. Sem transgênicos, com probióticos. Ideal para quem quer natural sem gastar muito. Preço: R$ 60-90 por 1,5kg.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Benefícios da Ração Natural</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Pelagem mais brilhante:</strong> Ômega 3 e 6 de fontes naturais</li>
+                    <li><strong>Menos fezes:</strong> Maior digestibilidade (80-90% vs 60-70% das econômicas)</li>
+                    <li><strong>Redução de alergias:</strong> Sem corantes e conservantes irritantes</li>
+                    <li><strong>Melhor saúde urinária:</strong> pH balanceado naturalmente</li>
+                    <li><strong>Mais energia:</strong> Proteína de qualidade fornece energia sustentada</li>
+                </ul>
+
+                <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-green-800 mb-2">🌿 Importante</h3>
+                    <p>Ração natural não é o mesmo que ração caseira. Rações naturais são balanceadas por nutricionistas veterinários. Comida caseira sem orientação pode causar deficiências.</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Fazer a Transição</h2>
+                <p>
+                    Misture gradualmente ao longo de 7-10 dias:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Dias 1-2: 25% natural + 75% antiga</li>
+                    <li>Dias 3-5: 50% natural + 50% antiga</li>
+                    <li>Dias 6-8: 75% natural + 25% antiga</li>
+                    <li>Dia 9+: 100% natural</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Ingredientes que Você Deve Ver</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Proteína animal como 1º ingrediente (frango, salmão, peru)</li>
+                    <li>Frutas e vegetais (cranberry, abóbora, espinafre)</li>
+                    <li>Probióticos e prebióticos</li>
+                    <li>Sem milho, trigo ou soja como base</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Vale a Pena o Investimento?</h2>
+                <p>
+                    Sim! Embora mais cara inicialmente, ração natural rende mais (gato come menos por ser mais nutritiva) e previne doenças. Economia em veterinário compensa o custo.
+                </p>
+
+                <p>
+                    Gatos alimentados com ração natural vivem em média 2-3 anos a mais e têm menos problemas renais e cardíacos na velhice.
+                </p>
+            </div>
+        )
+    },
+    "racao-natural-cachorro-guia": {
+        title: "Ração Natural para Cachorro: Guia Completo de Benefícios em 2026",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Ração natural para cachorro representa uma revolução na nutrição canina. Ingredientes reais, sem químicos desnecessários e formulações que respeitam a biologia do cão. Descubra por que veterinários recomendam e como escolher a melhor opção.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">O Que Define uma Ração Natural?</h2>
+                <p>
+                    Rações naturais priorizam ingredientes integrais e minimamente processados. Proteínas de carne real (não farinhas), carboidratos de batata-doce ou ervilha (não milho), e conservação natural com vitamina E e alecrim.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Melhores Marcas Brasileiras</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Herói</h3>
+                <p>
+                    Nacional, 100% natural. Fórmulas específicas por porte e idade. Usa frango, arroz integral e vegetais. Sem transgênicos. Preço: R$ 150-220 por 10kg.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Guabi Natural</h3>
+                <p>
+                    Linha grain-free com cordeiro, salmão ou frango. Batata-doce como carboidrato. Probióticos para digestão. Preço: R$ 180-280 por 10kg.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Biofresh</h3>
+                <p>
+                    Custo-benefício excelente. Ingredientes naturais sem ser grain-free (usa arroz integral). Boa opção para transição. Preço: R$ 120-180 por 10kg.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Benefícios Comprovados</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Saúde Digestiva</h3>
+                <p>
+                    Ingredientes naturais são 85-90% digeríveis vs 60-70% das rações econômicas. Resultado: menos gases, fezes menores e mais firmes, menos vômitos.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Pelagem e Pele</h3>
+                <p>
+                    Ômega 3 de salmão (não sintético) melhora brilho em 3-4 semanas. Reduz coceira e queda excessiva de pelo. Cães com dermatite alérgica melhoram significativamente.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Energia e Vitalidade</h3>
+                <p>
+                    Proteína de qualidade fornece energia sustentada. Cães ficam mais ativos sem hiperatividade. Ideal para cães de trabalho e esportivos.
+                </p>
+
+                <div className="bg-orange-50 border border-orange-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-orange-800 mb-2">💡 Dica Veterinária</h3>
+                    <p>Cães com problemas de pele, alergias ou digestão sensível veem melhora dramática em 30-60 dias com ração natural. Consulte seu vet antes de trocar.</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Transição Gradual é Essencial</h2>
+                <p>
+                    Nunca troque bruscamente! Siga o protocolo de 10 dias:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Dias 1-3: 25% natural + 75% antiga</li>
+                    <li>Dias 4-6: 50% natural + 50% antiga</li>
+                    <li>Dias 7-9: 75% natural + 25% antiga</li>
+                    <li>Dia 10+: 100% natural</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">O Que Evitar</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Subprodutos de carne (bicos, penas, vísceras de baixa qualidade)</li>
+                    <li>Corantes artificiais (vermelho 40, amarelo 5)</li>
+                    <li>BHA, BHT, etoxiquina (conservantes químicos)</li>
+                    <li>Milho ou trigo como primeiros ingredientes</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Custo vs Benefício</h2>
+                <p>
+                    Ração natural custa 40-60% mais que econômica, mas o cão come 30% menos (maior saciedade). Economia em veterinário (menos alergias, problemas digestivos) compensa.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Quanto Dar?</h2>
+                <p>
+                    Siga a tabela da embalagem, mas ajuste conforme atividade. Cães ativos precisam de 20-30% mais. Pese seu cão mensalmente para ajustar.
+                </p>
+
+                <p>
+                    Investir em ração natural é investir em longevidade e qualidade de vida. Cães bem nutridos vivem mais, adoecem menos e são mais felizes.
+                </p>
+            </div>
+        )
+    },
+    "vermifugo-gatos-guia": {
+        title: "Vermífugo para Gatos: Guia Completo de Tipos e Quando Usar",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Vermes intestinais afetam 45% dos gatos domésticos, causando diarreia, vômitos, anemia e até morte em filhotes. Vermifugar regularmente é essencial, mas escolher o produto errado ou usar dose inadequada pode ser ineficaz ou perigoso. Aprenda tudo aqui.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Tipos de Vermes em Gatos</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Vermes Redondos (Nematódeos)</h3>
+                <p>
+                    Áscaris e ancilóstomos. Parecem espaguete nas fezes. Causam barriga inchada, diarreia e vômitos. Filhotes podem pegar da mãe pelo leite.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Vermes Chatos (Cestódeos)</h3>
+                <p>
+                    Tênias transmitidas por pulgas. Você vê segmentos parecidos com grãos de arroz nas fezes ou ao redor do ânus. Causam coceira anal e perda de peso.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Giárdia</h3>
+                <p>
+                    Protozoário microscópico. Causa diarreia líquida persistente. Precisa de vermífugo específico (metronidazol ou fenbendazol).
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Principais Vermífugos</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Comprimidos</h3>
+                <p>
+                    <strong>Drontal Gatos:</strong> Combate vermes redondos e chatos. Dose única. Preço: R$ 25-40 por comprimido.<br />
+                    <strong>Milbemax Gatos:</strong> Amplo espectro, incluindo verme do coração. Preço: R$ 30-50.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Pastas Orais</h3>
+                <p>
+                    <strong>Panacur Pasta:</strong> Fenbendazol, eficaz contra giárdia. Uso por 3-5 dias consecutivos. Preço: R$ 40-60.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Pipetas (Spot-On)</h3>
+                <p>
+                    <strong>Revolution Plus:</strong> Vermífugo + antipulgas. Aplicação mensal na pele. Preço: R$ 60-90 por dose.
+                </p>
+
+                <div className="bg-red-50 border border-red-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-red-800 mb-2">⚠️ Nunca Faça Isso</h3>
+                    <p>Nunca use vermífugo de cachorro em gatos! Produtos com ivermectina em alta dose são tóxicos para felinos. Sempre use produtos específicos para gatos.</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Frequência de Vermifugação</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Filhotes (2-6 meses):</strong> A cada 30 dias</li>
+                    <li><strong>Adultos indoor:</strong> A cada 3-4 meses</li>
+                    <li><strong>Adultos com acesso externo:</strong> A cada 2-3 meses</li>
+                    <li><strong>Gatos caçadores:</strong> A cada 2 meses</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Dar Vermífugo</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Comprimido</h3>
+                <p>
+                    Esconda em petisco (sachê, patê). Se recusar, use aplicador de comprimidos ou triture e misture em comida úmida. Dê com estômago vazio para melhor absorção.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Pipeta</h3>
+                <p>
+                    Aplique na pele entre as escápulas (onde o gato não alcança para lamber). Afaste bem o pelo até ver a pele. Não dê banho 48h antes e depois.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Sinais de Verminose</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Diarreia ou vômito com vermes visíveis</li>
+                    <li>Barriga inchada (especialmente filhotes)</li>
+                    <li>Perda de peso apesar de comer bem</li>
+                    <li>Pelagem opaca e sem brilho</li>
+                    <li>Arrastar o bumbum no chão (coceira anal)</li>
+                    <li>Gengivas pálidas (anemia)</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Vermifugação Preventiva vs Terapêutica</h2>
+                <p>
+                    <strong>Preventiva:</strong> Vermifugar mesmo sem sintomas, seguindo calendário. Previne infestações graves.<br />
+                    <strong>Terapêutica:</strong> Quando há sintomas ou vermes visíveis. Pode precisar repetir dose após 15 dias.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Vermifugação de Filhotes</h2>
+                <p>
+                    Primeira dose aos 30 dias de vida. Repetir aos 45, 60, 90 e 120 dias. Use produtos específicos para filhotes (dose menor). Consulte veterinário para peso exato.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Efeitos Colaterais</h2>
+                <p>
+                    Normais: Vômito ou diarreia leve nas primeiras 24h (vermes sendo eliminados). Anormal: Vômito persistente, letargia, convulsões - procure veterinário imediatamente.
+                </p>
+
+                <p>
+                    Vermifugar é tão importante quanto vacinar. Vermes não tratados podem causar obstrução intestinal, perfuração e morte. Mantenha o calendário em dia!
+                </p>
+            </div>
+        )
+    },
+    "caminha-cachorro-guia": {
+        title: "Caminha para Cachorro: Como Escolher o Modelo Perfeito em 2026",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Uma boa caminha não é luxo - é necessidade. Cães passam 12-14 horas dormindo por dia, e uma caminha inadequada causa dores articulares, calos e desconforto. Aprenda a escolher o tamanho, material e modelo ideal para seu melhor amigo.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Tipos de Caminha</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Caminha Almofadada</h3>
+                <p>
+                    Retangular ou redonda, com enchimento de fibra siliconada. Marcas como Chalesco, Jambo e Furacão Pet oferecem diversos tamanhos. Confortável e lavável. Preço: R$ 60-200.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Caminha Ortopédica</h3>
+                <p>
+                    Espuma viscoelástica (memory foam) que se molda ao corpo. Essencial para cães idosos, com artrite ou displasia. Marcas: Petite Sofie, Zee.Dog. Preço: R$ 150-500.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Caminha Elevada</h3>
+                <p>
+                    Estrutura suspensa com tela. Mantém o cão fresco no verão e seco em áreas úmidas. Ideal para quintais. Preço: R$ 80-250.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Caminha Térmica</h3>
+                <p>
+                    Autoquecimento (reflete calor corporal) ou elétrica. Para regiões frias ou cães idosos. Preço: R$ 100-400.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Escolher o Tamanho</h2>
+                <p>
+                    Meça seu cão deitado esticado (do focinho à ponta da cauda) e adicione 15-20cm. A caminha deve permitir que ele se estique completamente.
+                </p>
+
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Pequeno (até 10kg):</strong> 50x40cm - Yorkshire, Poodle, Shih Tzu</li>
+                    <li><strong>Médio (10-25kg):</strong> 80x60cm - Beagle, Cocker, Border Collie</li>
+                    <li><strong>Grande (25-40kg):</strong> 100x80cm - Labrador, Golden, Boxer</li>
+                    <li><strong>Gigante (40kg+):</strong> 120x90cm - Rottweiler, Pastor Alemão, Fila</li>
+                </ul>
+
+                <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-blue-800 mb-2">💤 Dica Importante</h3>
+                    <p>Cães que dormem encolhidos podem usar caminha menor. Cães que esticam precisam de espaço extra. Observe como seu cão dorme antes de comprar.</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Materiais e Tecidos</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Tecidos Recomendados</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Lona:</strong> Resistente, impermeável, fácil de limpar</li>
+                    <li><strong>Suede:</strong> Macio, confortável, mas mancha fácil</li>
+                    <li><strong>Oxford:</strong> Durável, resistente a arranhões</li>
+                    <li><strong>Plush:</strong> Quentinho para inverno, mas acumula pelos</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Enchimentos</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Fibra siliconada:</strong> Lavável, não deforma, hipoalergênica</li>
+                    <li><strong>Espuma:</strong> Firme, boa para cães pesados</li>
+                    <li><strong>Viscoelástico:</strong> Ortopédico, alivia pressão nas articulações</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Cuidados Especiais por Idade</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Filhotes</h3>
+                <p>
+                    Evite caminhas muito caras - filhotes roem e destroem. Use modelos básicos e laváveis. Troque conforme crescem.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Adultos</h3>
+                <p>
+                    Invista em qualidade. Uma boa caminha dura 3-5 anos. Prefira modelos com capa removível para lavar.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Idosos</h3>
+                <p>
+                    Caminha ortopédica é essencial. Espuma viscoelástica reduz dores articulares e melhora qualidade do sono. Escolha modelos com laterais baixas (fácil acesso).
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Onde Colocar a Caminha</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Local tranquilo, longe de correntes de ar</li>
+                    <li>Não coloque em corredores ou áreas de passagem</li>
+                    <li>Evite sol direto (superaquecimento)</li>
+                    <li>Mantenha longe de portas e janelas (frio)</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Limpeza e Manutenção</h2>
+                <p>
+                    Lave a capa semanalmente em água morna. Use sabão neutro ou específico para pets. Seque completamente antes de recolocar. Aspire o enchimento mensalmente para remover pelos e ácaros.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Sinais de que Precisa Trocar</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Enchimento achatado (não recupera forma)</li>
+                    <li>Rasgos ou costuras abertas</li>
+                    <li>Mau cheiro persistente mesmo após lavar</li>
+                    <li>Cão evita usar ou prefere chão</li>
+                </ul>
+
+                <p>
+                    Uma caminha de qualidade é investimento em saúde. Cães que dormem bem têm menos problemas comportamentais, articulares e vivem mais felizes.
+                </p>
+            </div>
+        )
+    },
+    "arranhador-gatos-guia": {
+        title: "Arranhador para Gatos: Guia Completo de Tipos e Treinamento",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Arranhar é instinto natural dos gatos - eles marcam território, afiamunhas e se alongam. Sem arranhador adequado, seu sofá vira alvo. Escolher o modelo certo e treinar corretamente salva seus móveis e mantém seu gato feliz.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Por Que Gatos Arranham?</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Manutenção das unhas:</strong> Remove camada externa morta</li>
+                    <li><strong>Marcação de território:</strong> Glândulas nas patas deixam cheiro</li>
+                    <li><strong>Alongamento:</strong> Estica músculos das costas e ombros</li>
+                    <li><strong>Alívio de estresse:</strong> Comportamento calmante</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Tipos de Arranhador</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Arranhador Vertical (Poste)</h3>
+                <p>
+                    Poste coberto com sisal. Deve ter no mínimo 60cm de altura para o gato esticar completamente. Marcas: Chalesco, Jambo, Furacão Pet. Preço: R$ 60-150.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Arranhador Horizontal (Tapete)</h3>
+                <p>
+                    Tapete de sisal ou papelão ondulado. Ideal para gatos que preferem arranhar no chão. Alguns vêm com catnip. Preço: R$ 30-80.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Torre/Árvore de Gato</h3>
+                <p>
+                    Estrutura com múltiplos níveis, tocas e arranhadores. Combina exercício, descanso e arranhadura. Ideal para apartamentos. Preço: R$ 200-800.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Arranhador de Papelão</h3>
+                <p>
+                    Econômico e ecológico. Gatos adoram a textura. Precisa trocar a cada 2-3 meses. Preço: R$ 20-50.
+                </p>
+
+                <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-green-800 mb-2">🐱 Dica de Ouro</h3>
+                    <p>Tenha pelo menos 2 arranhadores: um vertical e um horizontal. Gatos têm preferências individuais!</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Escolher o Arranhador Ideal</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Altura Adequada</h3>
+                <p>
+                    Meça seu gato esticado nas patas traseiras e adicione 10cm. Arranhadores baixos não permitem alongamento completo.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Estabilidade</h3>
+                <p>
+                    O arranhador deve ser pesado ou ter base larga. Se balançar, o gato não usa. Teste empurrando - não deve tombar.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Material</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Sisal:</strong> Mais durável, textura ideal</li>
+                    <li><strong>Papelão:</strong> Econômico, mas dura menos</li>
+                    <li><strong>Carpete:</strong> Evite! Parece com tapetes/sofás (confunde o gato)</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Treinar o Gato</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Localização Estratégica</h3>
+                <p>
+                    Coloque perto de onde o gato dorme (gatos arranham ao acordar) e perto dos móveis que ele arranha. Não esconda em cantos!
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Incentive o Uso</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Esfregue catnip no arranhador</li>
+                    <li>Brinque com varinha perto dele</li>
+                    <li>Recompense com petisco quando usar</li>
+                    <li>Demonstre arranhando com suas unhas (sim, funciona!)</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Proteja os Móveis</h3>
+                <p>
+                    Cubra temporariamente com papel alumínio ou fita dupla-face (gatos odeiam). Borrife spray cítrico (repelente natural). Apare as unhas regularmente.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Erros Comuns</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Arranhador muito pequeno:</strong> Gato não consegue esticar</li>
+                    <li><strong>Base instável:</strong> Gato perde confiança e evita</li>
+                    <li><strong>Localização ruim:</strong> Escondido em canto que ninguém usa</li>
+                    <li><strong>Punir o gato:</strong> Cria estresse, não resolve</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Manutenção</h2>
+                <p>
+                    Aspire semanalmente para remover pelos. Troque papelão quando muito desgastado. Sisal dura 1-2 anos. Se o gato parar de usar, pode estar muito gasto.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Múltiplos Gatos</h2>
+                <p>
+                    Regra: número de gatos + 1 arranhador. Gatos não gostam de compartilhar. Coloque em locais diferentes da casa.
+                </p>
+
+                <p>
+                    Investir em bons arranhadores é muito mais barato que trocar sofás. Gatos felizes arranham onde devem!
+                </p>
+            </div>
+        )
+    },
+    "fonte-gatos-guia": {
+        title: "Fonte para Gatos: Por Que Seu Gato Precisa de Uma em 2026",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Gatos bebem pouca água por natureza, o que leva a problemas renais e urinários - principais causas de morte em felinos. Fontes de água estimulam a hidratação com água corrente e filtrada. Entenda os benefícios e como escolher.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Por Que Fontes Funcionam?</h2>
+                <p>
+                    Gatos são descendentes de animais do deserto. Instintivamente preferem água corrente (sinal de água fresca) a água parada (pode estar contaminada). Fontes imitam riachos naturais.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Benefícios Comprovados</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Aumenta consumo de água em 40-60%:</strong> Previne doenças renais</li>
+                    <li><strong>Reduz cristais urinários:</strong> Menos obstruções uretrais</li>
+                    <li><strong>Água sempre fresca:</strong> Filtros removem pelos e impurezas</li>
+                    <li><strong>Oxigenação:</strong> Água corrente tem mais oxigênio (melhor sabor)</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Tipos de Fonte</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Fonte de Plástico</h3>
+                <p>
+                    Mais barata e leve. Marcas: Chalesco, Jambo, Truqys. Fácil de limpar, mas plástico pode acumular bactérias com o tempo. Preço: R$ 80-150.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Fonte de Cerâmica</h3>
+                <p>
+                    Higiênica, não retém odores, pesada (não vira). Marcas: Chalesco Premium, Catit. Ideal para gatos com acne felina (plástico piora). Preço: R$ 150-300.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Fonte de Aço Inoxidável</h3>
+                <p>
+                    Mais durável e higiênica. Não arranha, não acumula bactérias. Marcas: Zee.Dog, Petite Sofie. Preço: R$ 200-400.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Fonte Silenciosa</h3>
+                <p>
+                    Modelos com bomba ultra-silenciosa. Essencial se você tem sono leve ou gato sensível a barulhos. Preço: R$ 150-350.
+                </p>
+
+                <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-blue-800 mb-2">💧 Importante</h3>
+                    <p>Fontes com filtro de carvão ativado removem cloro e metais pesados. Troque o filtro a cada 30 dias para máxima eficácia.</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Escolher</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Capacidade</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>1 gato:</strong> 1,5-2L (troca a cada 3-4 dias)</li>
+                    <li><strong>2-3 gatos:</strong> 2,5-3L (troca a cada 2-3 dias)</li>
+                    <li><strong>4+ gatos:</strong> 4L+ (troca diária)</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Facilidade de Limpeza</h3>
+                <p>
+                    Escolha modelos desmontáveis. Fontes com muitas peças pequenas são difíceis de higienizar. Verifique se as peças vão na lava-louças.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Nível de Ruído</h3>
+                <p>
+                    Bombas baratas fazem barulho irritante. Invista em modelos silenciosos (abaixo de 40dB). Leia avaliações sobre ruído antes de comprar.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Manutenção Essencial</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Limpeza Semanal</h3>
+                <p>
+                    Desmonte completamente. Lave com água e sabão neutro. Escove a bomba para remover pelos. Enxágue bem (resíduos de sabão afastam gatos).
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Troca de Filtro</h3>
+                <p>
+                    Filtros de carvão: a cada 30 dias. Filtros de espuma: lave semanalmente, troque a cada 2 meses. Sem filtro limpo, a água fica suja.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Nível de Água</h3>
+                <p>
+                    Complete diariamente. Bomba queima se funcionar sem água. Marque o nível mínimo com fita adesiva.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Acostumando o Gato</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Coloque perto do bebedouro antigo (transição gradual)</li>
+                    <li>Deixe desligada no primeiro dia (gato investiga sem medo)</li>
+                    <li>Ligue em velocidade baixa inicialmente</li>
+                    <li>Molhe a patinha dele na água corrente (curiosidade)</li>
+                    <li>Mantenha bebedouro antigo por 1 semana (segurança)</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Custo de Manutenção</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Energia:</strong> R$ 3-5/mês (bomba consome pouco)</li>
+                    <li><strong>Filtros:</strong> R$ 15-30/mês</li>
+                    <li><strong>Total:</strong> R$ 20-35/mês (vale cada centavo!)</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Sinais de Problema</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Bomba fazendo barulho estranho (limpe ou troque)</li>
+                    <li>Fluxo fraco (filtro entupido)</li>
+                    <li>Água com cheiro (limpeza insuficiente)</li>
+                    <li>Gato parou de usar (verifique temperatura - muito fria?)</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Vale o Investimento?</h2>
+                <p>
+                    Absolutamente! Problemas renais e urinários custam milhares em tratamento veterinário. Uma fonte de R$ 200 previne doenças que podem custar R$ 5.000+ em cirurgias e medicamentos.
+                </p>
+
+                <p>
+                    Gatos que bebem mais água vivem mais e com melhor qualidade de vida. É um dos melhores investimentos que você pode fazer pela saúde do seu felino.
+                </p>
+            </div>
+        )
+    },
+    "coleira-antipulgas-guia": {
+        title: "Coleira Antipulgas: Guia Completo de Eficácia e Uso Seguro",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Coleiras antipulgas oferecem proteção contínua por meses, sendo mais práticas que pipetas mensais. Mas nem todas são eficazes, e uso incorreto pode causar intoxicação. Aprenda a escolher, usar e quando evitar.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Funcionam?</h2>
+                <p>
+                    Coleiras liberam princípios ativos gradualmente que se espalham pela pele e pelo. Matam pulgas, carrapatos e, em alguns casos, repelem mosquitos transmissores de leishmaniose.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Principais Marcas</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Seresto (Bayer)</h3>
+                <p>
+                    A mais eficaz e recomendada. Proteção por 8 meses contra pulgas e carrapatos. Resistente à água. Versões para cães e gatos (NUNCA troque!). Preço: R$ 150-250.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Scalibor (MSD)</h3>
+                <p>
+                    Proteção por 6 meses. Repele mosquitos (previne leishmaniose). Apenas para cães. Preço: R$ 120-180.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Coleiras Genéricas</h3>
+                <p>
+                    Marcas como Chalesco e Jambo. Proteção por 3-4 meses. Menos eficazes, mas mais baratas. Preço: R$ 30-60.
+                </p>
+
+                <div className="bg-red-50 border border-red-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-red-800 mb-2">⚠️ ATENÇÃO CRÍTICA</h3>
+                    <p>Coleiras com permetrina (comuns para cães) são FATAIS para gatos. Causam convulsões e morte. Sempre use coleiras específicas para a espécie!</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Vantagens</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Praticidade:</strong> Coloca e esquece por meses</li>
+                    <li><strong>Não sai com banho:</strong> Resistente à água</li>
+                    <li><strong>Custo-benefício:</strong> Mais barato que 8 pipetas</li>
+                    <li><strong>Proteção contínua:</strong> Sem janelas de vulnerabilidade</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Desvantagens</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Pode causar irritação no pescoço (5-10% dos pets)</li>
+                    <li>Risco se pet lamber outro pet com coleira</li>
+                    <li>Não funciona se muito folgada ou apertada</li>
+                    <li>Investimento inicial alto</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Usar Corretamente</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Ajuste Perfeito</h3>
+                <p>
+                    Deve passar 2 dedos entre a coleira e o pescoço. Muito apertada irrita, muito folgada não distribui o produto. Corte o excesso (deixe apenas 2-3cm sobrando).
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Tempo de Ativação</h3>
+                <p>
+                    Leva 24-48h para atingir eficácia máxima. Não espere proteção imediata. Se pet já tem pulgas, use spray/banho antes da coleira.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Múltiplos Pets</h3>
+                <p>
+                    Evite que lambam uns aos outros nas primeiras 48h. Separe temporariamente ou use cone elizabetano.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Quando NÃO Usar</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Filhotes abaixo de 7 semanas:</strong> Sistema nervoso imaturo</li>
+                    <li><strong>Pets doentes ou debilitados:</strong> Consulte veterinário</li>
+                    <li><strong>Gatos que saem de casa:</strong> Risco de enforcamento (use coleira com fivela de segurança)</li>
+                    <li><strong>Pets com alergia conhecida:</strong> Teste com coleira genérica primeiro</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Sinais de Reação Adversa</h2>
+                <p>
+                    Retire imediatamente se notar:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Vermelhidão ou feridas no pescoço</li>
+                    <li>Coceira excessiva</li>
+                    <li>Vômitos ou diarreia</li>
+                    <li>Letargia ou tremores</li>
+                    <li>Perda de apetite</li>
+                </ul>
+                <p>
+                    Lave o pescoço com água e sabão neutro e procure veterinário.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Eficácia Real</h2>
+                <p>
+                    Seresto: 95-98% de eficácia. Scalibor: 90-95%. Genéricas: 60-80%. Estudos mostram que coleiras premium realmente funcionam quando usadas corretamente.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Custo-Benefício</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Seresto (8 meses):</strong> R$ 200 ÷ 8 = R$ 25/mês</li>
+                    <li><strong>Pipeta mensal:</strong> R$ 40-60/mês</li>
+                    <li><strong>Economia anual:</strong> R$ 180-420</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Manutenção</h2>
+                <p>
+                    Não precisa remover para banho (resistente à água). Verifique semanalmente o ajuste (pets podem perder/ganhar peso). Troque quando atingir prazo de validade, mesmo que pareça nova.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Combinação com Outros Produtos</h2>
+                <p>
+                    Não combine com pipetas ou comprimidos antipulgas sem orientação veterinária. Risco de superdosagem. Vermífugos são seguros para usar junto.
+                </p>
+
+                <p>
+                    Coleiras antipulgas de qualidade são investimento inteligente. Proteção contínua, praticidade e economia a longo prazo. Escolha marcas confiáveis e use corretamente!
+                </p>
+            </div>
+        )
     }
 };
 
