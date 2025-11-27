@@ -309,63 +309,96 @@ const Index = () => {
             Perguntas Frequentes
           </h2>
           <p className="text-xl text-muted-foreground">
-            Tudo o que você precisa saber
+            Tire suas dúvidas antes de começar sua jornada
           </p>
         </div>
 
         <Accordion type="single" collapsible className="space-y-4">
-
-
           <AccordionItem value="item-2" className="bg-card rounded-2xl px-6 shadow-soft border-none">
             <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              Preciso de muito tempo para responder?
+              Quanto tempo leva para fazer o quiz?
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground text-base">
-              É super rápido! Em menos de 10 minutos você faz um check-up completo da sua relação com seu pet.
-              É o tempo de um cafézinho para ganhar insights que valem por uma vida inteira de bem-estar.
+              Apenas 5 a 10 minutos! É o tempo de tomar um café enquanto você descobre insights valiosos
+              que podem transformar a vida do seu pet. As perguntas são objetivas e você pode pausar e
+              voltar quando quiser. Vale cada segundo! ☕
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-3" className="bg-card rounded-2xl px-6 shadow-soft border-none">
             <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              Funciona para cães e gatos de qualquer idade?
+              Funciona para cães E gatos?
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground text-base">
-              Sim! Nossa metodologia abrange desde filhotes até idosos, tanto cães quanto gatos.
-              As perguntas foram desenhadas por especialistas para considerar as necessidades vitais de cada fase e espécie.
+              Absolutamente! Nosso quiz foi desenvolvido por veterinários e especialistas em comportamento
+              animal para atender tanto cães quanto gatos, de todas as idades - desde filhotes cheios de
+              energia até idosos que merecem cuidados especiais. Cada espécie e fase da vida tem suas
+              necessidades únicas, e nós cobrimos todas elas! 🏆
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-4" className="bg-card rounded-2xl px-6 shadow-soft border-none">
             <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              O que ganho no relatório completo?
+              O que vou descobrir ao fazer o quiz?
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground text-base">
-              Você desbloqueia seu Score Oficial (0-100), o Nível de Tutor,
-              além de um guia prático com dicas personalizadas para melhorar a saúde e felicidade do seu pet imediatamente.
+              Você vai receber seu <strong>PetScore oficial (0-100)</strong>, descobrir seu <strong>nível de tutor</strong>
+              (de Iniciante a Lendário 🏆), e entender exatamente onde você está acertando e onde pode melhorar.
+              No relatório completo, você ganha um <strong>plano de ação personalizado</strong> com dicas práticas
+              para elevar o bem-estar do seu pet imediatamente. É como ter um veterinário e comportamentalista
+              analisando sua rotina! 💡
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-5" className="bg-card rounded-2xl px-6 shadow-soft border-none">
             <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              Posso acompanhar minha evolução?
+              Posso refazer o quiz para ver minha evolução?
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground text-base">
-              Com certeza! Recomendamos refazer o quiz a cada 3 meses para ver como a aplicação das dicas
-              está aumentando seu Score e, principalmente, melhorando a qualidade de vida do seu melhor amigo.
+              Sim, e nós recomendamos! Muitos tutores refazem o quiz a cada 3 meses para acompanhar sua
+              evolução e ver como as mudanças aplicadas estão impactando positivamente a vida do pet.
+              É incrível ver seu score subindo e saber que você está fazendo a diferença! 📊✨
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-6" className="bg-card rounded-2xl px-6 shadow-soft border-none">
             <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              As orientações servem para o meu caso?
+              Vou receber algo além do resultado?
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground text-base">
-              Totalmente. Não usamos "receitas de bolo". Seu plano é gerado com base nas SUAS respostas,
-              focando exatamente nos pontos onde você e seu pet mais precisam de atenção e carinho.
+              Sim! Além do seu score e análise, você ganha acesso a <strong>3 bônus exclusivos</strong>:
+              Guia Definitivo de Alimentos (saiba o que pode e não pode), Checklist "Casa Segura" (elimine
+              perigos ocultos), e Cronograma de Saúde Preventiva (nunca mais esqueça vacinas e vermífugos).
+              E no relatório completo, você ainda cria uma <strong>arte personalizada</strong> com a foto do
+              seu pet para compartilhar nas redes! 📸🎨
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-7" className="bg-card rounded-2xl px-6 shadow-soft border-none">
+            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
+              Por que devo fazer o quiz AGORA?
+            </AccordionTrigger>
+            <AccordionContent className="text-muted-foreground text-base">
+              Porque cada dia conta na vida do seu pet! Descobrir pontos de melhoria hoje pode prevenir
+              problemas de saúde amanhã, fortalecer o vínculo entre vocês e garantir que seu melhor amigo
+              viva mais feliz e saudável. Além disso, é grátis, rápido e você pode começar agora mesmo.
+              Seu pet merece o melhor, e você merece saber se está dando isso a ele! 🐾💚
             </AccordionContent>
           </AccordionItem>
         </Accordion>
+
+        <div className="mt-12 text-center">
+          <Button
+            size="lg"
+            onClick={scrollToQuiz}
+            className="text-xl px-10 py-6 h-auto shadow-lg hover:shadow-xl transition-all duration-300 hover-scale"
+          >
+            🚀 Quero Descobrir Meu PetScore Agora!
+          </Button>
+          <p className="mt-4 text-sm text-muted-foreground">
+            ✓ Grátis • ✓ 5 minutos • ✓ Resultado na hora
+          </p>
+        </div>
       </div>
     </section>
 

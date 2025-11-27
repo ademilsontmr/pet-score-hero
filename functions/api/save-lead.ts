@@ -2,7 +2,7 @@ interface Env {
     LEADS_KV: KVNamespace;
 }
 
-export const onRequestPost: PagesFunction<Env> = async (context) => {
+export const onRequestPost: PagesFunction<Env> = async (context: any) => {
     try {
         const { request, env } = context;
         const data = await request.json();

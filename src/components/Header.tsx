@@ -14,14 +14,18 @@ const Header = () => {
                     <span>PetScore</span>
                 </Link>
 
-                {isHomePage && (
+                {(isHomePage || location.pathname.startsWith("/blog")) && (
                     <nav className="hidden md:flex items-center gap-6 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                         <button onClick={() => {
-                            document.getElementById('como-funciona')?.scrollIntoView({ behavior: 'smooth' });
+                            if (isHomePage) {
+                                document.getElementById('como-funciona')?.scrollIntoView({ behavior: 'smooth' });
+                            } else {
+                                navigate("/#como-funciona");
+                            }
                         }} className="text-muted-foreground hover:text-primary transition-colors font-medium">
                             Como Funciona
                         </button>
-                        <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors font-medium">Blog</Link>
+                        <Link to="/blog" className={`text-muted-foreground hover:text-primary transition-colors font-medium ${location.pathname === '/blog' ? 'text-primary' : ''}`}>Blog</Link>
                     </nav>
                 )}
 

@@ -1,9 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Cat, Dog, Apple, Stethoscope, Heart, Syringe, Bone, Brain, DollarSign, Leaf, ShieldAlert, PawPrint, Share2 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+const getArticleConfig = (slug: string) => {
+    if (slug.includes('gato')) return { icon: Cat, color: "bg-purple-100 text-purple-600" };
+    if (slug.includes('cachorro') || slug.includes('cao') || slug.includes('caes')) return { icon: Dog, color: "bg-orange-100 text-orange-600" };
+    if (slug.includes('aliment') || slug.includes('nutri') || slug.includes('fruta') || slug.includes('racao') || slug.includes('superfoods')) return { icon: Apple, color: "bg-green-100 text-green-600" };
+    if (slug.includes('vacina') || slug.includes('vermifugo') || slug.includes('medic')) return { icon: Syringe, color: "bg-blue-100 text-blue-600" };
+    if (slug.includes('saude') || slug.includes('dor') || slug.includes('checkup') || slug.includes('emergencia')) return { icon: Stethoscope, color: "bg-cyan-100 text-cyan-600" };
+    if (slug.includes('ansiedade') || slug.includes('comportamento') || slug.includes('feliz') || slug.includes('amor')) return { icon: Heart, color: "bg-pink-100 text-pink-600" };
+    if (slug.includes('custo') || slug.includes('dinheiro')) return { icon: DollarSign, color: "bg-yellow-100 text-yellow-600" };
+    if (slug.includes('plantas') || slug.includes('toxic')) return { icon: Leaf, color: "bg-emerald-100 text-emerald-600" };
+    if (slug.includes('proibido') || slug.includes('perigo')) return { icon: ShieldAlert, color: "bg-red-100 text-red-600" };
+    if (slug.includes('inteligencia') || slug.includes('linguagem') || slug.includes('socializacao')) return { icon: Brain, color: "bg-indigo-100 text-indigo-600" };
+    if (slug.includes('raca') || slug.includes('srd') || slug.includes('shih') || slug.includes('york') || slug.includes('poodle') || slug.includes('spitz') || slug.includes('bull') || slug.includes('golden') || slug.includes('labrador') || slug.includes('pinscher') || slug.includes('lhasa')) return { icon: Bone, color: "bg-amber-100 text-amber-600" };
+
+    return { icon: PawPrint, color: "bg-primary/10 text-primary" };
+};
 
 const articles = {
     "custo-cachorro-2026": {
@@ -1647,6 +1663,118 @@ const articles = {
                 </div>
             </div>
         )
+    },
+    "frutas-permitidas-cachorro": {
+        title: "Frutas que Cachorros Podem Comer: Guia Seguro e Saudável",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Muitos tutores têm dúvida se podem compartilhar aquela fruta do café da manhã com o pet. A resposta é: sim, mas com cuidado! Frutas são ótimos petiscos naturais, ricos em vitaminas e antioxidantes, mas algumas partes (como sementes) podem ser perigosas.
+                </p>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">As 5 Melhores Frutas para Cães</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Banana:</strong> Rica em potássio e fibras. Ótima para dar energia, mas com moderação devido ao açúcar.</li>
+                    <li><strong>Maçã:</strong> Excelente fonte de vitaminas A e C. <strong>Atenção:</strong> Retire sempre o miolo e as sementes, que contêm cianeto (tóxico).</li>
+                    <li><strong>Melancia:</strong> Perfeita para hidratação no verão (92% água). Sirva sem casca e sem sementes.</li>
+                    <li><strong>Morango:</strong> Cheio de antioxidantes e ajuda a clarear os dentes (contém uma enzima especial).</li>
+                    <li><strong>Manga:</strong> Doce e nutritiva. Retire o caroço, que pode causar engasgo e obstrução.</li>
+                </ul>
+                <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-yellow-800 mb-2">⚠️ Regra de Ouro</h3>
+                    <p>Frutas devem ser apenas <strong>petiscos</strong> (máximo 10% das calorias diárias). O excesso pode causar diarreia ou obesidade.</p>
+                </div>
+            </div>
+        )
+    },
+    "alimentos-proibidos-pets": {
+        title: "Alimentos Proibidos: O Que Nunca Dar para Seu Pet",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Aquele olhar de "pidão" pode ser irresistível, mas ceder pode custar a vida do seu amigo. O metabolismo de cães e gatos é diferente do nosso, e alimentos inofensivos para humanos podem ser veneno para eles.
+                </p>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Lista Negra da Nutrição Pet</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Chocolate:</strong> O grande vilão. Contém teobromina, que causa arritmia cardíaca, tremores e convulsões. Chocolate amargo é ainda pior.</li>
+                    <li><strong>Uvas e Uvas-passas:</strong> Podem causar falência renal aguda súbita. Nunca ofereça, nem uma única uva.</li>
+                    <li><strong>Cebola e Alho:</strong> Destroem os glóbulos vermelhos, causando anemia grave. Cuidado com restos de comida caseira temperada.</li>
+                    <li><strong>Abacate:</strong> Contém persina, que pode causar vômitos e diarreia em cães (e é fatal para aves).</li>
+                    <li><strong>Xilitol (Adoçante):</strong> Presente em gomas de mascar e doces diet. Causa hipoglicemia rápida e falência hepática.</li>
+                </ul>
+                <div className="bg-red-50 border border-red-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-red-800 mb-2">🚑 Emergência!</h3>
+                    <p>Se seu pet ingeriu algo dessa lista, não espere os sintomas. Corra para o veterinário imediatamente. Leve a embalagem do produto se possível.</p>
+                </div>
+            </div>
+        )
+    },
+    "obesidade-pet-perigos": {
+        title: "Obesidade em Pets: Riscos Ocultos e Como Reverter",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Um pet "gordinho" pode parecer fofo, mas a obesidade é uma doença inflamatória crônica que rouba anos de vida do seu companheiro. Estima-se que mais de 50% dos pets no Brasil estão acima do peso.
+                </p>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Os Perigos do Excesso de Peso</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Articulações:</strong> O peso extra destrói joelhos e quadris (artrose), causando dor constante.</li>
+                    <li><strong>Diabetes:</strong> Muito comum em gatos obesos, exigindo injeções diárias de insulina.</li>
+                    <li><strong>Coração e Pulmão:</strong> A gordura comprime o tórax, dificultando a respiração e sobrecarregando o coração.</li>
+                </ul>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Saber se Ele Está Obeso?</h2>
+                <p>Faça o teste do toque: você deve conseguir sentir as costelas dele facilmente ao passar a mão, mas não vê-las. Se tiver que apertar para achar a costela, ele precisa de dieta.</p>
+                <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-blue-800 mb-2">💡 Dica de Dieta</h3>
+                    <p>Não basta reduzir a ração (isso pode causar deficiência nutricional). Troque por uma ração <strong>Light</strong> ou <strong>Obesity</strong> e use brinquedos interativos para ele "caçar" a comida.</p>
+                </div>
+            </div>
+        )
+    },
+    "hidratacao-gatos-guia": {
+        title: "Hidratação de Gatos: Por Que Eles Bebem Pouca Água?",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Gatos são descendentes de felinos do deserto. Na natureza, eles obtinham água quase exclusivamente da caça (presas têm 70% de água). Por isso, eles têm baixo instinto de sede. O problema? Ração seca tem apenas 10% de água.
+                </p>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">O Risco Renal</h2>
+                <p>A falta de água concentra a urina, formando cristais e cálculos que bloqueiam a uretra (emergência gravíssima) e levando à Doença Renal Crônica a longo prazo.</p>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Fazer o Gato Beber Mais Água</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Fontes de Água:</strong> Gatos amam água corrente e fresca. Invista em uma fonte elétrica.</li>
+                    <li><strong>Espalhe Potes:</strong> Tenha vários potes pela casa (longe da caixa de areia!).</li>
+                    <li><strong>Sachê Todo Dia:</strong> A ração úmida é a melhor prevenção. Dê pelo menos meio sachê por dia, misturado com um pouco de água morna ("sopinha").</li>
+                </ul>
+                <div className="bg-cyan-50 border border-cyan-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-cyan-800 mb-2">💧 Teste da Pele</h3>
+                    <p>Puxe levemente a pele da nuca do gato. Se ela demorar para voltar ao lugar, ele pode estar desidratado. Ofereça água ou vá ao vet.</p>
+                </div>
+            </div>
+        )
+    },
+    "como-trocar-racao": {
+        title: "Como Trocar a Ração do Pet Sem Causar Problemas",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Decidiu mudar a marca da ração? Ótimo, mas não faça isso de um dia para o outro! O sistema digestivo dos pets é sensível e habituado à fórmula atual. A troca brusca causa "bomba relógio": vômitos, gases e diarreia líquida.
+                </p>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">A Regra dos 7 Dias</h2>
+                <p>A transição deve ser gradual para adaptar a flora intestinal. Siga este cronograma:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Dias 1 e 2:</strong> 25% da Nova + 75% da Antiga.</li>
+                    <li><strong>Dias 3 e 4:</strong> 50% da Nova + 50% da Antiga.</li>
+                    <li><strong>Dias 5 e 6:</strong> 75% da Nova + 25% da Antiga.</li>
+                    <li><strong>Dia 7 em diante:</strong> 100% da Nova.</li>
+                </ul>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Sinais de Alerta</h2>
+                <p>Se durante a troca o pet apresentar fezes moles, volte um passo (reduza a quantidade da nova) e mantenha por mais dias. Se persistir, a nova ração pode não ser adequada para ele (alergia ou intolerância).</p>
+                <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-green-800 mb-2">🥣 Dica Extra</h3>
+                    <p>Misture bem os grãos. Se o pet for esperto e separar as bolinhas, você pode usar um pouco de água morna ou sachê para "grudar" os cheiros e sabores.</p>
+                </div>
+            </div>
+        )
     }
 };
 
@@ -1687,11 +1815,50 @@ const Article = () => {
                     </Button>
 
                     <article className="prose prose-lg max-w-none">
+                        <div className={`h-64 flex items-center justify-center rounded-2xl mb-8 ${getArticleConfig(slug || '').color}`}>
+                            {(() => {
+                                const Icon = getArticleConfig(slug || '').icon;
+                                return <Icon className="w-24 h-24 opacity-80" strokeWidth={1.5} />;
+                            })()}
+                        </div>
                         <h1 className="text-3xl md:text-4xl font-bold text-primary mb-8 leading-tight">{article.title}</h1>
                         <div className="bg-card p-8 rounded-2xl shadow-sm border border-border/50 text-foreground">
                             {article.content}
                         </div>
                     </article>
+
+                    <div className="flex justify-center">
+                        <Button
+                            onClick={async () => {
+                                try {
+                                    if (navigator.share) {
+                                        await navigator.share({
+                                            title: article.title,
+                                            text: `Confira este artigo do PetScore: ${article.title}`,
+                                            url: window.location.href
+                                        });
+                                    } else {
+                                        await navigator.clipboard.writeText(window.location.href);
+                                        // Create a simple toast notification
+                                        const toast = document.createElement('div');
+                                        toast.className = 'fixed bottom-4 right-4 bg-primary text-primary-foreground px-6 py-3 rounded-lg shadow-lg z-50 animate-in slide-in-from-bottom-5';
+                                        toast.textContent = '✓ Link copiado!';
+                                        document.body.appendChild(toast);
+                                        setTimeout(() => {
+                                            toast.remove();
+                                        }, 3000);
+                                    }
+                                } catch (error) {
+                                    console.log('Compartilhamento cancelado ou erro:', error);
+                                }
+                            }}
+                            className="gap-2"
+                            size="lg"
+                        >
+                            <Share2 className="w-4 h-4" />
+                            Compartilhar Artigo
+                        </Button>
+                    </div>
 
                     <hr className="border-border" />
 
@@ -1705,14 +1872,22 @@ const Article = () => {
                                         navigate(`/blog/${key}`);
                                         window.scrollTo(0, 0);
                                     }}
-                                    className="bg-card p-6 rounded-xl shadow-sm border border-border/50 hover:border-primary/50 hover:shadow-md transition-all cursor-pointer group"
+                                    className="bg-card overflow-hidden rounded-xl shadow-sm border border-border/50 hover:border-primary/50 hover:shadow-md transition-all cursor-pointer group flex flex-col"
                                 >
-                                    <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors mb-2">
-                                        {item.title}
-                                    </h3>
-                                    <span className="text-primary text-sm font-medium flex items-center gap-1">
-                                        Ler artigo <span className="group-hover:translate-x-1 transition-transform">→</span>
-                                    </span>
+                                    <div className={`h-32 flex items-center justify-center ${getArticleConfig(key).color} transition-colors`}>
+                                        {(() => {
+                                            const Icon = getArticleConfig(key).icon;
+                                            return <Icon className="w-12 h-12 opacity-80 group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />;
+                                        })()}
+                                    </div>
+                                    <div className="p-4 flex flex-col flex-1">
+                                        <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors mb-2 line-clamp-2">
+                                            {item.title}
+                                        </h3>
+                                        <span className="text-primary text-sm font-medium flex items-center gap-1 mt-auto">
+                                            Ler artigo <span className="group-hover:translate-x-1 transition-transform">→</span>
+                                        </span>
+                                    </div>
                                 </div>
                             ))}
                         </div>

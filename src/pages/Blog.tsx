@@ -1,11 +1,27 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate, Link } from "react-router-dom";
-import { ArrowLeft, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, BookOpen, PawPrint, Cat, Dog, Apple, Stethoscope, Heart, Syringe, Bone, Brain, AlertTriangle, DollarSign, Leaf, Activity, ShieldAlert } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 import { useEffect, useState } from "react";
+
+const getArticleConfig = (slug: string) => {
+    if (slug.includes('gato')) return { icon: Cat, color: "bg-purple-100 text-purple-600" };
+    if (slug.includes('cachorro') || slug.includes('cao') || slug.includes('caes')) return { icon: Dog, color: "bg-orange-100 text-orange-600" };
+    if (slug.includes('aliment') || slug.includes('nutri') || slug.includes('fruta') || slug.includes('racao') || slug.includes('superfoods')) return { icon: Apple, color: "bg-green-100 text-green-600" };
+    if (slug.includes('vacina') || slug.includes('vermifugo') || slug.includes('medic')) return { icon: Syringe, color: "bg-blue-100 text-blue-600" };
+    if (slug.includes('saude') || slug.includes('dor') || slug.includes('checkup') || slug.includes('emergencia')) return { icon: Stethoscope, color: "bg-cyan-100 text-cyan-600" };
+    if (slug.includes('ansiedade') || slug.includes('comportamento') || slug.includes('feliz') || slug.includes('amor')) return { icon: Heart, color: "bg-pink-100 text-pink-600" };
+    if (slug.includes('custo') || slug.includes('dinheiro')) return { icon: DollarSign, color: "bg-yellow-100 text-yellow-600" };
+    if (slug.includes('plantas') || slug.includes('toxic')) return { icon: Leaf, color: "bg-emerald-100 text-emerald-600" };
+    if (slug.includes('proibido') || slug.includes('perigo')) return { icon: ShieldAlert, color: "bg-red-100 text-red-600" };
+    if (slug.includes('inteligencia') || slug.includes('linguagem') || slug.includes('socializacao')) return { icon: Brain, color: "bg-indigo-100 text-indigo-600" };
+    if (slug.includes('raca') || slug.includes('srd') || slug.includes('shih') || slug.includes('york') || slug.includes('poodle') || slug.includes('spitz') || slug.includes('bull') || slug.includes('golden') || slug.includes('labrador') || slug.includes('pinscher') || slug.includes('lhasa')) return { icon: Bone, color: "bg-amber-100 text-amber-600" };
+
+    return { icon: PawPrint, color: "bg-primary/10 text-primary" };
+};
 
 const Blog = () => {
     const navigate = useNavigate();
@@ -167,6 +183,31 @@ const Blog = () => {
             slug: "enriquecimento-ambiental",
             title: "Seu pet está entediado? 8 brincadeiras baratas para fazer em casa",
             description: "Transforme a rotina do seu cão e acabe com a destruição de móveis com dicas simples."
+        },
+        {
+            slug: "frutas-permitidas-cachorro",
+            title: "Frutas que Cachorros Podem Comer: Guia Seguro e Saudável",
+            description: "Banana, maçã, melancia... Saiba quais frutas são petiscos saudáveis e quais evitar."
+        },
+        {
+            slug: "alimentos-proibidos-pets",
+            title: "Alimentos Proibidos: O Que Nunca Dar para Seu Pet",
+            description: "Chocolate, uva, cebola... Conheça a lista negra de alimentos que podem ser fatais."
+        },
+        {
+            slug: "obesidade-pet-perigos",
+            title: "Obesidade em Pets: Riscos Ocultos e Como Reverter",
+            description: "Seu pet está gordinho? Entenda os riscos para a saúde e como ajudá-lo a emagrecer."
+        },
+        {
+            slug: "hidratacao-gatos-guia",
+            title: "Hidratação de Gatos: Por Que Eles Bebem Pouca Água?",
+            description: "Dicas essenciais para evitar problemas renais e fazer seu gato beber mais água."
+        },
+        {
+            slug: "como-trocar-racao",
+            title: "Como Trocar a Ração do Pet Sem Causar Problemas",
+            description: "Aprenda a fazer a transição gradual para evitar vômitos e diarreia."
         }
     ];
 
@@ -200,15 +241,23 @@ const Blog = () => {
                     <div className="grid md:grid-cols-2 gap-6">
                         {currentArticles.map((article) => (
                             <Link key={article.slug} to={`/blog/${article.slug}`}>
-                                <Card className="h-full p-6 hover:shadow-lg transition-all cursor-pointer border-border/50 hover:border-primary/50 group">
-                                    <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                                        {article.title}
-                                    </h3>
-                                    <p className="text-muted-foreground">
-                                        {article.description}
-                                    </p>
-                                    <div className="mt-4 text-primary font-medium text-sm flex items-center gap-1">
-                                        Ler artigo completo <span className="group-hover:translate-x-1 transition-transform">→</span>
+                                <Card className="h-full overflow-hidden hover:shadow-lg transition-all cursor-pointer border-border/50 hover:border-primary/50 group flex flex-col">
+                                    <div className={`h-48 flex items-center justify-center ${getArticleConfig(article.slug).color} transition-colors`}>
+                                        {(() => {
+                                            const Icon = getArticleConfig(article.slug).icon;
+                                            return <Icon className="w-16 h-16 opacity-80 group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />;
+                                        })()}
+                                    </div>
+                                    <div className="p-6 flex flex-col flex-1">
+                                        <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                                            {article.title}
+                                        </h3>
+                                        <p className="text-muted-foreground line-clamp-3 mb-4 flex-1">
+                                            {article.description}
+                                        </p>
+                                        <div className="mt-auto text-primary font-medium text-sm flex items-center gap-1">
+                                            Ler artigo completo <span className="group-hover:translate-x-1 transition-transform">→</span>
+                                        </div>
                                     </div>
                                 </Card>
                             </Link>
@@ -221,8 +270,9 @@ const Blog = () => {
                                 variant="outline"
                                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                                 disabled={currentPage === 1}
+                                className="gap-2"
                             >
-                                <ChevronLeft className="w-4 h-4 mr-2" /> Anterior
+                                <PawPrint className="w-4 h-4 rotate-[-90deg]" /> Anterior
                             </Button>
                             <span className="text-muted-foreground font-medium">
                                 Página {currentPage} de {totalPages}
@@ -231,8 +281,9 @@ const Blog = () => {
                                 variant="outline"
                                 onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
                                 disabled={currentPage === totalPages}
+                                className="gap-2"
                             >
-                                Próxima <ChevronRight className="w-4 h-4 ml-2" />
+                                Próxima <PawPrint className="w-4 h-4" />
                             </Button>
                         </div>
                     )}
