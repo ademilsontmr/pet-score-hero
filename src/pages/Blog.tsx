@@ -223,6 +223,81 @@ const Blog = () => {
             slug: "bem-estar-pet-2026",
             title: "Bem-Estar Pet em 2026: Saúde Mental e Qualidade de Vida",
             description: "Terapia comportamental, fisioterapia e espaços pet-friendly: o novo padrão de cuidado."
+        },
+        {
+            slug: "racao-para-cachorro-guia",
+            title: "Ração para Cachorro: Guia Completo para Escolher a Melhor em 2026",
+            description: "Tipos, marcas, ingredientes e como escolher a ração ideal por idade e porte do seu cão."
+        },
+        {
+            slug: "racao-para-gato-guia",
+            title: "Ração para Gato: Como Escolher a Melhor Nutrição Felina em 2026",
+            description: "Entenda as diferenças entre rações, necessidades específicas e como alimentar seu gato corretamente."
+        },
+        {
+            slug: "areia-para-gato-guia",
+            title: "Areia para Gato: Guia Completo dos Melhores Tipos em 2026",
+            description: "Aglomerante, sílica ou biodegradável? Descubra qual areia é ideal para seu gato."
+        },
+        {
+            slug: "tapete-higienico-cachorro-guia",
+            title: "Tapete Higiênico para Cachorro: Guia Completo de Uso e Treinamento",
+            description: "Como escolher, treinar seu cão e fazer a transição do tapete para a rua."
+        },
+        {
+            slug: "antipulgas-cachorro-gato-guia",
+            title: "Antipulgas para Cães e Gatos: Guia Completo de Produtos em 2026",
+            description: "Coleiras, pipetas ou comprimidos? Saiba qual é o melhor antipulgas para seu pet."
+        },
+        {
+            slug: "osso-cachorro-guia",
+            title: "Osso para Cachorro: Guia Completo de Tipos Seguros e Benefícios",
+            description: "Ossos naturais, sintéticos ou comestíveis? Aprenda a escolher com segurança."
+        },
+        {
+            slug: "casinha-cachorro-guia",
+            title: "Casinha para Cachorro: Como Escolher o Modelo Ideal em 2026",
+            description: "Plástico, madeira ou fibra? Guia completo de tamanhos, materiais e localização."
+        },
+        {
+            slug: "coleira-gato-guia",
+            title: "Coleira para Gato: Guia Completo de Tipos e Como Usar com Segurança",
+            description: "Fivela de segurança, peitoral e como acostumar seu gato com coleira."
+        },
+        {
+            slug: "racao-natural-gatos-guia",
+            title: "Ração Natural para Gatos: Benefícios e Como Escolher em 2026",
+            description: "Marcas, benefícios comprovados e como fazer a transição para ração natural."
+        },
+        {
+            slug: "racao-natural-cachorro-guia",
+            title: "Ração Natural para Cachorro: Guia Completo de Benefícios em 2026",
+            description: "Por que veterinários recomendam e como escolher a melhor ração natural."
+        },
+        {
+            slug: "vermifugo-gatos-guia",
+            title: "Vermífugo para Gatos: Guia Completo de Tipos e Quando Usar",
+            description: "Comprimidos, pastas ou pipetas? Frequência correta e como aplicar."
+        },
+        {
+            slug: "caminha-cachorro-guia",
+            title: "Caminha para Cachorro: Como Escolher o Modelo Perfeito em 2026",
+            description: "Ortopédica, almofadada ou elevada? Guia completo de tamanhos e materiais."
+        },
+        {
+            slug: "arranhador-gatos-guia",
+            title: "Arranhador para Gatos: Guia Completo de Tipos e Treinamento",
+            description: "Vertical, horizontal ou torre? Como treinar e proteger seus móveis."
+        },
+        {
+            slug: "fonte-gatos-guia",
+            title: "Fonte para Gatos: Por Que Seu Gato Precisa de Uma em 2026",
+            description: "Benefícios comprovados, tipos de fontes e como aumentar a hidratação do seu gato."
+        },
+        {
+            slug: "coleira-antipulgas-guia",
+            title: "Coleira Antipulgas: Guia Completo de Eficácia e Uso Seguro",
+            description: "Seresto, Scalibor ou genéricas? Vantagens, desvantagens e como usar corretamente."
         }
     ];
 
