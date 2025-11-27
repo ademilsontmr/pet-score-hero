@@ -2384,6 +2384,246 @@ const articles = {
                 </p>
             </div>
         )
+    },
+    "casinha-cachorro-guia": {
+        title: "Casinha para Cachorro: Como Escolher o Modelo Ideal em 2026",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Uma casinha adequada protege seu cão de chuva, sol forte e frio, além de proporcionar um refúgio seguro onde ele se sente protegido. Escolher o tamanho, material e localização corretos garante conforto e saúde. Veja como acertar na escolha.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Tipos de Casinha para Cachorro</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Casinha de Plástico</h3>
+                <p>
+                    Marcas como Furacão Pet, Chalesco e Plast Pet oferecem casinhas de plástico resistente. São duráveis, fáceis de limpar e não apodrecem com umidade. Ideais para áreas externas com chuva frequente.
+                </p>
+                <p>
+                    <strong>Vantagens:</strong> Impermeável, durável (5-10 anos), fácil higienização.<br />
+                    <strong>Desvantagens:</strong> Esquenta muito no sol (precisa de sombra), pode rachar com frio extremo.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Casinha de Madeira</h3>
+                <p>
+                    Casinhas de madeira tratada (pinus ou eucalipto) são bonitas e oferecem melhor isolamento térmico. Marcas como Meu Pet e Casinha Pet vendem modelos com telhado impermeabilizado e pés elevados.
+                </p>
+                <p>
+                    <strong>Vantagens:</strong> Isolamento térmico superior, estética agradável, durável com manutenção.<br />
+                    <strong>Desvantagens:</strong> Precisa de verniz/impermeabilizante anual, mais cara (R$ 300-800).
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Casinha de Fibra de Vidro</h3>
+                <p>
+                    Resistentes e leves. Não racham, não apodrecem e isolam bem temperatura. Ideais para regiões com clima extremo. Marcas especializadas fabricam sob medida.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Casinha Iglu (Tecido)</h3>
+                <p>
+                    Casinhas portáteis de tecido impermeável com estrutura dobrável. Perfeitas para viagens, camping ou uso interno. Marcas como Chalesco e Jambo oferecem modelos compactos.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Escolher o Tamanho Certo</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Regra de Medição</h3>
+                <p>
+                    A casinha deve permitir que o cão entre, vire e deite confortavelmente. Meça seu cão:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Comprimento:</strong> Do focinho até a base da cauda + 15cm</li>
+                    <li><strong>Altura:</strong> Do chão até o topo da cabeça (em pé) + 10cm</li>
+                    <li><strong>Largura:</strong> Largura do corpo x 1,5</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Tamanhos Padrão</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Pequeno (até 10kg):</strong> 50x40x40cm - Poodle, Yorkshire, Shih Tzu</li>
+                    <li><strong>Médio (10-25kg):</strong> 80x60x60cm - Beagle, Cocker, Border Collie</li>
+                    <li><strong>Grande (25-40kg):</strong> 100x80x80cm - Labrador, Golden, Pastor Alemão</li>
+                    <li><strong>Gigante (40kg+):</strong> 120x100x90cm - Rottweiler, Fila, São Bernardo</li>
+                </ul>
+
+                <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-blue-800 mb-2">⚠️ Atenção</h3>
+                    <p>Casinha muito grande perde calor no inverno. Casinha muito pequena causa desconforto e o cão não usa. Prefira um tamanho justo.</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Localização Ideal</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Sombra:</strong> Nunca deixe a casinha em sol pleno. Use árvores ou telhados para sombreamento.</li>
+                    <li><strong>Elevação:</strong> Coloque sobre paletes ou tijolos (10cm do chão) para evitar umidade e insetos.</li>
+                    <li><strong>Proteção de vento:</strong> Posicione a entrada oposta à direção do vento predominante.</li>
+                    <li><strong>Drenagem:</strong> Escolha local onde água da chuva não acumula.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Acessórios Essenciais</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Colchonete ou Almofada</h3>
+                <p>
+                    Colchonetes impermeáveis com capa removível (Chalesco, Jambo) proporcionam conforto e isolamento do chão frio. Lave quinzenalmente.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Cortina para Entrada</h3>
+                <p>
+                    Cortinas de PVC transparente bloqueiam vento e chuva sem escurecer o interior. Essenciais para regiões frias.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Comedouro e Bebedouro</h3>
+                <p>
+                    Alguns modelos têm suporte lateral para potes. Mantenha água fresca sempre disponível, especialmente no verão.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Manutenção e Limpeza</h2>
+                <p>
+                    Limpe a casinha semanalmente com água, sabão neutro e desinfetante pet-safe. Verifique rachaduras, pregos soltos ou mofo. Reaplique impermeabilizante em casinhas de madeira anualmente.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Quanto Custa?</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Plástico pequena:</strong> R$ 80-150</li>
+                    <li><strong>Plástico média/grande:</strong> R$ 150-400</li>
+                    <li><strong>Madeira pequena:</strong> R$ 200-400</li>
+                    <li><strong>Madeira grande:</strong> R$ 400-1.000</li>
+                    <li><strong>Fibra de vidro:</strong> R$ 500-1.500 (sob medida)</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Sinais de que a Casinha Não Está Adequada</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Cão evita entrar ou fica pouco tempo dentro</li>
+                    <li>Postura curvada ou dificuldade para virar</li>
+                    <li>Interior muito quente ao toque (precisa de sombra)</li>
+                    <li>Umidade ou mofo no interior</li>
+                </ul>
+
+                <p>
+                    Uma casinha bem escolhida se torna o refúgio favorito do cão. Invista em qualidade e tamanho adequado para garantir anos de uso confortável.
+                </p>
+            </div>
+        )
+    },
+    "coleira-gato-guia": {
+        title: "Coleira para Gato: Guia Completo de Tipos e Como Usar com Segurança",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Coleiras para gatos não são apenas acessórios - elas salvam vidas. Gatos que saem de casa precisam de identificação, e coleiras com guia permitem passeios seguros. Mas escolher o tipo errado pode causar acidentes. Aprenda a escolher e usar corretamente.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Tipos de Coleira para Gato</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Coleira com Fivela de Segurança (Breakaway)</h3>
+                <p>
+                    A ÚNICA coleira segura para gatos que ficam soltos. A fivela se abre com pressão, evitando enforcamento se o gato ficar preso em galhos ou grades. Marcas como Chalesco, Jambo e Ferplast oferecem modelos ajustáveis.
+                </p>
+                <p>
+                    <strong>Essencial:</strong> Nunca use coleira comum de cachorro em gatos! Eles podem se enforcar tentando escapar.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Peitoral (Harness)</h3>
+                <p>
+                    Ideal para passeios com guia. Distribui pressão pelo peito, não pelo pescoço. Modelos em "H" ou "8" da Chalesco e Ferplast são mais seguros. Gatos não conseguem escapar facilmente.
+                </p>
+                <p>
+                    <strong>Vantagens:</strong> Seguro para passeios, não machuca pescoço, difícil de escapar.<br />
+                    <strong>Desvantagens:</strong> Precisa acostumar o gato gradualmente (pode estranhar no início).
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Coleira com Guizo</h3>
+                <p>
+                    Coleiras com sininho alertam pássaros e pequenos animais. Útil para gatos caçadores, mas pode estressar gatos sensíveis ao som constante. Use com moderação.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Coleira Antipulgas</h3>
+                <p>
+                    Coleiras como Seresto liberam antipulgas por 8 meses. Devem ter fivela de segurança. Atenção: alguns gatos têm alergia ao princípio ativo (coceira no pescoço).
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Escolher o Tamanho Certo</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Medição Correta</h3>
+                <p>
+                    Meça o pescoço do gato com fita métrica. A coleira deve permitir passar 2 dedos entre ela e o pescoço. Muito apertada machuca, muito folgada o gato escapa.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Filhotes (2-6 meses):</strong> 15-20cm ajustável</li>
+                    <li><strong>Adultos pequenos:</strong> 20-25cm</li>
+                    <li><strong>Adultos médios/grandes:</strong> 25-30cm</li>
+                </ul>
+
+                <div className="bg-purple-50 border border-purple-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-purple-800 mb-2">🐱 Dica Importante</h3>
+                    <p>Verifique o ajuste semanalmente. Gatos podem perder ou ganhar peso, e a coleira precisa ser reajustada.</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Acostumar o Gato com Coleira</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Passo 1: Apresentação Gradual</h3>
+                <p>
+                    Deixe a coleira perto do gato por alguns dias. Deixe-o cheirar e investigar. Associe com petiscos e carinho.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Passo 2: Primeiros Minutos</h3>
+                <p>
+                    Coloque a coleira por 5-10 minutos enquanto brinca ou oferece comida. Retire antes que ele fique estressado. Repita diariamente aumentando o tempo.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Passo 3: Uso Contínuo</h3>
+                <p>
+                    Após 1-2 semanas, o gato deve tolerar a coleira o dia todo. Alguns nunca se acostumam completamente - respeite o limite do seu gato.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Identificação Essencial</h2>
+                <p>
+                    Coloque plaquinha de identificação com nome do gato, seu telefone e endereço. Em caso de fuga, aumenta em 70% a chance de retorno. Plaquinhas de metal gravado (R$ 15-30) são duráveis.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Passeios com Guia</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Preparação</h3>
+                <p>
+                    Use peitoral, nunca coleira simples. Comece em ambiente fechado (quintal, varanda). Deixe o gato explorar no ritmo dele - não puxe a guia.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Locais Seguros</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Jardins tranquilos sem cães soltos</li>
+                    <li>Parques em horários calmos</li>
+                    <li>Evite ruas movimentadas (gatos se assustam com barulhos)</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Erros Comuns</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Usar coleira sem fivela de segurança:</strong> Risco de enforcamento fatal</li>
+                    <li><strong>Deixar muito folgada:</strong> Gato escapa facilmente</li>
+                    <li><strong>Forçar gato que odeia coleira:</strong> Causa estresse crônico</li>
+                    <li><strong>Não verificar ajuste regularmente:</strong> Pode apertar conforme gato cresce</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Quando Não Usar Coleira</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Gatos 100% indoor que não saem nunca (microchip é melhor)</li>
+                    <li>Gatos com problemas respiratórios (pode piorar)</li>
+                    <li>Filhotes abaixo de 8 semanas (pescoço muito frágil)</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Alternativas à Coleira</h2>
+                <p>
+                    <strong>Microchip:</strong> Identificação permanente implantada sob a pele. Não pode ser perdida. Custo: R$ 80-150. Essencial para gatos que recusam coleira.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Quanto Custa?</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Coleira simples com fivela de segurança:</strong> R$ 15-40</li>
+                    <li><strong>Peitoral ajustável:</strong> R$ 30-80</li>
+                    <li><strong>Coleira antipulgas (Seresto):</strong> R$ 150-200</li>
+                    <li><strong>Plaquinha de identificação:</strong> R$ 15-30</li>
+                </ul>
+
+                <p>
+                    Coleiras salvam vidas, mas só se usadas corretamente. Priorize sempre a segurança com fivela breakaway e ajuste adequado. Se seu gato rejeita completamente, considere microchip como alternativa.
+                </p>
+            </div>
+        )
     }
 };
 
