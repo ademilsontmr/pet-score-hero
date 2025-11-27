@@ -3337,6 +3337,462 @@ const articles = {
                 </p>
             </div>
         )
+    },
+    "plano-saude-pet-guia": {
+        title: "Plano de Saúde para Pets: Vale a Pena? Guia Completo 2026",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Planos de saúde para pets custam entre R$ 50-300/mês e podem economizar milhares em emergências. Mas será que vale a pena para seu pet? Entenda coberturas, exclusões, carências e como escolher o melhor plano.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">O Que é Plano de Saúde Pet?</h2>
+                <p>
+                    Funciona como convênio médico humano: você paga mensalidade e tem acesso a consultas, exames e procedimentos com desconto ou sem custo adicional. Alguns cobrem até cirurgias e internações.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Principais Operadoras no Brasil</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Porto Seguro Pet</h3>
+                <p>
+                    Planos de R$ 80-250/mês. Cobertura nacional, reembolso de até 80%. Inclui consultas, exames, cirurgias e fisioterapia. Carência: 30 dias (consultas) e 180 dias (cirurgias).
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Petlove Saúde</h3>
+                <p>
+                    R$ 60-200/mês. Rede credenciada ampla. Telemedicina 24h incluída. Cobertura para vacinas e castração. Carência: 30 dias geral.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Allianz Pet</h3>
+                <p>
+                    R$ 90-280/mês. Sem limite de uso anual. Cobre doenças congênitas após 12 meses. Assistência funeral incluída. Carência: 30-180 dias conforme procedimento.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">O Que Geralmente Está Coberto</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Consultas veterinárias:</strong> Clínico geral e especialistas</li>
+                    <li><strong>Exames:</strong> Sangue, raio-X, ultrassom, tomografia</li>
+                    <li><strong>Cirurgias:</strong> Emergenciais e eletivas (após carência)</li>
+                    <li><strong>Internações:</strong> UTI e enfermaria</li>
+                    <li><strong>Medicamentos:</strong> Durante internação</li>
+                    <li><strong>Fisioterapia:</strong> Pós-cirúrgica</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">O Que NÃO Está Coberto</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Doenças pré-existentes (antes da contratação)</li>
+                    <li>Vacinas de rotina (alguns planos cobrem)</li>
+                    <li>Banho e tosa</li>
+                    <li>Ração medicamentosa</li>
+                    <li>Tratamentos estéticos</li>
+                    <li>Doenças congênitas (primeiros 12 meses)</li>
+                </ul>
+
+                <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-yellow-800 mb-2">⚠️ Atenção às Carências</h3>
+                    <p>Carência é o período que você paga mas não pode usar. Emergências têm carência de 24h-7 dias. Cirurgias: 30-180 dias. Leia o contrato!</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Vale a Pena? Faça as Contas</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Cenário 1: Pet Saudável</h3>
+                <p>
+                    Gasto anual sem plano: R$ 800 (consultas + vacinas + vermífugo)<br />
+                    Plano básico: R$ 60/mês = R$ 720/ano<br />
+                    <strong>Resultado:</strong> Empate. Mas você tem segurança para emergências.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Cenário 2: Emergência Grave</h3>
+                <p>
+                    Cirurgia de urgência: R$ 5.000-15.000<br />
+                    Com plano: R$ 0-1.500 (franquia)<br />
+                    <strong>Economia:</strong> R$ 3.500-15.000
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Cenário 3: Doença Crônica</h3>
+                <p>
+                    Diabetes/insuficiência renal: R$ 500-1.500/mês em tratamento<br />
+                    Com plano: R$ 100-300/mês (mensalidade + coparticipação)<br />
+                    <strong>Economia anual:</strong> R$ 4.800-14.400
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Para Quem Vale Mais a Pena?</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Filhotes:</strong> Maior risco de acidentes e doenças</li>
+                    <li><strong>Raças predispostas:</strong> Bulldogs, Dachshunds, Persas (problemas genéticos)</li>
+                    <li><strong>Pets idosos:</strong> Acima de 7 anos (custos aumentam)</li>
+                    <li><strong>Tutores sem reserva financeira:</strong> Emergência de R$ 10 mil pode quebrar</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Escolher o Melhor Plano</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">1. Verifique a Rede Credenciada</h3>
+                <p>
+                    Tem veterinário perto de você? Aceita especialistas? Hospitais 24h disponíveis?
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">2. Compare Carências</h3>
+                <p>
+                    Quanto menor, melhor. Evite planos com carência acima de 180 dias para cirurgias.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">3. Leia as Exclusões</h3>
+                <p>
+                    Alguns planos não cobrem raças específicas ou doenças hereditárias. Leia a letra miúda!
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">4. Verifique Reembolso vs Rede</h3>
+                <p>
+                    Planos de reembolso: você paga e depois é reembolsado (50-80%).<br />
+                    Planos de rede: você usa veterinários credenciados sem pagar na hora.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Alternativa: Fundo de Emergência</h2>
+                <p>
+                    Se você tem disciplina financeira, pode criar um fundo próprio. Guarde R$ 100-200/mês em conta separada. Em 2 anos terá R$ 2.400-4.800 para emergências.
+                </p>
+                <p>
+                    <strong>Vantagem:</strong> Dinheiro é seu, sem carências ou exclusões.<br />
+                    <strong>Desvantagem:</strong> Emergência nos primeiros meses pode quebrar o fundo.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Dicas Finais</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Contrate quando o pet é jovem (mensalidade mais barata)</li>
+                    <li>Não cancele após usar muito (recontratação tem carência novamente)</li>
+                    <li>Guarde todos os recibos e laudos</li>
+                    <li>Teste o atendimento antes de precisar (ligue, tire dúvidas)</li>
+                </ul>
+
+                <p>
+                    Plano de saúde pet é investimento em tranquilidade. Se você não tem R$ 5-10 mil guardados para emergências, vale muito a pena. Seu pet merece o melhor cuidado!
+                </p>
+            </div>
+        )
+    },
+    "como-adotar-pet-guia": {
+        title: "Como Adotar um Pet: Guia Completo do Processo em 2026",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Adotar um pet salva vidas e traz amor incondicional para casa. Mas o processo tem etapas, documentos e responsabilidades. Aprenda tudo: onde adotar, como escolher, custos iniciais e como passar pela entrevista de adoção.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Por Que Adotar em Vez de Comprar?</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Salva vidas:</strong> 30 milhões de pets abandonados no Brasil</li>
+                    <li><strong>Combate criadores ilegais:</strong> Muitos operam em condições cruéis</li>
+                    <li><strong>Pets gratos:</strong> Adotados são extremamente leais</li>
+                    <li><strong>Custo zero:</strong> Adoção é gratuita (só paga castração se ainda não feita)</li>
+                    <li><strong>Variedade:</strong> Filhotes, adultos, idosos, raças puras e SRD</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Onde Adotar?</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">ONGs e Abrigos</h3>
+                <p>
+                    Organizações como Ampara Animal, SUIPA, Vira-Lata é Dez. Pets vacinados, vermifugados e castrados. Processo de adoção criterioso (entrevista + visita).
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Feiras de Adoção</h3>
+                <p>
+                    Acontecem em parques e pet shops aos finais de semana. Você conhece vários pets de uma vez. Processo mais rápido que ONGs.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Plataformas Online</h3>
+                <p>
+                    Sites como Petlove Adoção, Adopets, PetAnjo. Filtre por idade, porte, cidade. Contato direto com protetores independentes.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">CCZs (Centro de Controle de Zoonoses)</h3>
+                <p>
+                    Órgãos municipais. Pets resgatados das ruas. Processo burocrático, mas adoção gratuita e pets já vacinados.
+                </p>
+
+                <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-green-800 mb-2">💚 Dica de Ouro</h3>
+                    <p>Adote adultos ou idosos! Filhotes são adotados rapidamente. Pets adultos esperam anos por um lar e são mais calmos e treinados.</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Processo de Adoção Passo a Passo</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">1. Escolha do Pet</h3>
+                <p>
+                    Visite abrigos ou feiras. Interaja com vários pets. Observe comportamento: tímido, brincalhão, calmo? Escolha compatível com seu estilo de vida.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">2. Pré-Cadastro</h3>
+                <p>
+                    Preencha formulário com dados pessoais, tipo de moradia, rotina, experiência com pets. Seja honesto - mentir pode resultar em devolução do pet.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">3. Entrevista</h3>
+                <p>
+                    ONG liga ou agenda visita. Perguntas comuns:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Todos da casa concordam com a adoção?</li>
+                    <li>Quem cuidará do pet se você viajar?</li>
+                    <li>Tem condições financeiras para veterinário?</li>
+                    <li>Casa tem telas/muros seguros?</li>
+                    <li>Já teve pets? O que aconteceu com eles?</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">4. Visita Domiciliar</h3>
+                <p>
+                    Algumas ONGs visitam sua casa para verificar segurança: portões, telas, quintal. Não precisa ser mansão - precisa ser seguro.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">5. Assinatura do Termo</h3>
+                <p>
+                    Contrato de adoção responsável. Você se compromete a:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Não abandonar ou doar sem avisar a ONG</li>
+                    <li>Castrar (se ainda não castrado)</li>
+                    <li>Vacinar anualmente</li>
+                    <li>Não deixar na rua ou corrente</li>
+                    <li>Permitir visitas de acompanhamento (primeiros 6 meses)</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">6. Leva o Pet para Casa!</h3>
+                <p>
+                    Período de adaptação: 7-30 dias. Pet pode ficar assustado, não comer bem, esconder-se. É normal! Tenha paciência.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Documentos Necessários</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>RG e CPF</li>
+                    <li>Comprovante de residência</li>
+                    <li>Fotos da casa (algumas ONGs)</li>
+                    <li>Referências pessoais (2-3 contatos)</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Custos Iniciais da Adoção</h2>
+                <p>
+                    Adoção é gratuita, mas você precisa investir em:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Castração:</strong> R$ 200-600 (se não castrado)</li>
+                    <li><strong>Vacinas:</strong> R$ 80-150 (V10/V8 + antirrábica)</li>
+                    <li><strong>Vermífugo:</strong> R$ 30-60</li>
+                    <li><strong>Antipulgas:</strong> R$ 50-150</li>
+                    <li><strong>Acessórios:</strong> R$ 200-400 (caminha, potes, coleira, brinquedos)</li>
+                    <li><strong>Ração:</strong> R$ 100-300/mês</li>
+                </ul>
+                <p>
+                    <strong>Total inicial:</strong> R$ 660-1.660
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Passar na Entrevista</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Seja Honesto</h3>
+                <p>
+                    Não minta sobre rotina ou condições. ONGs preferem negar adoção a ver pet devolvido depois.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Mostre Comprometimento</h3>
+                <p>
+                    Explique que pesquisou sobre a raça/porte, já comprou itens, tem veterinário de confiança.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Tenha Plano B</h3>
+                <p>
+                    "Se eu viajar, minha mãe cuida." "Se eu mudar de cidade, levo comigo." Mostre que pensou em tudo.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Erros Comuns na Adoção</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Escolher por aparência:</strong> Comportamento é mais importante</li>
+                    <li><strong>Adotar por impulso:</strong> Pense bem, é compromisso de 10-20 anos</li>
+                    <li><strong>Não preparar a casa:</strong> Compre itens antes de buscar o pet</li>
+                    <li><strong>Esperar amor instantâneo:</strong> Vínculo leva semanas/meses</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Adaptação: Primeiros 30 Dias</h2>
+                <p>
+                    <strong>Semana 1:</strong> Pet explora, pode não comer bem, esconder-se. Deixe-o no ritmo dele.<br />
+                    <strong>Semana 2-3:</strong> Começa a relaxar, brinca mais, aceita carinho.<br />
+                    <strong>Semana 4+:</strong> Já se sente em casa, mostra personalidade real.
+                </p>
+
+                <p>
+                    Adotar é um ato de amor que transforma duas vidas: a sua e a do pet. Prepare-se, seja paciente e aproveite cada momento com seu novo melhor amigo! 🐾
+                </p>
+            </div>
+        )
+    },
+    "primeiro-pet-checklist": {
+        title: "Primeiro Pet: Checklist Completo do Que Você Precisa em 2026",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Ter o primeiro pet é emocionante, mas também assustador. O que comprar? Quanto gastar? Como preparar a casa? Este guia completo lista TUDO que você precisa antes de trazer seu novo amigo para casa.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Antes de Trazer o Pet para Casa</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">1. Escolha um Veterinário</h3>
+                <p>
+                    Pesquise clínicas perto de você. Leia avaliações no Google. Visite antes de precisar. Pergunte sobre valores de consulta (R$ 100-300) e emergências 24h.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">2. Pet-Proof sua Casa</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Esconda fios elétricos (pets mastigam)</li>
+                    <li>Remova plantas tóxicas (lírio, comigo-ninguém-pode, espada-de-são-jorge)</li>
+                    <li>Feche armários baixos com produtos de limpeza</li>
+                    <li>Instale telas em janelas e sacadas</li>
+                    <li>Remova objetos pequenos que podem ser engolidos</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">3. Defina um Orçamento</h3>
+                <p>
+                    <strong>Custo inicial:</strong> R$ 500-1.500<br />
+                    <strong>Custo mensal:</strong> R$ 200-600 (ração, antipulgas, vermífugo)<br />
+                    <strong>Emergências:</strong> Reserve R$ 2.000-5.000 ou contrate plano de saúde
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Checklist de Compras: Itens Essenciais</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Alimentação</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Ração de qualidade:</strong> R$ 80-200 (saco de 10-15kg). Escolha premium ou super premium.</li>
+                    <li><strong>Potes de água e comida:</strong> R$ 30-80. Prefira inox ou cerâmica (não acumulam bactérias).</li>
+                    <li><strong>Tapete para potes:</strong> R$ 20-40. Evita sujeira no chão.</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Higiene</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Caixa de areia (gatos):</strong> R$ 30-100. Escolha fechada para evitar odor.</li>
+                    <li><strong>Areia sanitária (gatos):</strong> R$ 15-40/mês.</li>
+                    <li><strong>Tapete higiênico (cães):</strong> R$ 30-60 (pacote com 30 unidades).</li>
+                    <li><strong>Shampoo pet:</strong> R$ 20-50. Nunca use shampoo humano!</li>
+                    <li><strong>Escova/pente:</strong> R$ 15-40.</li>
+                    <li><strong>Cortador de unhas:</strong> R$ 20-50.</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Conforto</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Caminha:</strong> R$ 60-200. Escolha tamanho adequado ao porte adulto.</li>
+                    <li><strong>Cobertor:</strong> R$ 30-80. Para dias frios.</li>
+                    <li><strong>Arranhador (gatos):</strong> R$ 60-150. Essencial para proteger móveis.</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Passeio e Segurança</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Coleira:</strong> R$ 20-60. Para gatos, use com fivela de segurança.</li>
+                    <li><strong>Guia:</strong> R$ 25-80. Prefira 1,5-2m de comprimento.</li>
+                    <li><strong>Peitoral (cães):</strong> R$ 40-100. Mais seguro que coleira simples.</li>
+                    <li><strong>Plaquinha de identificação:</strong> R$ 15-30. Com nome, telefone e endereço.</li>
+                    <li><strong>Caixa de transporte:</strong> R$ 80-250. Para viagens e idas ao vet.</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Brinquedos</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Bola:</strong> R$ 10-30.</li>
+                    <li><strong>Mordedor (cães):</strong> R$ 15-50. Essencial para filhotes.</li>
+                    <li><strong>Varinha/ratinho (gatos):</strong> R$ 10-40.</li>
+                    <li><strong>Brinquedo interativo:</strong> R$ 30-80. Estimula mentalmente.</li>
+                </ul>
+
+                <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-blue-800 mb-2">💰 Orçamento Total Inicial</h3>
+                    <p><strong>Básico:</strong> R$ 500-800<br /><strong>Completo:</strong> R$ 1.000-1.500<br /><strong>Premium:</strong> R$ 1.500-2.500</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Checklist de Saúde</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Primeira Semana</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Consulta veterinária inicial (R$ 100-300)</li>
+                    <li>Exame de fezes (R$ 50-100)</li>
+                    <li>Teste de FIV/FeLV para gatos (R$ 80-150)</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Primeiro Mês</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Vermífugo (R$ 30-60)</li>
+                    <li>Antipulgas (R$ 50-150)</li>
+                    <li>Primeira dose de vacina (R$ 60-120)</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Primeiros 6 Meses</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Completar protocolo de vacinas (3-4 doses): R$ 200-500</li>
+                    <li>Vacina antirrábica: R$ 50-100</li>
+                    <li>Castração: R$ 200-800</li>
+                    <li>Microchip: R$ 80-150 (opcional mas recomendado)</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Calendário de Cuidados</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Diário</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Água fresca (troque 2x/dia)</li>
+                    <li>Ração (2-3x/dia conforme idade)</li>
+                    <li>Limpeza de caixa de areia (gatos)</li>
+                    <li>Passeio (cães): 2-3x/dia, 15-30min cada</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Semanal</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Escovação (raças de pelo longo: diária)</li>
+                    <li>Limpeza de orelhas</li>
+                    <li>Verificar unhas</li>
+                    <li>Lavar potes e caminha</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Mensal</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Antipulgas/carrapatos</li>
+                    <li>Vermífugo (filhotes até 6 meses)</li>
+                    <li>Banho (cães: 15-30 dias; gatos: raramente)</li>
+                    <li>Corte de unhas</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Anual</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Reforço de vacinas</li>
+                    <li>Check-up completo (exames de sangue)</li>
+                    <li>Limpeza dentária (se necessário)</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Erros de Iniciante</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Comprar tudo de uma vez:</strong> Compre o essencial primeiro, depois complemente</li>
+                    <li><strong>Ração barata:</strong> Economia falsa - pet come mais e adoece</li>
+                    <li><strong>Pular veterinário:</strong> Check-up inicial é essencial</li>
+                    <li><strong>Não castrar:</strong> Previne câncer e comportamentos indesejados</li>
+                    <li><strong>Deixar sozinho muito tempo:</strong> Filhotes precisam de atenção constante</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Apps Úteis para Tutores</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>11pets:</strong> Controle de vacinas e vermífugos</li>
+                    <li><strong>Petlove:</strong> Compras online com entrega rápida</li>
+                    <li><strong>Guia de Plantas Tóxicas:</strong> Identifica plantas perigosas</li>
+                    <li><strong>Dog Monitor:</strong> Câmera para ver pet quando estiver fora</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Primeiros Sinais de Alerta</h2>
+                <p>
+                    Leve ao veterinário IMEDIATAMENTE se notar:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Vômito ou diarreia por mais de 24h</li>
+                    <li>Recusa total de água ou comida</li>
+                    <li>Letargia extrema (não levanta, não brinca)</li>
+                    <li>Dificuldade para respirar</li>
+                    <li>Sangue nas fezes ou urina</li>
+                    <li>Convulsões</li>
+                </ul>
+
+                <p>
+                    Ter um pet é responsabilidade, mas também é uma das experiências mais gratificantes da vida. Prepare-se bem, seja paciente e aproveite cada momento! 🐾❤️
+                </p>
+            </div>
+        )
     }
 };
 

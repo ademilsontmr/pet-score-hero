@@ -298,6 +298,21 @@ const Blog = () => {
             slug: "coleira-antipulgas-guia",
             title: "Coleira Antipulgas: Guia Completo de Eficácia e Uso Seguro",
             description: "Seresto, Scalibor ou genéricas? Vantagens, desvantagens e como usar corretamente."
+        },
+        {
+            slug: "plano-saude-pet-guia",
+            title: "Plano de Saúde para Pets: Vale a Pena? Guia Completo 2026",
+            description: "Coberturas, carências, custos e como escolher o melhor plano para seu pet."
+        },
+        {
+            slug: "como-adotar-pet-guia",
+            title: "Como Adotar um Pet: Guia Completo do Processo em 2026",
+            description: "Onde adotar, documentos necessários, entrevista e custos iniciais da adoção."
+        },
+        {
+            slug: "primeiro-pet-checklist",
+            title: "Primeiro Pet: Checklist Completo do Que Você Precisa em 2026",
+            description: "Lista completa de compras, custos iniciais e calendário de cuidados para novos tutores."
         }
     ];
 
