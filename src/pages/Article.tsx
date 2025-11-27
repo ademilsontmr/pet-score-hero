@@ -1775,6 +1775,117 @@ const articles = {
                 </div>
             </div>
         )
+    },
+    "tendencias-tech-pet-2026": {
+        title: "Tecnologia Pet em 2026: As Inovações que Vão Revolucionar o Cuidado",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    O mercado pet está passando por uma revolução tecnológica sem precedentes. Em 2026, cuidar do seu pet será mais inteligente, conectado e personalizado do que nunca. Veja as principais tendências que já estão transformando a vida de tutores e pets ao redor do mundo.
+                </p>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">1. Coleiras e Comedouros Inteligentes</h2>
+                <p>
+                    As coleiras GPS evoluíram. Agora elas monitoram batimentos cardíacos, temperatura corporal, níveis de atividade e até padrões de sono. Você recebe alertas no celular se algo estiver fora do normal.
+                </p>
+                <p>
+                    Comedouros automáticos com IA reconhecem o pet pela foto, liberam a porção exata de ração e enviam relatórios nutricionais para o veterinário. Alguns modelos já detectam se o pet está comendo menos (sinal de doença).
+                </p>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">2. Telemedicina Veterinária</h2>
+                <p>
+                    Consultas por vídeo com veterinários se tornaram rotina. Aplicativos permitem que você tire dúvidas rápidas, receba prescrições digitais e agende exames sem sair de casa. Ideal para pets ansiosos que sofrem no transporte.
+                </p>
+                <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-blue-800 mb-2">💡 Destaque 2026</h3>
+                    <p>Câmeras com IA que analisam fezes e urina em tempo real, alertando sobre infecções urinárias, diabetes ou problemas renais antes dos sintomas aparecerem.</p>
+                </div>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">3. Genética Personalizada</h2>
+                <p>
+                    Testes de DNA para pets estão mais acessíveis. Por R$ 300-500, você descobre predisposições genéticas a doenças, intolerâncias alimentares e até traços de personalidade. Isso permite criar um plano preventivo sob medida.
+                </p>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">4. Realidade Aumentada para Adestramento</h2>
+                <p>
+                    Aplicativos de AR projetam comandos visuais no ambiente real, facilitando o treinamento. O pet aprende mais rápido com estímulos visuais interativos que aparecem no chão ou nas paredes.
+                </p>
+            </div>
+        )
+    },
+    "sustentabilidade-pet-2026": {
+        title: "Sustentabilidade no Mundo Pet: A Revolução Verde de 2026",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    A consciência ambiental chegou ao mercado pet com força total. Tutores estão exigindo produtos ecológicos, e as marcas estão respondendo com inovações surpreendentes. Conheça as tendências sustentáveis que estão moldando 2026.
+                </p>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Rações com Proteína de Insetos</h2>
+                <p>
+                    A proteína de grilos e larvas está substituindo carne bovina em rações premium. Vantagens: 80% menos emissão de CO2, alto valor nutricional e hipoalergênico. Marcas brasileiras já lançaram linhas completas.
+                </p>
+                <p>
+                    Pets aceitam bem o sabor (é adicionado palatabilizante natural), e os resultados em pelagem e digestão são excelentes.
+                </p>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Embalagens Biodegradáveis e Refil</h2>
+                <p>
+                    Sacolas de ração feitas de amido de mandioca que se decompõem em 90 dias. Sistemas de refil em pet shops, onde você leva seu próprio recipiente e paga apenas pelo produto.
+                </p>
+                <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-green-800 mb-2">🌱 Inovação Brasileira</h3>
+                    <p>Startups nacionais criaram saquinhos de cocô feitos de cana-de-açúcar que viram adubo em composteiras domésticas. Já são vendidos em grandes redes.</p>
+                </div>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Brinquedos de Material Reciclado</h2>
+                <p>
+                    Brinquedos feitos de garrafas PET, redes de pesca retiradas do oceano e borracha reciclada de pneus. Duráveis, seguros e com design moderno.
+                </p>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Energia Solar em Petshops</h2>
+                <p>
+                    Grandes redes estão investindo em painéis solares e sistemas de captação de água da chuva. Alguns oferecem desconto para clientes que levam embalagens para reciclagem.
+                </p>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Crematórios Ecológicos</h2>
+                <p>
+                    Aquamação (cremação por água alcalina) está substituindo a cremação tradicional. Usa 90% menos energia e não emite gases tóxicos. As cinzas podem ser usadas como adubo.
+                </p>
+            </div>
+        )
+    },
+    "bem-estar-pet-2026": {
+        title: "Bem-Estar Pet em 2026: Saúde Mental e Qualidade de Vida",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    O conceito de bem-estar animal evoluiu. Não basta alimentar e vacinar. Em 2026, tutores estão investindo em saúde mental, enriquecimento ambiental e terapias holísticas para garantir que seus pets vivam plenamente felizes.
+                </p>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Terapia Comportamental Profissional</h2>
+                <p>
+                    Comportamentalistas certificados estão em alta. Eles tratam ansiedade de separação, agressividade, fobias e traumas com técnicas baseadas em ciência (condicionamento positivo, dessensibilização).
+                </p>
+                <p>
+                    Planos de saúde pet já cobrem sessões de terapia comportamental, reconhecendo que saúde mental é tão importante quanto física.
+                </p>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Creches e Hotéis com Enriquecimento</h2>
+                <p>
+                    Creches modernas oferecem piscinas, circuitos de agility, sessões de musicoterapia e até aromaterapia. Câmeras 24h permitem que você acompanhe em tempo real.
+                </p>
+                <div className="bg-purple-50 border border-purple-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-purple-800 mb-2">🎵 Novidade</h3>
+                    <p>Playlists específicas para pets no Spotify e Apple Music, com frequências sonoras que reduzem ansiedade e melhoram o sono. Estudos comprovam eficácia!</p>
+                </div>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Fisioterapia e Acupuntura</h2>
+                <p>
+                    Tratamentos antes restritos a pets de competição agora são acessíveis. Fisioterapia aquática para cães idosos com artrose, acupuntura para dor crônica e quiropraxia para problemas de coluna.
+                </p>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Suplementos Funcionais</h2>
+                <p>
+                    Ômega-3 para cérebro, probióticos para intestino, colágeno para articulações, CBD (canabidiol) para ansiedade. Tudo com dosagem veterinária e estudos clínicos.
+                </p>
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Espaços Pet-Friendly</h2>
+                <p>
+                    Restaurantes, shoppings, escritórios e até academias estão se adaptando para receber pets. Áreas de descanso, bebedouros e até cardápios especiais para cães e gatos.
+                </p>
+                <div className="bg-pink-50 border border-pink-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-pink-800 mb-2">❤️ Tendência Emocional</h3>
+                    <p>Sessões de "pet yoga" e meditação guiada para tutores e pets juntos. O vínculo se fortalece e ambos relaxam. Já existem estúdios especializados em grandes cidades.</p>
+                </div>
+            </div>
+        )
     }
 };
 

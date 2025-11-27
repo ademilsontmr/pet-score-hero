@@ -208,6 +208,21 @@ const Blog = () => {
             slug: "como-trocar-racao",
             title: "Como Trocar a Ração do Pet Sem Causar Problemas",
             description: "Aprenda a fazer a transição gradual para evitar vômitos e diarreia."
+        },
+        {
+            slug: "tendencias-tech-pet-2026",
+            title: "Tecnologia Pet em 2026: As Inovações que Vão Revolucionar o Cuidado",
+            description: "Coleiras inteligentes, telemedicina e IA: conheça as tecnologias que estão transformando o mundo pet."
+        },
+        {
+            slug: "sustentabilidade-pet-2026",
+            title: "Sustentabilidade no Mundo Pet: A Revolução Verde de 2026",
+            description: "Ração de insetos, embalagens biodegradáveis e produtos eco-friendly: o futuro sustentável chegou."
+        },
+        {
+            slug: "bem-estar-pet-2026",
+            title: "Bem-Estar Pet em 2026: Saúde Mental e Qualidade de Vida",
+            description: "Terapia comportamental, fisioterapia e espaços pet-friendly: o novo padrão de cuidado."
         }
     ];
 

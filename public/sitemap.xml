@@ -241,6 +241,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://petscore.com.br/blog/tendencias-tech-pet-2026</loc>
+    <lastmod>2025-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petscore.com.br/blog/sustentabilidade-pet-2026</loc>
+    <lastmod>2025-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petscore.com.br/blog/bem-estar-pet-2026</loc>
+    <lastmod>2025-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://petscore.com.br/privacidade</loc>
     <lastmod>2025-11-26</lastmod>
     <changefreq>yearly</changefreq>
