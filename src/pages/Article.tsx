@@ -1886,6 +1886,504 @@ const articles = {
                 </div>
             </div>
         )
+    },
+    "racao-para-cachorro-guia": {
+        title: "Ração para Cachorro: Guia Completo para Escolher a Melhor em 2026",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Escolher a ração ideal para o seu cachorro pode parecer simples, mas é uma das decisões mais importantes para garantir saúde, energia e longevidade do seu melhor amigo. Com tantas opções no mercado brasileiro, entender os tipos, ingredientes e necessidades específicas é fundamental.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Tipos de Ração para Cachorro</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Ração Seca (Kibble)</h3>
+                <p>
+                    A ração seca é a mais popular no Brasil. Oferece praticidade, longa validade e ajuda na limpeza dos dentes pela mastigação. Marcas premium como Royal Canin, Premier Pet e Farmina oferecem fórmulas balanceadas com proteínas de qualidade, vitaminas e minerais essenciais.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Ração Úmida (Sachê e Lata)</h3>
+                <p>
+                    Com 70-80% de umidade, a ração úmida é ideal para cães que bebem pouca água ou têm problemas dentários. Marcas como Pedigree, Golden e N&D oferecem sabores variados. Pode ser usada como complemento ou refeição principal, mas tem custo mais elevado.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Ração Natural e Grain-Free</h3>
+                <p>
+                    Rações sem grãos (grain-free) são indicadas para cães com alergias ou sensibilidade alimentar. Marcas como Guabi Natural, Biofresh e Herói utilizam batata-doce, ervilha e proteínas nobres como salmão e cordeiro. São mais caras, mas reduzem problemas digestivos.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Escolher a Ração Certa</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Por Idade</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Filhotes (até 12 meses):</strong> Precisam de ração com mais proteína (mínimo 28%) e cálcio para crescimento ósseo.</li>
+                    <li><strong>Adultos (1-7 anos):</strong> Fórmulas de manutenção com equilíbrio entre proteína (22-26%) e gordura.</li>
+                    <li><strong>Idosos (7+ anos):</strong> Rações light com menos calorias, mais fibras e suplementos para articulações (glucosamina).</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Por Porte</h3>
+                <p>
+                    Cães pequenos (até 10kg) precisam de grãos menores e mais energia por quilo. Raças grandes (acima de 25kg) necessitam de fórmulas com condroitina para proteger as articulações e evitar torção gástrica.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Ingredientes que Você Deve Procurar</h2>
+                <p>
+                    A proteína deve ser o primeiro ingrediente da lista. Prefira fontes identificadas como "frango", "cordeiro" ou "salmão" ao invés de "subprodutos de carne". Evite rações com corantes artificiais (vermelho 40, amarelo 5) e excesso de milho ou trigo como base.
+                </p>
+
+                <div className="bg-orange-50 border border-orange-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-orange-800 mb-2">💡 Dica de Veterinário</h3>
+                    <p>Leia sempre os 5 primeiros ingredientes da embalagem. Eles representam 80% da composição. Se aparecer "farinha de carne" ou "gordura animal" sem especificar a origem, desconfie da qualidade.</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Quanto Custa uma Ração de Qualidade?</h2>
+                <p>
+                    Rações econômicas custam R$ 80-150 por 15kg, mas têm baixo valor nutricional. Rações premium (R$ 200-400/15kg) oferecem melhor digestibilidade e menos fezes. Rações super premium (R$ 400-700/15kg) usam ingredientes humanos e são hipoalergênicas.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Erros Comuns ao Escolher Ração</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Trocar de marca constantemente (causa diarreia)</li>
+                    <li>Escolher apenas pelo preço sem ler ingredientes</li>
+                    <li>Dar ração de gato para cachorro (excesso de proteína prejudica rins)</li>
+                    <li>Não ajustar a quantidade conforme atividade física</li>
+                </ul>
+
+                <p>
+                    Investir em ração de qualidade previne obesidade, alergias e doenças renais, economizando em consultas veterinárias no futuro. Consulte sempre um veterinário para recomendações personalizadas.
+                </p>
+            </div>
+        )
+    },
+    "racao-para-gato-guia": {
+        title: "Ração para Gato: Como Escolher a Melhor Nutrição Felina em 2026",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Gatos são carnívoros obrigatórios com necessidades nutricionais únicas. Escolher a ração certa não é apenas sobre sabor, mas sobre fornecer proteínas de alta qualidade, taurina essencial e o equilíbrio perfeito de nutrientes para uma vida longa e saudável.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Diferenças Entre Ração de Gato e Cachorro</h2>
+                <p>
+                    Nunca dê ração de cachorro para gatos! Gatos precisam de 26-30% de proteína (vs 18-22% para cães) e taurina, um aminoácido que previne problemas cardíacos e cegueira. Rações felinas também têm mais gordura para energia e menos carboidratos.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Tipos de Ração para Gato</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Ração Seca para Gatos</h3>
+                <p>
+                    Marcas como Royal Canin Feline, Premier Pet Ambientes Internos e Purina Pro Plan oferecem fórmulas específicas. A ração seca ajuda a reduzir tártaro, mas deve ser combinada com água fresca sempre disponível.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Ração Úmida (Sachê e Patê)</h3>
+                <p>
+                    Essencial para hidratação! Sachês da Whiskas, Golden Gatos e N&D têm 75-80% de água. Veterinários recomendam pelo menos 1 sachê por dia, especialmente para gatos com histórico de problemas urinários ou renais.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Ração Grain-Free</h3>
+                <p>
+                    Gatos não precisam de grãos. Rações grain-free da Farmina, Biofresh e Guabi Natural usam batata e ervilha. Ideais para gatos com alergias, vômitos frequentes ou diarreia crônica.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Escolha por Necessidade Específica</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Gatos Castrados</h3>
+                <p>
+                    Após a castração, o metabolismo desacelera 30%. Rações específicas como Royal Canin Sterilised têm menos calorias e L-carnitina para queimar gordura.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Gatos com Problemas Urinários</h3>
+                <p>
+                    Fórmulas urinárias controlam pH da urina e reduzem cristais de estruvita. Essenciais para gatos que já tiveram obstrução uretral.
+                </p>
+
+                <div className="bg-purple-50 border border-purple-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-purple-800 mb-2">🐱 Atenção</h3>
+                    <p>Introduza novas rações gradualmente (7-10 dias) misturando com a antiga. Se recusar, aqueça levemente o sachê para liberar aroma.</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Ingredientes Essenciais</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Proteína animal:</strong> Frango, peixe ou carne devem ser os primeiros ingredientes</li>
+                    <li><strong>Taurina:</strong> Mínimo 0,1% (essencial para coração e visão)</li>
+                    <li><strong>Ômega 3 e 6:</strong> Para pelagem brilhante</li>
+                </ul>
+
+                <p>
+                    Investir em ração de qualidade previne doenças renais crônicas, a principal causa de morte em gatos domésticos.
+                </p>
+            </div>
+        )
+    },
+    "areia-para-gato-guia": {
+        title: "Areia para Gato: Guia Completo dos Melhores Tipos em 2026",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    A escolha da areia sanitária pode determinar se seu gato vai usar a caixa corretamente ou fazer suas necessidades em lugares indesejados. Entender os tipos, vantagens e como escolher a melhor opção é essencial para a higiene e bem-estar felino.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Tipos de Areia para Gato</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Areia Aglomerante (Bentonita)</h3>
+                <p>
+                    A mais popular no Brasil. Marcas como Pipicat, Chalesco e Jambo formam "bolinhas" sólidas ao contato com urina, facilitando a limpeza. Você remove apenas os dejetos, economizando produto. Controla bem o odor e dura 15-20 dias para um gato.
+                </p>
+                <p>
+                    <strong>Vantagens:</strong> Econômica, fácil de limpar, baixo desperdício.<br />
+                    <strong>Desvantagens:</strong> Pode grudar nas patas e espalhar pela casa. Não deve ser descartada no vaso sanitário.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Areia de Sílica (Cristais)</h3>
+                <p>
+                    Cristais de gel de sílica absorvem líquidos e neutralizam odores por até 30 dias. Marcas como Chalesco Sílica e Petlike são mais caras, mas rendem muito. Ideais para quem viaja ou tem pouco tempo para limpeza diária.
+                </p>
+                <p>
+                    <strong>Vantagens:</strong> Máxima absorção, sem poeira, longa duração.<br />
+                    <strong>Desvantagens:</strong> Preço elevado (R$ 40-80 por 3,6L), alguns gatos rejeitam a textura.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Areia Biodegradável (Madeira, Milho, Papel)</h3>
+                <p>
+                    Opções ecológicas da Chalesco Eco, Catbamboo e Pipicat Vegetal. Feitas de resíduos de madeira, milho ou papel reciclado. Podem ser descartadas no vaso sanitário (em pequenas quantidades) ou compostadas.
+                </p>
+                <p>
+                    <strong>Vantagens:</strong> Sustentáveis, biodegradáveis, sem químicos.<br />
+                    <strong>Desvantagens:</strong> Menor controle de odor, precisam ser trocadas com mais frequência.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Escolher a Areia Ideal</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Para Filhotes</h3>
+                <p>
+                    Evite areias aglomerantes! Filhotes podem ingerir a areia por curiosidade, e a bentonita expande no estômago causando obstrução. Use areia de sílica ou biodegradável até 6 meses de idade.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Para Múltiplos Gatos</h3>
+                <p>
+                    A regra é: número de gatos + 1 caixa. Com vários gatos, areias aglomerantes premium (Pipicat Clássica, Chalesco Premium) são mais econômicas. Troque completamente a cada 10 dias.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Para Gatos Alérgicos</h3>
+                <p>
+                    Areias com perfume podem causar espirros e irritação. Opte por versões sem fragrância ou areias naturais de madeira. Se o gato coça muito o nariz após usar a caixa, troque o tipo.
+                </p>
+
+                <div className="bg-cyan-50 border border-cyan-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-cyan-800 mb-2">💡 Dica de Ouro</h3>
+                    <p>Mantenha 5-7cm de altura de areia na caixa. Gatos gostam de cavar antes e depois. Menos que isso, eles podem rejeitar a caixa.</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Quanto Custa e Quanto Rende?</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Areia comum (não aglomerante):</strong> R$ 8-15 por 4kg. Rende 7-10 dias. Precisa trocar tudo.</li>
+                    <li><strong>Areia aglomerante:</strong> R$ 20-40 por 4kg. Rende 15-20 dias. Econômica no longo prazo.</li>
+                    <li><strong>Areia de sílica:</strong> R$ 40-80 por 3,6L. Rende 30 dias. Melhor custo-benefício para quem tem 1 gato.</li>
+                    <li><strong>Areia biodegradável:</strong> R$ 25-50 por 4kg. Rende 10-15 dias. Valor agregado: sustentabilidade.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Erros Comuns</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Colocar a caixa perto da comida (gatos não fazem necessidades onde comem)</li>
+                    <li>Não limpar diariamente (gatos são extremamente higiênicos)</li>
+                    <li>Trocar de marca constantemente (confunde o gato)</li>
+                    <li>Usar caixa pequena demais (deve ter 1,5x o tamanho do gato)</li>
+                </ul>
+
+                <p>
+                    A areia certa, combinada com limpeza diária e caixa adequada, garante que seu gato use o banheiro corretamente e mantém sua casa sem odores.
+                </p>
+            </div>
+        )
+    },
+    "tapete-higienico-cachorro-guia": {
+        title: "Tapete Higiênico para Cachorro: Guia Completo de Uso e Treinamento",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Tapetes higiênicos são essenciais para filhotes em treinamento, cães idosos com incontinência ou pets que vivem em apartamentos sem acesso fácil à rua. Escolher o tipo certo e treinar adequadamente faz toda a diferença entre sucesso e frustração.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Tipos de Tapete Higiênico</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Tapetes Descartáveis</h3>
+                <p>
+                    Os mais comuns no mercado. Marcas como Petix, Chalesco e Jambo oferecem pacotes com 30-80 unidades. Têm camadas absorventes com gel que retém líquidos e neutraliza odores. Ideais para uso diário, mas geram resíduos.
+                </p>
+                <p>
+                    <strong>Tamanhos:</strong> 60x60cm (pequeno porte), 60x80cm (médio porte), 80x90cm (grande porte).<br />
+                    <strong>Custo:</strong> R$ 40-80 por pacote de 30 unidades (R$ 1,30-2,60 por tapete).
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Tapetes Laváveis (Reutilizáveis)</h3>
+                <p>
+                    Feitos de tecido absorvente com camada impermeável. Marcas como Chalesco Eco e Petlike oferecem tapetes que duram 6-12 meses. Você lava na máquina e reutiliza. Econômicos e sustentáveis a longo prazo.
+                </p>
+                <p>
+                    <strong>Vantagens:</strong> Economia (1 tapete lavável = 300 descartáveis), ecológico.<br />
+                    <strong>Desvantagens:</strong> Investimento inicial maior (R$ 80-150), precisa lavar frequentemente.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Grama Sintética com Bandeja</h3>
+                <p>
+                    Simula grama real. O xixi escorre para uma bandeja inferior que você esvazia e lava. Ideal para cães que preferem fazer necessidades em superfícies naturais. Marcas como Petgrama e Chalesco Grama são populares.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Treinar seu Cão a Usar o Tapete</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Passo 1: Escolha o Local Certo</h3>
+                <p>
+                    Coloque o tapete em um local fixo, longe da comida e água. Cães não fazem necessidades onde comem. Escolha um canto tranquilo, de preferência perto da porta (facilita transição para rua depois).
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Passo 2: Estabeleça Rotina</h3>
+                <p>
+                    Leve o filhote ao tapete após acordar, comer, beber água e brincar. Filhotes fazem xixi a cada 2-3 horas. Use comando verbal como "faz xixi" sempre no mesmo tom.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Passo 3: Recompense Imediatamente</h3>
+                <p>
+                    Quando o cão usar o tapete, elogie efusivamente e dê petisco na hora. O reforço positivo deve ser instantâneo (até 3 segundos após o ato) para o cão associar corretamente.
+                </p>
+
+                <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-blue-800 mb-2">⚠️ Nunca Faça Isso</h3>
+                    <p>Não brigue se o cão fizer fora do tapete. Ele não entende punição após o fato. Apenas limpe com produto enzimático para remover o cheiro e continue o treino positivo.</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Quantos Tapetes Usar por Dia?</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Filhotes (2-4 meses):</strong> 4-6 tapetes/dia (fazem xixi muito frequentemente)</li>
+                    <li><strong>Filhotes (4-6 meses):</strong> 3-4 tapetes/dia</li>
+                    <li><strong>Adultos treinados:</strong> 2-3 tapetes/dia</li>
+                    <li><strong>Idosos com incontinência:</strong> 4-5 tapetes/dia</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Dicas para Economizar</h2>
+                <p>
+                    Compre pacotes grandes (80-100 unidades) em promoções. Alguns petshops oferecem assinatura com 15% de desconto. Para cães pequenos, você pode cortar tapetes grandes ao meio, dobrando o rendimento.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Transição do Tapete para a Rua</h2>
+                <p>
+                    Após vacinas completas (4 meses), comece a levar o cão para rua nos horários que ele usaria o tapete. Leve um pedaço do tapete usado para a rua - o cheiro ajuda na associação. Reduza gradualmente os tapetes em casa.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Problemas Comuns e Soluções</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Cão rasga o tapete:</strong> Use suporte/bandeja para fixar. Brinque mais para gastar energia.</li>
+                    <li><strong>Faz ao lado do tapete:</strong> Aumente o tamanho ou use 2 tapetes juntos.</li>
+                    <li><strong>Só faz cocô fora:</strong> Normal. Cocô exige mais privacidade. Seja paciente.</li>
+                </ul>
+
+                <p>
+                    Com consistência e paciência, a maioria dos cães aprende a usar o tapete em 2-4 semanas. Cães adultos podem levar mais tempo para desaprender hábitos antigos.
+                </p>
+            </div>
+        )
+    },
+    "antipulgas-cachorro-gato-guia": {
+        title: "Antipulgas para Cães e Gatos: Guia Completo de Produtos em 2026",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Pulgas não são apenas incômodas - elas transmitem doenças graves como verminoses e causam dermatite alérgica. Escolher o antipulgas certo e usar corretamente é fundamental para proteger seu pet e sua família. Conheça os tipos, eficácia e como aplicar.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Tipos de Antipulgas</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Coleiras Antipulgas</h3>
+                <p>
+                    Marcas como Seresto (Bayer) e Scalibor liberam princípios ativos gradualmente por 6-8 meses. Eficazes contra pulgas, carrapatos e até mosquitos transmissores de leishmaniose. Ideais para quem esquece aplicações mensais.
+                </p>
+                <p>
+                    <strong>Vantagens:</strong> Longa duração, praticidade, proteção contínua.<br />
+                    <strong>Desvantagens:</strong> Custo inicial alto (R$ 150-250), pode causar irritação no pescoço em pets sensíveis.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Pipetas (Spot-On)</h3>
+                <p>
+                    Aplicadas na pele entre as escápulas. Marcas como Frontline, Advantage e Revolution protegem por 30 dias. Fáceis de aplicar e eficazes. Importante: não dar banho 48h antes e depois da aplicação.
+                </p>
+                <p>
+                    <strong>Vantagens:</strong> Aplicação rápida, ação rápida (mata pulgas em 24h).<br />
+                    <strong>Desvantagens:</strong> Precisa reaplicar mensalmente, pode sair com banhos frequentes.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Comprimidos (Via Oral)</h3>
+                <p>
+                    Bravecto, Simparic e NexGard são comprimidos mastigáveis que protegem por 1-3 meses. Ação sistêmica: a pulga morre ao picar o pet. Não sai com banho e é ideal para pets que nadam ou tomam banho frequentemente.
+                </p>
+                <p>
+                    <strong>Vantagens:</strong> Máxima eficácia, não sai com água, proteção prolongada.<br />
+                    <strong>Desvantagens:</strong> Preço elevado (R$ 80-150/dose), alguns pets recusam o comprimido.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Sprays e Shampoos</h3>
+                <p>
+                    Soluções rápidas para infestações agudas. Sprays como Frontline Spray matam pulgas em minutos. Shampoos antipulgas (Sanol, Petix) limpam e eliminam pulgas visíveis, mas não previnem reinfestação.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Diferenças Entre Cães e Gatos</h2>
+                <p>
+                    <strong>ATENÇÃO:</strong> Nunca use antipulgas de cachorro em gatos! Produtos com permetrina (comum em antipulgas caninos) são fatais para gatos, causando convulsões e morte. Sempre use produtos específicos para felinos.
+                </p>
+
+                <div className="bg-red-50 border border-red-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-red-800 mb-2">🚨 Emergência</h3>
+                    <p>Se aplicou produto canino em gato por engano, lave imediatamente com água e sabão neutro e corra para o veterinário. Cada minuto conta!</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Escolher o Melhor Antipulgas</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Por Estilo de Vida</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Pet que sai muito:</strong> Comprimidos (Bravecto, Simparic) - não saem com chuva</li>
+                    <li><strong>Pet caseiro:</strong> Pipetas mensais são suficientes</li>
+                    <li><strong>Pet que nada:</strong> Comprimidos ou coleiras</li>
+                    <li><strong>Múltiplos pets:</strong> Coleiras (evita lambidas entre eles)</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Por Idade</h3>
+                <p>
+                    Filhotes abaixo de 8 semanas: use apenas produtos específicos para filhotes (Frontline Spray a partir de 2 dias). Comprimidos geralmente são liberados após 8 semanas e 2kg de peso.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Aplicar Pipeta Corretamente</h2>
+                <ol className="list-decimal pl-6 space-y-2 mb-6">
+                    <li>Não dê banho 48h antes</li>
+                    <li>Afaste o pelo entre as escápulas até ver a pele</li>
+                    <li>Aplique todo o conteúdo diretamente na pele (não no pelo)</li>
+                    <li>Não deixe outros pets lamberem o local por 24h</li>
+                    <li>Evite banho por 48h após aplicação</li>
+                </ol>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Tratamento do Ambiente</h2>
+                <p>
+                    95% das pulgas estão no ambiente (ovos, larvas, pupas), não no pet! Aspire sofás, camas e tapetes diariamente. Lave roupas de cama do pet em água quente. Use sprays ambientais (Bolfo, Pulvex) em frestas e rodapés.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Quanto Custa?</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Pipetas:</strong> R$ 30-80/mês (R$ 360-960/ano)</li>
+                    <li><strong>Comprimidos:</strong> R$ 80-150 a cada 1-3 meses (R$ 320-1.800/ano)</li>
+                    <li><strong>Coleiras:</strong> R$ 150-250 a cada 8 meses (R$ 225-375/ano) - mais econômico!</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Sinais de Infestação</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Coceira excessiva, especialmente na base da cauda</li>
+                    <li>Pontinhos pretos no pelo (fezes de pulga)</li>
+                    <li>Feridas e crostas na pele (dermatite alérgica)</li>
+                    <li>Anemia em filhotes (gengivas pálidas)</li>
+                </ul>
+
+                <p>
+                    Prevenir é mais barato que tratar. Um pet com pulgas precisa de banhos medicados, antibióticos para infecções secundárias e vermífugos extras. Mantenha a proteção em dia o ano todo!
+                </p>
+            </div>
+        )
+    },
+    "osso-cachorro-guia": {
+        title: "Osso para Cachorro: Guia Completo de Tipos Seguros e Benefícios",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Ossos são mais que entretenimento - eles limpam dentes, fortalecem mandíbulas e reduzem ansiedade. Mas nem todo osso é seguro. Ossos cozidos podem lascar e perfurar intestinos, enquanto ossos inadequados quebram dentes. Aprenda a escolher corretamente.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Tipos de Ossos para Cachorro</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Ossos Naturais Crus</h3>
+                <p>
+                    Ossos bovinos crus (canela, fêmur, costela) são os mais seguros. Marcas como Baw Waw e Ossinhos Naturais vendem ossos defumados ou desidratados. Ricos em cálcio e fósforo, limpam tártaro naturalmente pela mastigação.
+                </p>
+                <p>
+                    <strong>Regra de Ouro:</strong> O osso deve ser maior que a boca do cão para evitar engasgo. Para cães pequenos, use ossos de frango (pescoço, asa) sempre crus.<br />
+                    <strong>NUNCA:</strong> Ossos cozidos! O cozimento torna ossos quebradiços e perigosos.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Ossos de Couro (Palitos)</h3>
+                <p>
+                    Feitos de couro bovino prensado. Marcas como DogChoni, Bassar e Petitos oferecem em diversos tamanhos. Duráveis e digeríveis, mas escolha versões sem corantes artificiais (prefira cor natural bege/marrom).
+                </p>
+                <p>
+                    <strong>Atenção:</strong> Cães gulosos podem engolir pedaços grandes. Supervisione e retire quando ficar pequeno demais.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Ossos Sintéticos (Nylon)</h3>
+                <p>
+                    Ossos de nylon da Nylabone e Chalesco são indestrutíveis. Ideais para cães com mordida forte que destroem tudo. Não lascam e duram meses. Alguns têm sabor de bacon ou frango.
+                </p>
+                <p>
+                    <strong>Desvantagem:</strong> Não limpam dentes tão bem quanto ossos naturais. Verifique se há lascas ou desgaste excessivo.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Ossos Comestíveis (Snacks)</h3>
+                <p>
+                    Petiscos em formato de osso feitos de ração prensada. Marcas como Pedigree Dentastix e Greenies limpam dentes e são 100% digeríveis. Perfeitos para cães com estômago sensível.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Benefícios dos Ossos</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Saúde Dental</h3>
+                <p>
+                    A mastigação remove 70% do tártaro acumulado, prevenindo gengivite e perda de dentes. Cães que roem ossos regularmente têm hálito melhor e menos problemas dentários.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Redução de Ansiedade</h3>
+                <p>
+                    Roer libera endorfinas, acalmando cães ansiosos. Ideal para pets que sofrem de ansiedade de separação ou que destroem móveis quando sozinhos.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Fortalecimento Muscular</h3>
+                <p>
+                    A mastigação fortalece músculos da mandíbula, pescoço e ombros. Importante para raças de trabalho e cães ativos.
+                </p>
+
+                <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-amber-800 mb-2">🦴 Dica Profissional</h3>
+                    <p>Congele ossos naturais antes de dar. Isso aumenta a durabilidade e proporciona alívio para gengivas de filhotes em dentição.</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Ossos Proibidos</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Ossos de frango cozidos:</strong> Lascam e perfuram intestinos (fatal!)</li>
+                    <li><strong>Ossos de porco:</strong> Muito gordurosos, causam pancreatite</li>
+                    <li><strong>Ossos pequenos:</strong> Risco de engasgo e obstrução</li>
+                    <li><strong>Ossos defumados com temperos:</strong> Sal e alho são tóxicos</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Escolher por Porte</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Pequeno porte (até 10kg):</strong> Pescoço de frango cru, palitos de couro pequenos</li>
+                    <li><strong>Médio porte (10-25kg):</strong> Osso de canela bovino, palitos médios</li>
+                    <li><strong>Grande porte (25kg+):</strong> Fêmur bovino, ossos de nylon grandes</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Quanto Tempo Deixar o Cão Roer?</h2>
+                <p>
+                    Limite a 15-20 minutos por dia para ossos naturais. Mastigação excessiva pode desgastar dentes ou causar diarreia (excesso de cálcio). Para ossos sintéticos, pode deixar disponível o tempo todo.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Sinais de Problema</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Vômito ou diarreia após roer (pode ser intolerância)</li>
+                    <li>Sangue nas fezes (possível perfuração intestinal - EMERGÊNCIA)</li>
+                    <li>Dente quebrado ou sangrando (suspenda ossos duros)</li>
+                    <li>Engasgo ou tosse persistente (fragmento preso)</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Higiene e Armazenamento</h2>
+                <p>
+                    Lave ossos naturais após cada uso e guarde na geladeira (duram 3-4 dias). Descarte se houver mau cheiro ou limo. Ossos de couro e sintéticos podem ficar em temperatura ambiente, mas lave semanalmente.
+                </p>
+
+                <p>
+                    Ossos são excelentes para saúde e bem-estar, mas supervisão é essencial. Nunca deixe cães roendo ossos sem vigilância, especialmente nas primeiras vezes.
+                </p>
+            </div>
+        )
     }
 };
 
