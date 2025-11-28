@@ -242,7 +242,7 @@ const PartialResult = () => {
               size="lg"
               onClick={() => {
                 window.scrollTo(0, 0);
-                navigate("/resultado-completo", {
+                navigate("/pagamento", {
                   state: {
                     score,
                     petImage,
