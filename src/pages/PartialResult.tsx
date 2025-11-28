@@ -262,7 +262,7 @@ const PartialResult = () => {
                     
                     const result = await response.json();
                     console.log("✅ Resposta do servidor:", result);
-                    console.log("🔑 Submission ID:", result.submissionId);
+                    console.log("🔑 Response ID:", result.responseId);
                   } catch (e) {
                     console.error("❌ Lead save error", e);
                   }
