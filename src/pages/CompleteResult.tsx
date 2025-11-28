@@ -34,27 +34,17 @@ const CompleteResult = () => {
 
   /* Removed loading check */
 
-  if (!score) {
-    return (
-      <div className="min-h-screen bg-gradient-warm py-12 px-4 flex items-center justify-center">
-        <Card className="max-w-md w-full p-8 text-center shadow-medium">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-6">
-            <span className="text-3xl">⚠️</span>
-          </div>
-          <h1 className="text-2xl font-bold text-foreground mb-4">
-            Resultado não encontrado
-          </h1>
-          <p className="text-muted-foreground mb-8">
-            Não conseguimos recuperar o resultado do seu quiz.
-            <br />
-            {/* ID display removed */}
-          </p>
-          <Button onClick={() => navigate("/")} variant="outline">
-            Voltar ao Início
-          </Button>
-        </Card>
-      </div>
-    );
+  if (!score || !location.state?.paid) {
+    // Se não tiver score ou não tiver pago, redireciona
+    useEffect(() => {
+      if (score && !location.state?.paid) {
+        navigate("/pagamento", { state: location.state });
+      } else if (!score) {
+        navigate("/");
+      }
+    }, [score, location.state, navigate]);
+
+    return null;
   }
 
   const result = getQuizResult(score);
