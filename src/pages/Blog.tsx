@@ -8,11 +8,13 @@ import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
 
 const getArticleConfig = (slug: string) => {
+    if (slug.includes('plano')) return { icon: ShieldAlert, color: "bg-blue-100 text-blue-600" };
+    if (slug.includes('probiotico')) return { icon: Activity, color: "bg-green-100 text-green-600" };
     if (slug.includes('gato')) return { icon: Cat, color: "bg-purple-100 text-purple-600" };
     if (slug.includes('cachorro') || slug.includes('cao') || slug.includes('caes')) return { icon: Dog, color: "bg-orange-100 text-orange-600" };
     if (slug.includes('aliment') || slug.includes('nutri') || slug.includes('fruta') || slug.includes('racao') || slug.includes('superfoods')) return { icon: Apple, color: "bg-green-100 text-green-600" };
     if (slug.includes('vacina') || slug.includes('vermifugo') || slug.includes('medic')) return { icon: Syringe, color: "bg-blue-100 text-blue-600" };
-    if (slug.includes('saude') || slug.includes('dor') || slug.includes('checkup') || slug.includes('emergencia')) return { icon: Stethoscope, color: "bg-cyan-100 text-cyan-600" };
+    if (slug.includes('saude') || slug.includes('dor') || slug.includes('checkup') || slug.includes('emergencia') || slug.includes('bucal')) return { icon: Stethoscope, color: "bg-cyan-100 text-cyan-600" };
     if (slug.includes('ansiedade') || slug.includes('comportamento') || slug.includes('feliz') || slug.includes('amor')) return { icon: Heart, color: "bg-pink-100 text-pink-600" };
     if (slug.includes('custo') || slug.includes('dinheiro')) return { icon: DollarSign, color: "bg-yellow-100 text-yellow-600" };
     if (slug.includes('plantas') || slug.includes('toxic')) return { icon: Leaf, color: "bg-emerald-100 text-emerald-600" };
@@ -34,6 +36,21 @@ const Blog = () => {
     }, [currentPage]);
 
     const articles = [
+        {
+            slug: "plano-saude-pet",
+            title: "Plano de Saúde para Pets: Vale a Pena em 2026? Guia Completo",
+            description: "Crescimento de 13% ao ano! Descubra quando contratar, armadilhas a evitar e como escolher o plano ideal."
+        },
+        {
+            slug: "saude-bucal-pets",
+            title: "Saúde Bucal de Cães e Gatos: O Guia Definitivo da Higiene Dental",
+            description: "80% dos cães têm doença periodontal. Aprenda a prevenir, tratar e manter os dentes do seu pet saudáveis."
+        },
+        {
+            slug: "probioticos-pets",
+            title: "Probióticos para Pets: O Guia Completo de Benefícios e Uso",
+            description: "Saúde intestinal, imunidade e pele: descubra quando usar, quais cepas funcionam e como escolher."
+        },
         {
             slug: "custo-cachorro-2026",
             title: "Quanto Custa Ter um Cachorro em 2026? Guia Completo",

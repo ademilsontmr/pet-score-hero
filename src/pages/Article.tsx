@@ -4059,6 +4059,408 @@ const articles = {
                 </div>
             </div>
         )
+    },
+    "plano-saude-pet": {
+        title: "Plano de Saúde para Pets: Vale a Pena em 2026? Guia Completo",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    O mercado de planos de saúde para pets está explodindo no Brasil. Com crescimento anual de 13%, mais de 500 mil pets já têm cobertura médica. Mas será que vale a pena para você? Como veterinário e consultor financeiro pet, vou te mostrar exatamente quando contratar, o que evitar e como escolher o plano ideal sem cair em armadilhas.
+                </p>
+                <p>
+                    Uma cirurgia de emergência pode custar entre R$ 3.000 e R$ 15.000. Um tratamento oncológico ultrapassa facilmente os R$ 20.000. Para muitos tutores, o plano de saúde pet deixou de ser luxo e virou planejamento financeiro inteligente.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">O Que é um Plano de Saúde Pet?</h2>
+                <p>
+                    Funciona de forma similar ao plano de saúde humano: você paga uma mensalidade e, em troca, tem acesso a consultas, exames, cirurgias e internações com descontos ou cobertura total, dependendo do plano.
+                </p>
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">Tipos de Planos</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Básico:</strong> Consultas ilimitadas, vacinas e vermífugos. Mensalidade: R$ 50 a R$ 100.</li>
+                    <li><strong>Intermediário:</strong> Inclui exames laboratoriais, ultrassom e raio-X. Mensalidade: R$ 100 a R$ 200.</li>
+                    <li><strong>Completo:</strong> Cobertura para cirurgias, internações, quimioterapia e fisioterapia. Mensalidade: R$ 200 a R$ 500.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Quando Vale a Pena Contratar?</h2>
+                <div className="grid md:grid-cols-2 gap-6 my-8">
+                    <div className="bg-green-50 p-6 rounded-xl border border-green-200">
+                        <h4 className="font-bold text-lg mb-3 text-green-800">✅ Vale a Pena Se:</h4>
+                        <ul className="space-y-2 text-sm">
+                            <li>• Seu pet tem raça predisposta a doenças (Bulldog, Golden, Persa)</li>
+                            <li>• Você não tem reserva de emergência de R$ 5.000+</li>
+                            <li>• Seu pet é filhote (previne custos futuros)</li>
+                            <li>• Você mora longe de clínicas populares</li>
+                        </ul>
+                    </div>
+                    <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                        <h4 className="font-bold text-lg mb-3 text-red-800">❌ Talvez Não Valha Se:</h4>
+                        <ul className="space-y-2 text-sm">
+                            <li>• Seu pet é SRD saudável e jovem</li>
+                            <li>• Você tem fundo de emergência robusto</li>
+                            <li>• Seu pet já é idoso (carência longa e mensalidade alta)</li>
+                            <li>• Você tem acesso a clínicas universitárias</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Armadilhas e Letras Miúdas</h2>
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">1. Carência</h3>
+                <p>
+                    Período em que você paga, mas não pode usar. Varia de 30 dias (consultas) a 180 dias (cirurgias). Doenças pré-existentes NUNCA são cobertas.
+                </p>
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">2. Rede Credenciada Limitada</h3>
+                <p>
+                    Alguns planos só funcionam em clínicas específicas. Se você já tem um veterinário de confiança, confirme se ele aceita o plano.
+                </p>
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">3. Franquia e Coparticipação</h3>
+                <p>
+                    Franquia: valor que você paga antes do plano cobrir (ex: R$ 500). Coparticipação: você paga um % do procedimento (ex: 20% de uma cirurgia de R$ 5.000 = R$ 1.000 do seu bolso).
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Principais Operadoras no Brasil (2026)</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Porto Seguro Pet:</strong> Maior rede credenciada. Planos a partir de R$ 60/mês.</li>
+                    <li><strong>Petlove & Co:</strong> Telemedicina 24h incluída. Planos a partir de R$ 80/mês.</li>
+                    <li><strong>Vet Smart:</strong> Especializado em pets idosos. Planos a partir de R$ 120/mês.</li>
+                    <li><strong>Allianz Pet:</strong> Cobertura internacional. Planos a partir de R$ 150/mês.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Alternativa: Fundo de Emergência Pet</h2>
+                <p>
+                    Se você tem disciplina financeira, pode criar seu próprio "plano". Guarde R$ 150/mês em uma conta separada. Em 2 anos, você terá R$ 3.600 disponíveis sem carência, sem burocracia e sem restrição de clínica.
+                </p>
+                <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 my-6">
+                    <h3 className="text-xl font-bold text-blue-900 mb-2">💡 Dica do Especialista</h3>
+                    <p>Combine os dois: contrate um plano básico (R$ 70/mês) para consultas e vacinas + guarde R$ 100/mês para emergências. Assim você tem o melhor dos dois mundos.</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Checklist: Antes de Contratar</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>✓ Leia o contrato inteiro (especialmente exclusões)</li>
+                    <li>✓ Confirme a rede credenciada na sua cidade</li>
+                    <li>✓ Verifique o prazo de carência para cada procedimento</li>
+                    <li>✓ Pergunte sobre reajuste anual (pode subir até 30%)</li>
+                    <li>✓ Confirme se cobre doenças hereditárias da raça</li>
+                </ul>
+
+                <p>
+                    Plano de saúde pet não é para todos, mas pode ser um salva-vidas financeiro e emocional. Analise seu perfil, faça as contas e escolha com consciência. Seu bolso e seu pet agradecem.
+                </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Você cuida bem do seu pet?</h3>
+                    <p className="mb-6 text-lg">Descubra seu nível de cuidado e receba dicas personalizadas!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Fazer o Quiz Gratuito
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "saude-bucal-pets": {
+        title: "Saúde Bucal de Cães e Gatos: O Guia Definitivo da Higiene Dental",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    80% dos cães e 70% dos gatos acima de 3 anos têm doença periodontal. Essa estatística assustadora revela uma verdade incômoda: a saúde bucal é a área mais negligenciada no cuidado pet. E as consequências vão muito além do mau hálito. Bactérias da boca migram para o coração, rins e fígado, encurtando a vida do seu melhor amigo.
+                </p>
+                <p>
+                    Como veterinário, vejo diariamente tutores chocados ao descobrir que o "bafo" do pet era, na verdade, uma infecção grave. Neste guia, vou te ensinar tudo sobre prevenção, tratamento e como manter os dentes do seu pet saudáveis sem drama.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Por Que a Saúde Bucal é Tão Importante?</h2>
+                <p>
+                    A boca é a porta de entrada do organismo. Quando há acúmulo de placa bacteriana (aquela camada amarelada nos dentes), ela se transforma em tártaro (placa endurecida). O tártaro inflama a gengiva (gengivite), que evolui para doença periodontal, causando:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Dor crônica:</strong> Dentes moles, gengivas sangrando, dificuldade para comer.</li>
+                    <li><strong>Perda de dentes:</strong> Irreversível.</li>
+                    <li><strong>Infecções sistêmicas:</strong> Bactérias caem na corrente sanguínea e atacam órgãos vitais.</li>
+                    <li><strong>Endocardite bacteriana:</strong> Infecção no coração, potencialmente fatal.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Sinais de Alerta: Quando Ir ao Veterinário</h2>
+                <div className="bg-red-50 border-l-4 border-red-500 p-6 my-6">
+                    <h3 className="text-xl font-bold text-red-700 mb-3">🚨 Sintomas de Doença Periodontal</h3>
+                    <ul className="space-y-2">
+                        <li>• Mau hálito intenso (cheiro de podre)</li>
+                        <li>• Gengivas vermelhas, inchadas ou sangrando</li>
+                        <li>• Tártaro visível (camada marrom/amarela nos dentes)</li>
+                        <li>• Dificuldade para mastigar ou recusa de ração seca</li>
+                        <li>• Salivação excessiva ou sangue na saliva</li>
+                        <li>• Dente mole ou caindo</li>
+                        <li>• Emagrecimento (dor ao comer)</li>
+                    </ul>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Prevenção: O Que Você Pode Fazer em Casa</h2>
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">1. Escovação Dental (O Padrão Ouro)</h3>
+                <p>
+                    Sim, é possível escovar os dentes do seu pet! O ideal é diariamente, mas 3x por semana já faz diferença.
+                </p>
+                <div className="bg-card p-6 rounded-xl border border-border/50 my-6">
+                    <h4 className="font-bold text-lg mb-4">🪥 Como Escovar (Passo a Passo)</h4>
+                    <ol className="list-decimal pl-6 space-y-3">
+                        <li>Use pasta de dente ESPECÍFICA para pets (pasta humana é tóxica). Sabores: frango, carne, malte.</li>
+                        <li>Escova: dedeira de silicone (para iniciantes) ou escova infantil macia.</li>
+                        <li>Comece devagar: deixe ele lamber a pasta por 3 dias para se acostumar com o sabor.</li>
+                        <li>Levante o lábio e escove em movimentos circulares, focando na linha da gengiva.</li>
+                        <li>Não precisa enxaguar. Recompense com petisco após.</li>
+                    </ol>
+                </div>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">2. Produtos Auxiliares</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Petiscos Dentais:</strong> Ossos de couro, palitos com enzimas (ex: Greenies, DentaStix). Ajudam a raspar o tártaro mecanicamente.</li>
+                    <li><strong>Brinquedos Mastigáveis:</strong> Borracha texturizada (Kong Dental) ou corda. Massageiam a gengiva.</li>
+                    <li><strong>Ração Dental:</strong> Croquetes maiores e mais duros que forçam a mastigação (ex: Hill's t/d).</li>
+                    <li><strong>Aditivos para Água:</strong> Líquidos que inibem bactérias. Eficácia moderada.</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">3. Alimentação Estratégica</h3>
+                <p>
+                    Ração úmida (patê) não limpa os dentes. Se possível, ofereça ração seca ou intercale. Ossos recreativos crus (para cães) também ajudam, mas NUNCA ossos cozidos (podem lascar e perfurar).
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Tratamento Profissional: Limpeza Dentária</h2>
+                <p>
+                    Quando o tártaro já está instalado, só a limpeza profissional resolve. O procedimento é feito sob anestesia geral e inclui:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Remoção de tártaro com ultrassom</li>
+                    <li>Polimento dos dentes</li>
+                    <li>Avaliação de dentes comprometidos (extração se necessário)</li>
+                    <li>Aplicação de flúor</li>
+                </ul>
+                <p>
+                    <strong>Custo médio:</strong> R$ 800 a R$ 2.500 (varia com porte e gravidade). <strong>Frequência:</strong> A cada 1-2 anos, dependendo da prevenção em casa.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Diferenças Entre Cães e Gatos</h2>
+                <div className="grid md:grid-cols-2 gap-6 my-8">
+                    <div className="bg-card p-6 rounded-xl border border-border/50">
+                        <h4 className="font-bold text-lg mb-3">🐕 Cães</h4>
+                        <ul className="space-y-2 text-sm">
+                            <li>• Mais tolerantes à escovação</li>
+                            <li>• Aceitam petiscos dentais grandes</li>
+                            <li>• Raças pequenas (Yorkie, Poodle) têm mais problemas</li>
+                        </ul>
+                    </div>
+                    <div className="bg-card p-6 rounded-xl border border-border/50">
+                        <h4 className="font-bold text-lg mb-3">🐱 Gatos</h4>
+                        <ul className="space-y-2 text-sm">
+                            <li>• Mais resistentes à escovação (treine desde filhote)</li>
+                            <li>• Sofrem de reabsorção dentária (doença específica felina)</li>
+                            <li>• Ração úmida piora o problema</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Mitos e Verdades</h2>
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">"Osso limpa os dentes do cachorro."</h3>
+                <p>
+                    <strong>MEIA VERDADE.</strong> Ossos recreativos crus (canela bovina) ajudam, mas ossos cozidos ou muito duros (fêmur) podem quebrar dentes. Nunca dê osso de galinha cozido.
+                </p>
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">"Gato não precisa de cuidado dental."</h3>
+                <p>
+                    <strong>MITO PERIGOSO.</strong> Gatos escondem dor muito bem. Quando você percebe, a doença já está avançada.
+                </p>
+
+                <div className="bg-green-50 border border-green-200 rounded-2xl p-6 my-6">
+                    <h3 className="text-xl font-bold text-green-800 mb-2">💚 Rotina Ideal de Saúde Bucal</h3>
+                    <ul className="space-y-2">
+                        <li>• <strong>Diariamente:</strong> Escovação (ou pelo menos 3x/semana)</li>
+                        <li>• <strong>Diariamente:</strong> Petisco dental após a última refeição</li>
+                        <li>• <strong>Anualmente:</strong> Check-up veterinário com avaliação bucal</li>
+                        <li>• <strong>A cada 1-2 anos:</strong> Limpeza profissional (se necessário)</li>
+                    </ul>
+                </div>
+
+                <p>
+                    Cuidar da saúde bucal do seu pet é um ato de amor que pode adicionar anos de vida. Comece hoje, mesmo que seja só com um petisco dental. Seu pet (e o nariz de quem recebe lambidas) agradecem!
+                </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Você é um tutor exemplar?</h3>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja como melhorar os cuidados!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Fazer o Quiz Agora
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "probioticos-pets": {
+        title: "Probióticos para Pets: O Guia Completo de Benefícios e Uso",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Probióticos deixaram de ser modinha e viraram ciência consolidada na medicina veterinária. Esses "bichinhos do bem" que vivem no intestino do seu pet são responsáveis por 70% da imunidade, influenciam o humor, a pele e até a longevidade. Mas nem todo probiótico funciona, e usar o produto errado pode ser desperdício de dinheiro.
+                </p>
+                <p>
+                    Como veterinário especializado em nutrição, vou te mostrar exatamente quando usar, quais cepas funcionam de verdade e como escolher o melhor probiótico para o seu cão ou gato.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">O Que São Probióticos?</h2>
+                <p>
+                    Probióticos são microrganismos vivos (bactérias e leveduras "do bem") que, quando administrados em quantidades adequadas, trazem benefícios à saúde. Eles colonizam o intestino e equilibram a microbiota, que é o ecossistema de trilhões de bactérias que vivem no trato digestivo.
+                </p>
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">Probióticos vs Prebióticos</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Probióticos:</strong> As bactérias vivas (ex: Lactobacillus, Bifidobacterium).</li>
+                    <li><strong>Prebióticos:</strong> A "comida" das bactérias boas (fibras como FOS e MOS).</li>
+                    <li><strong>Simbióticos:</strong> Combinação dos dois (mais eficaz).</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Benefícios Comprovados pela Ciência</h2>
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">1. Saúde Digestiva</h3>
+                <p>
+                    Probióticos são o tratamento de primeira linha para:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Diarreia (viral, bacteriana ou por estresse)</li>
+                    <li>Diarreia pós-antibiótico (os antibióticos matam bactérias boas também)</li>
+                    <li>Síndrome do Intestino Irritável (SII)</li>
+                    <li>Flatulência excessiva</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">2. Fortalecimento da Imunidade</h3>
+                <p>
+                    70% das células imunológicas estão no intestino. Uma microbiota saudável = sistema imune forte. Estudos mostram que probióticos reduzem infecções respiratórias e urinárias em cães.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">3. Saúde da Pele e Pelagem</h3>
+                <p>
+                    O eixo intestino-pele é real. Probióticos reduzem alergias alimentares, dermatites atópicas e coceira crônica. Pets com pele sensível se beneficiam muito.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">4. Saúde Mental (Eixo Intestino-Cérebro)</h3>
+                <p>
+                    Bactérias intestinais produzem neurotransmissores como serotonina. Probióticos podem reduzir ansiedade de separação e comportamentos compulsivos em cães.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Quando Usar Probióticos?</h2>
+                <div className="grid md:grid-cols-2 gap-6 my-8">
+                    <div className="bg-green-50 p-6 rounded-xl border border-green-200">
+                        <h4 className="font-bold text-lg mb-3 text-green-800">✅ Situações Ideais</h4>
+                        <ul className="space-y-2 text-sm">
+                            <li>• Durante e após tratamento com antibióticos</li>
+                            <li>• Diarreia aguda ou crônica</li>
+                            <li>• Troca de ração (transição)</li>
+                            <li>• Estresse (viagem, mudança, chegada de novo pet)</li>
+                            <li>• Filhotes (fortalece imunidade)</li>
+                            <li>• Idosos (microbiota enfraquece com a idade)</li>
+                            <li>• Pets com alergias ou pele sensível</li>
+                        </ul>
+                    </div>
+                    <div className="bg-yellow-50 p-6 rounded-xl border border-yellow-200">
+                        <h4 className="font-bold text-lg mb-3 text-yellow-800">⚠️ Quando NÃO Usar</h4>
+                        <ul className="space-y-2 text-sm">
+                            <li>• Pet com sistema imune severamente comprometido (ex: FIV/FeLV avançado)</li>
+                            <li>• Durante infecção bacteriana ativa grave (consulte o vet)</li>
+                            <li>• Sem orientação em casos de pancreatite aguda</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Cepas Mais Eficazes para Pets</h2>
+                <p>
+                    Nem toda bactéria funciona. Procure produtos com essas cepas comprovadas:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Lactobacillus acidophilus:</strong> Diarreia e imunidade.</li>
+                    <li><strong>Bifidobacterium animalis:</strong> Saúde intestinal e pele.</li>
+                    <li><strong>Enterococcus faecium:</strong> Específico para cães, reduz diarreia.</li>
+                    <li><strong>Saccharomyces boulardii:</strong> Levedura, excelente para diarreia aguda.</li>
+                    <li><strong>Bacillus subtilis:</strong> Resistente ao calor, ótimo para rações.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Escolher o Melhor Produto?</h2>
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">Checklist de Qualidade</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>✓ <strong>UFC (Unidades Formadoras de Colônias):</strong> Mínimo de 1 bilhão de UFC por dose. Ideal: 5 a 10 bilhões.</li>
+                    <li>✓ <strong>Cepas identificadas:</strong> O rótulo deve listar as cepas específicas, não só "Lactobacillus sp."</li>
+                    <li>✓ <strong>Validade:</strong> Bactérias morrem com o tempo. Compre produtos frescos.</li>
+                    <li>✓ <strong>Armazenamento:</strong> Alguns precisam de refrigeração. Leia a embalagem.</li>
+                    <li>✓ <strong>Sem açúcar:</strong> Evite produtos com açúcar ou corantes.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Formas de Apresentação</h2>
+                <div className="bg-card p-6 rounded-xl border border-border/50 my-6">
+                    <h4 className="font-bold text-lg mb-4">📦 Tipos de Probióticos</h4>
+                    <ul className="space-y-3">
+                        <li><strong>Pó (Sachê):</strong> Mistura na comida. Ótimo para filhotes e gatos. Ex: Floratil Pet, Proviable.</li>
+                        <li><strong>Cápsulas:</strong> Pode abrir e misturar ou dar inteira. Ex: FortiFlora.</li>
+                        <li><strong>Pasta:</strong> Palatável, fácil de administrar. Ex: Nutri-Vet.</li>
+                        <li><strong>Ração com Probiótico:</strong> Conveniente, mas UFC costuma ser baixo.</li>
+                    </ul>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Dosagem e Duração</h2>
+                <p>
+                    <strong>Dose padrão:</strong> 1 sachê ou cápsula por dia (para cães de 10-20 kg). Ajuste conforme peso e orientação do rótulo.
+                </p>
+                <p>
+                    <strong>Duração:</strong>
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Diarreia aguda: 5 a 7 dias</li>
+                    <li>Pós-antibiótico: Durante o tratamento + 7 dias após</li>
+                    <li>Manutenção (idosos, alérgicos): Uso contínuo ou 15 dias por mês</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Probióticos Naturais na Alimentação</h2>
+                <p>
+                    Você também pode oferecer alimentos ricos em probióticos (com moderação e orientação):
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Iogurte natural sem açúcar:</strong> 1 colher de sopa para cães pequenos, 2-3 para grandes.</li>
+                    <li><strong>Kefir:</strong> Mais potente que iogurte. Dose: mesma do iogurte.</li>
+                    <li><strong>Chucrute (sem sal):</strong> Pequenas quantidades para cães.</li>
+                </ul>
+                <p className="text-sm text-muted-foreground">
+                    ⚠️ Gatos são intolerantes à lactose. Evite laticínios. Use probióticos específicos.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Efeitos Colaterais</h2>
+                <p>
+                    Probióticos são seguros, mas nos primeiros dias pode haver:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Flatulência (gases) temporária</li>
+                    <li>Fezes mais moles (normaliza em 2-3 dias)</li>
+                </ul>
+                <p>
+                    Se piorar, suspenda e consulte o veterinário.
+                </p>
+
+                <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 my-6">
+                    <h3 className="text-xl font-bold text-blue-900 mb-2">💙 Dica de Ouro</h3>
+                    <p>Combine probióticos com prebióticos (fibras). Alimentos como abóbora cozida, batata-doce e chicória são excelentes prebióticos naturais que potencializam o efeito.</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Marcas Recomendadas (Brasil, 2026)</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>FortiFlora (Purina):</strong> Líder de mercado. Cães e gatos.</li>
+                    <li><strong>Proviable (Nutramax):</strong> Alta concentração de UFC.</li>
+                    <li><strong>Floratil Pet:</strong> Saccharomyces boulardii, ótimo para diarreia.</li>
+                    <li><strong>Organnact Pet (Organnact):</strong> Nacional, boa relação custo-benefício.</li>
+                </ul>
+
+                <p>
+                    Probióticos são uma ferramenta poderosa para a saúde do seu pet. Use com inteligência, escolha produtos de qualidade e observe os resultados. Um intestino feliz = um pet feliz!
+                </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quer saber se você cuida bem do seu pet?</h3>
+                    <p className="mb-6 text-lg">Faça nosso quiz e descubra seu PetScore!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Fazer o Quiz Gratuito
+                    </Button>
+                </div>
+            </div>
+        )
     }
 };
 
