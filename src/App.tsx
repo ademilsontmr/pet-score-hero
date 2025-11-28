@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Quiz from "./pages/Quiz";
 import PartialResult from "./pages/PartialResult";
-import Payment from "./pages/Payment";
 import CompleteResult from "./pages/CompleteResult";
 import Privacidade from "./pages/Privacidade";
 import Termos from "./pages/Termos";
@@ -28,7 +27,6 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/resultado-parcial" element={<PartialResult />} />
-          <Route path="/pagamento" element={<Payment />} />
           <Route path="/resultado-completo/:responseId" element={<CompleteResult />} />
           <Route path="/resultado-completo" element={<CompleteResult />} />
 
