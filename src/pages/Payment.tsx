@@ -103,21 +103,60 @@ const Payment = () => {
       const tutorName = location.state?.tutorName || "";
       const tutorPhone = location.state?.tutorPhone || "";
 
-      const response = await fetch(`${workerUrl}/criar-pagamento`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: tutorName,
-          whatsapp: tutorPhone,
-          value: 19.90
-        })
-      });
+      console.log("🔗 Chamando Worker:", `${workerUrl}/criar-pagamento`);
+      console.log("📤 Dados enviados:", { name: tutorName, whatsapp: tutorPhone, value: 19.90 });
+
+      let response;
+      try {
+        response = await fetch(`${workerUrl}/criar-pagamento`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: tutorName,
+            whatsapp: tutorPhone,
+            value: 19.90
+          })
+        });
+      } catch (fetchError: any) {
+        console.error("❌ Erro na requisição fetch:", fetchError);
+        // Fallback temporário para teste
+        console.warn("⚠️ Usando fallback temporário (mock)");
+        const mockPixCode = `00020126580014BR.GOV.BCB.PIX0136123e4567-e89b-12d3-a456-426614174000520400005303986540519.905802BR5925PETSCORE COMERCIO LTDA6009SAO PAULO62070503***6304${Math.random().toString(36).substring(2, 15)}`;
+        const mockPaymentId = `pagamento_${Date.now()}`;
+        
+        setPixCode(mockPixCode);
+        setPaymentId(mockPaymentId);
+        setShowPix(true);
+        setTimeLeft(300);
+        
+        toast.warning("Modo de teste ativo. O pagamento não será processado.");
+        return;
+      }
+
+      console.log("📥 Status da resposta:", response.status);
+      console.log("📥 Response OK:", response.ok);
 
       if (!response.ok) {
-        throw new Error("Erro ao criar pagamento");
+        let errorMessage = `Erro ${response.status}`;
+        try {
+          const errorData = await response.json();
+          errorMessage = errorData.error || errorMessage;
+          console.error("❌ Erro na resposta:", errorData);
+        } catch {
+          const errorText = await response.text();
+          errorMessage = errorText || errorMessage;
+          console.error("❌ Erro na resposta (texto):", errorText);
+        }
+        throw new Error(errorMessage);
       }
 
       const data = await response.json();
+      console.log("✅ Dados recebidos:", data);
+
+      if (!data.pixCode) {
+        throw new Error("Código PIX não retornado pelo servidor");
+      }
+
       setPixCode(data.pixCode);
       setPaymentId(data.id);
       setShowPix(true);
@@ -125,9 +164,10 @@ const Payment = () => {
 
       // Inicia verificação de status do pagamento
       startPaymentPolling(data.id);
-    } catch (error) {
-      console.error("Erro ao gerar Pix:", error);
-      toast.error("Erro ao gerar código Pix. Tente novamente.");
+    } catch (error: any) {
+      console.error("❌ Erro ao gerar Pix:", error);
+      const errorMessage = error.message || "Erro desconhecido";
+      toast.error(`Erro ao gerar código Pix: ${errorMessage}`);
     } finally {
       setIsLoading(false);
     }
