@@ -1,8 +1,10 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { useEffect } from "react";
-import { Check } from "lucide-react";
+import { useEffect, useState, useCallback } from "react";
+import { Check, Copy, QrCode } from "lucide-react";
+import { toast } from "sonner";
+import { QRCodeSVG } from "qrcode.react";
 
 const Payment = () => {
   const location = useLocation();
@@ -12,21 +14,197 @@ const Payment = () => {
   const petName = location.state?.petName || "";
   const petGender = location.state?.petGender || "";
 
+  const [showPix, setShowPix] = useState(false);
+  const [pixCode, setPixCode] = useState<string>("");
+  const [timeLeft, setTimeLeft] = useState(300); // 5 minutos em segundos
+  const [isLoading, setIsLoading] = useState(false);
+
   // Determine the correct article based on gender
   const article = petGender === "female" ? "da" : "do";
 
   useEffect(() => {
-    document.title = "Finalizar Compra | PetScore";
+    document.title = showPix ? "Pagamento Pix | PetScore" : "Finalizar Compra | PetScore";
     if (!location.state?.score) {
       navigate("/");
     }
-  }, [location.state, navigate]);
+  }, [location.state, navigate, showPix]);
 
-  const handlePayment = () => {
-    // Simulate payment - in real app, integrate payment gateway
-    navigate("/resultado-completo", { state: { score, paid: true, petImage, petName, petGender } });
+  // Contador regressivo
+  useEffect(() => {
+    if (!showPix || timeLeft <= 0) return;
+
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(timer);
+          toast.error("Tempo de pagamento expirado. Gere um novo QR Code.");
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [showPix, timeLeft]);
+
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
   };
 
+  const generatePixCode = useCallback(async () => {
+    setIsLoading(true);
+    try {
+      // Gerar um código PIX mockado (substituir pela integração real com Worker)
+      // Em produção, isso viria do Worker de checkout via API
+      const mockPixCode = `00020126580014BR.GOV.BCB.PIX0136123e4567-e89b-12d3-a456-426614174000520400005303986540519.905802BR5925PETSCORE COMERCIO LTDA6009SAO PAULO62070503***6304${Math.random().toString(36).substring(2, 15)}`;
+
+      setPixCode(mockPixCode);
+      setShowPix(true);
+      setTimeLeft(300); // Resetar contador para 5 minutos
+    } catch (error) {
+      console.error("Erro ao gerar Pix:", error);
+      toast.error("Erro ao gerar código Pix. Tente novamente.");
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
+
+  const handlePayment = () => {
+    generatePixCode();
+  };
+
+  const copyPixCode = async () => {
+    if (!pixCode) {
+      toast.error("Código Pix não disponível");
+      return;
+    }
+
+    try {
+      // Tentar usar a API moderna do Clipboard
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(pixCode);
+        toast.success("Código Pix copiado!");
+      } else {
+        // Fallback para navegadores mais antigos
+        const textArea = document.createElement("textarea");
+        textArea.value = pixCode;
+        textArea.style.position = "fixed";
+        textArea.style.left = "-999999px";
+        textArea.style.top = "-999999px";
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        
+        try {
+          const successful = document.execCommand("copy");
+          if (successful) {
+            toast.success("Código Pix copiado!");
+          } else {
+            throw new Error("Falha ao copiar");
+          }
+        } catch (err) {
+          toast.error("Erro ao copiar. Selecione o código manualmente.");
+        } finally {
+          document.body.removeChild(textArea);
+        }
+      }
+    } catch (error) {
+      console.error("Erro ao copiar código Pix:", error);
+      toast.error("Erro ao copiar. Selecione o código manualmente.");
+    }
+  };
+
+  // Tela PIX
+  if (showPix) {
+    return (
+      <div className="min-h-screen bg-gradient-warm py-8 px-4 flex items-center justify-center">
+        <div className="max-w-md w-full space-y-6">
+          {/* Header com Valor e Contador */}
+          <div className="text-center space-y-3">
+            <h1 className="text-2xl font-bold text-foreground">Pagamento Pix</h1>
+            <div className="flex items-center justify-center gap-4">
+              <div>
+                <p className="text-sm text-gray-600">Valor</p>
+                <p className="text-2xl font-bold text-orange-600">R$ 19,90</p>
+              </div>
+              <div className="h-12 w-px bg-gray-300"></div>
+              <div>
+                <p className="text-sm text-gray-600">Tempo</p>
+                <p className={`text-2xl font-bold ${timeLeft < 60 ? "text-red-600" : "text-orange-600"}`}>
+                  {formatTime(timeLeft)}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* QR Code */}
+          <Card className="p-6 bg-white shadow-medium">
+            <div className="flex flex-col items-center">
+              <div className="bg-white p-3 rounded-lg border-2 border-gray-200">
+                {pixCode ? (
+                  <QRCodeSVG
+                    value={pixCode}
+                    size={240}
+                    level="M"
+                    includeMargin={true}
+                  />
+                ) : (
+                  <div className="w-60 h-60 bg-gray-100 flex items-center justify-center rounded">
+                    <QrCode className="w-24 h-24 text-gray-400" />
+                  </div>
+                )}
+              </div>
+            </div>
+          </Card>
+
+          {/* Código Copiável */}
+          <Card className="p-4 bg-white shadow-medium">
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <label className="text-sm font-medium text-gray-700">
+                  Código Pix
+                </label>
+                <Button
+                  onClick={copyPixCode}
+                  size="sm"
+                  className="gap-2 bg-orange-600 hover:bg-orange-700"
+                >
+                  <Copy className="w-4 h-4" />
+                  Copiar
+                </Button>
+              </div>
+              <div className="bg-gray-50 p-3 rounded border border-gray-200">
+                <p 
+                  id="pix-code-text"
+                  className="text-xs font-mono text-gray-800 break-all select-all cursor-text"
+                  onClick={(e) => {
+                    const range = document.createRange();
+                    range.selectNodeContents(e.currentTarget);
+                    const selection = window.getSelection();
+                    selection?.removeAllRanges();
+                    selection?.addRange(range);
+                  }}
+                >
+                  {pixCode || "Gerando código Pix..."}
+                </p>
+              </div>
+            </div>
+          </Card>
+
+          {/* Mensagem informativa */}
+          <div className="text-center">
+            <p className="text-sm text-gray-600">
+              Após a confirmação do pagamento, você será redirecionado automaticamente para a página do resultado completo.
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Tela inicial de pagamento
   return (
     <div className="min-h-screen bg-gradient-warm py-12 px-4">
       <div className="max-w-3xl mx-auto space-y-8">
@@ -130,9 +308,10 @@ const Payment = () => {
             <Button
               size="lg"
               onClick={handlePayment}
-              className="w-full text-lg px-8 py-6 h-auto shadow-lg hover:shadow-xl transition-all duration-300 bg-orange-600 hover:bg-orange-700"
+              disabled={isLoading}
+              className="w-full text-lg px-8 py-6 h-auto shadow-lg hover:shadow-xl transition-all duration-300 bg-orange-600 hover:bg-orange-700 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Desbloquear Resultado Completo
+              {isLoading ? "Gerando código Pix..." : "Desbloquear Resultado Completo"}
             </Button>
 
             <p className="text-xs text-muted-foreground/80 italic">
