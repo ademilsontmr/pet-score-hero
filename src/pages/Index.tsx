@@ -327,7 +327,7 @@ const Index = () => {
 
           <AccordionItem value="item-3" className="bg-card rounded-2xl px-6 shadow-soft border-none">
             <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              Funciona para cães E gatos?
+              Funciona para cães e gatos?
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground text-base">
               Absolutamente! Nosso quiz foi desenvolvido por veterinários e especialistas em comportamento

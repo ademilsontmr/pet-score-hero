@@ -1,6 +1,17 @@
 name = "petscore-checkout"
-main = "src/index.ts"
+main = "src/worker.js"
 compatibility_date = "2025-11-26"
+
+# Binding do KV
+[[kv_namespaces]]
+binding = "PAGAMENTOS_KV"
+id = "8a82bbcb3a984d67b2e2607e9111b325"
+
+# Variáveis de ambiente
+[vars]
+ASAAS_BASE_URL = "https://api.asaas.com/v3"
+# ASAAS_API_KEY deve ser configurada como secret no Cloudflare Dashboard
+# ou via: wrangler secret put ASAAS_API_KEY
 
 [env.production]
 vars = { ENVIRONMENT = "production" }
