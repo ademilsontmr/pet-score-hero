@@ -2,47 +2,59 @@ interface Env {
     LEADS_KV: KVNamespace;
 }
 
+/**
+ * Gera um ID único para cada submissão/resposta
+ * Cada resposta do quiz terá seu próprio ID único
+ */
+function generateSubmissionId(): string {
+    const timestamp = Date.now();
+    const random = Math.random().toString(36).substring(2, 15);
+    return `submission_${timestamp}_${random}`;
+}
+
 export const onRequestPost: PagesFunction<Env> = async (context: any) => {
     try {
         const { request, env } = context;
         const data = await request.json();
 
+        console.log("📥 Dados recebidos:", JSON.stringify(data));
+
+        // Gera um ID único para cada submissão/resposta
+        // Cada resposta do quiz terá seu próprio ID, mesmo que seja do mesmo usuário
+        const submissionId = generateSubmissionId();
+        const storageKey = submissionId;
+
+        console.log("🔑 Submission ID gerado:", submissionId);
+        console.log("🗝️ Storage Key:", storageKey);
+
         // Get current date in DD/MM/YYYY format (Brazil Time UTC-3)
         const now = new Date();
         const brazilTime = new Date(now.getTime() - (3 * 60 * 60 * 1000)); // Manual UTC-3 adjustment
 
-        const day = String(brazilTime.getUTCDate()).padStart(2, '0');
-        const month = String(brazilTime.getUTCMonth() + 1).padStart(2, '0');
-        const year = brazilTime.getUTCFullYear();
-
-        const dateKey = `${day}/${month}/${year}`;
-        const storageKey = `leads:${dateKey}`;
-
-        // Get existing leads for this day
-        let currentLeads = [];
-        try {
-            const stored = await env.LEADS_KV.get(storageKey, 'json');
-            if (stored && Array.isArray(stored)) {
-                currentLeads = stored;
-            }
-        } catch (e) {
-            // New day or error, start with empty array
-        }
-
-        // Add metadata to the new lead
-        const newLead = {
-            ...data,
+        // Prepara dados da submissão (sempre cria um novo registro)
+        const submissionData = {
+            id: submissionId,
+            name: data.name || '',
+            phone: data.phone || '',
+            petName: data.petName || '',
+            petGender: data.petGender || '',
+            score: data.score !== undefined ? data.score : 0,
             savedAt: brazilTime.toISOString(),
             formattedDate: brazilTime.toLocaleString("pt-BR")
         };
 
-        // Append new lead
-        currentLeads.push(newLead);
+        // Salva no KV com chave = submissionId (cada resposta tem sua própria chave)
+        await env.LEADS_KV.put(storageKey, JSON.stringify(submissionData));
 
-        // Save back to KV
-        await env.LEADS_KV.put(storageKey, JSON.stringify(currentLeads));
+        console.log("✅ Dados salvos no KV com chave:", storageKey);
+        console.log("📊 Dados salvos:", JSON.stringify(submissionData));
 
-        return new Response(JSON.stringify({ success: true, count: currentLeads.length }), {
+        return new Response(JSON.stringify({ 
+            success: true, 
+            submissionId: submissionId,
+            storageKey: storageKey,
+            data: submissionData
+        }), {
             headers: { "Content-Type": "application/json" },
             status: 200
         });

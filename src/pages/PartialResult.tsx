@@ -242,26 +242,43 @@ const PartialResult = () => {
               size="lg"
               onClick={async () => {
                 // Save lead data silently (fire and forget to avoid blocking UX)
+                // Cada submissão terá seu próprio ID único gerado no backend
                 if (tutorName || tutorPhone) {
                   try {
-                    fetch("/api/save-lead", {
+                    const payload = {
+                      name: tutorName,
+                      phone: tutorPhone,
+                      petName,
+                      petGender,
+                      score
+                    };
+                    console.log("📤 Enviando para /api/save-lead:", payload);
+                    
+                    const response = await fetch("/api/save-lead", {
                       method: "POST",
                       headers: { "Content-Type": "application/json" },
-                      body: JSON.stringify({
-                        name: tutorName,
-                        phone: tutorPhone,
-                        petName,
-                        petGender,
-                        score
-                      })
+                      body: JSON.stringify(payload)
                     });
+                    
+                    const result = await response.json();
+                    console.log("✅ Resposta do servidor:", result);
+                    console.log("🔑 Submission ID:", result.submissionId);
                   } catch (e) {
-                    console.error("Lead save error", e);
+                    console.error("❌ Lead save error", e);
                   }
                 }
 
                 window.scrollTo(0, 0);
-                navigate("/pagamento", { state: { score, petImage, petName, petGender, tutorName, tutorPhone } });
+                navigate("/pagamento", { 
+                  state: { 
+                    score, 
+                    petImage, 
+                    petName, 
+                    petGender, 
+                    tutorName, 
+                    tutorPhone
+                  } 
+                });
               }}
               className="w-full text-lg md:text-xl px-8 md:px-12 py-6 md:py-7 h-auto rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 bg-purple-600 hover:bg-purple-700"
             >
