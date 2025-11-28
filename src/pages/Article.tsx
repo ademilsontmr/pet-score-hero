@@ -1952,6 +1952,14 @@ const articles = {
                 <p>
                     Investir em ração de qualidade previne obesidade, alergias e doenças renais, economizando em consultas veterinárias no futuro. Consulte sempre um veterinário para recomendações personalizadas.
                 </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
+                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -2012,6 +2020,14 @@ const articles = {
                 <p>
                     Investir em ração de qualidade previne doenças renais crônicas, a principal causa de morte em gatos domésticos.
                 </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
+                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -2093,6 +2109,14 @@ const articles = {
                 <p>
                     A areia certa, combinada com limpeza diária e caixa adequada, garante que seu gato use o banheiro corretamente e mantém sua casa sem odores.
                 </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
+                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -2179,6 +2203,14 @@ const articles = {
                 <p>
                     Com consistência e paciência, a maioria dos cães aprende a usar o tapete em 2-4 semanas. Cães adultos podem levar mais tempo para desaprender hábitos antigos.
                 </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
+                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -2281,6 +2313,14 @@ const articles = {
                 <p>
                     Prevenir é mais barato que tratar. Um pet com pulgas precisa de banhos medicados, antibióticos para infecções secundárias e vermífugos extras. Mantenha a proteção em dia o ano todo!
                 </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
+                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -2382,6 +2422,14 @@ const articles = {
                 <p>
                     Ossos são excelentes para saúde e bem-estar, mas supervisão é essencial. Nunca deixe cães roendo ossos sem vigilância, especialmente nas primeiras vezes.
                 </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
+                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -2498,6 +2546,14 @@ const articles = {
                 <p>
                     Uma casinha bem escolhida se torna o refúgio favorito do cão. Invista em qualidade e tamanho adequado para garantir anos de uso confortável.
                 </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
+                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -2622,6 +2678,14 @@ const articles = {
                 <p>
                     Coleiras salvam vidas, mas só se usadas corretamente. Priorize sempre a segurança com fivela breakaway e ajuste adequado. Se seu gato rejeita completamente, considere microchip como alternativa.
                 </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
+                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -2696,6 +2760,14 @@ const articles = {
                 <p>
                     Gatos alimentados com ração natural vivem em média 2-3 anos a mais e têm menos problemas renais e cardíacos na velhice.
                 </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
+                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -2783,6 +2855,14 @@ const articles = {
                 <p>
                     Investir em ração natural é investir em longevidade e qualidade de vida. Cães bem nutridos vivem mais, adoecem menos e são mais felizes.
                 </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
+                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -2883,6 +2963,14 @@ const articles = {
                 <p>
                     Vermifugar é tão importante quanto vacinar. Vermes não tratados podem causar obstrução intestinal, perfuração e morte. Mantenha o calendário em dia!
                 </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
+                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -2991,6 +3079,14 @@ const articles = {
                 <p>
                     Uma caminha de qualidade é investimento em saúde. Cães que dormem bem têm menos problemas comportamentais, articulares e vivem mais felizes.
                 </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
+                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -3097,6 +3193,14 @@ const articles = {
                 <p>
                     Investir em bons arranhadores é muito mais barato que trocar sofás. Gatos felizes arranham onde devem!
                 </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
+                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -3216,6 +3320,14 @@ const articles = {
                 <p>
                     Gatos que bebem mais água vivem mais e com melhor qualidade de vida. É um dos melhores investimentos que você pode fazer pela saúde do seu felino.
                 </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
+                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -3335,6 +3447,14 @@ const articles = {
                 <p>
                     Coleiras antipulgas de qualidade são investimento inteligente. Proteção contínua, praticidade e economia a longo prazo. Escolha marcas confiáveis e use corretamente!
                 </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
+                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -3467,6 +3587,14 @@ const articles = {
                 <p>
                     Plano de saúde pet é investimento em tranquilidade. Se você não tem R$ 5-10 mil guardados para emergências, vale muito a pena. Seu pet merece o melhor cuidado!
                 </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
+                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -3619,6 +3747,14 @@ const articles = {
                 <p>
                     Adotar é um ato de amor que transforma duas vidas: a sua e a do pet. Prepare-se, seja paciente e aproveite cada momento com seu novo melhor amigo! 🐾
                 </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
+                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -3791,6 +3927,14 @@ const articles = {
                 <p>
                     Ter um pet é responsabilidade, mas também é uma das experiências mais gratificantes da vida. Prepare-se bem, seja paciente e aproveite cada momento! 🐾❤️
                 </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
+                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -3905,6 +4049,14 @@ const articles = {
                 <p>
                     Vacinar é um ato de amor e responsabilidade. Mantenha a carteirinha em dia e proteja quem você ama. Na dúvida, consulte sempre seu veterinário de confiança.
                 </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
+                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     }
