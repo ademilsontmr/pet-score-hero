@@ -3793,6 +3793,120 @@ const articles = {
                 </p>
             </div>
         )
+    },
+    "vacinas-pet-guia-veterinario": {
+        title: "Guia Completo de Vacinas para Cães e Gatos em 2026: Calendário e Cuidados",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Como veterinário, a pergunta que mais ouço é: "Doutor, quais vacinas meu pet realmente precisa?". A vacinação é o pilar mais importante da medicina preventiva. Ela protege contra doenças fatais como Cinomose, Parvovirose e Raiva. Neste guia técnico e prático, explico o protocolo ideal para 2026.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Por Que Vacinar é Inegociável?</h2>
+                <p>
+                    Vacinas estimulam o sistema imunológico a criar anticorpos. Se um pet não vacinado entra em contato com o vírus, o corpo não sabe se defender, levando a doenças graves e frequentemente fatais. O custo de tratar uma Parvovirose (internação, soro, antibióticos) pode chegar a R$ 5.000, enquanto a vacina custa uma fração disso.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Vacinas Essenciais para Cães (Obrigatórias)</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Múltipla (V8 ou V10)</h3>
+                <p>
+                    Protege contra as doenças mais letais: Cinomose, Parvovirose, Hepatite Infecciosa, Adenovírus, Parainfluenza e Leptospirose.
+                </p>
+                <p>
+                    <strong>Diferença V8 x V10:</strong> A V10 protege contra 2 cepas a mais de Leptospirose. Para cães que vivem em áreas com ratos ou enchentes, a V10 é superior.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Antirrábica</h3>
+                <p>
+                    Obrigatória por lei. A Raiva é uma zoonose (passa para humanos) e é 100% fatal. Não existe cura.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Vacinas Opcionais (Mas Recomendadas)</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Gripe Canina (Tosse dos Canis):</strong> Essencial para cães que frequentam creches, parques ou banho e tosa. Protege contra Bordetella e Parainfluenza.</li>
+                    <li><strong>Giárdia:</strong> Recomendada para cães que vivem em quintais ou passeiam muito. A Giardia causa diarreia severa e passa para humanos.</li>
+                    <li><strong>Leishmaniose:</strong> Indispensável em regiões endêmicas (litoral, interior de SP/MG/Nordeste). Doença grave transmitida pelo mosquito palha.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Protocolo de Vacinação: Filhotes de Cães</h2>
+                <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-blue-800 mb-2">📅 Calendário Padrão</h3>
+                    <ul className="list-disc pl-6 space-y-2">
+                        <li><strong>45 dias:</strong> 1ª dose da V8/V10</li>
+                        <li><strong>66 dias:</strong> 2ª dose da V8/V10</li>
+                        <li><strong>87 dias:</strong> 3ª dose da V8/V10 + Gripe Canina</li>
+                        <li><strong>108 dias:</strong> 4ª dose da V8/V10 (opcional, para raças sensíveis como Rottweiler) + Reforço Gripe + Giárdia</li>
+                        <li><strong>129 dias:</strong> Antirrábica + Reforço Giárdia</li>
+                    </ul>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Vacinas Essenciais para Gatos</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">Múltipla (V3, V4 ou V5)</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>V3:</strong> Panleucopenia, Rinotraqueíte e Calicivirose. (Básica)</li>
+                    <li><strong>V4:</strong> Tudo da V3 + Clamidiose. (Recomendada)</li>
+                    <li><strong>V5:</strong> Tudo da V4 + FeLV (Leucemia Felina). (Padrão Ouro)</li>
+                </ul>
+
+                <div className="bg-purple-50 border border-purple-200 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-purple-800 mb-2">🐱 Atenção à FeLV</h3>
+                    <p>Antes de aplicar a V5, é OBRIGATÓRIO fazer o teste de FIV/FeLV. Se o gato já tiver o vírus, a vacina não adianta e pode mascarar sintomas. Gatos negativos devem tomar a V5.</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Protocolo de Vacinação: Filhotes de Gatos</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>60 dias:</strong> 1ª dose da V4 ou V5</li>
+                    <li><strong>90 dias:</strong> 2ª dose da V4 ou V5</li>
+                    <li><strong>120 dias:</strong> Antirrábica</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Reforço Anual: O Erro Mais Comum</h2>
+                <p>
+                    Muitos tutores vacinam quando filhote e esquecem depois. <strong>O reforço é ANUAL para todas as vacinas</strong> (V10, Raiva, Gripe, etc.). A imunidade cai após 12 meses, deixando o pet vulnerável novamente.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Efeitos Colaterais: O Que é Normal?</h2>
+                <p>
+                    Nas primeiras 24-48h após a vacina, é comum:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Febre leve e apatia (ficar quietinho)</li>
+                    <li>Dor ou inchaço no local da aplicação</li>
+                    <li>Dormir mais que o normal</li>
+                </ul>
+                <p>
+                    <strong>Sinais de Alerta (Volte ao Vet):</strong> Rosto inchado (reação alérgica), vômitos intensos, dificuldade para respirar ou desmaio.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Mitos e Verdades</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">"Gato de apartamento não precisa de vacina."</h3>
+                <p>
+                    <strong>MITO.</strong> Vírus como a Panleucopenia são ultra-resistentes e você pode trazê-los na sola do sapato ou na roupa. Morcegos (transmissores da Raiva) entram em apartamentos.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">"Cachorro idoso não precisa mais vacinar."</h3>
+                <p>
+                    <strong>MITO.</strong> O sistema imune de idosos é mais fraco (imunossenescência). Eles precisam da proteção vacinal tanto quanto filhotes.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">"Vacina importada é melhor que nacional?"</h3>
+                <p>
+                    <strong>VERDADE TÉCNICA.</strong> Vacinas importadas (éticas) passam por controles de qualidade mais rígidos e garantem melhor imunização ("pega" melhor). A maioria dos veterinários confia mais na proteção das importadas.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Janela Imunológica</h2>
+                <p>
+                    O filhote só está protegido 21 dias APÓS a última dose da V10/V5. Antes disso, <strong>NÃO PASSEIE NA RUA</strong>. O contato com chão contaminado pode ser fatal. Use colo ou carrinho se precisar sair.
+                </p>
+
+                <p>
+                    Vacinar é um ato de amor e responsabilidade. Mantenha a carteirinha em dia e proteja quem você ama. Na dúvida, consulte sempre seu veterinário de confiança.
+                </p>
+            </div>
+        )
     }
 };
 

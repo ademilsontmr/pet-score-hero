@@ -313,6 +313,11 @@ const Blog = () => {
             slug: "primeiro-pet-checklist",
             title: "Primeiro Pet: Checklist Completo do Que Você Precisa em 2026",
             description: "Lista completa de compras, custos iniciais e calendário de cuidados para novos tutores."
+        },
+        {
+            slug: "vacinas-pet-guia-veterinario",
+            title: "Guia Completo de Vacinas para Cães e Gatos em 2026: Calendário e Cuidados",
+            description: "Protocolo veterinário atualizado: V10, V5, Raiva, Gripe e o que realmente é obrigatório."
         }
     ];
 
