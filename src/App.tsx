@@ -29,6 +29,7 @@ const App = () => (
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/resultado-parcial" element={<PartialResult />} />
           <Route path="/pagamento" element={<Payment />} />
+          <Route path="/resultado-completo/:responseId" element={<CompleteResult />} />
           <Route path="/resultado-completo" element={<CompleteResult />} />
 
           {/* Footer Pages */}

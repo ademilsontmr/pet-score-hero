@@ -13,11 +13,13 @@ const Payment = () => {
   const petImage = location.state?.petImage || null;
   const petName = location.state?.petName || "";
   const petGender = location.state?.petGender || "";
+  const responseId = location.state?.responseId || null;
 
   const [showPix, setShowPix] = useState(false);
   const [pixCode, setPixCode] = useState<string>("");
   const [timeLeft, setTimeLeft] = useState(300); // 5 minutos em segundos
   const [isLoading, setIsLoading] = useState(false);
+  const [paymentId, setPaymentId] = useState<string | null>(null);
 
   // Determine the correct article based on gender
   const article = petGender === "female" ? "da" : "do";
@@ -53,23 +55,83 @@ const Payment = () => {
     return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
   };
 
+  // Verifica status do pagamento periodicamente
+  const startPaymentPolling = useCallback((paymentId: string) => {
+    const workerUrl = import.meta.env.VITE_PIX_WORKER_URL || "https://petscore-checkout.ademilson.workers.dev";
+    
+    const interval = setInterval(async () => {
+      try {
+        const response = await fetch(`${workerUrl}/status-pagamento?id=${paymentId}`);
+        if (!response.ok) return;
+
+        const data = await response.json();
+        if (data.status === "CONFIRMED") {
+          clearInterval(interval);
+          toast.success("Pagamento confirmado! Redirecionando...");
+          
+          // Redireciona para URL única do resultado completo
+          if (responseId) {
+            navigate(`/resultado-completo/${responseId}`);
+          } else {
+            navigate("/resultado-completo", { 
+              state: { 
+                score, 
+                paid: true, 
+                petImage, 
+                petName, 
+                petGender 
+              } 
+            });
+          }
+        }
+      } catch (error) {
+        console.error("Erro ao verificar status:", error);
+      }
+    }, 5000); // Verifica a cada 5 segundos
+
+    // Para o polling após 5 minutos
+    setTimeout(() => {
+      clearInterval(interval);
+    }, 300000);
+  }, [responseId, navigate, score, petImage, petName, petGender]);
+
   const generatePixCode = useCallback(async () => {
     setIsLoading(true);
     try {
-      // Gerar um código PIX mockado (substituir pela integração real com Worker)
-      // Em produção, isso viria do Worker de checkout via API
-      const mockPixCode = `00020126580014BR.GOV.BCB.PIX0136123e4567-e89b-12d3-a456-426614174000520400005303986540519.905802BR5925PETSCORE COMERCIO LTDA6009SAO PAULO62070503***6304${Math.random().toString(36).substring(2, 15)}`;
+      // Chama o Worker para criar pagamento
+      const workerUrl = import.meta.env.VITE_PIX_WORKER_URL || "https://petscore-checkout.ademilson.workers.dev";
+      const tutorName = location.state?.tutorName || "";
+      const tutorPhone = location.state?.tutorPhone || "";
 
-      setPixCode(mockPixCode);
+      const response = await fetch(`${workerUrl}/criar-pagamento`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: tutorName,
+          whatsapp: tutorPhone,
+          value: 19.90
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error("Erro ao criar pagamento");
+      }
+
+      const data = await response.json();
+      setPixCode(data.pixCode);
+      setPaymentId(data.id);
       setShowPix(true);
       setTimeLeft(300); // Resetar contador para 5 minutos
+
+      // Inicia verificação de status do pagamento
+      startPaymentPolling(data.id);
     } catch (error) {
       console.error("Erro ao gerar Pix:", error);
       toast.error("Erro ao gerar código Pix. Tente novamente.");
     } finally {
       setIsLoading(false);
     }
-  }, []);
+  }, [location.state, startPaymentPolling]);
 
   const handlePayment = () => {
     generatePixCode();

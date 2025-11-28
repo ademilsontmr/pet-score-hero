@@ -1,7 +1,7 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getQuizResult } from "@/types/quiz";
 import { Share2, Download } from "lucide-react";
 import { toast } from "sonner";
@@ -9,43 +9,80 @@ import { toast } from "sonner";
 const CompleteResult = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const { responseId } = useParams();
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  
+  const [loading, setLoading] = useState(false);
+  const [responseData, setResponseData] = useState<any>(null);
 
-  // Try to get state from location first, then localStorage
-  const getInitialState = () => {
-    if (location.state?.score) {
-      return {
-        score: location.state.score,
-        paid: location.state.paid,
-        petImage: location.state.petImage,
-        petName: location.state.petName,
-        petGender: location.state.petGender
-      };
-    }
+  // Busca dados do KV usando o responseId da URL
+  useEffect(() => {
+    const loadResponseData = async () => {
+      if (!responseId) {
+        // Fallback para método antigo (compatibilidade)
+        const state = location.state;
+        if (state?.score && state?.paid) {
+          setResponseData({
+            score: state.score,
+            petImage: state.petImage,
+            petName: state.petName,
+            petGender: state.petGender
+          });
+          return;
+        }
+        navigate("/");
+        return;
+      }
 
-    // Fallback legado (apenas para compatibilidade durante migração)
-    const legacyData = localStorage.getItem('petscore_payment_data');
-    if (legacyData) {
-      return JSON.parse(legacyData);
-    }
+      setLoading(true);
+      try {
+        // Busca dados do KV via API
+        const response = await fetch(`/api/get-response?id=${responseId}`);
+        if (!response.ok) {
+          throw new Error("Resposta não encontrada");
+        }
+        const data = await response.json();
+        setResponseData(data);
+      } catch (error) {
+        console.error("Erro ao carregar dados:", error);
+        toast.error("Não foi possível carregar o resultado");
+        navigate("/");
+      } finally {
+        setLoading(false);
+      }
+    };
 
-    return {};
-  };
+    loadResponseData();
+  }, [responseId, location.state, navigate]);
 
-  const state = getInitialState();
-  const score = state.score || 0;
-  const paid = state.paid || false;
-  const petImage = state.petImage || null;
-  const petName = state.petName || "";
+  const score = responseData?.score || location.state?.score || 0;
+  const petImage = responseData?.petImage || location.state?.petImage || null;
+  const petName = responseData?.petName || location.state?.petName || "";
+  const petGender = responseData?.petGender || location.state?.petGender || "";
 
   useEffect(() => {
     document.title = "Seu Resultado Completo | PetScore";
-    if (!paid || !location.state?.score) {
-      navigate("/");
-    }
-  }, [paid, location.state, navigate]);
+  }, []);
 
-  if (!score) {
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-warm py-12 px-4 flex items-center justify-center">
+        <Card className="max-w-md w-full p-8 text-center shadow-medium">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6">
+            <span className="text-3xl">⏳</span>
+          </div>
+          <h1 className="text-2xl font-bold text-foreground mb-4">
+            Carregando resultado...
+          </h1>
+          <p className="text-muted-foreground">
+            Aguarde enquanto buscamos seu resultado completo.
+          </p>
+        </Card>
+      </div>
+    );
+  }
+
+  if (!score || !responseData) {
     return (
       <div className="min-h-screen bg-gradient-warm py-12 px-4 flex items-center justify-center">
         <Card className="max-w-md w-full p-8 text-center shadow-medium">
@@ -58,9 +95,11 @@ const CompleteResult = () => {
           <p className="text-muted-foreground mb-8">
             Não conseguimos recuperar o resultado do seu quiz.
             <br />
-            <span className="text-xs font-mono bg-gray-100 p-1 rounded mt-2 block">
-              RID: {new URLSearchParams(location.search).get("rid") || "N/A"}
-            </span>
+            {responseId && (
+              <span className="text-xs font-mono bg-gray-100 p-1 rounded mt-2 block">
+                ID: {responseId}
+              </span>
+            )}
           </p>
           <Button onClick={() => navigate("/")} variant="outline">
             Voltar ao Início

@@ -241,8 +241,8 @@ const PartialResult = () => {
             <Button
               size="lg"
               onClick={async () => {
-                // Save lead data silently (fire and forget to avoid blocking UX)
-                // Cada submissão terá seu próprio ID único gerado no backend
+                // Save lead data e captura o responseId para URL única
+                let responseId = null;
                 if (tutorName || tutorPhone) {
                   try {
                     const payload = {
@@ -262,7 +262,8 @@ const PartialResult = () => {
                     
                     const result = await response.json();
                     console.log("✅ Resposta do servidor:", result);
-                    console.log("🔑 Response ID:", result.responseId);
+                    responseId = result.responseId;
+                    console.log("🔑 Response ID:", responseId);
                   } catch (e) {
                     console.error("❌ Lead save error", e);
                   }
@@ -276,7 +277,8 @@ const PartialResult = () => {
                     petName, 
                     petGender, 
                     tutorName, 
-                    tutorPhone
+                    tutorPhone,
+                    responseId // Passa o responseId para Payment
                   } 
                 });
               }}
