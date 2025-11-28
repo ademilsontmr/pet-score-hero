@@ -27,9 +27,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/quiz" element={<Quiz />} />
-          <Route path="/partial-result" element={<PartialResult />} />
-          <Route path="/payment" element={<Payment />} />
-          <Route path="/complete-result" element={<CompleteResult />} />
+          <Route path="/resultado-parcial" element={<PartialResult />} />
+          <Route path="/pagamento" element={<Payment />} />
+          <Route path="/resultado-completo" element={<CompleteResult />} />
 
           {/* Footer Pages */}
           <Route path="/privacidade" element={<Privacidade />} />

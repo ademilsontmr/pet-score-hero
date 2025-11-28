@@ -24,7 +24,7 @@ const Payment = () => {
 
   const handlePayment = () => {
     // Simulate payment - in real app, integrate payment gateway
-    navigate("/complete-result", { state: { score, paid: true, petImage, petName, petGender } });
+    navigate("/resultado-completo", { state: { score, paid: true, petImage, petName, petGender } });
   };
 
   return (

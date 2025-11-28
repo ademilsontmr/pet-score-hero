@@ -41,7 +41,7 @@ const QuizQuestion = () => {
                     replace: true
                 });
             } else {
-                navigate("/partial-result", { state: { score: newScore } });
+                navigate("/resultado-parcial", { state: { score: newScore } });
             }
         }, 400);
     };

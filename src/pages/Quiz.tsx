@@ -65,7 +65,7 @@ const Quiz = () => {
       setCurrentQuestion(currentQuestion + 1);
     } else {
       const newScore = answers.reduce((sum, pts) => sum + pts, 0);
-      navigate("/partial-result", { state: { score: newScore } });
+      navigate("/resultado-parcial", { state: { score: newScore } });
     }
   };
 
