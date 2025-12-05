@@ -1955,7 +1955,7 @@ const articles = {
 
                 <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
                     <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
-                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
                         Descobrir meu PetScore
                     </Button>
@@ -2023,7 +2023,7 @@ const articles = {
 
                 <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
                     <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
-                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
                         Descobrir meu PetScore
                     </Button>
@@ -2112,7 +2112,7 @@ const articles = {
 
                 <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
                     <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
-                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
                         Descobrir meu PetScore
                     </Button>
@@ -2206,7 +2206,7 @@ const articles = {
 
                 <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
                     <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
-                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
                         Descobrir meu PetScore
                     </Button>
@@ -2316,7 +2316,7 @@ const articles = {
 
                 <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
                     <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
-                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
                         Descobrir meu PetScore
                     </Button>
@@ -2425,7 +2425,7 @@ const articles = {
 
                 <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
                     <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
-                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
                         Descobrir meu PetScore
                     </Button>
@@ -2549,7 +2549,7 @@ const articles = {
 
                 <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
                     <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
-                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
                         Descobrir meu PetScore
                     </Button>
@@ -2681,7 +2681,7 @@ const articles = {
 
                 <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
                     <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
-                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
                         Descobrir meu PetScore
                     </Button>
@@ -2763,7 +2763,7 @@ const articles = {
 
                 <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
                     <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
-                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
                         Descobrir meu PetScore
                     </Button>
@@ -2858,7 +2858,7 @@ const articles = {
 
                 <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
                     <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
-                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
                         Descobrir meu PetScore
                     </Button>
@@ -2966,7 +2966,7 @@ const articles = {
 
                 <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
                     <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
-                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
                         Descobrir meu PetScore
                     </Button>
@@ -3082,7 +3082,7 @@ const articles = {
 
                 <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
                     <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
-                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
                         Descobrir meu PetScore
                     </Button>
@@ -3196,7 +3196,7 @@ const articles = {
 
                 <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
                     <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
-                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
                         Descobrir meu PetScore
                     </Button>
@@ -3323,7 +3323,7 @@ const articles = {
 
                 <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
                     <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
-                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
                         Descobrir meu PetScore
                     </Button>
@@ -3450,7 +3450,7 @@ const articles = {
 
                 <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
                     <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
-                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
                         Descobrir meu PetScore
                     </Button>
@@ -3590,7 +3590,7 @@ const articles = {
 
                 <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
                     <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
-                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
                         Descobrir meu PetScore
                     </Button>
@@ -3750,7 +3750,7 @@ const articles = {
 
                 <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
                     <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
-                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
                         Descobrir meu PetScore
                     </Button>
@@ -3930,7 +3930,7 @@ const articles = {
 
                 <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
                     <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
-                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
                         Descobrir meu PetScore
                     </Button>
@@ -4052,7 +4052,7 @@ const articles = {
 
                 <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
                     <h3 className="text-2xl font-bold text-primary mb-4">Quer saber o nível de cuidado com seu pet?</h3>
-                    <p className="mb-6 text-lg">Faça nosso quiz gratuito e descubra seu PetScore oficial!</p>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
                         Descobrir meu PetScore
                     </Button>
