@@ -4461,6 +4461,1225 @@ const articles = {
                 </div>
             </div>
         )
+    },
+    "castracao-caes-gatos-guia": {
+        title: "Castração de Cães e Gatos: Guia Completo 2026",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    A castração é um dos procedimentos veterinários mais comuns e benéficos, mas ainda cercada de mitos. "Meu cachorro vai ficar gordo", "Gatos precisam ter pelo menos uma ninhada antes", "Vai mudar a personalidade dele" - nada disso é verdade. Como veterinário, realizo castrações diariamente e vejo a transformação positiva na saúde e comportamento dos pets. Vamos esclarecer tudo.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">O Que É a Castração?</h2>
+                <p>
+                    <strong>Castração</strong> é a remoção cirúrgica dos órgãos reprodutivos. Em machos, chamamos de <strong>orquiectomia</strong> (retirada dos testículos). Em fêmeas, <strong>ovariohisterectomia</strong> (retirada de ovários e útero) ou apenas <strong>ovariectomia</strong> (só ovários).
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Quando Castrar?</h2>
+                <div className="grid md:grid-cols-2 gap-6 my-8">
+                    <div className="bg-card p-6 rounded-xl border border-border/50">
+                        <h4 className="font-bold text-lg mb-2">🐕 Cães</h4>
+                        <ul className="list-disc pl-6 space-y-2 text-sm">
+                            <li><strong>Fêmeas:</strong> Antes do primeiro cio (6-8 meses) reduz em 99% o risco de câncer de mama.</li>
+                            <li><strong>Machos:</strong> A partir de 6 meses. Em raças grandes, alguns vets recomendam esperar até 12-18 meses para completar crescimento ósseo.</li>
+                        </ul>
+                    </div>
+                    <div className="bg-card p-6 rounded-xl border border-border/50">
+                        <h4 className="font-bold text-lg mb-2">🐱 Gatos</h4>
+                        <ul className="list-disc pl-6 space-y-2 text-sm">
+                            <li><strong>Fêmeas:</strong> 5-6 meses, antes do primeiro cio.</li>
+                            <li><strong>Machos:</strong> 5-6 meses. Evita marcação territorial com urina (spray).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Benefícios Comprovados</h2>
+                <h3 className="text-2xl font-semibold text-green-600 mt-6 mb-3">✅ Saúde</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Fêmeas:</strong> Elimina risco de piometra (infecção uterina fatal), reduz drasticamente câncer de mama e ovário.</li>
+                    <li><strong>Machos:</strong> Previne câncer testicular, reduz hiperplasia prostática e hérnias perineais.</li>
+                    <li><strong>Longevidade:</strong> Estudos mostram que animais castrados vivem em média 20-30% mais.</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-green-600 mt-6 mb-3">✅ Comportamento</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Reduz agressividade territorial em 60-70% dos machos.</li>
+                    <li>Diminui fugas e brigas por fêmeas no cio.</li>
+                    <li>Gatos machos param de marcar território com urina fedorenta.</li>
+                    <li>Fêmeas não entram mais no cio (sem miados noturnos, sangramento).</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Mitos vs. Realidade</h2>
+                <div className="bg-red-50 border-l-4 border-red-500 p-4 my-4">
+                    <p className="font-bold text-red-700">❌ MITO: "Vai ficar gordo"</p>
+                    <p className="text-red-600 text-sm">
+                        <strong>REALIDADE:</strong> A castração reduz o metabolismo em ~10-20%. Basta ajustar a quantidade de ração (reduzir 10-15%) e manter exercícios. Obesidade vem de superalimentação, não da cirurgia.
+                    </p>
+                </div>
+                <div className="bg-red-50 border-l-4 border-red-500 p-4 my-4">
+                    <p className="font-bold text-red-700">❌ MITO: "Fêmea precisa ter uma cria antes"</p>
+                    <p className="text-red-600 text-sm">
+                        <strong>REALIDADE:</strong> Zero benefício. Pelo contrário, cada cio aumenta o risco de câncer de mama. Gravidez tem riscos (eclâmpsia, distocia).
+                    </p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Pós-Operatório</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Repouso:</strong> 7-10 dias sem pular, correr ou subir escadas.</li>
+                    <li><strong>Colar elisabetano:</strong> Obrigatório para não lamber os pontos.</li>
+                    <li><strong>Pontos:</strong> Retirada em 10-14 dias (ou absorvíveis internos).</li>
+                    <li><strong>Dor:</strong> Analgésicos prescritos. Nunca dê remédios humanos.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Custo (2026)</h2>
+                <p>
+                    <strong>Clínicas particulares:</strong> R$ 300 a R$ 800 (varia com porte e sexo).<br />
+                    <strong>Castrações gratuitas:</strong> Muitos municípios oferecem via Zoonoses ou ONGs. Consulte a prefeitura.
+                </p>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Castrar é Amor</h3>
+                    <p className="text-lg mb-6">
+                        Além de proteger seu pet, você evita a superpopulação de animais abandonados. Milhões de cães e gatos são eutanasiados anualmente por falta de lar. Castrar é responsabilidade.
+                    </p>
+                    <div className="bg-background p-6 rounded-xl shadow-sm border border-primary/20">
+                        <h4 className="font-bold text-foreground mb-2">Você cuida bem do seu pet?</h4>
+                        <p className="text-muted-foreground mb-4">
+                            Descubra se você está tomando todas as decisões certas para a saúde do seu melhor amigo.
+                        </p>
+                        <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                            👉 Fazer o Quiz Gratuito
+                        </Button>
+                    </div>
+                </div>
+            </div>
+        )
+    },
+    "adestramento-comandos-basicos": {
+        title: "Como Ensinar Comandos Básicos: Guia de Adestramento Positivo",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    "Senta", "Fica", "Vem" - comandos simples que podem salvar a vida do seu cão. Imagine: ele solta da coleira perto de uma rua movimentada. Se ele responde ao "Vem" ou "Fica", você evita um acidente. Adestramento não é luxo, é segurança e comunicação. E não, você não precisa de chicote, grito ou "dominância alfa". O adestramento positivo funciona melhor, é comprovado pela ciência e fortalece o vínculo.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">O Que É Adestramento Positivo?</h2>
+                <p>
+                    Baseado em <strong>reforço positivo</strong>: recompensar comportamentos corretos em vez de punir os errados. Quando o cão faz algo certo, ele ganha algo que ama (petisco, carinho, brinquedo). O cérebro dele associa o comando ao prazer e repete o comportamento.
+                </p>
+                <p>
+                    <strong>Por que funciona melhor que punição?</strong> Punição gera medo, ansiedade e pode causar agressividade. Reforço positivo cria cães confiantes, felizes e que querem aprender.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Ferramentas Necessárias</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Petiscos pequenos e irresistíveis:</strong> Pedacinhos de frango cozido, queijo, salsicha (tamanho de uma unha).</li>
+                    <li><strong>Clicker (opcional):</strong> Dispositivo que faz "click" para marcar o momento exato do acerto.</li>
+                    <li><strong>Coleira e guia:</strong> Para treinos externos.</li>
+                    <li><strong>Paciência e consistência:</strong> O ingrediente secreto.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Comando 1: SENTA</h2>
+                <div className="bg-card p-6 rounded-xl border border-border/50 my-6">
+                    <h4 className="font-bold text-lg mb-4">📋 Passo a Passo:</h4>
+                    <ol className="list-decimal pl-6 space-y-3">
+                        <li>Segure um petisco perto do nariz do cão.</li>
+                        <li>Mova a mão para cima e para trás (acima da cabeça dele). O bumbum vai automaticamente ao chão.</li>
+                        <li>No exato momento em que o bumbum tocar o chão, diga "SENTA" e dê o petisco + elogio ("Muito bem!").</li>
+                        <li>Repita 5-10 vezes por sessão, 2-3 sessões por dia.</li>
+                        <li>Depois de 3-5 dias, comece a dar o comando ANTES do movimento da mão.</li>
+                    </ol>
+                    <p className="text-sm text-muted-foreground mt-4">
+                        ⏱️ Tempo médio para aprender: 3-7 dias.
+                    </p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Comando 2: FICA</h2>
+                <p>
+                    Ensine "Senta" primeiro. "Fica" é uma extensão.
+                </p>
+                <ol className="list-decimal pl-6 space-y-3 mb-6">
+                    <li>Peça "Senta".</li>
+                    <li>Mostre a palma da mão aberta na frente dele (sinal visual de "pare") e diga "FICA".</li>
+                    <li>Dê um passo para trás. Se ele ficar parado por 2 segundos, volte e recompense.</li>
+                    <li>Aumente gradualmente: 5 segundos, 10 segundos, mais passos de distância.</li>
+                    <li>Se ele levantar antes do comando de liberação ("OK" ou "Pode"), não recompense. Recomece.</li>
+                </ol>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Comando 3: VEM (Recall)</h2>
+                <p>
+                    O mais importante e o mais difícil. Nunca chame o cão para algo ruim (banho, bronca). "Vem" deve ser sempre = coisa boa.
+                </p>
+                <ol className="list-decimal pl-6 space-y-3 mb-6">
+                    <li>Em casa, sem distrações, agache-se e diga "VEM" com voz animada.</li>
+                    <li>Quando ele vier, festa! Petisco especial + carinho exagerado.</li>
+                    <li>Pratique em ambientes controlados (quintal cercado).</li>
+                    <li>Use guia longa (5-10m) em parques para treinar com distrações.</li>
+                    <li>Nunca corra atrás dele se fugir. Isso vira brincadeira. Corra na direção oposta para ele te seguir.</li>
+                </ol>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Comando 4: DEITA</h2>
+                <ol className="list-decimal pl-6 space-y-3 mb-6">
+                    <li>Peça "Senta".</li>
+                    <li>Segure petisco perto do nariz e mova para baixo, entre as patas dianteiras.</li>
+                    <li>O cão vai seguir o petisco e deitar. Diga "DEITA" e recompense.</li>
+                    <li>Pratique até ele associar a palavra ao movimento.</li>
+                </ol>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Comando 5: JUNTO (Andar Sem Puxar)</h2>
+                <p>
+                    Cão que puxa a guia é frustrante e perigoso.
+                </p>
+                <ol className="list-decimal pl-6 space-y-3 mb-6">
+                    <li>Comece em casa, sem distrações.</li>
+                    <li>Segure petiscos na mão do lado que o cão deve andar (geralmente esquerda).</li>
+                    <li>Dê um passo. Se ele andar ao seu lado sem puxar, recompense a cada 2-3 passos.</li>
+                    <li>Se ele puxar, PARE imediatamente. Não dê um passo sequer. Espere ele afrouxar a guia.</li>
+                    <li>Quando afrouxar, elogie e continue andando.</li>
+                    <li>Regra de ouro: <strong>Guia tensa = você vira estátua. Guia frouxa = você anda.</strong></li>
+                </ol>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Erros Comuns</h2>
+                <div className="bg-red-50 border-l-4 border-red-500 p-4 my-4">
+                    <ul className="space-y-2">
+                        <li>❌ <strong>Sessões longas:</strong> Cães perdem foco após 10-15 minutos. Faça sessões curtas e divertidas.</li>
+                        <li>❌ <strong>Inconsistência:</strong> Se hoje você permite pular e amanhã pune, ele fica confuso.</li>
+                        <li>❌ <strong>Petiscos grandes:</strong> Ele fica saciado rápido. Use pedaços minúsculos.</li>
+                        <li>❌ <strong>Treinar com fome ou cansaço:</strong> Ele não vai prestar atenção.</li>
+                    </ul>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Cronograma Realista</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Semana 1-2:</strong> Senta e Deita.</li>
+                    <li><strong>Semana 3-4:</strong> Fica (com distração baixa).</li>
+                    <li><strong>Semana 5-6:</strong> Vem (em ambientes controlados).</li>
+                    <li><strong>Semana 7+:</strong> Junto e generalização (treinar em locais diferentes).</li>
+                </ul>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Adestramento é Comunicação</h3>
+                    <p className="text-lg mb-6">
+                        Um cão treinado é um cão seguro, confiante e feliz. Você não está "dominando" ele, está ensinando uma segunda língua para vocês se entenderem melhor.
+                    </p>
+                    <div className="bg-background p-6 rounded-xl shadow-sm border border-primary/20">
+                        <h4 className="font-bold text-foreground mb-2">Você conhece seu cão de verdade?</h4>
+                        <p className="text-muted-foreground mb-4">
+                            Descubra se você está interpretando os sinais dele corretamente e sendo o melhor tutor possível.
+                        </p>
+                        <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                            👉 Testar Meu Conhecimento
+                        </Button>
+                    </div>
+                </div>
+            </div>
+        )
+    },
+    "banho-casa-caes-gatos": {
+        title: "Banho em Casa: Passo a Passo Completo para Cães e Gatos",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Dar banho no pet em casa economiza dinheiro e fortalece o vínculo, mas feito errado pode virar um pesadelo molhado. Água no ouvido, shampoo nos olhos, cão fugindo ensaboado pela casa - já viu esse filme? Vou te ensinar o método profissional para transformar o banho em um momento tranquilo (ou pelo menos tolerável).
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Frequência Ideal</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Cães:</strong> A cada 7-15 dias (raças de pelo curto podem espaçar para 20-30 dias).</li>
+                    <li><strong>Gatos:</strong> Raramente precisam de banho (eles se limpam). Apenas em casos de sujeira extrema, pulgas ou orientação veterinária. Máximo 1x por mês.</li>
+                    <li><strong>Filhotes:</strong> Após a segunda dose de vacina (cerca de 60 dias de vida).</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Materiais Necessários</h2>
+                <div className="grid md:grid-cols-2 gap-4 my-6">
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold mb-2">✅ Essenciais</h4>
+                        <ul className="text-sm space-y-1">
+                            <li>• Shampoo específico para pets (pH diferente do humano)</li>
+                            <li>• Condicionador (opcional, para pelos longos)</li>
+                            <li>• Toalhas absorventes (2-3 unidades)</li>
+                            <li>• Escova ou pente</li>
+                            <li>• Algodão para proteger ouvidos</li>
+                        </ul>
+                    </div>
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold mb-2">🔧 Opcionais</h4>
+                        <ul className="text-sm space-y-1">
+                            <li>• Tapete antiderrapante</li>
+                            <li>• Secador (temperatura morna/fria)</li>
+                            <li>• Brinquedo flutuante (distração)</li>
+                            <li>• Petiscos para recompensa</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Passo a Passo: Cães</h2>
+                <div className="bg-card p-6 rounded-xl border border-border/50 my-6">
+                    <h4 className="font-bold text-lg mb-4">🚿 Método Profissional:</h4>
+                    <ol className="list-decimal pl-6 space-y-3">
+                        <li><strong>Escove antes:</strong> Remove pelos mortos e nós. Pelo emaranhado + água = desastre.</li>
+                        <li><strong>Proteja os ouvidos:</strong> Coloque algodão seco (sem apertar) para evitar otite.</li>
+                        <li><strong>Molhe completamente:</strong> Comece pelas patas traseiras (menos assustador). Use água morna (teste no seu pulso). Evite jato direto no rosto.</li>
+                        <li><strong>Aplique shampoo:</strong> Dilua o shampoo em água (1:3) para espalhar melhor. Massageie de trás para frente, deixando cabeça por último.</li>
+                        <li><strong>Enxágue muito bem:</strong> Resíduo de shampoo causa coceira e caspa. Enxágue até a água sair transparente.</li>
+                        <li><strong>Condicionador (opcional):</strong> Apenas nas pontas do pelo. Enxágue bem.</li>
+                        <li><strong>Seque:</strong> Aperte (não esfregue) com toalha. Secador a 30cm de distância, temperatura morna. Nunca quente!</li>
+                    </ol>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Passo a Passo: Gatos</h2>
+                <p className="text-red-600 font-semibold">⚠️ Atenção: Gatos odeiam água. Prepare-se para resistência.</p>
+                <ol className="list-decimal pl-6 space-y-3 mb-6">
+                    <li><strong>Corte as unhas antes:</strong> Por segurança (sua e dele).</li>
+                    <li><strong>Use bacia ou pia:</strong> Mais controlável que chuveiro.</li>
+                    <li><strong>Água morna, pouca quantidade:</strong> 5-10cm de altura na bacia.</li>
+                    <li><strong>Molhe com caneca:</strong> Jato direto aterroriza. Despeje água suavemente.</li>
+                    <li><strong>Shampoo específico para gatos:</strong> Massageie rápido. Evite rosto.</li>
+                    <li><strong>Enxágue rápido e completo:</strong> Gatos lambem o pelo. Resíduo pode intoxicar.</li>
+                    <li><strong>Seque com toalha:</strong> Maioria dos gatos não tolera secador. Deixe em ambiente quente até secar naturalmente.</li>
+                </ol>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Erros Fatais</h2>
+                <div className="bg-red-50 border-l-4 border-red-500 p-4 my-4">
+                    <ul className="space-y-2">
+                        <li>❌ <strong>Água no ouvido:</strong> Causa otite. Use algodão!</li>
+                        <li>❌ <strong>Shampoo humano:</strong> pH errado, resseca a pele e pode causar dermatite.</li>
+                        <li>❌ <strong>Água muito quente:</strong> Queima a pele sensível.</li>
+                        <li>❌ <strong>Banho com pet doente:</strong> Pode piorar. Consulte o vet antes.</li>
+                        <li>❌ <strong>Deixar secar ao ar livre no frio:</strong> Risco de pneumonia, especialmente filhotes e idosos.</li>
+                    </ul>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Dicas Pro</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Acostume desde filhote:</strong> Banhos curtos e com muita recompensa criam associação positiva.</li>
+                    <li><strong>Cansaço ajuda:</strong> Passeio longo antes do banho = cão mais calmo.</li>
+                    <li><strong>Banho seco:</strong> Para gatos ou emergências, use shampoo seco em pó (sem enxágue).</li>
+                    <li><strong>Limpeza de ouvido e unhas:</strong> Aproveite o pós-banho para fazer manutenção completa.</li>
+                </ul>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Higiene é Saúde</h3>
+                    <p className="text-lg mb-6">
+                        Um pet limpo é um pet saudável. Banhos regulares previnem problemas de pele, parasitas e mau cheiro. Com técnica e paciência, você transforma o banho em rotina tranquila.
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Avaliar Meus Cuidados com o Pet
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "racas-gatos-populares-brasil": {
+        title: "Raças de Gatos: As 10 Mais Populares no Brasil em 2026",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Enquanto os cães têm seu hall da fama bem estabelecido, os gatos estão conquistando cada vez mais espaço nos lares brasileiros. De 2020 para cá, a população felina cresceu 20% no país. Apartamentos pequenos, rotinas corridas e a independência dos gatos tornaram-nos a escolha perfeita para milhões de tutores. Conheça as raças que estão dominando os corações (e sofás) do Brasil.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">1. SRD (Sem Raça Definida) - O Vira-Lata Felino</h2>
+                <p>
+                    Assim como nos cães, o campeão absoluto é o gato sem raça definida. Vaquinhas, rajados, laranjas, pretos - a diversidade é infinita. São resistentes, adaptáveis e cheios de personalidade única.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Temperamento:</strong> Varia muito. Geralmente independentes mas carinhosos.</li>
+                    <li><strong>Saúde:</strong> Excelente. Menos problemas genéticos que raças puras.</li>
+                    <li><strong>Ideal para:</strong> Qualquer tutor. Adoção salva vidas!</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">2. Persa</h2>
+                <p>
+                    O gato de "cara amassada" e pelo longo e luxuoso. Símbolo de elegância, mas exige cuidados intensos.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Temperamento:</strong> Calmo, dócil, caseiro. Adora colo.</li>
+                    <li><strong>Cuidados:</strong> Escovação diária obrigatória. Limpeza de olhos (lacrimejam muito). Propensão a problemas respiratórios.</li>
+                    <li><strong>Ideal para:</strong> Tutores com tempo para grooming e ambiente tranquilo.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">3. Siamês</h2>
+                <p>
+                    O gato "falante". Olhos azuis penetrantes e pelagem clara com extremidades escuras (points).
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Temperamento:</strong> Extremamente vocal, inteligente, grudento. Segue o tutor pela casa.</li>
+                    <li><strong>Curiosidade:</strong> Mia MUITO. Se você quer silêncio, não é a raça certa.</li>
+                    <li><strong>Ideal para:</strong> Tutores que querem interação constante e não se importam com "conversas".</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">4. Maine Coon</h2>
+                <p>
+                    O "gigante gentil". Pode pesar até 10kg! Pelo semilongo, orelhas com tufos e personalidade de cachorro.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Temperamento:</strong> Sociável, brincalhão, adora água (raro em gatos).</li>
+                    <li><strong>Saúde:</strong> Propenso a cardiomiopatia hipertrófica. Check-ups cardíacos anuais.</li>
+                    <li><strong>Ideal para:</strong> Famílias com espaço. Adora brincar e explorar.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">5. Bengal</h2>
+                <p>
+                    O gato com "print de onça". Resultado do cruzamento com gato-leopardo asiático. Energia de sobra!
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Temperamento:</strong> Hiperativo, atlético, curioso. Precisa de MUITO enriquecimento.</li>
+                    <li><strong>Cuidados:</strong> Arranhadores altos, brinquedos interativos, tempo de brincadeira diário.</li>
+                    <li><strong>Ideal para:</strong> Tutores ativos que podem dedicar tempo a brincadeiras.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">6. Ragdoll</h2>
+                <p>
+                    O "gato de pano". Relaxa completamente quando pegado no colo (daí o nome). Olhos azuis hipnotizantes.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Temperamento:</strong> Extremamente dócil, calmo, adora colo. Pouco vocal.</li>
+                    <li><strong>Curiosidade:</strong> Não tem instinto de caça desenvolvido. Não deve ter acesso à rua.</li>
+                    <li><strong>Ideal para:</strong> Apartamentos, famílias com crianças, idosos.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">7. British Shorthair</h2>
+                <p>
+                    O "gato de pelúcia". Corpo robusto, pelo denso e curto, cara redonda. Inspiração do Gato de Cheshire (Alice).
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Temperamento:</strong> Independente mas afetuoso. Não é grudento.</li>
+                    <li><strong>Saúde:</strong> Propenso a obesidade. Controle de peso é essencial.</li>
+                    <li><strong>Ideal para:</strong> Tutores que trabalham fora. Lida bem com solidão.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">8. Sphynx (Pelado)</h2>
+                <p>
+                    O gato sem pelo. Pele quente e aveludada. Personalidade extrovertida.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Temperamento:</strong> Sociável, brincalhão, busca calor (adora cobertores e colos).</li>
+                    <li><strong>Cuidados:</strong> Banhos semanais (a pele acumula oleosidade). Proteção contra frio e sol.</li>
+                    <li><strong>Ideal para:</strong> Alérgicos (mito: ainda produz alérgenos, mas menos).</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">9. Scottish Fold</h2>
+                <p>
+                    O gato de "orelhas dobradas". Aparência de coruja. Extremamente fofo.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Temperamento:</strong> Calmo, afetuoso, adapta-se bem a apartamentos.</li>
+                    <li><strong>Saúde:</strong> A mutação das orelhas pode causar problemas articulares (osteocondrodisplasia). Criadores éticos evitam cruzamentos Fold x Fold.</li>
+                    <li><strong>Ideal para:</strong> Tutores conscientes que compram de criadores responsáveis.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">10. Angorá</h2>
+                <p>
+                    Pelo longo, sedoso e branco (geralmente). Elegante e ativo.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Temperamento:</strong> Brincalhão, inteligente, adora água.</li>
+                    <li><strong>Cuidados:</strong> Escovação 2-3x por semana. Menos propenso a nós que o Persa.</li>
+                    <li><strong>Ideal para:</strong> Famílias ativas que querem um gato interativo.</li>
+                </ul>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">A Raça Certa Para Você</h3>
+                    <p className="text-lg mb-6">
+                        Cada raça tem necessidades específicas. Pesquise, converse com criadores éticos e, se possível, considere adotar um SRD. Milhares de gatos incríveis aguardam um lar nos abrigos.
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Descobrir Se Estou Pronto Para Um Gato
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "cachorro-late-demais-solucoes": {
+        title: "Cachorro que Late Demais: 7 Soluções Comprovadas",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Vizinhos reclamando, noites sem dormir, multas do condomínio - o latido excessivo é um dos problemas comportamentais mais frustrantes. Mas antes de rotular seu cão como "chato" ou "mal-educado", entenda: <strong>latir é comunicação</strong>. Ele está tentando te dizer algo. Seu trabalho é descobrir o quê e resolver a causa raiz, não apenas calar o sintoma.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Por Que Cães Latem?</h2>
+                <p>
+                    Latido não é birra. É linguagem. Cães latem para:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Alerta:</strong> "Tem alguém na porta!"</li>
+                    <li><strong>Medo:</strong> "Estou assustado com esse barulho!"</li>
+                    <li><strong>Tédio:</strong> "Não tenho nada para fazer!"</li>
+                    <li><strong>Ansiedade de separação:</strong> "Não me deixe sozinho!"</li>
+                    <li><strong>Demanda de atenção:</strong> "Me dá comida/brinquedo/carinho AGORA!"</li>
+                    <li><strong>Excitação:</strong> "Eba, vamos passear!"</li>
+                    <li><strong>Dor:</strong> "Algo está me machucando!"</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Solução 1: Exercício Físico e Mental</h2>
+                <p>
+                    <strong>A causa #1 de latido excessivo é energia acumulada.</strong> Um cão cansado é um cão silencioso.
+                </p>
+                <div className="bg-card p-6 rounded-xl border border-border/50 my-6">
+                    <h4 className="font-bold text-lg mb-4">🏃 Protocolo Anti-Latido:</h4>
+                    <ul className="space-y-3">
+                        <li><strong>Manhã:</strong> 30-60 min de caminhada (varia com porte e raça).</li>
+                        <li><strong>Tarde:</strong> 15 min de brincadeira (buscar bola, cabo de guerra).</li>
+                        <li><strong>Noite:</strong> 10 min de treino mental (comandos, truques novos).</li>
+                        <li><strong>Enriquecimento:</strong> Brinquedos recheáveis (Kong com pasta de amendoim), tapetes de farejar.</li>
+                    </ul>
+                    <p className="text-sm text-muted-foreground mt-4">
+                        📌 Raças de trabalho (Border Collie, Pastor Alemão, Husky) precisam do DOBRO de exercício.
+                    </p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Solução 2: Ignore o Latido de Demanda</h2>
+                <p>
+                    Se ele late para ganhar atenção/comida e você cede, você está <strong>reforçando o comportamento</strong>.
+                </p>
+                <ol className="list-decimal pl-6 space-y-3 mb-6">
+                    <li><strong>Vire de costas:</strong> Não olhe, não fale, não toque.</li>
+                    <li><strong>Espere o silêncio:</strong> Mesmo que seja 2 segundos.</li>
+                    <li><strong>Recompense:</strong> No momento em que ele parar, dê atenção/petisco.</li>
+                    <li><strong>Seja consistente:</strong> Se você ceder UMA vez, ele aprende que "insistir funciona".</li>
+                </ol>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Solução 3: Dessensibilização a Gatilhos</h2>
+                <p>
+                    Late para campainha, moto, outros cães? Você precisa dessensibilizá-lo.
+                </p>
+                <div className="bg-card p-6 rounded-xl border border-border/50 my-6">
+                    <h4 className="font-bold text-lg mb-4">🔔 Exemplo: Campainha</h4>
+                    <ol className="list-decimal pl-6 space-y-3">
+                        <li>Grave o som da campainha no celular.</li>
+                        <li>Toque em volume BAIXO. Se ele não latir, dê petisco.</li>
+                        <li>Aumente gradualmente o volume ao longo de dias/semanas.</li>
+                        <li>Quando alguém tocar a campainha de verdade, peça "Senta" e recompense o silêncio.</li>
+                    </ol>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Solução 4: Comando "Quieto"</h2>
+                <ol className="list-decimal pl-6 space-y-3 mb-6">
+                    <li>Deixe ele latir 2-3 vezes (não reprima imediatamente).</li>
+                    <li>Diga "QUIETO" com voz firme (não grite).</li>
+                    <li>Espere ele parar (mesmo que por 1 segundo).</li>
+                    <li>Recompense imediatamente com petisco + elogio.</li>
+                    <li>Repita até ele associar "Quieto" = parar de latir = ganhar petisco.</li>
+                </ol>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Solução 5: Trate Ansiedade de Separação</h2>
+                <p>
+                    Late/uiva quando você sai? É ansiedade, não vingança.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Saídas curtas:</strong> Comece saindo por 30 segundos. Volte. Aumente gradualmente.</li>
+                    <li><strong>Não faça festa:</strong> Sair e voltar deve ser "sem emoção". Ignore-o por 5 min ao chegar.</li>
+                    <li><strong>Deixe distrações:</strong> Kong recheado, rádio ligado, brinquedo favorito.</li>
+                    <li><strong>Casos graves:</strong> Consulte veterinário comportamentalista. Pode precisar de ansiolíticos temporários.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Solução 6: Bloqueie Estímulos Visuais</h2>
+                <p>
+                    Late para tudo que passa na janela? Feche cortinas ou use adesivo jateado na parte de baixo do vidro. Sem estímulo = sem latido.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Solução 7: Descarte Problemas de Saúde</h2>
+                <p>
+                    Latido súbito e excessivo pode indicar dor (artrose, otite, problemas dentários) ou disfunção cognitiva em idosos. Se o comportamento mudou de repente, vá ao veterinário.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">O Que NÃO Fazer</h2>
+                <div className="bg-red-50 border-l-4 border-red-500 p-4 my-4">
+                    <ul className="space-y-2">
+                        <li>❌ <strong>Gritar:</strong> Ele acha que você está latindo junto. Piora.</li>
+                        <li>❌ <strong>Bater/punir:</strong> Gera medo e agressividade.</li>
+                        <li>❌ <strong>Coleira anti-latido de choque:</strong> Cruel e ineficaz a longo prazo.</li>
+                        <li>❌ <strong>Cirurgia de cordas vocais:</strong> Antiético e ilegal em muitos países.</li>
+                    </ul>
+                </div>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Paciência e Consistência</h3>
+                    <p className="text-lg mb-6">
+                        Resolver latido excessivo leva semanas, não dias. Mas com exercício, treino e compreensão da causa, você terá um cão equilibrado e vizinhos felizes.
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Avaliar Meu Conhecimento em Comportamento
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "fogos-artificio-proteger-pet": {
+        title: "Fogos de Artifício: Como Proteger Seu Pet do Pânico",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Réveillon, festas juninas, jogos de futebol - fogos de artifício são tradição brasileira. Mas para cães e gatos, são puro terror. A audição deles é 4x mais sensível que a nossa. O que para nós é "barulhinho", para eles é explosão ensurdecedora. Resultado: pânico, fuga, acidentes e até ataques cardíacos em pets idosos. Veja como proteger seu melhor amigo.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Por Que Fogos Aterrorizam Pets?</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Audição sensível:</strong> Cães ouvem frequências de 40Hz a 60kHz (humanos: 20Hz a 20kHz).</li>
+                    <li><strong>Imprevisibilidade:</strong> Não sabem de onde vem o barulho nem quando vai parar.</li>
+                    <li><strong>Instinto de sobrevivência:</strong> Barulho alto = perigo iminente. O cérebro entra em modo "luta ou fuga".</li>
+                    <li><strong>Sem controle:</strong> Não conseguem escapar do som, gerando desespero.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Sinais de Pânico</h2>
+                <div className="bg-red-50 border-l-4 border-red-500 p-4 my-4">
+                    <ul className="space-y-2">
+                        <li>🚨 Tremores, ofegar excessivo, salivação</li>
+                        <li>🚨 Tentativa de fuga (pular janelas, cavar portas)</li>
+                        <li>🚨 Esconder-se em locais apertados (embaixo da cama, armários)</li>
+                        <li>🚨 Vocalização (latidos, uivos, miados desesperados)</li>
+                        <li>🚨 Xixi/cocô no lugar errado (perda de controle)</li>
+                        <li>🚨 Pupilas dilatadas, orelhas para trás</li>
+                    </ul>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Protocolo Anti-Fogos: Antes</h2>
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">1. Crie um Refúgio Seguro</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Local:</strong> Quarto interno, banheiro ou closet (quanto mais isolado do barulho externo, melhor).</li>
+                    <li><strong>Conforto:</strong> Caminha favorita, cobertores, brinquedos, água.</li>
+                    <li><strong>Som ambiente:</strong> Deixe TV ou rádio ligados em volume moderado para abafar os estrondos.</li>
+                    <li><strong>Escuridão:</strong> Feche cortinas. Alguns pets se acalmam no escuro.</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">2. Exercício Intenso</h3>
+                <p>
+                    3-4 horas ANTES dos fogos, faça um passeio longo e cansativo. Pet exausto = pet mais calmo. Libere endorfinas naturais.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">3. Alimentação Leve</h3>
+                <p>
+                    Ofereça refeição 2-3 horas antes. Estômago cheio demais + ansiedade = vômito.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Protocolo Anti-Fogos: Durante</h2>
+                <div className="bg-card p-6 rounded-xl border border-border/50 my-6">
+                    <h4 className="font-bold text-lg mb-4">✅ O Que Fazer:</h4>
+                    <ul className="space-y-3">
+                        <li><strong>Fique calmo:</strong> Seu nervosismo piora o dele. Aja normalmente.</li>
+                        <li><strong>Não force interação:</strong> Se ele quer se esconder, deixe. É mecanismo de defesa.</li>
+                        <li><strong>Ofereça distração:</strong> Brinquedos recheáveis, ossos duráveis.</li>
+                        <li><strong>Feche portas e janelas:</strong> Previne fugas. Pets em pânico pulam de janelas altas.</li>
+                        <li><strong>Coloque coleira e plaquinha:</strong> Se fugir, facilita identificação.</li>
+                    </ul>
+                </div>
+
+                <div className="bg-red-50 border-l-4 border-red-500 p-4 my-4">
+                    <h4 className="font-bold text-red-700 mb-2">❌ O Que NÃO Fazer:</h4>
+                    <ul className="space-y-2">
+                        <li>❌ <strong>Fazer carinho excessivo:</strong> Reforça o medo ("ele está me consolando porque há perigo real").</li>
+                        <li>❌ <strong>Punir:</strong> Ele não está fazendo birra, está aterrorizado.</li>
+                        <li>❌ <strong>Forçar a sair do esconderijo:</strong> Aumenta o estresse.</li>
+                    </ul>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Soluções Naturais e Medicamentosas</h2>
+                <h3 className="text-2xl font-semibold text-green-600 mt-6 mb-3">🌿 Naturais (Sem Receita)</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Feromônios (Adaptil/Feliway):</strong> Difusores ou coleiras. Começar 1 semana antes.</li>
+                    <li><strong>Fitoterápicos:</strong> Passiflora, valeriana, camomila (produtos específicos para pets).</li>
+                    <li><strong>Thundershirt:</strong> Colete de pressão que acalma (funciona em 60% dos casos).</li>
+                    <li><strong>Música clássica:</strong> Comprovadamente reduz ansiedade.</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-blue-600 mt-6 mb-3">💊 Medicamentosos (Com Receita)</h3>
+                <p>
+                    Para casos graves, veterinário pode prescrever:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Ansiolíticos:</strong> Alprazolam, diazepam (uso pontual).</li>
+                    <li><strong>Sedativos leves:</strong> Acepromazina (controverso, alguns vets não recomendam).</li>
+                    <li><strong>Antidepressivos:</strong> Fluoxetina (para tratamento de longo prazo, não resolve no dia).</li>
+                </ul>
+                <p className="text-sm text-red-600 font-semibold">
+                    ⚠️ NUNCA medique por conta própria. Doses erradas podem matar.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Dessensibilização (Longo Prazo)</h2>
+                <p>
+                    Treine seu pet meses antes das festas:
+                </p>
+                <ol className="list-decimal pl-6 space-y-3 mb-6">
+                    <li>Baixe sons de fogos no YouTube.</li>
+                    <li>Toque em volume MUITO baixo enquanto ele come ou brinca.</li>
+                    <li>Aumente 5% do volume a cada 3-5 dias.</li>
+                    <li>Se ele mostrar medo, volte ao volume anterior.</li>
+                    <li>Processo leva 2-6 meses. Paciência!</li>
+                </ol>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Emergência: Pet Fugiu</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Acione redes sociais imediatamente (grupos de pets perdidos).</li>
+                    <li>Avise abrigos, clínicas veterinárias e pet shops da região.</li>
+                    <li>Deixe roupas suas no quintal/porta (o cheiro pode guiá-lo de volta).</li>
+                    <li>Procure em locais escuros e apertados (embaixo de carros, bueiros, matagal).</li>
+                </ul>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Planejamento Salva Vidas</h3>
+                    <p className="text-lg mb-6">
+                        Fogos são previsíveis (Ano Novo, São João). Não deixe para última hora. Prepare seu pet com antecedência e evite tragédias.
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Avaliar Meus Cuidados com o Pet
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "cinomose-caes-sintomas-prevencao": {
+        title: "Cinomose em Cães: Sintomas, Tratamento e Prevenção",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Cinomose é uma das doenças mais temidas por veterinários e tutores. Altamente contagiosa, pode ser fatal em até 80% dos filhotes não vacinados. Mesmo cães que sobrevivem podem ter sequelas neurológicas permanentes. A boa notícia? É 100% prevenível com vacinação. Vamos entender tudo sobre essa doença.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">O Que É Cinomose?</h2>
+                <p>
+                    Doença viral causada pelo <strong>Vírus da Cinomose Canina (CDV)</strong>, da família Paramyxoviridae (mesma do sarampo humano). Ataca múltiplos sistemas: respiratório, digestivo e nervoso.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como Se Transmite?</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Contato direto:</strong> Secreções nasais, saliva, urina, fezes de cão infectado.</li>
+                    <li><strong>Aerossol:</strong> Tosse e espirro espalham o vírus pelo ar.</li>
+                    <li><strong>Objetos contaminados:</strong> Potes de água/comida, brinquedos.</li>
+                    <li><strong>Mãe para filhotes:</strong> Cadelas infectadas transmitem via placenta ou leite.</li>
+                </ul>
+                <p className="text-red-600 font-semibold">
+                    ⚠️ O vírus sobrevive no ambiente por poucas horas, mas é extremamente contagioso.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Sintomas (Fases da Doença)</h2>
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">Fase 1: Respiratória e Digestiva (1-2 semanas)</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Febre alta (39.5-41°C)</li>
+                    <li>Secreção nasal e ocular (inicialmente clara, depois purulenta)</li>
+                    <li>Tosse, espirros</li>
+                    <li>Vômitos e diarreia (às vezes com sangue)</li>
+                    <li>Perda de apetite, desidratação</li>
+                    <li>Apatia extrema</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">Fase 2: Neurológica (2-4 semanas ou meses depois)</h3>
+                <p>Nem todos os cães chegam aqui, mas quando chegam, é grave:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Mioclonia:</strong> Contrações musculares involuntárias (tiques). Pode ser permanente.</li>
+                    <li>Convulsões</li>
+                    <li>Paralisia de membros</li>
+                    <li>Incoordenação motora (andar cambaleante)</li>
+                    <li>Cegueira</li>
+                    <li>Mudança de comportamento (agressividade ou apatia)</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">Sinal Clássico: Hiperqueratose</h3>
+                <p>
+                    Endurecimento das almofadinhas das patas e do focinho ("hard pad disease"). Pele grossa, rachada e dolorida.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Diagnóstico</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Clínico:</strong> Sintomas + histórico de vacinação.</li>
+                    <li><strong>PCR:</strong> Detecta material genético do vírus (sangue, secreções).</li>
+                    <li><strong>Teste rápido:</strong> Kits de detecção de antígeno (menos preciso).</li>
+                    <li><strong>Hemograma:</strong> Leucopenia (queda de glóbulos brancos) é comum.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Tratamento</h2>
+                <p className="text-red-600 font-semibold mb-4">
+                    ⚠️ NÃO EXISTE CURA. O tratamento é de suporte para ajudar o sistema imunológico a combater o vírus.
+                </p>
+                <div className="bg-card p-6 rounded-xl border border-border/50 my-6">
+                    <h4 className="font-bold text-lg mb-4">🏥 Protocolo de Suporte:</h4>
+                    <ul className="space-y-3">
+                        <li><strong>Hidratação:</strong> Soro intravenoso (desidratação mata).</li>
+                        <li><strong>Antibióticos:</strong> Previnem infecções bacterianas secundárias.</li>
+                        <li><strong>Antieméticos:</strong> Controlam vômitos.</li>
+                        <li><strong>Anticonvulsivantes:</strong> Se houver convulsões.</li>
+                        <li><strong>Suplementação nutricional:</strong> Alimentação forçada ou sonda.</li>
+                        <li><strong>Fisioterapia:</strong> Para cães com sequelas neurológicas.</li>
+                    </ul>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Prognóstico</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Filhotes não vacinados:</strong> 50-80% de mortalidade.</li>
+                    <li><strong>Adultos vacinados:</strong> Raramente pegam. Se pegam, chances de sobrevivência são maiores.</li>
+                    <li><strong>Sequelas:</strong> Tiques musculares, convulsões, cegueira podem ser permanentes.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Prevenção: Vacinação é TUDO</h2>
+                <div className="bg-green-50 border-l-4 border-green-500 p-6 my-6">
+                    <h4 className="font-bold text-green-800 text-lg mb-4">💉 Protocolo Vacinal:</h4>
+                    <ul className="space-y-3">
+                        <li><strong>Filhotes:</strong> V8 ou V10 (inclui cinomose) aos 45 dias, com reforços a cada 21 dias até 16 semanas.</li>
+                        <li><strong>Reforço anual:</strong> Obrigatório para manter imunidade.</li>
+                        <li><strong>Cães adultos não vacinados:</strong> 2 doses com intervalo de 21 dias + reforço anual.</li>
+                    </ul>
+                    <p className="text-sm text-green-700 mt-4">
+                        ✅ A vacina é 95-99% eficaz. É a ÚNICA forma confiável de prevenção.
+                    </p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Cuidados com Filhotes Não Vacinados</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>❌ NÃO leve para passeios em locais públicos antes de completar vacinação.</li>
+                    <li>❌ NÃO permita contato com cães desconhecidos.</li>
+                    <li>✅ Socialize em casa com cães sabidamente vacinados.</li>
+                    <li>✅ Limpe patas com pano úmido ao entrar em casa.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Desinfecção Ambiental</h2>
+                <p>
+                    Se um cão com cinomose viveu no local:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Descarte potes, caminhas, brinquedos (vírus é resistente).</li>
+                    <li>Lave pisos e paredes com água sanitária diluída (1:30).</li>
+                    <li>Espere 30-60 dias antes de trazer outro cão não vacinado.</li>
+                </ul>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Vacinar é Salvar Vidas</h3>
+                    <p className="text-lg mb-6">
+                        Cinomose é devastadora, mas completamente evitável. Mantenha a vacinação em dia e proteja seu melhor amigo dessa doença cruel.
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Verificar Meus Cuidados Preventivos
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "pets-apartamento-guia-racas": {
+        title: "Pets em Apartamento: Guia Completo de Raças e Cuidados",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Morar em apartamento não é desculpa para não ter pet! Milhões de cães e gatos vivem felizes em espaços pequenos. O segredo não está no tamanho do imóvel, mas em escolher a raça certa, oferecer exercícios adequados e respeitar as necessidades do animal. Veja como fazer funcionar.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Mitos vs. Realidade</h2>
+                <div className="bg-red-50 border-l-4 border-red-500 p-4 my-4">
+                    <p className="font-bold text-red-700">❌ MITO: "Cão grande não pode viver em apartamento"</p>
+                    <p className="text-red-600 text-sm">
+                        <strong>REALIDADE:</strong> Greyhounds e Dogues Alemães são gigantes mas extremamente calmos e dormem 18h/dia. Já um Jack Russell (pequeno) é hiperativo e destrutivo sem exercício.
+                    </p>
+                </div>
+                <div className="bg-green-50 border-l-4 border-green-500 p-4 my-4">
+                    <p className="font-bold text-green-700">✅ VERDADE: "Temperamento importa mais que tamanho"</p>
+                    <p className="text-green-600 text-sm">
+                        Cães calmos, silenciosos e com baixa energia são ideais. Raças de trabalho (Border Collie, Husky) sofrem em apartamentos sem estímulo extremo.
+                    </p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Melhores Raças de Cães para Apartamento</h2>
+                <h3 className="text-2xl font-semibold text-green-600 mt-6 mb-3">🏆 Top 10:</h3>
+                <div className="space-y-4">
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold">1. Bulldog Francês</h4>
+                        <p className="text-sm">Calmo, silencioso, baixa energia. Perfeito para espaços pequenos.</p>
+                    </div>
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold">2. Pug</h4>
+                        <p className="text-sm">Companheiro, não late muito, adora sofá.</p>
+                    </div>
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold">3. Shih Tzu</h4>
+                        <p className="text-sm">Criado para viver em palácios. Adaptado para ambientes internos.</p>
+                    </div>
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold">4. Cavalier King Charles</h4>
+                        <p className="text-sm">Dócil, silencioso, adora colo.</p>
+                    </div>
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold">5. Bichon Frisé</h4>
+                        <p className="text-sm">Pequeno, alegre, não solta muito pelo.</p>
+                    </div>
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold">6. Basset Hound</h4>
+                        <p className="text-sm">Calmo, preguiçoso, late pouco.</p>
+                    </div>
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold">7. Greyhound</h4>
+                        <p className="text-sm">Gigante mas extremamente calmo. "Sofá de 4 patas".</p>
+                    </div>
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold">8. Maltês</h4>
+                        <p className="text-sm">Pequeno, carinhoso, se adapta bem.</p>
+                    </div>
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold">9. Lhasa Apso</h4>
+                        <p className="text-sm">Independente, alerta mas não late excessivamente.</p>
+                    </div>
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold">10. SRD (Vira-Lata) de Porte Pequeno/Médio</h4>
+                        <p className="text-sm">Adaptáveis, inteligentes. Adote!</p>
+                    </div>
+                </div>
+
+                <h3 className="text-2xl font-semibold text-red-600 mt-8 mb-3">❌ Raças Desafiadoras para Apartamento:</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Border Collie:</strong> Precisa de trabalho mental e físico intenso.</li>
+                    <li><strong>Husky Siberiano:</strong> Hiperativo, late/uiva muito, destrutivo se entediado.</li>
+                    <li><strong>Beagle:</strong> Late MUITO (instinto de caça).</li>
+                    <li><strong>Jack Russell Terrier:</strong> Energia infinita, late, cava.</li>
+                    <li><strong>Pastor Alemão:</strong> Precisa de espaço e atividade constante.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Melhores Raças de Gatos para Apartamento</h2>
+                <p>
+                    <strong>Boa notícia:</strong> Quase todos os gatos se adaptam bem a apartamentos! Eles são naturalmente territorialistas e preferem ambientes menores e controlados.
+                </p>
+                <h3 className="text-2xl font-semibold text-green-600 mt-6 mb-3">🏆 Ideais:</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Persa:</strong> Calmo, caseiro, baixa energia.</li>
+                    <li><strong>Ragdoll:</strong> Extremamente dócil, adora colo.</li>
+                    <li><strong>British Shorthair:</strong> Independente, lida bem com solidão.</li>
+                    <li><strong>Scottish Fold:</strong> Tranquilo, adapta-se facilmente.</li>
+                    <li><strong>SRD:</strong> Versáteis e adoráveis!</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Cuidados Essenciais em Apartamento</h2>
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">1. Exercício Diário (Cães)</h3>
+                <p>
+                    <strong>Regra de ouro:</strong> 30-60 min de passeio/dia, independente do tamanho do apartamento. Cão sem exercício = destruição e latidos.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">2. Enriquecimento Ambiental</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Cães:</strong> Brinquedos recheáveis (Kong), tapetes de farejar, esconder petiscos.</li>
+                    <li><strong>Gatos:</strong> Arranhadores verticais, prateleiras nas paredes, brinquedos de caça.</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">3. Controle de Latidos</h3>
+                <p>
+                    Treine comandos "Quieto", dessensibilize a gatilhos (campainha, barulhos), exercite bastante. Vizinhos agradecem!
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">4. Higiene Redobrada</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Tapetes higiênicos ou treinamento para fazer necessidades na rua.</li>
+                    <li>Caixa de areia sempre limpa (gatos).</li>
+                    <li>Aspirador de pó frequente (pelos).</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">5. Segurança em Janelas e Sacadas</h3>
+                <div className="bg-red-50 border-l-4 border-red-500 p-4 my-4">
+                    <p className="font-bold text-red-700">⚠️ CRÍTICO:</p>
+                    <p className="text-red-600 text-sm">
+                        Instale telas de proteção em TODAS as janelas e sacadas. Gatos caem (Síndrome do Gato Paraquedista) e cães pulam em pânico (fogos, por exemplo).
+                    </p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Questões Legais</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Condomínio pode proibir pets?</strong> NÃO, se a convenção não proibia antes de você comprar/alugar.</li>
+                    <li><strong>Barulho excessivo:</strong> Pode gerar multas. Treine e controle latidos.</li>
+                    <li><strong>Áreas comuns:</strong> Use coleira e guia. Recolha fezes.</li>
+                </ul>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Apartamento Pequeno, Amor Gigante</h3>
+                    <p className="text-lg mb-6">
+                        O que seu pet precisa não é espaço físico, mas atenção, exercício e amor. Com planejamento, qualquer apartamento pode ser um lar feliz.
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Descobrir Se Estou Pronto Para Um Pet
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "apresentar-novo-pet-residente": {
+        title: "Como Apresentar um Novo Pet para o Residente",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Você decidiu adotar um segundo (ou terceiro) pet. Ótimo! Mas apresentações mal feitas podem gerar traumas, brigas e estresse permanente. Cães e gatos são territoriais. A chegada de um "invasor" precisa ser gradual, respeitosa e estratégica. Veja o protocolo correto para cada combinação.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Preparação: Antes da Chegada</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Check-up veterinário:</strong> Ambos devem estar saudáveis, vacinados e vermifugados.</li>
+                    <li><strong>Recursos duplicados:</strong> 2 potes de água, 2 de comida, 2 camas, 2 caixas de areia (gatos).</li>
+                    <li><strong>Espaço separado:</strong> Prepare um cômodo isolado para o novato nos primeiros dias.</li>
+                    <li><strong>Feromônios:</strong> Use difusores (Adaptil para cães, Feliway para gatos) 1 semana antes.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Protocolo: Cão Residente + Cão Novo</h2>
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">Dia 1: Primeiro Contato (Território Neutro)</h3>
+                <div className="bg-card p-6 rounded-xl border border-border/50 my-6">
+                    <ol className="list-decimal pl-6 space-y-3">
+                        <li><strong>Local neutro:</strong> Parque ou rua (não sua casa). Ambos na coleira.</li>
+                        <li><strong>Caminhada paralela:</strong> Andem lado a lado, com 3-5m de distância. Não deixe se encararem ainda.</li>
+                        <li><strong>Reduza distância:</strong> Gradualmente aproxime. Observe linguagem corporal (rabo, orelhas, postura).</li>
+                        <li><strong>Cheiro primeiro:</strong> Deixe se cheirarem rapidamente (2-3 segundos) e afaste. Recompense calma.</li>
+                        <li><strong>Sinais positivos:</strong> Rabo abanando relaxado, postura solta, curiosidade. Recompense!</li>
+                        <li><strong>Sinais negativos:</strong> Rosnado, pelo eriçado, corpo rígido. Afaste e tente depois.</li>
+                    </ol>
+                </div>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">Dias 2-7: Convivência Supervisionada</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Mantenha o novo cão em cômodo separado quando não estiver supervisionando.</li>
+                    <li>Sessões de interação de 10-15 min, 3-4x/dia.</li>
+                    <li>Alimente em cômodos separados (evita disputa por comida).</li>
+                    <li>Dê atenção IGUAL aos dois. Ciúmes são reais.</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">Semana 2+: Integração Total</h3>
+                <p>
+                    Se tudo correu bem, permita convivência livre. Mantenha recursos duplicados por 1-2 meses.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Protocolo: Gato Residente + Gato Novo</h2>
+                <p className="text-red-600 font-semibold">
+                    ⚠️ Gatos são MUITO mais territoriais que cães. Processo leva 2-4 semanas (ou mais).
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">Fase 1: Isolamento Total (3-7 dias)</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Novo gato fica em cômodo fechado com tudo que precisa (caixa, comida, água, arranhador).</li>
+                    <li>Eles vão se cheirar por baixo da porta. Normal.</li>
+                    <li>Troque cobertores entre eles para acostumar com o cheiro.</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">Fase 2: Contato Visual (Dias 7-14)</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Abra a porta 5-10cm (use trava ou grade).</li>
+                    <li>Deixe se verem mas não se tocarem.</li>
+                    <li>Alimente dos dois lados da porta (associação positiva).</li>
+                    <li>Se houver rosnados/bufadas, é normal. Não force.</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">Fase 3: Encontros Curtos (Dias 14-21)</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Abra a porta completamente por 5 min. Supervisione.</li>
+                    <li>Use brinquedos/petiscos para distrair.</li>
+                    <li>Se houver briga, separe com barulho (palma, lata com moedas). Nunca com as mãos!</li>
+                    <li>Aumente tempo gradualmente.</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">Fase 4: Convivência Livre (Semana 3+)</h3>
+                <p>
+                    Quando comerem juntos, dormirem próximos ou se limparem, a integração está completa.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Protocolo: Cão + Gato</h2>
+                <p>
+                    Desafio: Cão pode ver gato como presa. Gato pode ver cão como predador.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Treine "Fica" e "Quieto":</strong> Cão precisa ter autocontrole.</li>
+                    <li><strong>Gato em local alto:</strong> Dê rotas de fuga (prateleiras, móveis).</li>
+                    <li><strong>Apresentação com cão na coleira:</strong> Deixe gato livre para fugir se quiser.</li>
+                    <li><strong>Recompense calma:</strong> Cão que ignora gato = petisco.</li>
+                    <li><strong>Nunca deixe sozinhos:</strong> Até ter certeza absoluta de segurança.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Sinais de Que Está Funcionando</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>✅ Comem próximos sem tensão</li>
+                    <li>✅ Dormem no mesmo ambiente</li>
+                    <li>✅ Brincam juntos (ou se ignoram pacificamente)</li>
+                    <li>✅ Linguagem corporal relaxada</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Sinais de Alerta</h2>
+                <div className="bg-red-50 border-l-4 border-red-500 p-4 my-4">
+                    <ul className="space-y-2">
+                        <li>❌ Brigas com ferimentos</li>
+                        <li>❌ Um dos pets para de comer</li>
+                        <li>❌ Xixi/cocô fora do lugar (estresse)</li>
+                        <li>❌ Agressividade crescente (não diminui com tempo)</li>
+                    </ul>
+                    <p className="text-red-600 font-semibold mt-4">
+                        Se isso acontecer, consulte veterinário comportamentalista. Pode precisar de medicação ansiolítica temporária.
+                    </p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Erros Fatais</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>❌ Apresentação imediata sem preparação</li>
+                    <li>❌ Forçar interação ("eles vão se acostumar")</li>
+                    <li>❌ Punir rosnados/bufadas (são avisos saudáveis)</li>
+                    <li>❌ Dar mais atenção ao novato (ciúmes do residente)</li>
+                </ul>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Paciência é a Chave</h3>
+                    <p className="text-lg mb-6">
+                        Alguns pets se tornam melhores amigos em dias. Outros levam meses para tolerar um ao outro. Respeite o tempo deles e não desista cedo demais.
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Avaliar Meu Conhecimento em Comportamento
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "tosa-caes-tipos-cuidados": {
+        title: "Tosa para Cães: Tipos, Frequência e Cuidados em 2026",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Tosa não é só estética. É saúde, higiene e conforto. Pelos emaranhados causam dor, acumulam sujeira e podem esconder feridas ou parasitas. Mas tosa errada também prejudica: raspar demais expõe a pele ao sol e frio, e alguns cortes desrespeitam a raça. Veja tudo sobre tosa responsável.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Tipos de Tosa</h2>
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">1. Tosa Higiênica</h3>
+                <p>
+                    <strong>O que é:</strong> Apara pelos em regiões íntimas (genitais, ânus), patas, orelhas e barriga.
+                </p>
+                <p>
+                    <strong>Frequência:</strong> A cada 30-45 dias.
+                </p>
+                <p>
+                    <strong>Para quem:</strong> TODAS as raças, especialmente as de pelo longo.
+                </p>
+                <p>
+                    <strong>Benefícios:</strong> Previne acúmulo de fezes/urina, facilita limpeza, reduz infecções urinárias e dermatites.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">2. Tosa Bebê (Filhote)</h3>
+                <p>
+                    <strong>O que é:</strong> Corte uniforme e curto, deixando o cão com aparência de filhote.
+                </p>
+                <p>
+                    <strong>Frequência:</strong> A cada 45-60 dias.
+                </p>
+                <p>
+                    <strong>Para quem:</strong> Shih Tzu, Maltês, Poodle, Lhasa Apso.
+                </p>
+                <p>
+                    <strong>Vantagem:</strong> Fácil manutenção, ideal para tutores sem tempo para escovação diária.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">3. Tosa na Tesoura (Padrão da Raça)</h3>
+                <p>
+                    <strong>O que é:</strong> Respeita o padrão oficial da raça. Feita com tesoura para manter textura e formato natural.
+                </p>
+                <p>
+                    <strong>Frequência:</strong> A cada 60-90 dias.
+                </p>
+                <p>
+                    <strong>Para quem:</strong> Cães de exposição ou tutores que querem manter a aparência original (Poodle, Cocker, Schnauzer).
+                </p>
+                <p>
+                    <strong>Desvantagem:</strong> Mais cara e demorada.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">4. Tosa na Máquina (Verão)</h3>
+                <p>
+                    <strong>O que é:</strong> Corte rente com máquina elétrica.
+                </p>
+                <p>
+                    <strong>Frequência:</strong> A cada 30-60 dias (pelo cresce rápido).
+                </p>
+                <p>
+                    <strong>Para quem:</strong> Raças de pelo longo em regiões quentes.
+                </p>
+                <div className="bg-red-50 border-l-4 border-red-500 p-4 my-4">
+                    <p className="font-bold text-red-700">⚠️ CUIDADO:</p>
+                    <p className="text-red-600 text-sm">
+                        Não rase completamente! Deixe pelo menos 1-2cm. Pelo protege contra sol (queimaduras) e regula temperatura. Cães NÃO suam pela pele, suam pelas patas e língua.
+                    </p>
+                </div>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">5. Stripping (Tosa Manual)</h3>
+                <p>
+                    <strong>O que é:</strong> Remoção manual de pelos mortos, puxando com os dedos ou faca de stripping.
+                </p>
+                <p>
+                    <strong>Para quem:</strong> Raças de pelo duro (Wire): Schnauzer, Fox Terrier, West Highland White Terrier.
+                </p>
+                <p>
+                    <strong>Por quê:</strong> Máquina amolece o pelo duro. Stripping mantém textura e cor.
+                </p>
+                <p>
+                    <strong>Frequência:</strong> A cada 2-3 meses.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Raças que NÃO Devem Ser Tosadas</h2>
+                <div className="bg-red-50 border-l-4 border-red-500 p-4 my-4">
+                    <ul className="space-y-2">
+                        <li>❌ <strong>Husky Siberiano, Malamute, Samoieda:</strong> Pelo duplo regula temperatura. Tosar causa superaquecimento.</li>
+                        <li>❌ <strong>Golden Retriever, Labrador:</strong> Pelo protege de água e sol. Apenas apare (não rase).</li>
+                        <li>❌ <strong>Pastor Alemão, Border Collie:</strong> Pelo cresce desigual após tosa.</li>
+                    </ul>
+                    <p className="text-red-600 font-semibold mt-4">
+                        Para essas raças: escovação frequente + banho. Não tosa!
+                    </p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Frequência Ideal por Tipo de Pelo</h2>
+                <div className="grid md:grid-cols-2 gap-4 my-6">
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold mb-2">Pelo Curto (Pug, Beagle)</h4>
+                        <p className="text-sm">Apenas tosa higiênica a cada 45-60 dias.</p>
+                    </div>
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold mb-2">Pelo Médio (Cocker, Springer)</h4>
+                        <p className="text-sm">Tosa a cada 45-60 dias + escovação semanal.</p>
+                    </div>
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold mb-2">Pelo Longo (Shih Tzu, Maltês)</h4>
+                        <p className="text-sm">Tosa a cada 30-45 dias + escovação diária.</p>
+                    </div>
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold mb-2">Pelo Duro (Schnauzer, Terriers)</h4>
+                        <p className="text-sm">Stripping a cada 60-90 dias.</p>
+                    </div>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Tosa em Casa vs. Profissional</h2>
+                <h3 className="text-2xl font-semibold text-green-600 mt-6 mb-3">✅ Tosa Profissional (Recomendado)</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Equipamento adequado (máquinas, tesouras profissionais).</li>
+                    <li>Conhecimento de anatomia (evita cortes em veias, glândulas).</li>
+                    <li>Limpeza de glândulas anais (incluída).</li>
+                    <li>Corte de unhas e limpeza de ouvidos.</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">🏠 Tosa em Casa (Apenas Higiênica)</h3>
+                <p>
+                    Se for fazer em casa, limite-se à tosa higiênica:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li>Use tesoura sem ponta.</li>
+                    <li>Apare pelos ao redor de genitais, ânus e patas.</li>
+                    <li>Não tente cortes complexos sem treino.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Cuidados Pós-Tosa</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Protetor solar:</strong> Se tosou muito curto, aplique protetor pet em áreas expostas.</li>
+                    <li><strong>Evite sol forte:</strong> Pele recém-tosada queima fácil.</li>
+                    <li><strong>Hidratação da pele:</strong> Use condicionador ou óleo específico para evitar ressecamento.</li>
+                    <li><strong>Observe irritações:</strong> Vermelhidão, coceira ou feridas? Volte ao tosador ou vet.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Custo Médio (2026)</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Tosa higiênica:</strong> R$ 50 a R$ 100</li>
+                    <li><strong>Tosa completa (banho + tosa):</strong> R$ 80 a R$ 200 (varia com porte)</li>
+                    <li><strong>Stripping:</strong> R$ 150 a R$ 300</li>
+                </ul>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Tosa é Bem-Estar</h3>
+                    <p className="text-lg mb-6">
+                        Um cão bem tosado é um cão confortável, limpo e saudável. Escolha profissionais qualificados e respeite as necessidades da raça.
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Verificar Meus Cuidados com o Pet
+                    </Button>
+                </div>
+            </div>
+        )
     }
 };
 

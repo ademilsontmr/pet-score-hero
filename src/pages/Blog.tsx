@@ -52,6 +52,31 @@ const Blog = () => {
             description: "Saúde intestinal, imunidade e pele: descubra quando usar, quais cepas funcionam e como escolher."
         },
         {
+            slug: "viagem-pet-2026",
+            title: "Viagem com Pet em 2026: Guia Completo de Avião, Carro e Hotéis",
+            description: "Novas regras ANAC, hotéis pet-friendly e dicas de segurança para viajar tranquilo com seu melhor amigo."
+        },
+        {
+            slug: "adocao-pet-guia-completo",
+            title: "Como Adotar um Pet: Guia Completo do Processo em 2026",
+            description: "Passo a passo, documentos, custos iniciais e como preparar a casa para receber seu novo amigo."
+        },
+        {
+            slug: "gatos-idosos-cuidados",
+            title: "Cuidados com Gatos Idosos: Guia Completo para a Melhor Idade Felina",
+            description: "Doenças comuns, nutrição específica, adaptações na casa e qualidade de vida para gatos sêniores."
+        },
+        {
+            slug: "alimentacao-natural-caseira-receitas",
+            title: "Alimentação Natural Caseira para Pets: Receitas Seguras e Balanceadas",
+            description: "Receitas práticas, alimentos permitidos e proibidos, e como fazer a transição com segurança."
+        },
+        {
+            slug: "primeiros-socorros-pets",
+            title: "Primeiros Socorros para Pets: Guia de Emergências Domésticas",
+            description: "Como agir em engasgo, intoxicação, convulsões e outras emergências. Kit essencial e quando ir ao vet."
+        },
+        {
             slug: "custo-cachorro-2026",
             title: "Quanto Custa Ter um Cachorro em 2026? Guia Completo",
             description: "Planilha de gastos reais com ração, veterinário e imprevistos para cada porte."
@@ -335,6 +360,56 @@ const Blog = () => {
             slug: "vacinas-pet-guia-veterinario",
             title: "Guia Completo de Vacinas para Cães e Gatos em 2026: Calendário e Cuidados",
             description: "Protocolo veterinário atualizado: V10, V5, Raiva, Gripe e o que realmente é obrigatório."
+        },
+        {
+            slug: "castracao-caes-gatos-guia",
+            title: "Castração de Cães e Gatos: Guia Completo 2026",
+            description: "Quando castrar, benefícios comprovados, mitos vs. realidade e tudo sobre o pós-operatório."
+        },
+        {
+            slug: "adestramento-comandos-basicos",
+            title: "Como Ensinar Comandos Básicos: Guia de Adestramento Positivo",
+            description: "Senta, Fica, Vem, Deita e Junto - passo a passo completo com reforço positivo."
+        },
+        {
+            slug: "banho-casa-caes-gatos",
+            title: "Banho em Casa: Passo a Passo Completo para Cães e Gatos",
+            description: "Método profissional, frequência ideal, materiais necessários e erros fatais a evitar."
+        },
+        {
+            slug: "racas-gatos-populares-brasil",
+            title: "Raças de Gatos: As 10 Mais Populares no Brasil em 2026",
+            description: "Persa, Siamês, Maine Coon, Bengal e mais - temperamento, cuidados e qual é ideal para você."
+        },
+        {
+            slug: "cachorro-late-demais-solucoes",
+            title: "Cachorro que Late Demais: 7 Soluções Comprovadas",
+            description: "Entenda as causas e aprenda técnicas eficazes para resolver latido excessivo sem punição."
+        },
+        {
+            slug: "fogos-artificio-proteger-pet",
+            title: "Fogos de Artifício: Como Proteger Seu Pet do Pânico",
+            description: "Protocolo completo para antes, durante e depois dos fogos. Dessensibilização e soluções naturais."
+        },
+        {
+            slug: "cinomose-caes-sintomas-prevencao",
+            title: "Cinomose em Cães: Sintomas, Tratamento e Prevenção",
+            description: "Doença fatal mas 100% prevenível. Fases, sintomas, tratamento de suporte e importância da vacinação."
+        },
+        {
+            slug: "pets-apartamento-guia-racas",
+            title: "Pets em Apartamento: Guia Completo de Raças e Cuidados",
+            description: "Melhores raças para espaços pequenos, cuidados essenciais e como fazer funcionar perfeitamente."
+        },
+        {
+            slug: "apresentar-novo-pet-residente",
+            title: "Como Apresentar um Novo Pet para o Residente",
+            description: "Protocolos específicos para cão+cão, gato+gato e cão+gato. Passo a passo para integração segura."
+        },
+        {
+            slug: "tosa-caes-tipos-cuidados",
+            title: "Tosa para Cães: Tipos, Frequência e Cuidados em 2026",
+            description: "Higiênica, bebê, tesoura, máquina e stripping. Raças que não devem ser tosadas e cuidados pós-tosa."
         }
     ];
 
