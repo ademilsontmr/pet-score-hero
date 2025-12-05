@@ -439,7 +439,7 @@ const articles = {
                             Muitos tutores só percebem que poderiam ter feito mais quando é tarde. Não seja esse tutor. Faça nosso quiz e descubra se você está cobrindo todas as bases do bem-estar do seu pet.
                         </p>
                         <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
-                            👉 Fazer o Quiz de Tutor Agora
+                            👉 Descobrir Meu PetScore
                         </Button>
                     </div>
                 </div>
@@ -888,7 +888,7 @@ const articles = {
                             Será que você está cuidando dele da maneira ideal para o perfil dele? Faça nosso quiz e descubra se você é o tutor que seu pet merece!
                         </p>
                         <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
-                            👉 Fazer o Quiz Agora
+                            👉 Descobrir Meu PetScore
                         </Button>
                     </div>
                 </div>
@@ -4152,7 +4152,7 @@ const articles = {
                     <h3 className="text-2xl font-bold text-primary mb-4">Você cuida bem do seu pet?</h3>
                     <p className="mb-6 text-lg">Descubra seu nível de cuidado e receba dicas personalizadas!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
-                        Fazer o Quiz Gratuito
+                        Descobrir Meu PetScore
                     </Button>
                 </div>
             </div>
@@ -4285,7 +4285,7 @@ const articles = {
                     <h3 className="text-2xl font-bold text-primary mb-4">Você é um tutor exemplar?</h3>
                     <p className="mb-6 text-lg">Descubra seu PetScore e veja como melhorar os cuidados!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
-                        Fazer o Quiz Agora
+                        Descobrir Meu PetScore
                     </Button>
                 </div>
             </div>
@@ -4454,9 +4454,9 @@ const articles = {
 
                 <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
                     <h3 className="text-2xl font-bold text-primary mb-4">Quer saber se você cuida bem do seu pet?</h3>
-                    <p className="mb-6 text-lg">Faça nosso quiz e descubra seu PetScore!</p>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
                     <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
-                        Fazer o Quiz Gratuito
+                        Descobrir Meu PetScore
                     </Button>
                 </div>
             </div>
@@ -4548,7 +4548,7 @@ const articles = {
                             Descubra se você está tomando todas as decisões certas para a saúde do seu melhor amigo.
                         </p>
                         <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
-                            👉 Fazer o Quiz Gratuito
+                            👉 Descobrir Meu PetScore
                         </Button>
                     </div>
                 </div>
