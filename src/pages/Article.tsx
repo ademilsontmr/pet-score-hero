@@ -62,11 +62,11 @@ const articles = {
                 <h3 className="text-2xl font-semibold text-foreground">✔️ Preventivo é mais barato</h3>
                 <p>Um ultrassom custa menos que uma cirurgia de emergência. Exames semestrais evitam gastos gigantescos.</p>
 
-                <div className="bg-primary/5 border border-primary/20 p-6 rounded-2xl">
-                    <h3 className="text-2xl font-bold text-primary mb-3">Planilha pronta para download</h3>
-                    <p className="text-muted-foreground">Baixe nossa planilha gratuita de custos e descubra se seu orçamento comporta um novo integrante.</p>
-                    <Button className="mt-4" onClick={() => window.location.href = "/quiz"}>
-                        Calcular meu orçamento pet
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Seu orçamento está preparado?</h3>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir Meu PetScore
                     </Button>
                 </div>
             </div>
@@ -100,6 +100,14 @@ const articles = {
                     <h3 className="text-2xl font-bold text-orange-700 mb-3">Quando procurar o veterinário imediatamente?</h3>
                     <p className="text-muted-foreground">Se a dor vier acompanhada de vômitos, tremores, gemidos constantes ou dificuldade para urinar/defecar, vá ao pronto-atendimento. Analgésicos humanos são proibidos sem prescrição.</p>
                 </div>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Você sabe identificar sinais de dor?</h3>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir Meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -132,6 +140,14 @@ const articles = {
                         <h3 className="font-semibold text-primary">Para quintais com cães</h3>
                         <p>Lavanda, alecrim, bromélias e cactos sem espinhos são plantas seguras e aromáticas.</p>
                     </div>
+                </div>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Sua casa é segura para pets?</h3>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir Meu PetScore
+                    </Button>
                 </div>
             </div>
         )
@@ -176,6 +192,14 @@ const articles = {
                 </div>
 
                 <p>Coloque lembretes no celular e peça para a clínica enviar SMS antes da data. A cada surto de raiva urbana, municípios voltam a registrar casos fatais. Vacinar é um ato de responsabilidade coletiva.</p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Você mantém a vacinação em dia?</h3>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir Meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -198,6 +222,14 @@ const articles = {
                 <p>Use apenas com orientação veterinária, mas mantenha no kit: carvão ativado, antiemético prescrito e analgésico específico para pets. Nunca ofereça dipirona, paracetamol ou ibuprofeno por conta própria.</p>
                 <h3 className="text-2xl font-semibold text-foreground">Checklist impressa</h3>
                 <p>Inclua na bolsa uma ficha com peso, alergias, doenças pré-existentes e padrão respiratório normal do seu pet. Em emergências com terceiros (pet sitter, familiares), essa ficha ganha tempo precioso.</p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Você está preparado para emergências?</h3>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir Meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -219,6 +251,14 @@ const articles = {
                 <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
                     <h3 className="text-xl font-bold text-green-800 mb-2">Dica do vet</h3>
                     <p>Faça exame de fezes anual, mesmo com vermifugação em dia. Assim você confirma se o protocolo está eficaz e detecta giárdia ou coccidiose silenciosa.</p>
+                </div>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">A saúde do seu pet está protegida?</h3>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir Meu PetScore
+                    </Button>
                 </div>
             </div>
         )
@@ -242,6 +282,14 @@ const articles = {
                 <h3 className="text-2xl font-semibold text-foreground">Feromônios e fitoterápicos</h3>
                 <p>Difusores de feromônio facial sintético (Feliway) ajudam na adaptação. Fitoterápicos à base de passiflora e valeriana podem complementar, sempre com orientação veterinária.</p>
                 <p>Caso o gato se automutile, esconda por dias ou pare de comer, marque consulta com um veterinário comportamentalista para avaliar ansiolíticos específicos.</p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Seu gato é feliz?</h3>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir Meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -269,6 +317,14 @@ const articles = {
                     <h3 className="text-xl font-bold text-blue-900 mb-2">Como economizar</h3>
                     <p>Clínicas universitárias e planos de saúde pet oferecem pacotes com até 40% de desconto. Agende exames combinados no mesmo dia para reduzir estresse do animal.</p>
                 </div>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">A saúde do seu pet está em dia?</h3>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir Meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -290,6 +346,14 @@ const articles = {
                 <h3 className="text-2xl font-semibold text-foreground">Cuidado com modismos</h3>
                 <p>Vinagre de maçã, água alcalina e carvão ativado “detox” não têm evidência em pets. Em excesso, podem irritar o estômago ou alterar o pH sanguíneo.</p>
                 <p>Sempre introduza um ingrediente de cada vez por 7 dias e observe fezes, apetite e pele. Se houver vômito ou coceira, suspenda e procure o veterinário.</p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Você alimenta bem seu pet?</h3>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir Meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -311,6 +375,14 @@ const articles = {
                 <div className="bg-purple-50 border border-purple-200 rounded-2xl p-6">
                     <h3 className="text-xl font-bold text-purple-900 mb-2">Ferramenta bônus</h3>
                     <p>Monte um “bingo de socialização” na geladeira com 20 experiências para ir marcando. Transforme o processo em jogo e envolva toda a família.</p>
+                </div>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Seu filhote está socializado?</h3>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir Meu PetScore
+                    </Button>
                 </div>
             </div>
         )
@@ -1683,6 +1755,14 @@ const articles = {
                     <h3 className="text-xl font-bold text-yellow-800 mb-2">⚠️ Regra de Ouro</h3>
                     <p>Frutas devem ser apenas <strong>petiscos</strong> (máximo 10% das calorias diárias). O excesso pode causar diarreia ou obesidade.</p>
                 </div>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Você cuida bem da alimentação do seu pet?</h3>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir Meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -1704,6 +1784,14 @@ const articles = {
                 <div className="bg-red-50 border border-red-200 rounded-2xl p-6">
                     <h3 className="text-xl font-bold text-red-800 mb-2">🚑 Emergência!</h3>
                     <p>Se seu pet ingeriu algo dessa lista, não espere os sintomas. Corra para o veterinário imediatamente. Leve a embalagem do produto se possível.</p>
+                </div>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Você sabe o que é perigoso para seu pet?</h3>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir Meu PetScore
+                    </Button>
                 </div>
             </div>
         )
@@ -1727,6 +1815,14 @@ const articles = {
                     <h3 className="text-xl font-bold text-blue-800 mb-2">💡 Dica de Dieta</h3>
                     <p>Não basta reduzir a ração (isso pode causar deficiência nutricional). Troque por uma ração <strong>Light</strong> ou <strong>Obesity</strong> e use brinquedos interativos para ele "caçar" a comida.</p>
                 </div>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Seu pet está no peso ideal?</h3>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir Meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -1748,6 +1844,14 @@ const articles = {
                 <div className="bg-cyan-50 border border-cyan-200 rounded-2xl p-6">
                     <h3 className="text-xl font-bold text-cyan-800 mb-2">💧 Teste da Pele</h3>
                     <p>Puxe levemente a pele da nuca do gato. Se ela demorar para voltar ao lugar, ele pode estar desidratado. Ofereça água ou vá ao vet.</p>
+                </div>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Seu gato bebe água suficiente?</h3>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir Meu PetScore
+                    </Button>
                 </div>
             </div>
         )
@@ -1772,6 +1876,14 @@ const articles = {
                 <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
                     <h3 className="text-xl font-bold text-green-800 mb-2">🥣 Dica Extra</h3>
                     <p>Misture bem os grãos. Se o pet for esperto e separar as bolinhas, você pode usar um pouco de água morna ou sachê para "grudar" os cheiros e sabores.</p>
+                </div>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Você sabe trocar a ração corretamente?</h3>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir Meu PetScore
+                    </Button>
                 </div>
             </div>
         )
@@ -1806,6 +1918,14 @@ const articles = {
                 <p>
                     Aplicativos de AR projetam comandos visuais no ambiente real, facilitando o treinamento. O pet aprende mais rápido com estímulos visuais interativos que aparecem no chão ou nas paredes.
                 </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Você é um tutor tecnológico?</h3>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir Meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -1843,6 +1963,14 @@ const articles = {
                 <p>
                     Aquamação (cremação por água alcalina) está substituindo a cremação tradicional. Usa 90% menos energia e não emite gases tóxicos. As cinzas podem ser usadas como adubo.
                 </p>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Você é um tutor sustentável?</h3>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir Meu PetScore
+                    </Button>
+                </div>
             </div>
         )
     },
@@ -1883,6 +2011,14 @@ const articles = {
                 <div className="bg-pink-50 border border-pink-200 rounded-2xl p-6">
                     <h3 className="text-xl font-bold text-pink-800 mb-2">❤️ Tendência Emocional</h3>
                     <p>Sessões de "pet yoga" e meditação guiada para tutores e pets juntos. O vínculo se fortalece e ambos relaxam. Já existem estúdios especializados em grandes cidades.</p>
+                </div>
+
+                <div className="mt-8 p-6 bg-primary/10 rounded-2xl text-center">
+                    <h3 className="text-2xl font-bold text-primary mb-4">O bem-estar do seu pet está em dia?</h3>
+                    <p className="mb-6 text-lg">Descubra seu PetScore e veja se você é um tutor nota 10!</p>
+                    <Button onClick={() => window.location.href = '/quiz'} className="w-full md:w-auto font-bold text-lg">
+                        Descobrir Meu PetScore
+                    </Button>
                 </div>
             </div>
         )
