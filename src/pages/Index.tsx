@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useNavigate, Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
-import { Heart, TrendingUp, Award, Clock, Target, CheckCircle2, Star, Share2, Gift, Users, Zap, ChevronDown } from "lucide-react";
+import { Heart, TrendingUp, Award, Clock, Target, CheckCircle2, Star, Share2, Gift, Users, Zap, ChevronDown, Utensils, Shield, Calendar } from "lucide-react";
 import heroImage from "@/assets/hero-pets.jpg";
 import testimonial1 from "@/assets/testimonial-1.jpg";
 import testimonial2 from "@/assets/testimonial-2.jpg";
@@ -570,48 +570,94 @@ const Index = () => {
     </section>
 
     {/* Bonus Section */}
-    <section className="py-20 px-4 bg-background">
-      <div className="max-w-5xl mx-auto">
-        <Card className="overflow-hidden shadow-medium">
-          <div className="bg-gradient-hero text-white p-12 text-center">
-            <Gift className="w-16 h-16 mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              🎁 3 Presentes Inclusos
-            </h2>
-            <p className="text-xl opacity-95">
-              Ferramentas essenciais para facilitar sua rotina e proteger quem você ama:
-            </p>
+    <section className="py-24 px-4 bg-gradient-warm relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 -left-40 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 -right-40 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl" />
+      </div>
+
+      <div className="max-w-5xl mx-auto relative">
+        <div className="text-center mb-16 animate-in fade-in duration-700">
+          <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <Gift className="w-4 h-4" />
+            Bônus Exclusivos
           </div>
-          <div className="p-12 space-y-6">
-            <div className="flex items-start gap-4">
-              <CheckCircle2 className="w-6 h-6 text-accent shrink-0 mt-1" />
-              <div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Guia Definitivo de Alimentos</h3>
-                <p className="text-muted-foreground">
-                  Pare de adivinhar. Tenha em mãos a lista exata do que nutre e do que intoxica seu pet, evitando emergências desnecessárias.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <CheckCircle2 className="w-6 h-6 text-accent shrink-0 mt-1" />
-              <div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Checklist "Casa Segura"</h3>
-                <p className="text-muted-foreground">
-                  Um rastreio completo para eliminar armadilhas silenciosas em sua casa. Proteja seu pet de acidentes comuns e perigosos.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <CheckCircle2 className="w-6 h-6 text-accent shrink-0 mt-1" />
-              <div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Cronograma de Saúde Preventiva</h3>
-                <p className="text-muted-foreground">
-                  Nunca mais perca uma data de vacina ou vermífugo. Um organizador prático para garantir que a saúde do seu melhor amigo esteja sempre em dia.
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            3 Presentes Inclusos
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Ferramentas essenciais para facilitar sua rotina e proteger quem você ama
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          {/* Card 1 - Guia de Alimentos */}
+          <div className="group animate-in fade-in slide-in-from-bottom duration-700">
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/30 transition-all duration-500 group-hover:-translate-y-3 h-full text-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative">
+                <div className="relative mx-auto w-fit mb-6">
+                  <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500" />
+                  <div className="relative bg-primary/10 rounded-2xl p-5 group-hover:bg-primary/20 transition-colors duration-300">
+                    <Utensils className="w-10 h-10 text-primary" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Guia Definitivo de Alimentos</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  Lista exata do que nutre e do que intoxica seu pet, evitando emergências desnecessárias.
                 </p>
               </div>
             </div>
           </div>
-        </Card>
+
+          {/* Card 2 - Casa Segura */}
+          <div className="group animate-in fade-in slide-in-from-bottom duration-700 delay-150">
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-secondary/30 transition-all duration-500 group-hover:-translate-y-3 h-full text-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative">
+                <div className="relative mx-auto w-fit mb-6">
+                  <div className="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500" />
+                  <div className="relative bg-secondary/10 rounded-2xl p-5 group-hover:bg-secondary/20 transition-colors duration-300">
+                    <Shield className="w-10 h-10 text-secondary" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Checklist "Casa Segura"</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  Rastreio completo para eliminar armadilhas silenciosas e proteger seu pet de acidentes.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 3 - Cronograma de Saúde */}
+          <div className="group animate-in fade-in slide-in-from-bottom duration-700 delay-300">
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/30 transition-all duration-500 group-hover:-translate-y-3 h-full text-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative">
+                <div className="relative mx-auto w-fit mb-6">
+                  <div className="absolute inset-0 bg-accent/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500" />
+                  <div className="relative bg-accent/10 rounded-2xl p-5 group-hover:bg-accent/20 transition-colors duration-300">
+                    <Calendar className="w-10 h-10 text-accent" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Cronograma de Saúde</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  Nunca mais perca vacina ou vermífugo. Organizador prático para a saúde do seu pet.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom badge */}
+        <div className="mt-12 text-center animate-in fade-in duration-700 delay-500">
+          <div className="inline-flex items-center gap-3 bg-card/60 backdrop-blur-sm rounded-full px-6 py-3 shadow-soft border border-border/50">
+            <CheckCircle2 className="w-5 h-5 text-accent" />
+            <span className="text-muted-foreground font-medium">Acesso imediato após o quiz</span>
+          </div>
+        </div>
       </div>
     </section>
 
