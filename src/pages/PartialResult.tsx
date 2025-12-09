@@ -106,7 +106,7 @@ const PartialResult = () => {
               </div>
               <div>
                 <h2 className="font-bold text-foreground">Personalize seu Resultado</h2>
-                <p className="text-sm text-muted-foreground">Opcional - deixe seu certificado único</p>
+                <p className="text-sm text-muted-foreground">Deixe seu certificado único</p>
               </div>
             </div>
           </div>
@@ -115,8 +115,7 @@ const PartialResult = () => {
             {/* Pet Name */}
             <div className="space-y-2">
               <Label htmlFor="petName" className="text-sm font-semibold text-foreground flex items-center gap-2">
-                🐾 Nome do Pet
-                <span className="text-xs font-normal text-muted-foreground">(opcional)</span>
+                🐾 Nome do Pet <span className="text-destructive">*</span>
               </Label>
               <Input
                 id="petName"
@@ -131,7 +130,6 @@ const PartialResult = () => {
             <div className="space-y-2">
               <Label className="text-sm font-semibold text-foreground flex items-center gap-2">
                 Seu pet é
-                <span className="text-xs font-normal text-muted-foreground">(opcional)</span>
               </Label>
               <div className="grid grid-cols-2 gap-3">
                 <button
@@ -162,8 +160,7 @@ const PartialResult = () => {
             {/* Photo Upload */}
             <div className="space-y-2">
               <Label className="text-sm font-semibold text-foreground flex items-center gap-2">
-                📸 Foto do Pet
-                <span className="text-xs font-normal text-muted-foreground">(opcional)</span>
+                📸 Foto do Pet <span className="text-destructive">*</span>
               </Label>
               
               {petImage ? (
