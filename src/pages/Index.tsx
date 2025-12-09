@@ -236,73 +236,111 @@ const Index = () => {
     </section>
 
     {/* O que você vai receber */}
-    <section className="py-20 px-4 bg-gradient-warm">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16 animate-in fade-in duration-700">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+    <section className="py-24 px-4 bg-gradient-warm relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 -right-20 w-80 h-80 bg-secondary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 -left-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
+      </div>
+
+      <div className="max-w-6xl mx-auto relative">
+        <div className="text-center mb-20 animate-in fade-in duration-700">
+          <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <Gift className="w-4 h-4" />
+            Tudo Incluído
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             O Que Você Vai Descobrir
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Uma análise profunda que vai transformar a vida do seu pet
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Uma análise profunda e personalizada que vai transformar a vida do seu pet
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          <Card className="p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-left duration-700">
-            <div className="flex gap-4">
-              <div className="bg-primary text-primary-foreground rounded-2xl p-4 shrink-0 h-fit">
-                <TrendingUp className="w-8 h-8" />
-              </div>
-              <div className="space-y-3">
-                <h3 className="text-2xl font-bold text-foreground">Diagnóstico Completo (0-100)</h3>
-                <p className="text-muted-foreground text-lg">
-                  Entenda com precisão científica o nível de bem-estar que você proporciona hoje e descubra onde pode evoluir.
-                </p>
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          {/* Card 1 - Diagnóstico */}
+          <div className="group animate-in fade-in slide-in-from-left duration-700">
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/20 transition-all duration-500 group-hover:-translate-y-2 h-full">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative flex gap-5">
+                <div className="relative shrink-0">
+                  <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500" />
+                  <div className="relative bg-primary/10 rounded-2xl p-4">
+                    <TrendingUp className="w-8 h-8 text-primary" />
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-xl lg:text-2xl font-bold text-foreground">Diagnóstico Completo (0-100)</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Entenda com precisão científica o nível de bem-estar que você proporciona hoje e descubra onde pode evoluir.
+                  </p>
+                </div>
               </div>
             </div>
-          </Card>
+          </div>
 
-          <Card className="p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-right duration-700">
-            <div className="flex gap-4">
-              <div className="bg-secondary text-secondary-foreground rounded-2xl p-4 shrink-0 h-fit">
-                <Award className="w-8 h-8" />
-              </div>
-              <div className="space-y-3">
-                <h3 className="text-2xl font-bold text-foreground">Sua Identidade de Tutor</h3>
-                <p className="text-muted-foreground text-lg">
-                  Conquiste títulos exclusivos como Lendário 🏆 ou Herói do Lar ⭐ que comprovam sua dedicação e amor.
-                </p>
+          {/* Card 2 - Identidade */}
+          <div className="group animate-in fade-in slide-in-from-right duration-700">
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-secondary/20 transition-all duration-500 group-hover:-translate-y-2 h-full">
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative flex gap-5">
+                <div className="relative shrink-0">
+                  <div className="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500" />
+                  <div className="relative bg-secondary/10 rounded-2xl p-4">
+                    <Award className="w-8 h-8 text-secondary" />
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-xl lg:text-2xl font-bold text-foreground">Sua Identidade de Tutor</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Conquiste títulos exclusivos como Lendário 🏆 ou Herói do Lar ⭐ que comprovam sua dedicação e amor.
+                  </p>
+                </div>
               </div>
             </div>
-          </Card>
+          </div>
 
-          <Card className="p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-left duration-700 delay-200">
-            <div className="flex gap-4">
-              <div className="bg-accent text-accent-foreground rounded-2xl p-4 shrink-0 h-fit">
-                <Heart className="w-8 h-8" />
-              </div>
-              <div className="space-y-3">
-                <h3 className="text-2xl font-bold text-foreground">Plano de Ação Personalizado</h3>
-                <p className="text-muted-foreground text-lg">
-                  Receba um guia prático feito sob medida para a rotina e necessidades específicas do seu melhor amigo.
-                </p>
+          {/* Card 3 - Plano de Ação */}
+          <div className="group animate-in fade-in slide-in-from-left duration-700 delay-200">
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/20 transition-all duration-500 group-hover:-translate-y-2 h-full">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative flex gap-5">
+                <div className="relative shrink-0">
+                  <div className="absolute inset-0 bg-accent/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500" />
+                  <div className="relative bg-accent/10 rounded-2xl p-4">
+                    <Heart className="w-8 h-8 text-accent" />
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-xl lg:text-2xl font-bold text-foreground">Plano de Ação Personalizado</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Receba um guia prático feito sob medida para a rotina e necessidades específicas do seu melhor amigo.
+                  </p>
+                </div>
               </div>
             </div>
-          </Card>
+          </div>
 
-          <Card className="p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-right duration-700 delay-200">
-            <div className="flex gap-4">
-              <div className="bg-gradient-success text-white rounded-2xl p-4 shrink-0 h-fit">
-                <Share2 className="w-8 h-8" />
-              </div>
-              <div className="space-y-3">
-                <h3 className="text-2xl font-bold text-foreground">Recordação Exclusiva</h3>
-                <p className="text-muted-foreground text-lg">
-                  Crie uma arte única com a <strong>foto do seu pet</strong> emoldurada com sua conquista para compartilhar nas redes sociais e eternizar esse momento! 📸
-                </p>
+          {/* Card 4 - Recordação */}
+          <div className="group animate-in fade-in slide-in-from-right duration-700 delay-200">
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/20 transition-all duration-500 group-hover:-translate-y-2 h-full">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative flex gap-5">
+                <div className="relative shrink-0">
+                  <div className="absolute inset-0 bg-gradient-hero rounded-2xl blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500" />
+                  <div className="relative bg-gradient-hero rounded-2xl p-4">
+                    <Share2 className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-xl lg:text-2xl font-bold text-foreground">Recordação Exclusiva</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Crie uma arte única com a <strong>foto do seu pet</strong> emoldurada para compartilhar nas redes sociais! 📸
+                  </p>
+                </div>
               </div>
             </div>
-          </Card>
+          </div>
         </div>
       </div>
     </section>
