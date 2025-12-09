@@ -12,7 +12,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { useEffect } from "react";
 const Index = () => {
   const navigate = useNavigate();
-
   useEffect(() => {
     document.title = "Pet Score - O Quiz Oficial dos Pais de Pet";
   }, []);
@@ -131,7 +130,10 @@ const Index = () => {
           {/* Connecting line - hidden on mobile */}
           <div className="hidden md:block absolute top-24 left-[16.66%] right-[16.66%] h-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-full opacity-30" />
           <div className="hidden md:block absolute top-24 left-[16.66%] right-[16.66%] h-1">
-            <div className="h-full bg-gradient-to-r from-primary via-secondary to-accent rounded-full animate-pulse" style={{ width: '100%', opacity: 0.6 }} />
+            <div className="h-full bg-gradient-to-r from-primary via-secondary to-accent rounded-full animate-pulse" style={{
+              width: '100%',
+              opacity: 0.6
+            }} />
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
@@ -525,8 +527,7 @@ const Index = () => {
 
           <AccordionItem value="item-7" className="group bg-card/80 backdrop-blur-sm rounded-3xl px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-accent/30">
             <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6 group-hover:text-accent transition-colors duration-300">
-              <div className="flex items-center gap-3">
-                <div className="bg-accent/10 rounded-xl p-2 group-data-[state=open]:bg-accent/20 transition-colors duration-300">
+              <div className="flex items-center gap-3">Por que devo fazer o quiz agora?<div className="bg-accent/10 rounded-xl p-2 group-data-[state=open]:bg-accent/20 transition-colors duration-300">
                   <Zap className="w-5 h-5 text-accent" />
                 </div>
                 Por que devo fazer o quiz AGORA?
@@ -545,11 +546,7 @@ const Index = () => {
         <div className="mt-16 text-center animate-in fade-in duration-700">
           <div className="relative inline-block group">
             <div className="absolute inset-0 bg-gradient-hero rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
-            <Button
-              size="lg"
-              onClick={scrollToQuiz}
-              className="relative text-xl px-10 py-6 h-auto shadow-lg hover:shadow-xl transition-all duration-300 hover-scale"
-            >
+            <Button size="lg" onClick={scrollToQuiz} className="relative text-xl px-10 py-6 h-auto shadow-lg hover:shadow-xl transition-all duration-300 hover-scale">
               🚀 Quero Descobrir Meu PetScore Agora!
             </Button>
           </div>
