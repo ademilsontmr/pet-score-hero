@@ -699,8 +699,8 @@ const CompleteResult = () => {
               </div>
 
               {/* Action buttons - Premium Design */}
-              <div className="flex flex-col gap-3 sm:gap-4 w-full max-w-sm">
-                {/* Save Button - Elegant Outline */}
+              <div className="flex flex-col-reverse sm:flex-col gap-3 sm:gap-4 w-full max-w-sm">
+                {/* Save Button - Elegant Outline (appears second on mobile) */}
                 <button
                   onClick={handleDownload}
                   className="group relative w-full overflow-hidden rounded-2xl border-2 border-primary/20 bg-card/90 backdrop-blur-sm p-4 sm:p-5 transition-all duration-300 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10"
@@ -717,7 +717,7 @@ const CompleteResult = () => {
                   </div>
                 </button>
 
-                {/* Share Button - Gradient with Glow */}
+                {/* Share Button - Gradient with Glow (appears first on mobile) */}
                 <button
                   onClick={handleShare}
                   className="group relative w-full overflow-hidden rounded-2xl p-4 sm:p-5 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
@@ -737,7 +737,7 @@ const CompleteResult = () => {
                     </div>
                     <div className="flex flex-col items-start">
                       <span className="text-base sm:text-lg font-semibold text-white">Compartilhar</span>
-                      <span className="text-xs text-white/80">Mostre seu resultado</span>
+                      <span className="text-xs text-white/80">WhatsApp, Instagram e mais</span>
                     </div>
                   </div>
                 </button>
