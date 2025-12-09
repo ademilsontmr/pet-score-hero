@@ -99,7 +99,7 @@ const Index = () => {
           <div className="text-muted-foreground">|</div>
           <div className="font-semibold">10.247 tutores</div>
           <div className="text-muted-foreground">|</div>
-          <div className="font-semibold">Aprovado por veterinários</div>
+          <div className="font-semibold">Sem precisar criar conta</div>
         </div>
       </div>
     </section>
