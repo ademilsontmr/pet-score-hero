@@ -105,54 +105,135 @@ const Index = () => {
     </section>
 
     {/* Como Funciona Section */}
-    <section id="como-funciona" className="py-20 px-4 bg-background">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16 animate-in fade-in duration-700">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+    <section id="como-funciona" className="py-24 px-4 bg-background relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
+      </div>
+
+      <div className="max-w-6xl mx-auto relative">
+        <div className="text-center mb-20 animate-in fade-in duration-700">
+          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <Zap className="w-4 h-4" />
+            Simples e Rápido
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             Como Funciona
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Sua jornada para se tornar o melhor amigo do seu pet começa aqui
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Sua jornada para se tornar o melhor amigo do seu pet começa aqui — em apenas 3 passos simples
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="text-center space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
-            <div className="bg-gradient-hero text-white rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold mx-auto shadow-medium">
-              1
-            </div>
-            <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-medium transition-all duration-300 h-full">
-              <Target className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-foreground mb-3">Responda com o Coração</h3>
-              <p className="text-muted-foreground">
-                Perguntas rápidas sobre o dia a dia que vão fazer você refletir sobre a conexão única que tem com seu pet
-              </p>
-            </div>
+        {/* Steps with connecting line */}
+        <div className="relative">
+          {/* Connecting line - hidden on mobile */}
+          <div className="hidden md:block absolute top-24 left-[16.66%] right-[16.66%] h-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-full opacity-30" />
+          <div className="hidden md:block absolute top-24 left-[16.66%] right-[16.66%] h-1">
+            <div className="h-full bg-gradient-to-r from-primary via-secondary to-accent rounded-full animate-pulse" style={{ width: '100%', opacity: 0.6 }} />
           </div>
 
-          <div className="text-center space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
-            <div className="bg-gradient-hero text-white rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold mx-auto shadow-medium">
-              2
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+            {/* Step 1 */}
+            <div className="relative group animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
+              <div className="text-center space-y-6">
+                {/* Number badge */}
+                <div className="relative mx-auto w-fit">
+                  <div className="absolute inset-0 bg-gradient-hero rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
+                  <div className="relative bg-gradient-hero text-white rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold shadow-lg ring-4 ring-background">
+                    1
+                  </div>
+                </div>
+                
+                {/* Card */}
+                <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/20 transition-all duration-500 group-hover:-translate-y-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative">
+                    <div className="bg-primary/10 rounded-2xl p-4 w-fit mx-auto mb-6">
+                      <Target className="w-10 h-10 text-primary" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-foreground mb-4">Responda com o Coração</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      30 perguntas rápidas sobre o dia a dia que vão fazer você refletir sobre a conexão única com seu pet
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-medium transition-all duration-300 h-full">
-              <Zap className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-foreground mb-3">Descubra seu Perfil</h3>
-              <p className="text-muted-foreground">
-                Receba uma análise inicial gratuita e veja como seus cuidados impactam a felicidade do seu companheiro
-              </p>
+
+            {/* Step 2 */}
+            <div className="relative group animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+              <div className="text-center space-y-6">
+                {/* Number badge */}
+                <div className="relative mx-auto w-fit">
+                  <div className="absolute inset-0 bg-gradient-hero rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
+                  <div className="relative bg-gradient-hero text-white rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold shadow-lg ring-4 ring-background">
+                    2
+                  </div>
+                </div>
+                
+                {/* Card */}
+                <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-secondary/20 transition-all duration-500 group-hover:-translate-y-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative">
+                    <div className="bg-secondary/10 rounded-2xl p-4 w-fit mx-auto mb-6">
+                      <Users className="w-10 h-10 text-secondary" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-foreground mb-4">Descubra seu Perfil</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Receba uma análise inicial gratuita e veja como seus cuidados impactam a felicidade do seu companheiro
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="relative group animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
+              <div className="text-center space-y-6">
+                {/* Number badge */}
+                <div className="relative mx-auto w-fit">
+                  <div className="absolute inset-0 bg-gradient-hero rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
+                  <div className="relative bg-gradient-hero text-white rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold shadow-lg ring-4 ring-background">
+                    3
+                  </div>
+                </div>
+                
+                {/* Card */}
+                <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/20 transition-all duration-500 group-hover:-translate-y-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative">
+                    <div className="bg-accent/10 rounded-2xl p-4 w-fit mx-auto mb-6">
+                      <Award className="w-10 h-10 text-accent" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-foreground mb-4">Transforme a Relação</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Acesse o plano completo com dicas exclusivas para elevar o nível de bem-estar do seu pet
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
 
-          <div className="text-center space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
-            <div className="bg-gradient-hero text-white rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold mx-auto shadow-medium">
-              3
+        {/* Bottom CTA */}
+        <div className="mt-16 text-center animate-in fade-in duration-700 delay-700">
+          <div className="inline-flex flex-wrap items-center justify-center gap-6 bg-card/60 backdrop-blur-sm rounded-full px-8 py-4 shadow-soft border border-border/50">
+            <div className="flex items-center gap-2 text-sm">
+              <Clock className="w-4 h-4 text-primary" />
+              <span className="text-muted-foreground">5-10 minutos</span>
             </div>
-            <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-medium transition-all duration-300 h-full">
-              <Award className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-foreground mb-3">Transforme a Relação</h3>
-              <p className="text-muted-foreground">
-                Tenha acesso ao plano completo com dicas exclusivas de especialistas para elevar o nível de bem-estar do seu pet
-              </p>
+            <div className="w-px h-4 bg-border hidden sm:block" />
+            <div className="flex items-center gap-2 text-sm">
+              <CheckCircle2 className="w-4 h-4 text-accent" />
+              <span className="text-muted-foreground">100% Gratuito</span>
+            </div>
+            <div className="w-px h-4 bg-border hidden sm:block" />
+            <div className="flex items-center gap-2 text-sm">
+              <Zap className="w-4 h-4 text-secondary" />
+              <span className="text-muted-foreground">Resultado Instantâneo</span>
             </div>
           </div>
         </div>
