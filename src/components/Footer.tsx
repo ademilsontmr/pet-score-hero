@@ -25,7 +25,7 @@ const Footer = () => {
     return (
         <footer className="bg-background pt-20 pb-10 px-4 border-t border-border/40">
             <div className="max-w-6xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
                     {/* Brand */}
                     <div className="space-y-4">
                         <div className="flex items-center gap-2 text-2xl font-bold text-primary">
@@ -35,17 +35,6 @@ const Footer = () => {
                         <p className="text-muted-foreground leading-relaxed">
                             O quiz mais divertido e revelador para tutores apaixonados. Descubra seu nível de dedicação em minutos.
                         </p>
-                    </div>
-
-                    {/* Blog */}
-                    <div className="space-y-4">
-                        <h3 className="font-bold text-foreground text-lg">Blog</h3>
-                        <ul className="space-y-3 text-muted-foreground">
-                            <li><Link to="/blog/caes-idosos" className="hover:text-primary transition-colors">Como cuidar de cães idosos</Link></li>
-                            <li><Link to="/blog/alimentacao-natural" className="hover:text-primary transition-colors">Alimentação natural vs Ração</Link></li>
-                            <li><Link to="/blog/linguagem-canina" className="hover:text-primary transition-colors">Entendendo a linguagem canina</Link></li>
-                            <li><Link to="/blog/gatos-felizes" className="hover:text-primary transition-colors">Dicas para gatos felizes</Link></li>
-                        </ul>
                     </div>
 
                     {/* Links */}
