@@ -26,7 +26,7 @@ const Footer = () => {
                         Pronto para descobrir seu Pet Score?
                     </h2>
                     <p className="text-white/80 text-lg max-w-2xl mx-auto">
-                        Faça o quiz gratuito e descubra como você pode melhorar ainda mais a vida do seu melhor amigo.
+                        Responda o quiz e descubra como você pode melhorar ainda mais a vida do seu melhor amigo.
                     </p>
                     <Button 
                         onClick={scrollToQuiz}

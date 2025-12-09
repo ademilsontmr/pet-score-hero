@@ -53,7 +53,7 @@ const Index = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Button size="lg" onClick={scrollToQuiz} className="text-lg px-8 py-4 h-auto shadow-sm hover:shadow-md transition-all duration-300 hover-scale">
-                🎯 Começar Quiz Grátis
+                🎯 Descobrir Meu PetScore
               </Button>
               <Button size="lg" variant="outline" onClick={() => document.getElementById('como-funciona')?.scrollIntoView({
                 behavior: 'smooth'
@@ -537,7 +537,7 @@ const Index = () => {
             <AccordionContent className="text-muted-foreground text-base pb-6 pl-14 leading-relaxed">
               Porque cada dia conta na vida do seu pet! Descobrir pontos de melhoria hoje pode prevenir
               problemas de saúde amanhã, fortalecer o vínculo entre vocês e garantir que seu melhor amigo
-              viva mais feliz e saudável. Além disso, é grátis, rápido e você pode começar agora mesmo.
+              viva mais feliz e saudável. É rápido e você pode começar agora mesmo.
               Seu pet merece o melhor, e você merece saber se está dando isso a ele! 🐾💚
             </AccordionContent>
           </AccordionItem>
@@ -554,7 +554,7 @@ const Index = () => {
           <div className="mt-6 inline-flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-accent" />
-              Grátis
+              Sem criar conta
             </span>
             <span className="flex items-center gap-1.5">
               <Clock className="w-4 h-4 text-primary" />
@@ -680,7 +680,7 @@ const Index = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
           <Button size="lg" onClick={scrollToQuiz} className="text-xl px-10 py-6 h-auto shadow-lg hover:shadow-xl transition-all duration-300 hover-scale">
-            🎯 Começar Quiz Grátis Agora
+            🎯 Descobrir Meu PetScore Agora
           </Button>
         </div>
 
