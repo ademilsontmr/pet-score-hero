@@ -527,7 +527,8 @@ const Index = () => {
 
           <AccordionItem value="item-7" className="group bg-card/80 backdrop-blur-sm rounded-3xl px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-accent/30">
             <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6 group-hover:text-accent transition-colors duration-300">
-              <div className="flex items-center gap-3">Por que devo fazer o quiz agora?<div className="bg-accent/10 rounded-xl p-2 group-data-[state=open]:bg-accent/20 transition-colors duration-300">
+              <div className="flex items-center gap-3">
+Por que devo fazer o quiz agora?<div className="bg-accent/10 rounded-xl p-2 group-data-[state=open]:bg-accent/20 transition-colors duration-300">
                   <Zap className="w-5 h-5 text-accent" />
                 </div>
                 Por que devo fazer o quiz AGORA?
