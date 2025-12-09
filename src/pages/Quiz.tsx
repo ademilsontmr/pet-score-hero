@@ -87,15 +87,9 @@ const Quiz = () => {
         <div className="max-w-lg w-full relative z-10">
           {/* Header Card */}
           <div className="text-center mb-6 animate-in fade-in slide-in-from-top duration-500">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-hero rounded-3xl mb-5 shadow-lg">
-              <span className="text-4xl">🎯</span>
-            </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-              Avaliação Pet Score
-            </h1>
-            <p className="text-muted-foreground text-lg">
-              Descubra seu nível como tutor em 5 pilares
-            </p>
+            
+            
+            
           </div>
 
           {/* Trust badges */}
