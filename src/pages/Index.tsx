@@ -661,48 +661,6 @@ const Index = () => {
       </div>
     </section>
 
-    {/* CTA Final Section */}
-    <section className="py-24 px-4 bg-primary/5 relative overflow-hidden">
-      {/* Floating elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-20 text-9xl opacity-5 text-primary">🐾</div>
-        <div className="absolute bottom-20 right-20 text-9xl opacity-5 text-primary">🐾</div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[200px] opacity-5 text-primary">❤️</div>
-      </div>
-
-      <div className="max-w-6xl mx-auto text-center space-y-8 relative z-10">
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight md:whitespace-nowrap">
-          Seu Pet Merece um Tutor Incrível
-        </h2>
-        <p className="text-2xl md:text-3xl text-muted-foreground leading-relaxed">
-          Descubra seu nível agora e transforme o cuidado que você oferece! 🐾
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-          <Button size="lg" onClick={scrollToQuiz} className="text-xl px-10 py-6 h-auto shadow-lg hover:shadow-xl transition-all duration-300 hover-scale">
-            🎯 Descobrir Meu PetScore Agora
-          </Button>
-        </div>
-
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-muted-foreground">
-          <div className="flex items-center gap-2">
-            <Clock className="w-5 h-5 text-primary" />
-            <span>5-10 minutos</span>
-          </div>
-          <div className="hidden sm:block">•</div>
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-5 h-5 text-primary" />
-            <span>100% Seguro</span>
-          </div>
-          <div className="hidden sm:block">•</div>
-          <div className="flex items-center gap-2">
-            <Star className="w-5 h-5 fill-primary text-primary" />
-            <span>10k+ Tutores Satisfeitos</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <Footer />
   </div>;
 };
