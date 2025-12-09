@@ -227,11 +227,6 @@ const Index = () => {
             </div>
             <div className="w-px h-4 bg-border hidden sm:block" />
             <div className="flex items-center gap-2 text-sm">
-              <CheckCircle2 className="w-4 h-4 text-accent" />
-              <span className="text-muted-foreground">100% Gratuito</span>
-            </div>
-            <div className="w-px h-4 bg-border hidden sm:block" />
-            <div className="flex items-center gap-2 text-sm">
               <Zap className="w-4 h-4 text-secondary" />
               <span className="text-muted-foreground">Resultado Instantâneo</span>
             </div>
