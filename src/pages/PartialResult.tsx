@@ -2,9 +2,9 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useEffect, useState } from "react";
-
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { ArrowRight, Camera, CheckCircle2, Gift, Heart, Sparkles, Star, Trophy, Upload } from "lucide-react";
 
 const PartialResult = () => {
   const location = useLocation();
@@ -36,176 +36,220 @@ const PartialResult = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-warm py-12 px-4">
-      <div className="max-w-4xl mx-auto space-y-6">
-
-        {/* Header Card */}
-        <Card className="p-8 md:p-12 shadow-medium bg-gradient-to-br from-white to-orange-50/30 overflow-hidden relative">
-          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-secondary" />
-
-          <div className="text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-orange-100 rounded-2xl mb-4">
-              <span className="text-5xl">🎉</span>
+    <div className="min-h-screen bg-gradient-to-b from-amber-50 via-orange-50/50 to-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-secondary/5 to-transparent">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.1),transparent_50%)]" />
+        <div className="absolute top-20 right-10 w-32 h-32 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-40 h-40 bg-secondary/5 rounded-full blur-3xl" />
+        
+        <div className="relative max-w-4xl mx-auto px-4 py-12 md:py-16">
+          {/* Success Badge */}
+          <div className="flex justify-center mb-6 animate-fade-in">
+            <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
+              <CheckCircle2 className="w-4 h-4" />
+              Quiz concluído com sucesso!
             </div>
+          </div>
 
-            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-              Você completou o quiz!
+          {/* Main Title */}
+          <div className="text-center mb-8 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-3xl mb-6 shadow-lg">
+              <Trophy className="w-10 h-10 text-white" />
+            </div>
+            
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              Parabéns! Você completou o quiz 🎉
             </h1>
-
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Parabéns por se dedicar ao bem-estar do seu pet
+            
+            <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto">
+              Seu pet tem muita sorte de ter alguém que se importa tanto assim!
             </p>
           </div>
-        </Card>
 
-        {/* Congratulations Card */}
-        <Card className="p-8 md:p-10 shadow-medium bg-gradient-to-br from-white to-green-50/30">
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-2xl mb-4">
-              <span className="text-3xl">💛</span>
+          {/* Stats Preview */}
+          <div className="flex justify-center gap-6 md:gap-10 mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <div className="text-center">
+              <div className="w-14 h-14 bg-white rounded-2xl shadow-md flex items-center justify-center mx-auto mb-2">
+                <Star className="w-7 h-7 text-amber-500" />
+              </div>
+              <p className="text-xs text-muted-foreground font-medium">Score</p>
+              <p className="text-sm font-bold text-foreground">Calculado</p>
             </div>
-
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Seu pet tem MUITA sorte de ter você!
-            </h2>
-
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Com base nas suas respostas, já dá para ver que você tem um{" "}
-              <span className="font-semibold text-foreground">vínculo especial e único</span>{" "}
-              com seu companheiro 🐾
-            </p>
+            <div className="text-center">
+              <div className="w-14 h-14 bg-white rounded-2xl shadow-md flex items-center justify-center mx-auto mb-2">
+                <Gift className="w-7 h-7 text-primary" />
+              </div>
+              <p className="text-xs text-muted-foreground font-medium">Dicas</p>
+              <p className="text-sm font-bold text-foreground">Prontas</p>
+            </div>
+            <div className="text-center">
+              <div className="w-14 h-14 bg-white rounded-2xl shadow-md flex items-center justify-center mx-auto mb-2">
+                <Heart className="w-7 h-7 text-rose-500" />
+              </div>
+              <p className="text-xs text-muted-foreground font-medium">Nível</p>
+              <p className="text-sm font-bold text-foreground">Revelado</p>
+            </div>
           </div>
-        </Card>
+        </div>
+      </div>
 
+      {/* Main Content */}
+      <div className="max-w-2xl mx-auto px-4 -mt-4 pb-16 space-y-6">
+        
         {/* Personalization Card */}
-        <Card className="p-8 md:p-10 shadow-medium bg-gradient-to-br from-white to-blue-50/30">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-2xl mb-4">
-              <span className="text-3xl">📸</span>
+        <Card className="overflow-hidden shadow-lg border-0 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+          <div className="bg-gradient-to-r from-primary/10 to-secondary/10 px-6 py-4 border-b border-primary/10">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center">
+                <Sparkles className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h2 className="font-bold text-foreground">Personalize seu Resultado</h2>
+                <p className="text-sm text-muted-foreground">Opcional - deixe seu certificado único</p>
+              </div>
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
-              Personalize seu Resultado
-            </h2>
-            <p className="text-muted-foreground text-lg">
-              Adicione uma foto para gerar um certificado oficial e exclusivo
-            </p>
           </div>
-
-          <div className="max-w-md mx-auto space-y-6">
-            {/* Pet Name Input */}
-            <div className="bg-white p-6 rounded-3xl border-2 border-blue-200 shadow-sm">
-              <Label htmlFor="petName" className="text-base font-semibold mb-3 block text-gray-700">
-                Nome do seu Pet (Opcional)
+          
+          <div className="p-6 space-y-5">
+            {/* Pet Name */}
+            <div className="space-y-2">
+              <Label htmlFor="petName" className="text-sm font-semibold text-foreground flex items-center gap-2">
+                🐾 Nome do Pet
+                <span className="text-xs font-normal text-muted-foreground">(opcional)</span>
               </Label>
               <Input
                 id="petName"
                 placeholder="Ex: Thor, Luna, Bob..."
                 value={petName}
                 onChange={(e) => setPetName(e.target.value)}
-                className="text-lg py-6 border-2 border-blue-100 focus:border-blue-400"
+                className="h-12 bg-muted/30 border-muted focus:bg-white transition-colors"
               />
             </div>
 
-            {/* Pet Gender Selection */}
-            <div className="bg-white p-6 rounded-3xl border-2 border-blue-200 shadow-sm">
-              <Label className="text-base font-semibold mb-3 block text-gray-700">
-                Seu pet é (Opcional)
+            {/* Pet Gender */}
+            <div className="space-y-2">
+              <Label className="text-sm font-semibold text-foreground flex items-center gap-2">
+                Seu pet é
+                <span className="text-xs font-normal text-muted-foreground">(opcional)</span>
               </Label>
-              <div className="flex gap-4">
+              <div className="grid grid-cols-2 gap-3">
                 <button
                   type="button"
                   onClick={() => setPetGender("male")}
-                  className={`flex-1 py-4 px-6 rounded-2xl border-2 transition-all ${petGender === "male"
-                    ? "bg-blue-100 border-blue-400 text-blue-800 font-semibold"
-                    : "bg-white border-blue-200 text-gray-700 hover:border-blue-300"
-                    }`}
+                  className={`py-3.5 px-4 rounded-xl border-2 transition-all duration-200 flex items-center justify-center gap-2 font-medium ${
+                    petGender === "male"
+                      ? "bg-blue-50 border-blue-400 text-blue-700 shadow-sm"
+                      : "bg-muted/30 border-transparent text-muted-foreground hover:bg-muted/50"
+                  }`}
                 >
-                  🐕 Macho
+                  <span className="text-lg">♂️</span> Macho
                 </button>
                 <button
                   type="button"
                   onClick={() => setPetGender("female")}
-                  className={`flex-1 py-4 px-6 rounded-2xl border-2 transition-all ${petGender === "female"
-                    ? "bg-pink-100 border-pink-400 text-pink-800 font-semibold"
-                    : "bg-white border-blue-200 text-gray-700 hover:border-blue-300"
-                    }`}
+                  className={`py-3.5 px-4 rounded-xl border-2 transition-all duration-200 flex items-center justify-center gap-2 font-medium ${
+                    petGender === "female"
+                      ? "bg-pink-50 border-pink-400 text-pink-700 shadow-sm"
+                      : "bg-muted/30 border-transparent text-muted-foreground hover:bg-muted/50"
+                  }`}
                 >
-                  🐕 Fêmea
+                  <span className="text-lg">♀️</span> Fêmea
                 </button>
               </div>
             </div>
 
             {/* Photo Upload */}
-            <div className="bg-white p-8 rounded-3xl border-2 border-blue-200 shadow-sm">
-              <div className="flex flex-col items-center gap-4">
-                {petImage ? (
-                  <div className="relative">
-                    <div className="w-56 h-56 rounded-3xl overflow-hidden border-4 border-blue-400 shadow-lg">
-                      <img src={petImage} alt="Seu pet" className="w-full h-full object-cover" />
-                    </div>
+            <div className="space-y-2">
+              <Label className="text-sm font-semibold text-foreground flex items-center gap-2">
+                📸 Foto do Pet
+                <span className="text-xs font-normal text-muted-foreground">(opcional)</span>
+              </Label>
+              
+              {petImage ? (
+                <div className="flex items-center gap-4 p-4 bg-muted/30 rounded-xl">
+                  <div className="w-20 h-20 rounded-xl overflow-hidden border-2 border-primary/20 shadow-sm">
+                    <img src={petImage} alt="Seu pet" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-sm font-medium text-foreground mb-1">Foto adicionada!</p>
                     <Button
-                      variant="secondary"
+                      variant="ghost"
                       size="sm"
-                      className="mt-4 bg-blue-100 hover:bg-blue-200 text-blue-700 font-semibold"
+                      className="h-8 text-muted-foreground hover:text-foreground"
                       onClick={() => setPetImage(null)}
                     >
-                      ✏️ Trocar foto
+                      <Camera className="w-4 h-4 mr-1" /> Trocar foto
                     </Button>
                   </div>
-                ) : (
-                  <label className="cursor-pointer group w-full">
-                    <div className="w-full py-12 px-8 rounded-3xl bg-gradient-to-br from-blue-50 to-blue-100/50 flex flex-col items-center justify-center border-2 border-dashed border-blue-300 group-hover:border-blue-500 group-hover:bg-gradient-to-br group-hover:from-blue-100 group-hover:to-blue-200/50 transition-all duration-300">
-                      <div className="w-20 h-20 bg-blue-200 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <span className="text-5xl">📸</span>
-                      </div>
-                      <p className="text-blue-700 font-bold text-lg mb-2">
-                        Clique para enviar foto do seu pet
-                      </p>
-                      <p className="text-blue-600 text-sm text-center max-w-xs">
-                        A foto aparecerá no seu certificado oficial
-                      </p>
+                </div>
+              ) : (
+                <label className="cursor-pointer block">
+                  <div className="py-8 px-6 rounded-xl bg-muted/30 border-2 border-dashed border-muted-foreground/20 hover:border-primary/40 hover:bg-muted/50 transition-all duration-200 text-center group">
+                    <div className="w-14 h-14 bg-muted rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/10 transition-colors">
+                      <Upload className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
                     </div>
-                    <input
-                      type="file"
-                      accept="image/*"
-                      className="hidden"
-                      onChange={handleImageUpload}
-                    />
-                  </label>
-                )}
-              </div>
+                    <p className="text-sm font-medium text-foreground mb-1">
+                      Clique para enviar uma foto
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      A foto aparece no seu certificado
+                    </p>
+                  </div>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    className="hidden"
+                    onChange={handleImageUpload}
+                  />
+                </label>
+              )}
             </div>
           </div>
         </Card>
 
-        {/* Score Teaser Card */}
-        <Card className="p-8 md:p-10 shadow-medium bg-gradient-to-br from-white to-purple-50/30 border-2 border-purple-200">
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-2xl mb-4">
-              <span className="text-3xl">👀</span>
-            </div>
-
-            <h2 className="text-2xl md:text-3xl font-bold text-purple-800 mb-3">
-              Seu score está acima da média!
-            </h2>
-
-            <p className="text-lg text-purple-700 mb-6">
-              Seu resultado completo está quase pronto...
-            </p>
-
-            <div className="bg-white p-6 rounded-3xl border-2 border-purple-200 shadow-sm mb-6">
-              <p className="text-gray-700 leading-relaxed">
-                Descubra seu <span className="font-bold text-purple-600">score real</span>, seu{" "}
-                <span className="font-bold text-purple-600">nível oficial de tutor</span> e{" "}
-                <span className="font-bold text-purple-600">dicas personalizadas</span>{" "}
-                para deixar seu pet ainda mais feliz
+        {/* CTA Card */}
+        <Card className="overflow-hidden shadow-xl border-2 border-primary/20 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+          <div className="bg-gradient-to-br from-primary/5 via-secondary/5 to-primary/10 p-6 md:p-8">
+            <div className="text-center mb-6">
+              <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-700 px-3 py-1.5 rounded-full text-xs font-semibold mb-4">
+                <Sparkles className="w-3.5 h-3.5" />
+                RESULTADO PRONTO
+              </div>
+              
+              <h2 className="text-xl md:text-2xl font-bold text-foreground mb-2">
+                Descubra seu Score Completo
+              </h2>
+              
+              <p className="text-muted-foreground">
+                Seu nível de tutor, dicas personalizadas e certificado exclusivo
               </p>
             </div>
 
-            {/* Lead Capture Fields */}
-            <div className="space-y-4 mb-8 text-left max-w-md mx-auto">
-              <div>
-                <Label htmlFor="tutorName" className="text-purple-900 font-semibold mb-2 block">
+            {/* What's Included */}
+            <div className="bg-white/80 backdrop-blur rounded-xl p-4 mb-6 space-y-3">
+              <div className="flex items-center gap-3 text-sm">
+                <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
+                <span className="text-foreground">Score detalhado com análise completa</span>
+              </div>
+              <div className="flex items-center gap-3 text-sm">
+                <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
+                <span className="text-foreground">Nível oficial de tutor revelado</span>
+              </div>
+              <div className="flex items-center gap-3 text-sm">
+                <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
+                <span className="text-foreground">Dicas personalizadas para seu pet</span>
+              </div>
+              <div className="flex items-center gap-3 text-sm">
+                <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
+                <span className="text-foreground">Certificado exclusivo para compartilhar</span>
+              </div>
+            </div>
+
+            {/* Lead Capture */}
+            <div className="space-y-4 mb-6">
+              <div className="space-y-2">
+                <Label htmlFor="tutorName" className="text-sm font-semibold text-foreground">
                   Seu Nome
                 </Label>
                 <Input
@@ -213,11 +257,11 @@ const PartialResult = () => {
                   placeholder="Como você se chama?"
                   value={tutorName}
                   onChange={(e) => setTutorName(e.target.value)}
-                  className="bg-white border-purple-200 focus:border-purple-500 h-12"
+                  className="h-12 bg-white border-muted focus:border-primary"
                 />
               </div>
-              <div>
-                <Label htmlFor="tutorPhone" className="text-purple-900 font-semibold mb-2 block">
+              <div className="space-y-2">
+                <Label htmlFor="tutorPhone" className="text-sm font-semibold text-foreground">
                   Seu WhatsApp
                 </Label>
                 <Input
@@ -233,11 +277,12 @@ const PartialResult = () => {
                     setTutorPhone(value);
                   }}
                   maxLength={12}
-                  className="bg-white border-purple-200 focus:border-purple-500 h-12"
+                  className="h-12 bg-white border-muted focus:border-primary"
                 />
               </div>
             </div>
 
+            {/* CTA Button */}
             <Button
               size="lg"
               onClick={() => {
@@ -253,18 +298,28 @@ const PartialResult = () => {
                   }
                 });
               }}
-              className="w-full text-lg md:text-xl px-8 md:px-12 py-6 md:py-7 h-auto rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 bg-purple-600 hover:bg-purple-700"
+              className="w-full h-14 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary"
             >
-              🧡 Ver meu Score Completo
+              Ver meu Score Completo
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
+
+            <p className="text-xs text-center text-muted-foreground mt-4">
+              🔒 Seus dados estão protegidos e seguros
+            </p>
           </div>
         </Card>
 
-        {/* Footer Decoration */}
-        <div className="flex justify-center gap-4 opacity-30 py-4">
-          <span className="text-4xl">🐾</span>
-          <span className="text-4xl">🐾</span>
-          <span className="text-4xl">🐾</span>
+        {/* Trust Footer */}
+        <div className="text-center pt-4 animate-fade-in" style={{ animationDelay: "0.5s" }}>
+          <div className="flex justify-center gap-1 mb-2">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+            ))}
+          </div>
+          <p className="text-sm text-muted-foreground">
+            Mais de 10.000 tutores já descobriram seu score
+          </p>
         </div>
       </div>
     </div>
