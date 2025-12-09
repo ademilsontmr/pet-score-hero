@@ -184,7 +184,7 @@ const Index = () => {
                     </div>
                     <h3 className="text-2xl font-bold text-foreground mb-4">Descubra seu Perfil</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Receba uma análise inicial gratuita e veja como seus cuidados impactam a felicidade do seu companheiro
+                      Receba sua análise personalizada e veja como seus cuidados impactam a felicidade do seu companheiro
                     </p>
                   </div>
                 </div>
