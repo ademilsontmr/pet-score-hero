@@ -1,4 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
+import { Heart, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
     const navigate = useNavigate();
@@ -8,60 +10,146 @@ const Footer = () => {
     };
 
     const scrollToSection = (id: string) => {
-        // If we are on the home page, scroll to section
         if (window.location.pathname === "/") {
             document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
         } else {
-            // If not, navigate to home and then scroll (this might need more complex handling, 
-            // but for now let's just navigate to home with a hash)
             navigate(`/#${id}`);
-            // Note: React Router doesn't handle hash scrolling automatically on navigation 
-            // without extra setup, but let's keep it simple for now.
-            // A better approach for cross-page anchor linking often involves a useEffect hook in the destination page.
-            // For this specific request, I'll just navigate to root for "Como Funciona" if not on root.
         }
     };
 
     return (
-        <footer className="bg-background pt-20 pb-10 px-4 border-t border-border/40">
-            <div className="max-w-6xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-                    {/* Brand */}
-                    <div className="space-y-4">
-                        <div className="flex items-center gap-2 text-2xl font-bold text-primary">
-                            <span>🐾</span>
-                            <span>PetScore</span>
-                        </div>
-                        <p className="text-muted-foreground leading-relaxed">
-                            O quiz mais divertido e revelador para tutores apaixonados. Descubra seu nível de dedicação em minutos.
-                        </p>
-                    </div>
-
-                    {/* Links */}
-                    <div className="space-y-4">
-                        <h3 className="font-bold text-foreground text-lg">Links Rápidos</h3>
-                        <ul className="space-y-3 text-muted-foreground">
-                            <li><button onClick={scrollToQuiz} className="hover:text-primary transition-colors text-left">Fazer o Teste</button></li>
-                            <li><button onClick={() => scrollToSection('como-funciona')} className="hover:text-primary transition-colors text-left">Como Funciona</button></li>
-                            <li><Link to="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
-                            <li><Link to="/" className="hover:text-primary transition-colors">Perguntas Frequentes</Link></li>
-                            <li><Link to="/sobre" className="hover:text-primary transition-colors">Sobre o Teste</Link></li>
-                        </ul>
-                    </div>
-
-                    {/* Legal */}
-                    <div className="space-y-4">
-                        <h3 className="font-bold text-foreground text-lg">Legal</h3>
-                        <ul className="space-y-3 text-muted-foreground">
-                            <li><Link to="/privacidade" className="hover:text-primary transition-colors">Política de Privacidade</Link></li>
-                            <li><Link to="/termos" className="hover:text-primary transition-colors">Termos de Uso</Link></li>
-                            <li><Link to="/contato" className="hover:text-primary transition-colors">Contato</Link></li>
-                        </ul>
-                    </div>
+        <footer className="relative overflow-hidden">
+            {/* CTA Section */}
+            <div className="bg-gradient-hero py-16 px-4">
+                <div className="max-w-4xl mx-auto text-center space-y-6">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white">
+                        Pronto para descobrir seu Pet Score?
+                    </h2>
+                    <p className="text-white/80 text-lg max-w-2xl mx-auto">
+                        Faça o quiz gratuito e descubra como você pode melhorar ainda mais a vida do seu melhor amigo.
+                    </p>
+                    <Button 
+                        onClick={scrollToQuiz}
+                        size="lg"
+                        className="bg-white text-primary hover:bg-white/90 shadow-lg hover:shadow-xl transition-all duration-300 group"
+                    >
+                        Começar Agora
+                        <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
                 </div>
+            </div>
 
-                <div className="pt-8 border-t border-border/40 text-center text-muted-foreground text-sm">
-                    © {new Date().getFullYear()} Pet Score. Todos os direitos reservados.
+            {/* Main Footer */}
+            <div className="bg-card/50 backdrop-blur-sm pt-16 pb-8 px-4">
+                <div className="max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-12">
+                        {/* Brand - Takes more space */}
+                        <div className="md:col-span-5 space-y-5">
+                            <Link to="/" className="inline-flex items-center gap-2 text-2xl font-bold text-primary hover:opacity-80 transition-opacity">
+                                <span className="text-3xl">🐾</span>
+                                <span>PetScore</span>
+                            </Link>
+                            <p className="text-muted-foreground leading-relaxed max-w-sm">
+                                O quiz mais divertido e revelador para tutores apaixonados. Descubra seu nível de dedicação e transforme a vida do seu pet.
+                            </p>
+                            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                                <span>Feito com</span>
+                                <Heart className="w-4 h-4 fill-primary text-primary animate-pulse" />
+                                <span>para tutores de pets</span>
+                            </div>
+                        </div>
+
+                        {/* Links Rápidos */}
+                        <div className="md:col-span-3 space-y-5">
+                            <h3 className="font-semibold text-foreground text-sm uppercase tracking-wider">
+                                Links Rápidos
+                            </h3>
+                            <ul className="space-y-3">
+                                <li>
+                                    <button 
+                                        onClick={scrollToQuiz} 
+                                        className="text-muted-foreground hover:text-primary transition-colors duration-200 text-left flex items-center gap-2 group"
+                                    >
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
+                                        Fazer o Teste
+                                    </button>
+                                </li>
+                                <li>
+                                    <button 
+                                        onClick={() => scrollToSection('como-funciona')} 
+                                        className="text-muted-foreground hover:text-primary transition-colors duration-200 text-left flex items-center gap-2 group"
+                                    >
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
+                                        Como Funciona
+                                    </button>
+                                </li>
+                                <li>
+                                    <Link 
+                                        to="/blog" 
+                                        className="text-muted-foreground hover:text-primary transition-colors duration-200 flex items-center gap-2 group"
+                                    >
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
+                                        Blog
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link 
+                                        to="/sobre" 
+                                        className="text-muted-foreground hover:text-primary transition-colors duration-200 flex items-center gap-2 group"
+                                    >
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
+                                        Sobre o Teste
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+
+                        {/* Legal */}
+                        <div className="md:col-span-4 space-y-5">
+                            <h3 className="font-semibold text-foreground text-sm uppercase tracking-wider">
+                                Legal & Suporte
+                            </h3>
+                            <ul className="space-y-3">
+                                <li>
+                                    <Link 
+                                        to="/privacidade" 
+                                        className="text-muted-foreground hover:text-primary transition-colors duration-200 flex items-center gap-2 group"
+                                    >
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
+                                        Política de Privacidade
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link 
+                                        to="/termos" 
+                                        className="text-muted-foreground hover:text-primary transition-colors duration-200 flex items-center gap-2 group"
+                                    >
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
+                                        Termos de Uso
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link 
+                                        to="/contato" 
+                                        className="text-muted-foreground hover:text-primary transition-colors duration-200 flex items-center gap-2 group"
+                                    >
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
+                                        Contato
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* Bottom Bar */}
+                    <div className="pt-8 border-t border-border/30">
+                        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+                            <p>© {new Date().getFullYear()} Pet Score. Todos os direitos reservados.</p>
+                            <p className="flex items-center gap-1">
+                                🐶 Cuidando de quem cuida 🐱
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
