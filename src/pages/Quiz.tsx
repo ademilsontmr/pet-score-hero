@@ -104,10 +104,7 @@ const Quiz = () => {
               <Clock className="w-4 h-4 text-primary" />
               <span>5-10 min</span>
             </div>
-            <div className="flex items-center gap-1.5 text-sm text-muted-foreground bg-card/80 backdrop-blur px-3 py-1.5 rounded-full">
-              <Shield className="w-4 h-4 text-primary" />
-              <span>100% Gratuito</span>
-            </div>
+            
             <div className="flex items-center gap-1.5 text-sm text-muted-foreground bg-card/80 backdrop-blur px-3 py-1.5 rounded-full">
               <Sparkles className="w-4 h-4 text-primary" />
               <span>Resultado Instantâneo</span>
