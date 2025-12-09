@@ -54,6 +54,7 @@ const Footer = () => {
                         <ul className="space-y-3 text-muted-foreground">
                             <li><button onClick={scrollToQuiz} className="hover:text-primary transition-colors text-left">Fazer o Teste</button></li>
                             <li><button onClick={() => scrollToSection('como-funciona')} className="hover:text-primary transition-colors text-left">Como Funciona</button></li>
+                            <li><Link to="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
                             <li><Link to="/" className="hover:text-primary transition-colors">Perguntas Frequentes</Link></li>
                             <li><Link to="/sobre" className="hover:text-primary transition-colors">Sobre o Teste</Link></li>
                         </ul>
