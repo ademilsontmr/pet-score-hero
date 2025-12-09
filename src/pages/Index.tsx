@@ -41,7 +41,7 @@ const Index = () => {
             </div>
 
             <div className="space-y-6">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
                 Você é um Bom Tutor de Pet?
                 <span className="block text-primary mt-2">Descubra Agora!</span>
               </h1>
@@ -84,21 +84,21 @@ const Index = () => {
     </section>
 
     {/* Social Proof Section */}
-    <section className="py-12 px-4 bg-card/50">
+    <section className="py-8 md:py-12 px-4 bg-card/50">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 sm:gap-8 md:gap-16 opacity-80">
           <div className="flex items-center gap-2">
-            <Star className="w-5 h-5 fill-primary text-primary" />
-            <Star className="w-5 h-5 fill-primary text-primary" />
-            <Star className="w-5 h-5 fill-primary text-primary" />
-            <Star className="w-5 h-5 fill-primary text-primary" />
-            <Star className="w-5 h-5 fill-primary text-primary" />
-            <span className="ml-2 font-semibold">4.9/5.0</span>
+            <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary" />
+            <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary" />
+            <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary" />
+            <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary" />
+            <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary" />
+            <span className="ml-2 font-semibold text-sm sm:text-base">4.9/5.0</span>
           </div>
-          <div className="text-muted-foreground">|</div>
-          <div className="font-semibold">10.247 tutores</div>
-          <div className="text-muted-foreground">|</div>
-          <div className="font-semibold">Sem precisar criar conta</div>
+          <div className="hidden sm:block text-muted-foreground">|</div>
+          <div className="font-semibold text-sm sm:text-base">10.247 tutores</div>
+          <div className="hidden sm:block text-muted-foreground">|</div>
+          <div className="font-semibold text-sm sm:text-base">Sem precisar criar conta</div>
         </div>
       </div>
     </section>
@@ -117,7 +117,7 @@ const Index = () => {
             <Zap className="w-4 h-4" />
             Simples e Rápido
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             Como Funciona
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -149,7 +149,7 @@ const Index = () => {
                 </div>
                 
                 {/* Card */}
-                <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/20 transition-all duration-500 group-hover:-translate-y-2">
+                <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/20 transition-all duration-500 group-hover:-translate-y-2">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="relative">
                     <div className="bg-primary/10 rounded-2xl p-4 w-fit mx-auto mb-6">
@@ -176,7 +176,7 @@ const Index = () => {
                 </div>
                 
                 {/* Card */}
-                <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-secondary/20 transition-all duration-500 group-hover:-translate-y-2">
+                <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-secondary/20 transition-all duration-500 group-hover:-translate-y-2">
                   <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="relative">
                     <div className="bg-secondary/10 rounded-2xl p-4 w-fit mx-auto mb-6">
@@ -203,7 +203,7 @@ const Index = () => {
                 </div>
                 
                 {/* Card */}
-                <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/20 transition-all duration-500 group-hover:-translate-y-2">
+                <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/20 transition-all duration-500 group-hover:-translate-y-2">
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="relative">
                     <div className="bg-accent/10 rounded-2xl p-4 w-fit mx-auto mb-6">
@@ -251,7 +251,7 @@ const Index = () => {
             <Gift className="w-4 h-4" />
             Tudo Incluído
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             O Que Você Vai Descobrir
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -262,7 +262,7 @@ const Index = () => {
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
           {/* Card 1 - Diagnóstico */}
           <div className="group animate-in fade-in slide-in-from-left duration-700">
-            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/20 transition-all duration-500 group-hover:-translate-y-2 h-full">
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/20 transition-all duration-500 group-hover:-translate-y-2 h-full">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative flex gap-5">
                 <div className="relative shrink-0">
@@ -283,7 +283,7 @@ const Index = () => {
 
           {/* Card 2 - Identidade */}
           <div className="group animate-in fade-in slide-in-from-right duration-700">
-            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-secondary/20 transition-all duration-500 group-hover:-translate-y-2 h-full">
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-secondary/20 transition-all duration-500 group-hover:-translate-y-2 h-full">
               <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative flex gap-5">
                 <div className="relative shrink-0">
@@ -304,7 +304,7 @@ const Index = () => {
 
           {/* Card 3 - Plano de Ação */}
           <div className="group animate-in fade-in slide-in-from-left duration-700 delay-200">
-            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/20 transition-all duration-500 group-hover:-translate-y-2 h-full">
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/20 transition-all duration-500 group-hover:-translate-y-2 h-full">
               <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative flex gap-5">
                 <div className="relative shrink-0">
@@ -325,7 +325,7 @@ const Index = () => {
 
           {/* Card 4 - Recordação */}
           <div className="group animate-in fade-in slide-in-from-right duration-700 delay-200">
-            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/20 transition-all duration-500 group-hover:-translate-y-2 h-full">
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/20 transition-all duration-500 group-hover:-translate-y-2 h-full">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative flex gap-5">
                 <div className="relative shrink-0">
@@ -348,19 +348,19 @@ const Index = () => {
     </section>
 
     {/* Depoimentos */}
-    <section className="py-20 px-4 bg-background">
+    <section className="py-16 md:py-20 px-4 bg-background">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16 animate-in fade-in duration-700">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-12 md:mb-16 animate-in fade-in duration-700">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
             O Que Dizem Nossos Tutores
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-lg md:text-xl text-muted-foreground">
             Milhares já descobriram como melhorar o cuidado com seus pets
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <Card className="p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 duration-700">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+          <Card className="p-6 sm:p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="space-y-4">
               <div className="flex gap-1 mb-2">
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
@@ -378,7 +378,7 @@ const Index = () => {
             </div>
           </Card>
 
-          <Card className="p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
+          <Card className="p-6 sm:p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
             <div className="space-y-4">
               <div className="flex gap-1 mb-2">
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
@@ -396,7 +396,7 @@ const Index = () => {
             </div>
           </Card>
 
-          <Card className="p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400">
+          <Card className="p-6 sm:p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400">
             <div className="space-y-4">
               <div className="flex gap-1 mb-2">
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
@@ -418,7 +418,7 @@ const Index = () => {
     </section>
 
     {/* FAQ Section */}
-    <section className="py-24 px-4 bg-gradient-warm relative overflow-hidden">
+    <section className="py-16 md:py-24 px-4 bg-gradient-warm relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-40 -left-40 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -426,46 +426,46 @@ const Index = () => {
       </div>
 
       <div className="max-w-4xl mx-auto relative">
-        <div className="text-center mb-16 animate-in fade-in duration-700">
+        <div className="text-center mb-12 md:mb-16 animate-in fade-in duration-700">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
             <CheckCircle2 className="w-4 h-4" />
             Tire Suas Dúvidas
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             Perguntas Frequentes
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Tudo que você precisa saber antes de começar sua jornada
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="space-y-4">
-          <AccordionItem value="item-2" className="group bg-card/80 backdrop-blur-sm rounded-3xl px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-primary/30">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6 group-hover:text-primary transition-colors duration-300">
-              <div className="flex items-center gap-3">
-                <div className="bg-primary/10 rounded-xl p-2 group-data-[state=open]:bg-primary/20 transition-colors duration-300">
-                  <Clock className="w-5 h-5 text-primary" />
+        <Accordion type="single" collapsible className="space-y-3 md:space-y-4">
+          <AccordionItem value="item-2" className="group bg-card/80 backdrop-blur-sm rounded-2xl md:rounded-3xl px-4 md:px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-primary/30">
+            <AccordionTrigger className="text-base md:text-lg font-semibold hover:no-underline py-4 md:py-6 group-hover:text-primary transition-colors duration-300">
+              <div className="flex items-center gap-2 md:gap-3 text-left">
+                <div className="bg-primary/10 rounded-lg md:rounded-xl p-1.5 md:p-2 group-data-[state=open]:bg-primary/20 transition-colors duration-300 shrink-0">
+                  <Clock className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                 </div>
                 Quanto tempo leva para fazer o quiz?
               </div>
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-base pb-6 pl-14 leading-relaxed">
+            <AccordionContent className="text-muted-foreground text-sm md:text-base pb-4 md:pb-6 pl-10 md:pl-14 leading-relaxed">
               Apenas 5 a 10 minutos! É o tempo de tomar um café enquanto você descobre insights valiosos
               que podem transformar a vida do seu pet. As perguntas são objetivas e você pode pausar e
               voltar quando quiser. Vale cada segundo! ☕
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-3" className="group bg-card/80 backdrop-blur-sm rounded-3xl px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-secondary/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-secondary/30">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6 group-hover:text-secondary transition-colors duration-300">
-              <div className="flex items-center gap-3">
-                <div className="bg-secondary/10 rounded-xl p-2 group-data-[state=open]:bg-secondary/20 transition-colors duration-300">
-                  <Heart className="w-5 h-5 text-secondary" />
+          <AccordionItem value="item-3" className="group bg-card/80 backdrop-blur-sm rounded-2xl md:rounded-3xl px-4 md:px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-secondary/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-secondary/30">
+            <AccordionTrigger className="text-base md:text-lg font-semibold hover:no-underline py-4 md:py-6 group-hover:text-secondary transition-colors duration-300">
+              <div className="flex items-center gap-2 md:gap-3 text-left">
+                <div className="bg-secondary/10 rounded-lg md:rounded-xl p-1.5 md:p-2 group-data-[state=open]:bg-secondary/20 transition-colors duration-300 shrink-0">
+                  <Heart className="w-4 h-4 md:w-5 md:h-5 text-secondary" />
                 </div>
                 Funciona para cães e gatos?
               </div>
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-base pb-6 pl-14 leading-relaxed">
+            <AccordionContent className="text-muted-foreground text-sm md:text-base pb-4 md:pb-6 pl-10 md:pl-14 leading-relaxed">
               Absolutamente! Nosso quiz foi desenvolvido por veterinários e especialistas em comportamento
               animal para atender tanto cães quanto gatos, de todas as idades - desde filhotes cheios de
               energia até idosos que merecem cuidados especiais. Cada espécie e fase da vida tem suas
@@ -473,16 +473,16 @@ const Index = () => {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-4" className="group bg-card/80 backdrop-blur-sm rounded-3xl px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-accent/30">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6 group-hover:text-accent transition-colors duration-300">
-              <div className="flex items-center gap-3">
-                <div className="bg-accent/10 rounded-xl p-2 group-data-[state=open]:bg-accent/20 transition-colors duration-300">
-                  <TrendingUp className="w-5 h-5 text-accent" />
+          <AccordionItem value="item-4" className="group bg-card/80 backdrop-blur-sm rounded-2xl md:rounded-3xl px-4 md:px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-accent/30">
+            <AccordionTrigger className="text-base md:text-lg font-semibold hover:no-underline py-4 md:py-6 group-hover:text-accent transition-colors duration-300">
+              <div className="flex items-center gap-2 md:gap-3 text-left">
+                <div className="bg-accent/10 rounded-lg md:rounded-xl p-1.5 md:p-2 group-data-[state=open]:bg-accent/20 transition-colors duration-300 shrink-0">
+                  <TrendingUp className="w-4 h-4 md:w-5 md:h-5 text-accent" />
                 </div>
                 O que vou descobrir ao fazer o quiz?
               </div>
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-base pb-6 pl-14 leading-relaxed">
+            <AccordionContent className="text-muted-foreground text-sm md:text-base pb-4 md:pb-6 pl-10 md:pl-14 leading-relaxed">
               Você vai receber seu <strong>PetScore oficial (0-100)</strong>, descobrir seu <strong>nível de tutor</strong>
               (de Iniciante a Lendário 🏆), e entender exatamente onde você está acertando e onde pode melhorar.
               No relatório completo, você ganha um <strong>plano de ação personalizado</strong> com dicas práticas
@@ -491,32 +491,32 @@ const Index = () => {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-5" className="group bg-card/80 backdrop-blur-sm rounded-3xl px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-primary/30">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6 group-hover:text-primary transition-colors duration-300">
-              <div className="flex items-center gap-3">
-                <div className="bg-primary/10 rounded-xl p-2 group-data-[state=open]:bg-primary/20 transition-colors duration-300">
-                  <Target className="w-5 h-5 text-primary" />
+          <AccordionItem value="item-5" className="group bg-card/80 backdrop-blur-sm rounded-2xl md:rounded-3xl px-4 md:px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-primary/30">
+            <AccordionTrigger className="text-base md:text-lg font-semibold hover:no-underline py-4 md:py-6 group-hover:text-primary transition-colors duration-300">
+              <div className="flex items-center gap-2 md:gap-3 text-left">
+                <div className="bg-primary/10 rounded-lg md:rounded-xl p-1.5 md:p-2 group-data-[state=open]:bg-primary/20 transition-colors duration-300 shrink-0">
+                  <Target className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                 </div>
                 Posso refazer o quiz para ver minha evolução?
               </div>
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-base pb-6 pl-14 leading-relaxed">
+            <AccordionContent className="text-muted-foreground text-sm md:text-base pb-4 md:pb-6 pl-10 md:pl-14 leading-relaxed">
               Sim, e nós recomendamos! Muitos tutores refazem o quiz a cada 3 meses para acompanhar sua
               evolução e ver como as mudanças aplicadas estão impactando positivamente a vida do pet.
               É incrível ver seu score subindo e saber que você está fazendo a diferença! 📊✨
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-6" className="group bg-card/80 backdrop-blur-sm rounded-3xl px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-secondary/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-secondary/30">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6 group-hover:text-secondary transition-colors duration-300">
-              <div className="flex items-center gap-3">
-                <div className="bg-secondary/10 rounded-xl p-2 group-data-[state=open]:bg-secondary/20 transition-colors duration-300">
-                  <Gift className="w-5 h-5 text-secondary" />
+          <AccordionItem value="item-6" className="group bg-card/80 backdrop-blur-sm rounded-2xl md:rounded-3xl px-4 md:px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-secondary/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-secondary/30">
+            <AccordionTrigger className="text-base md:text-lg font-semibold hover:no-underline py-4 md:py-6 group-hover:text-secondary transition-colors duration-300">
+              <div className="flex items-center gap-2 md:gap-3 text-left">
+                <div className="bg-secondary/10 rounded-lg md:rounded-xl p-1.5 md:p-2 group-data-[state=open]:bg-secondary/20 transition-colors duration-300 shrink-0">
+                  <Gift className="w-4 h-4 md:w-5 md:h-5 text-secondary" />
                 </div>
                 Vou receber algo além do resultado?
               </div>
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-base pb-6 pl-14 leading-relaxed">
+            <AccordionContent className="text-muted-foreground text-sm md:text-base pb-4 md:pb-6 pl-10 md:pl-14 leading-relaxed">
               Sim! Além do seu score e análise, você ganha acesso a <strong>3 bônus exclusivos</strong>:
               Guia Definitivo de Alimentos (saiba o que pode e não pode), Checklist "Casa Segura" (elimine
               perigos ocultos), e Cronograma de Saúde Preventiva (nunca mais esqueça vacinas e vermífugos).
@@ -525,16 +525,16 @@ const Index = () => {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-7" className="group bg-card/80 backdrop-blur-sm rounded-3xl px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-accent/30">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6 group-hover:text-accent transition-colors duration-300">
-              <div className="flex items-center gap-3">
-                <div className="bg-accent/10 rounded-xl p-2 group-data-[state=open]:bg-accent/20 transition-colors duration-300">
-                  <Zap className="w-5 h-5 text-accent" />
+          <AccordionItem value="item-7" className="group bg-card/80 backdrop-blur-sm rounded-2xl md:rounded-3xl px-4 md:px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-accent/30">
+            <AccordionTrigger className="text-base md:text-lg font-semibold hover:no-underline py-4 md:py-6 group-hover:text-accent transition-colors duration-300">
+              <div className="flex items-center gap-2 md:gap-3 text-left">
+                <div className="bg-accent/10 rounded-lg md:rounded-xl p-1.5 md:p-2 group-data-[state=open]:bg-accent/20 transition-colors duration-300 shrink-0">
+                  <Zap className="w-4 h-4 md:w-5 md:h-5 text-accent" />
                 </div>
                 Por que devo fazer o quiz AGORA?
               </div>
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-base pb-6 pl-14 leading-relaxed">
+            <AccordionContent className="text-muted-foreground text-sm md:text-base pb-4 md:pb-6 pl-10 md:pl-14 leading-relaxed">
               Porque cada dia conta na vida do seu pet! Descobrir pontos de melhoria hoje pode prevenir
               problemas de saúde amanhã, fortalecer o vínculo entre vocês e garantir que seu melhor amigo
               viva mais feliz e saudável. É rápido e você pode começar agora mesmo.
@@ -544,10 +544,10 @@ const Index = () => {
         </Accordion>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center animate-in fade-in duration-700">
+        <div className="mt-10 md:mt-16 text-center animate-in fade-in duration-700">
           <div className="relative inline-block group">
             <div className="absolute inset-0 bg-gradient-hero rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
-            <Button size="lg" onClick={scrollToQuiz} className="relative text-xl px-10 py-6 h-auto shadow-lg hover:shadow-xl transition-all duration-300 hover-scale">
+            <Button size="lg" onClick={scrollToQuiz} className="relative text-lg md:text-xl px-8 md:px-10 py-5 md:py-6 h-auto shadow-lg hover:shadow-xl transition-all duration-300 hover-scale">
               🚀 Quero Descobrir Meu PetScore Agora!
             </Button>
           </div>
@@ -584,18 +584,18 @@ const Index = () => {
             <Gift className="w-4 h-4" />
             Bônus Exclusivos
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             3 Presentes Inclusos
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Ferramentas essenciais para facilitar sua rotina e proteger quem você ama
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {/* Card 1 - Guia de Alimentos */}
           <div className="group animate-in fade-in slide-in-from-bottom duration-700">
-            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/30 transition-all duration-500 group-hover:-translate-y-3 h-full text-center">
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 sm:p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/30 transition-all duration-500 group-hover:-translate-y-3 h-full text-center">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative">
                 <div className="relative mx-auto w-fit mb-6">
@@ -614,7 +614,7 @@ const Index = () => {
 
           {/* Card 2 - Casa Segura */}
           <div className="group animate-in fade-in slide-in-from-bottom duration-700 delay-150">
-            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-secondary/30 transition-all duration-500 group-hover:-translate-y-3 h-full text-center">
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 sm:p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-secondary/30 transition-all duration-500 group-hover:-translate-y-3 h-full text-center">
               <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative">
                 <div className="relative mx-auto w-fit mb-6">
@@ -633,7 +633,7 @@ const Index = () => {
 
           {/* Card 3 - Cronograma de Saúde */}
           <div className="group animate-in fade-in slide-in-from-bottom duration-700 delay-300">
-            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/30 transition-all duration-500 group-hover:-translate-y-3 h-full text-center">
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 sm:p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/30 transition-all duration-500 group-hover:-translate-y-3 h-full text-center">
               <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative">
                 <div className="relative mx-auto w-fit mb-6">
