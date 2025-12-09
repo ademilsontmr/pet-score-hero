@@ -544,14 +544,14 @@ const Index = () => {
         </Accordion>
 
         {/* Bottom CTA */}
-        <div className="mt-10 md:mt-16 text-center animate-in fade-in duration-700">
-          <div className="relative inline-block group">
+        <div className="mt-10 md:mt-16 text-center animate-in fade-in duration-700 px-2">
+          <div className="relative inline-block group w-full sm:w-auto">
             <div className="absolute inset-0 bg-gradient-hero rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
-            <Button size="lg" onClick={scrollToQuiz} className="relative text-lg md:text-xl px-8 md:px-10 py-5 md:py-6 h-auto shadow-lg hover:shadow-xl transition-all duration-300 hover-scale">
-              🚀 Quero Descobrir Meu PetScore Agora!
+            <Button size="lg" onClick={scrollToQuiz} className="relative text-base sm:text-lg md:text-xl px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 h-auto shadow-lg hover:shadow-xl transition-all duration-300 hover-scale w-full sm:w-auto whitespace-normal">
+              🚀 Descobrir Meu PetScore!
             </Button>
           </div>
-          <div className="mt-6 inline-flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
+          <div className="mt-6 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 text-sm text-muted-foreground">
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-accent" />
               Sem criar conta
