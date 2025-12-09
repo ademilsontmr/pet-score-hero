@@ -698,26 +698,49 @@ const CompleteResult = () => {
                 </div>
               </div>
 
-              {/* Action buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-md">
-                <Button
-                  size="lg"
-                  variant="outline"
+              {/* Action buttons - Premium Design */}
+              <div className="flex flex-col gap-3 sm:gap-4 w-full max-w-sm">
+                {/* Save Button - Elegant Outline */}
+                <button
                   onClick={handleDownload}
-                  className="flex-1 text-sm sm:text-base px-4 sm:px-6 py-5 sm:py-6 h-auto rounded-xl sm:rounded-2xl border-2 border-primary/30 bg-card/80 backdrop-blur-sm text-primary hover:bg-primary/10 hover:border-primary/50 hover:shadow-lg transition-all duration-300 group"
+                  className="group relative w-full overflow-hidden rounded-2xl border-2 border-primary/20 bg-card/90 backdrop-blur-sm p-4 sm:p-5 transition-all duration-300 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10"
                 >
-                  <Download className="mr-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 group-hover:-translate-y-0.5 transition-transform" />
-                  Salvar Imagem
-                </Button>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative flex items-center justify-center gap-3">
+                    <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 group-hover:bg-primary/15 transition-colors">
+                      <Download className="w-5 h-5 sm:w-6 sm:h-6 text-primary group-hover:scale-110 group-hover:-translate-y-0.5 transition-transform duration-300" />
+                    </div>
+                    <div className="flex flex-col items-start">
+                      <span className="text-base sm:text-lg font-semibold text-foreground">Salvar Imagem</span>
+                      <span className="text-xs text-muted-foreground">Download em alta qualidade</span>
+                    </div>
+                  </div>
+                </button>
 
-                <Button
-                  size="lg"
+                {/* Share Button - Gradient with Glow */}
+                <button
                   onClick={handleShare}
-                  className="flex-1 text-sm sm:text-base px-4 sm:px-6 py-5 sm:py-6 h-auto rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-gradient-to-r from-primary to-secondary text-primary-foreground border-0 group"
+                  className="group relative w-full overflow-hidden rounded-2xl p-4 sm:p-5 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
                 >
-                  <Share2 className="mr-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform" />
-                  Compartilhar
-                </Button>
+                  {/* Animated gradient background */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_100%] animate-[shimmer_3s_linear_infinite]" />
+                  
+                  {/* Glow effect */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary blur-xl opacity-50" />
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="relative flex items-center justify-center gap-3">
+                    <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/20 backdrop-blur-sm group-hover:bg-white/30 transition-colors">
+                      <Share2 className="w-5 h-5 sm:w-6 sm:h-6 text-white group-hover:scale-110 transition-transform duration-300" />
+                    </div>
+                    <div className="flex flex-col items-start">
+                      <span className="text-base sm:text-lg font-semibold text-white">Compartilhar</span>
+                      <span className="text-xs text-white/80">Mostre seu resultado</span>
+                    </div>
+                  </div>
+                </button>
               </div>
 
               {/* Social CTA */}
