@@ -652,47 +652,82 @@ const CompleteResult = () => {
         </Card>
 
         {/* 7. Recordação Exclusiva */}
-        <Card className="p-4 sm:p-8 md:p-12 shadow-medium bg-gradient-to-b from-card to-muted/50">
-          <div className="text-center mb-5 sm:mb-8">
-            <h2 className="text-lg sm:text-2xl font-bold text-foreground mb-1 sm:mb-2">
-              📸 Sua Recordação Exclusiva
-            </h2>
-            <p className="text-muted-foreground text-xs sm:text-base">
-              Eternize e compartilhe sua conquista!
-            </p>
+        <Card className="relative p-4 sm:p-8 md:p-12 shadow-medium overflow-hidden bg-gradient-to-br from-card via-primary/5 to-secondary/10">
+          {/* Decorative background elements */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute -top-20 -right-20 w-40 h-40 sm:w-64 sm:h-64 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-3xl" />
+            <div className="absolute -bottom-20 -left-20 w-40 h-40 sm:w-64 sm:h-64 bg-gradient-to-tr from-secondary/20 to-primary/20 rounded-full blur-3xl" />
           </div>
 
-          <div className="flex flex-col items-center gap-4 sm:gap-6">
-            <canvas
-              ref={canvasRef}
-              className="border-2 sm:border-4 border-card shadow-xl sm:shadow-2xl rounded-xl sm:rounded-2xl max-w-full h-auto"
-              style={{ maxHeight: "400px" }}
-            />
+          {/* Top accent bar */}
+          <div className="absolute top-0 left-0 right-0 h-1 sm:h-1.5 bg-gradient-to-r from-primary via-secondary to-primary" />
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center items-center mt-2 sm:mt-6">
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={handleDownload}
-                className="w-full sm:w-auto text-sm sm:text-lg px-4 sm:px-8 py-4 sm:py-7 h-auto rounded-xl sm:rounded-2xl shadow-sm hover:shadow-md transition-all border-2 border-primary/20 bg-card text-primary hover:bg-primary/5 group"
-              >
-                <Download className="mr-2 sm:mr-3 w-4 h-4 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
-                Salvar Imagem
-              </Button>
-
-              <Button
-                size="lg"
-                onClick={handleShare}
-                className="w-full sm:w-auto text-sm sm:text-lg px-6 sm:px-10 py-4 sm:py-7 h-auto rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all bg-gradient-to-r from-primary to-secondary text-primary-foreground border-0"
-              >
-                <Share2 className="mr-2 sm:mr-3 w-4 h-4 sm:w-6 sm:h-6" />
-                Compartilhar
-              </Button>
+          <div className="relative z-10">
+            {/* Header */}
+            <div className="text-center mb-6 sm:mb-10">
+              <div className="inline-flex items-center justify-center w-14 h-14 sm:w-20 sm:h-20 bg-gradient-to-br from-primary/20 to-secondary/20 backdrop-blur-sm rounded-2xl sm:rounded-3xl mb-4 sm:mb-5 border border-primary/10 shadow-lg">
+                <span className="text-2xl sm:text-4xl">📸</span>
+              </div>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2 sm:mb-3">
+                Sua Recordação Exclusiva
+              </h2>
+              <p className="text-muted-foreground text-xs sm:text-base max-w-md mx-auto">
+                Eternize e compartilhe sua conquista nas redes sociais
+              </p>
             </div>
 
-            <p className="text-center text-xs sm:text-sm text-muted-foreground">
-              Marque @petscoreoficial nos stories! 🐾
-            </p>
+            {/* Canvas with premium frame */}
+            <div className="flex flex-col items-center gap-5 sm:gap-8">
+              <div className="relative group">
+                {/* Glowing border effect */}
+                <div className="absolute -inset-1 sm:-inset-2 bg-gradient-to-r from-primary via-secondary to-primary rounded-2xl sm:rounded-3xl opacity-50 group-hover:opacity-75 blur-sm transition-opacity duration-500" />
+                
+                {/* Canvas container */}
+                <div className="relative bg-card/80 backdrop-blur-sm p-2 sm:p-4 rounded-xl sm:rounded-2xl border border-primary/20 shadow-2xl">
+                  <canvas
+                    ref={canvasRef}
+                    className="rounded-lg sm:rounded-xl max-w-full h-auto"
+                    style={{ maxHeight: "400px" }}
+                  />
+                </div>
+
+                {/* Floating badge */}
+                <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 bg-gradient-to-br from-primary to-secondary text-primary-foreground text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full shadow-lg flex items-center gap-1 sm:gap-1.5">
+                  <span className="text-xs sm:text-sm">✨</span>
+                  Exclusivo
+                </div>
+              </div>
+
+              {/* Action buttons */}
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-md">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  onClick={handleDownload}
+                  className="flex-1 text-sm sm:text-base px-4 sm:px-6 py-5 sm:py-6 h-auto rounded-xl sm:rounded-2xl border-2 border-primary/30 bg-card/80 backdrop-blur-sm text-primary hover:bg-primary/10 hover:border-primary/50 hover:shadow-lg transition-all duration-300 group"
+                >
+                  <Download className="mr-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 group-hover:-translate-y-0.5 transition-transform" />
+                  Salvar Imagem
+                </Button>
+
+                <Button
+                  size="lg"
+                  onClick={handleShare}
+                  className="flex-1 text-sm sm:text-base px-4 sm:px-6 py-5 sm:py-6 h-auto rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-gradient-to-r from-primary to-secondary text-primary-foreground border-0 group"
+                >
+                  <Share2 className="mr-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform" />
+                  Compartilhar
+                </Button>
+              </div>
+
+              {/* Social CTA */}
+              <div className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-card/60 backdrop-blur-sm rounded-full border border-primary/10">
+                <span className="text-base sm:text-lg">🐾</span>
+                <p className="text-xs sm:text-sm text-muted-foreground">
+                  Marque <span className="font-semibold text-primary">@petscoreoficial</span> nos stories!
+                </p>
+              </div>
+            </div>
           </div>
         </Card>
 
