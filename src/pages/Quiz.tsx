@@ -5,7 +5,6 @@ import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { QUESTIONS } from "@/types/quiz";
 import { ChevronLeft, Clock, Shield, Sparkles, ArrowRight } from "lucide-react";
-
 const Quiz = () => {
   const navigate = useNavigate();
   const [showIntro, setShowIntro] = useState(true);
@@ -17,11 +16,9 @@ const Quiz = () => {
   } | null>(null);
   const [isProcessingAnswer, setIsProcessingAnswer] = useState(false);
   const [questionKey, setQuestionKey] = useState(0);
-
   useEffect(() => {
     document.title = showIntro ? "Quiz | PetScore" : `Pergunta ${currentQuestion + 1} | PetScore`;
   }, [showIntro, currentQuestion]);
-
   useLayoutEffect(() => {
     // Reset seleção e processamento ao trocar de pergunta
     // useLayoutEffect garante que o reset acontece ANTES da renderização visual
@@ -30,7 +27,6 @@ const Quiz = () => {
     // Incrementar questionKey força React a recriar todos os componentes
     setQuestionKey(prev => prev + 1);
   }, [currentQuestion]);
-
   const handleStart = () => {
     setShowIntro(false);
     setCurrentQuestion(0);
@@ -38,22 +34,22 @@ const Quiz = () => {
     setSelectedOption(null);
     setIsProcessingAnswer(false);
   };
-
   const handleAnswer = (points: number, index: number) => {
     if (isProcessingAnswer) return; // Prevent multiple clicks
 
     // Apenas seleciona a alternativa, não avança automaticamente
-    setSelectedOption({ question: currentQuestion, index });
-    
+    setSelectedOption({
+      question: currentQuestion,
+      index
+    });
+
     // Salva a resposta imediatamente
     const newAnswers = [...answers];
     newAnswers[currentQuestion] = points;
     setAnswers(newAnswers);
   };
-
   const handleNext = () => {
     if (!selectedOption || selectedOption.question !== currentQuestion) return;
-    
     setIsProcessingAnswer(true);
 
     // Reset estado ANTES de mudar a pergunta
@@ -65,10 +61,13 @@ const Quiz = () => {
       setCurrentQuestion(currentQuestion + 1);
     } else {
       const newScore = answers.reduce((sum, pts) => sum + pts, 0);
-      navigate("/resultado-parcial", { state: { score: newScore } });
+      navigate("/resultado-parcial", {
+        state: {
+          score: newScore
+        }
+      });
     }
   };
-
   const handleBack = () => {
     if (currentQuestion > 0) {
       setCurrentQuestion(currentQuestion - 1);
@@ -76,10 +75,8 @@ const Quiz = () => {
       setShowIntro(true);
     }
   };
-
   if (showIntro) {
-    return (
-      <div className="min-h-screen bg-gradient-warm py-6 px-4 flex items-center justify-center relative overflow-hidden">
+    return <div className="min-h-screen bg-gradient-warm py-6 px-4 flex items-center justify-center relative overflow-hidden">
         {/* Background decorations */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-10 left-10 text-6xl opacity-10 animate-bounce">🐾</div>
@@ -195,28 +192,19 @@ const Quiz = () => {
               </div>
             </div>
 
-            <Button
-              onClick={handleStart}
-              className="w-full text-lg py-6 rounded-2xl bg-gradient-hero hover:opacity-90 shadow-lg hover:shadow-xl transition-all group"
-            >
+            <Button onClick={handleStart} className="w-full text-lg py-6 rounded-2xl bg-gradient-hero hover:opacity-90 shadow-lg hover:shadow-xl transition-all group">
               Começar Avaliação
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
 
-            <p className="text-center text-xs text-muted-foreground mt-4">
-              🔒 Suas respostas são anônimas e não são compartilhadas
-            </p>
+            
           </Card>
         </div>
-      </div>
-    );
+      </div>;
   }
-
   const question = QUESTIONS[currentQuestion];
-  const progress = ((currentQuestion + 1) / QUESTIONS.length) * 100;
-
-  return (
-    <div className="min-h-screen bg-gradient-warm py-8 px-4">
+  const progress = (currentQuestion + 1) / QUESTIONS.length * 100;
+  return <div className="min-h-screen bg-gradient-warm py-8 px-4">
       <div className="max-w-2xl mx-auto">
         {/* Progress */}
         <div className="mb-8">
@@ -239,55 +227,30 @@ const Quiz = () => {
 
           <div className="space-y-4" key={`options-${currentQuestion}-${questionKey}`}>
             {question.options.map((option, index) => {
-              // Só mostra como selecionado se:
-              // 1. selectedOption não for null
-              // 2. A pergunta do selectedOption for exatamente a pergunta atual
-              // 3. O índice do selectedOption for exatamente o índice atual
-              const isSelected = Boolean(
-                selectedOption &&
-                selectedOption.question === currentQuestion &&
-                selectedOption.index === index
-              );
-
-              return (
-                <Button
-                  key={`q${currentQuestion}-opt${index}-${questionKey}`}
-                  onClick={() => handleAnswer(option.points, index)}
-                  variant={isSelected ? "default" : "outline"}
-                  disabled={isProcessingAnswer}
-                  style={{ WebkitTapHighlightColor: 'transparent' }}
-                  className={`w-full h-auto py-4 md:py-5 px-4 md:px-6 text-left justify-start transition-all duration-300 text-sm md:text-base rounded-xl leading-relaxed ${
-                    isSelected
-                      ? "bg-primary text-primary-foreground border-primary"
-                      : "hover:bg-primary hover:text-primary-foreground hover:border-primary active:bg-transparent focus:bg-transparent"
-                  }`}
-                >
+            // Só mostra como selecionado se:
+            // 1. selectedOption não for null
+            // 2. A pergunta do selectedOption for exatamente a pergunta atual
+            // 3. O índice do selectedOption for exatamente o índice atual
+            const isSelected = Boolean(selectedOption && selectedOption.question === currentQuestion && selectedOption.index === index);
+            return <Button key={`q${currentQuestion}-opt${index}-${questionKey}`} onClick={() => handleAnswer(option.points, index)} variant={isSelected ? "default" : "outline"} disabled={isProcessingAnswer} style={{
+              WebkitTapHighlightColor: 'transparent'
+            }} className={`w-full h-auto py-4 md:py-5 px-4 md:px-6 text-left justify-start transition-all duration-300 text-sm md:text-base rounded-xl leading-relaxed ${isSelected ? "bg-primary text-primary-foreground border-primary" : "hover:bg-primary hover:text-primary-foreground hover:border-primary active:bg-transparent focus:bg-transparent"}`}>
                   {option.text}
-                </Button>
-              );
-            })}
+                </Button>;
+          })}
           </div>
 
           {/* Next Button */}
-          {selectedOption && selectedOption.question === currentQuestion && (
-            <div className="mt-6">
-              <Button
-                onClick={handleNext}
-                className="w-full text-base md:text-lg py-6 md:py-7 rounded-2xl bg-green-600 hover:bg-green-700 text-white shadow-lg hover:shadow-xl transition-all"
-              >
+          {selectedOption && selectedOption.question === currentQuestion && <div className="mt-6">
+              <Button onClick={handleNext} className="w-full text-base md:text-lg py-6 md:py-7 rounded-2xl bg-green-600 hover:bg-green-700 text-white shadow-lg hover:shadow-xl transition-all">
                 {currentQuestion < QUESTIONS.length - 1 ? "Próxima" : "Finalizar"}
               </Button>
-            </div>
-          )}
+            </div>}
         </Card>
 
         {/* Back Button */}
         <div className="mt-4">
-          <Button
-            onClick={handleBack}
-            variant="ghost"
-            className="text-gray-600 hover:text-gray-900 hover:bg-gray-100"
-          >
+          <Button onClick={handleBack} variant="ghost" className="text-gray-600 hover:text-gray-900 hover:bg-gray-100">
             <ChevronLeft className="w-4 h-4 mr-1" />
             Voltar
           </Button>
@@ -300,8 +263,6 @@ const Quiz = () => {
           <span className="text-3xl">🐾</span>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Quiz;
