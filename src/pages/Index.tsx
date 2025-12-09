@@ -416,34 +416,54 @@ const Index = () => {
     </section>
 
     {/* FAQ Section */}
-    <section className="py-20 px-4 bg-gradient-warm">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-24 px-4 bg-gradient-warm relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-40 -left-40 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-40 -right-40 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
+      </div>
+
+      <div className="max-w-4xl mx-auto relative">
         <div className="text-center mb-16 animate-in fade-in duration-700">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <CheckCircle2 className="w-4 h-4" />
+            Tire Suas Dúvidas
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             Perguntas Frequentes
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Tire suas dúvidas antes de começar sua jornada
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Tudo que você precisa saber antes de começar sua jornada
           </p>
         </div>
 
         <Accordion type="single" collapsible className="space-y-4">
-          <AccordionItem value="item-2" className="bg-card rounded-2xl px-6 shadow-soft border-none">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              Quanto tempo leva para fazer o quiz?
+          <AccordionItem value="item-2" className="group bg-card/80 backdrop-blur-sm rounded-3xl px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-primary/30">
+            <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6 group-hover:text-primary transition-colors duration-300">
+              <div className="flex items-center gap-3">
+                <div className="bg-primary/10 rounded-xl p-2 group-data-[state=open]:bg-primary/20 transition-colors duration-300">
+                  <Clock className="w-5 h-5 text-primary" />
+                </div>
+                Quanto tempo leva para fazer o quiz?
+              </div>
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-base">
+            <AccordionContent className="text-muted-foreground text-base pb-6 pl-14 leading-relaxed">
               Apenas 5 a 10 minutos! É o tempo de tomar um café enquanto você descobre insights valiosos
               que podem transformar a vida do seu pet. As perguntas são objetivas e você pode pausar e
               voltar quando quiser. Vale cada segundo! ☕
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-3" className="bg-card rounded-2xl px-6 shadow-soft border-none">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              Funciona para cães e gatos?
+          <AccordionItem value="item-3" className="group bg-card/80 backdrop-blur-sm rounded-3xl px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-secondary/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-secondary/30">
+            <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6 group-hover:text-secondary transition-colors duration-300">
+              <div className="flex items-center gap-3">
+                <div className="bg-secondary/10 rounded-xl p-2 group-data-[state=open]:bg-secondary/20 transition-colors duration-300">
+                  <Heart className="w-5 h-5 text-secondary" />
+                </div>
+                Funciona para cães e gatos?
+              </div>
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-base">
+            <AccordionContent className="text-muted-foreground text-base pb-6 pl-14 leading-relaxed">
               Absolutamente! Nosso quiz foi desenvolvido por veterinários e especialistas em comportamento
               animal para atender tanto cães quanto gatos, de todas as idades - desde filhotes cheios de
               energia até idosos que merecem cuidados especiais. Cada espécie e fase da vida tem suas
@@ -451,11 +471,16 @@ const Index = () => {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-4" className="bg-card rounded-2xl px-6 shadow-soft border-none">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              O que vou descobrir ao fazer o quiz?
+          <AccordionItem value="item-4" className="group bg-card/80 backdrop-blur-sm rounded-3xl px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-accent/30">
+            <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6 group-hover:text-accent transition-colors duration-300">
+              <div className="flex items-center gap-3">
+                <div className="bg-accent/10 rounded-xl p-2 group-data-[state=open]:bg-accent/20 transition-colors duration-300">
+                  <TrendingUp className="w-5 h-5 text-accent" />
+                </div>
+                O que vou descobrir ao fazer o quiz?
+              </div>
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-base">
+            <AccordionContent className="text-muted-foreground text-base pb-6 pl-14 leading-relaxed">
               Você vai receber seu <strong>PetScore oficial (0-100)</strong>, descobrir seu <strong>nível de tutor</strong>
               (de Iniciante a Lendário 🏆), e entender exatamente onde você está acertando e onde pode melhorar.
               No relatório completo, você ganha um <strong>plano de ação personalizado</strong> com dicas práticas
@@ -464,22 +489,32 @@ const Index = () => {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-5" className="bg-card rounded-2xl px-6 shadow-soft border-none">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              Posso refazer o quiz para ver minha evolução?
+          <AccordionItem value="item-5" className="group bg-card/80 backdrop-blur-sm rounded-3xl px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-primary/30">
+            <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6 group-hover:text-primary transition-colors duration-300">
+              <div className="flex items-center gap-3">
+                <div className="bg-primary/10 rounded-xl p-2 group-data-[state=open]:bg-primary/20 transition-colors duration-300">
+                  <Target className="w-5 h-5 text-primary" />
+                </div>
+                Posso refazer o quiz para ver minha evolução?
+              </div>
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-base">
+            <AccordionContent className="text-muted-foreground text-base pb-6 pl-14 leading-relaxed">
               Sim, e nós recomendamos! Muitos tutores refazem o quiz a cada 3 meses para acompanhar sua
               evolução e ver como as mudanças aplicadas estão impactando positivamente a vida do pet.
               É incrível ver seu score subindo e saber que você está fazendo a diferença! 📊✨
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-6" className="bg-card rounded-2xl px-6 shadow-soft border-none">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              Vou receber algo além do resultado?
+          <AccordionItem value="item-6" className="group bg-card/80 backdrop-blur-sm rounded-3xl px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-secondary/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-secondary/30">
+            <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6 group-hover:text-secondary transition-colors duration-300">
+              <div className="flex items-center gap-3">
+                <div className="bg-secondary/10 rounded-xl p-2 group-data-[state=open]:bg-secondary/20 transition-colors duration-300">
+                  <Gift className="w-5 h-5 text-secondary" />
+                </div>
+                Vou receber algo além do resultado?
+              </div>
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-base">
+            <AccordionContent className="text-muted-foreground text-base pb-6 pl-14 leading-relaxed">
               Sim! Além do seu score e análise, você ganha acesso a <strong>3 bônus exclusivos</strong>:
               Guia Definitivo de Alimentos (saiba o que pode e não pode), Checklist "Casa Segura" (elimine
               perigos ocultos), e Cronograma de Saúde Preventiva (nunca mais esqueça vacinas e vermífugos).
@@ -488,11 +523,16 @@ const Index = () => {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-7" className="bg-card rounded-2xl px-6 shadow-soft border-none">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              Por que devo fazer o quiz AGORA?
+          <AccordionItem value="item-7" className="group bg-card/80 backdrop-blur-sm rounded-3xl px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-accent/30">
+            <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6 group-hover:text-accent transition-colors duration-300">
+              <div className="flex items-center gap-3">
+                <div className="bg-accent/10 rounded-xl p-2 group-data-[state=open]:bg-accent/20 transition-colors duration-300">
+                  <Zap className="w-5 h-5 text-accent" />
+                </div>
+                Por que devo fazer o quiz AGORA?
+              </div>
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-base">
+            <AccordionContent className="text-muted-foreground text-base pb-6 pl-14 leading-relaxed">
               Porque cada dia conta na vida do seu pet! Descobrir pontos de melhoria hoje pode prevenir
               problemas de saúde amanhã, fortalecer o vínculo entre vocês e garantir que seu melhor amigo
               viva mais feliz e saudável. Além disso, é grátis, rápido e você pode começar agora mesmo.
@@ -501,17 +541,32 @@ const Index = () => {
           </AccordionItem>
         </Accordion>
 
-        <div className="mt-12 text-center">
-          <Button
-            size="lg"
-            onClick={scrollToQuiz}
-            className="text-xl px-10 py-6 h-auto shadow-lg hover:shadow-xl transition-all duration-300 hover-scale"
-          >
-            🚀 Quero Descobrir Meu PetScore Agora!
-          </Button>
-          <p className="mt-4 text-sm text-muted-foreground">
-            ✓ Grátis • ✓ 5 minutos • ✓ Resultado na hora
-          </p>
+        {/* Bottom CTA */}
+        <div className="mt-16 text-center animate-in fade-in duration-700">
+          <div className="relative inline-block group">
+            <div className="absolute inset-0 bg-gradient-hero rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
+            <Button
+              size="lg"
+              onClick={scrollToQuiz}
+              className="relative text-xl px-10 py-6 h-auto shadow-lg hover:shadow-xl transition-all duration-300 hover-scale"
+            >
+              🚀 Quero Descobrir Meu PetScore Agora!
+            </Button>
+          </div>
+          <div className="mt-6 inline-flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
+            <span className="flex items-center gap-1.5">
+              <CheckCircle2 className="w-4 h-4 text-accent" />
+              Grátis
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Clock className="w-4 h-4 text-primary" />
+              5 minutos
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Zap className="w-4 h-4 text-secondary" />
+              Resultado na hora
+            </span>
+          </div>
         </div>
       </div>
     </section>
