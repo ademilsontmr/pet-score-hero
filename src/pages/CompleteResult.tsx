@@ -203,9 +203,6 @@ const CompleteResult = () => {
         // Bottom Card for Text
         drawBottomCard(ctx);
 
-        // Certification Seal
-        drawCertificationSeal(ctx);
-
         // Website URL (On the bottom bar)
         ctx.save();
         ctx.textBaseline = "middle";
@@ -230,9 +227,6 @@ const CompleteResult = () => {
       ctx.fillText("/100", centerX, centerY + 140);
 
       drawBottomCard(ctx);
-
-      // Certification Seal
-      drawCertificationSeal(ctx);
 
       // Website URL (On the bottom bar)
       ctx.save();
@@ -289,102 +283,6 @@ const CompleteResult = () => {
     // Adjusted Y to y + 85 to center the 2-line block vertically
     // Increased maxWidth to 700 to ensure it fits nicely in 2 lines
     wrapText(ctx, text, canvas.width / 2 + 20, y + 85, 700, 46);
-  };
-
-  const drawCertificationSeal = (ctx: CanvasRenderingContext2D) => {
-    const canvas = ctx.canvas;
-    const sealX = 920;
-    const sealY = 1080;
-    const outerRadius = 70;
-    const innerRadius = 55;
-
-    ctx.save();
-
-    // Outer shadow
-    ctx.shadowColor = "rgba(0,0,0,0.25)";
-    ctx.shadowBlur = 15;
-    ctx.shadowOffsetY = 5;
-
-    // Outer circle with gradient (gold/bronze effect)
-    const goldGradient = ctx.createRadialGradient(sealX, sealY, 0, sealX, sealY, outerRadius);
-    goldGradient.addColorStop(0, "#D4A853");
-    goldGradient.addColorStop(0.5, "#C9973F");
-    goldGradient.addColorStop(1, "#A67C2E");
-    
-    ctx.beginPath();
-    ctx.arc(sealX, sealY, outerRadius, 0, Math.PI * 2);
-    ctx.fillStyle = goldGradient;
-    ctx.fill();
-    ctx.restore();
-
-    // Decorative ridges (notched edge effect)
-    ctx.save();
-    ctx.strokeStyle = "#B8860B";
-    ctx.lineWidth = 2;
-    for (let i = 0; i < 24; i++) {
-      const angle = (i / 24) * Math.PI * 2;
-      const x1 = sealX + Math.cos(angle) * (outerRadius - 8);
-      const y1 = sealY + Math.sin(angle) * (outerRadius - 8);
-      const x2 = sealX + Math.cos(angle) * outerRadius;
-      const y2 = sealY + Math.sin(angle) * outerRadius;
-      ctx.beginPath();
-      ctx.moveTo(x1, y1);
-      ctx.lineTo(x2, y2);
-      ctx.stroke();
-    }
-    ctx.restore();
-
-    // Inner circle
-    const innerGradient = ctx.createRadialGradient(sealX, sealY, 0, sealX, sealY, innerRadius);
-    innerGradient.addColorStop(0, "#F5E6C8");
-    innerGradient.addColorStop(1, "#E8D5A8");
-    
-    ctx.beginPath();
-    ctx.arc(sealX, sealY, innerRadius, 0, Math.PI * 2);
-    ctx.fillStyle = innerGradient;
-    ctx.fill();
-
-    // Inner border
-    ctx.strokeStyle = "#C9973F";
-    ctx.lineWidth = 3;
-    ctx.stroke();
-
-    // Checkmark icon
-    ctx.save();
-    ctx.strokeStyle = "#8B6914";
-    ctx.lineWidth = 6;
-    ctx.lineCap = "round";
-    ctx.lineJoin = "round";
-    ctx.beginPath();
-    ctx.moveTo(sealX - 22, sealY);
-    ctx.lineTo(sealX - 5, sealY + 18);
-    ctx.lineTo(sealX + 25, sealY - 15);
-    ctx.stroke();
-    ctx.restore();
-
-    // Ribbon tails
-    ctx.save();
-    // Left ribbon
-    ctx.fillStyle = "#C41E3A";
-    ctx.beginPath();
-    ctx.moveTo(sealX - 35, sealY + outerRadius - 15);
-    ctx.lineTo(sealX - 55, sealY + outerRadius + 50);
-    ctx.lineTo(sealX - 40, sealY + outerRadius + 35);
-    ctx.lineTo(sealX - 25, sealY + outerRadius + 55);
-    ctx.lineTo(sealX - 15, sealY + outerRadius - 5);
-    ctx.closePath();
-    ctx.fill();
-
-    // Right ribbon
-    ctx.beginPath();
-    ctx.moveTo(sealX + 35, sealY + outerRadius - 15);
-    ctx.lineTo(sealX + 55, sealY + outerRadius + 50);
-    ctx.lineTo(sealX + 40, sealY + outerRadius + 35);
-    ctx.lineTo(sealX + 25, sealY + outerRadius + 55);
-    ctx.lineTo(sealX + 15, sealY + outerRadius - 5);
-    ctx.closePath();
-    ctx.fill();
-    ctx.restore();
   };
 
   const wrapText = (
