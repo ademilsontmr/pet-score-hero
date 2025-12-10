@@ -200,6 +200,9 @@ const CompleteResult = () => {
         ctx.font = "bold 100px Arial";
         ctx.fillText(score.toString(), badgeX, badgeY + 35);
 
+        // Elegant subtle seal next to score
+        drawElegantSeal(ctx, badgeX - 180, badgeY - 50);
+
         // Bottom Card for Text
         drawBottomCard(ctx);
 
@@ -225,6 +228,9 @@ const CompleteResult = () => {
       ctx.fillStyle = "#9CA3AF";
       ctx.font = "bold 60px Arial";
       ctx.fillText("/100", centerX, centerY + 140);
+
+      // Elegant subtle seal
+      drawElegantSeal(ctx, centerX + 180, centerY - 100);
 
       drawBottomCard(ctx);
 
@@ -283,6 +289,67 @@ const CompleteResult = () => {
     // Adjusted Y to y + 85 to center the 2-line block vertically
     // Increased maxWidth to 700 to ensure it fits nicely in 2 lines
     wrapText(ctx, text, canvas.width / 2 + 20, y + 85, 700, 46);
+  };
+
+  const drawElegantSeal = (ctx: CanvasRenderingContext2D, x: number, y: number) => {
+    const radius = 35;
+    
+    ctx.save();
+    
+    // Subtle shadow
+    ctx.shadowColor = "rgba(0,0,0,0.15)";
+    ctx.shadowBlur = 8;
+    ctx.shadowOffsetY = 3;
+    
+    // Outer ring with gold gradient
+    const goldGradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
+    goldGradient.addColorStop(0, "#E8D5A8");
+    goldGradient.addColorStop(0.7, "#D4A853");
+    goldGradient.addColorStop(1, "#B8860B");
+    
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, Math.PI * 2);
+    ctx.fillStyle = goldGradient;
+    ctx.fill();
+    ctx.restore();
+    
+    // Inner circle
+    ctx.save();
+    const innerGradient = ctx.createRadialGradient(x, y, 0, x, y, radius - 8);
+    innerGradient.addColorStop(0, "#FFFDF5");
+    innerGradient.addColorStop(1, "#F5E6C8");
+    
+    ctx.beginPath();
+    ctx.arc(x, y, radius - 8, 0, Math.PI * 2);
+    ctx.fillStyle = innerGradient;
+    ctx.fill();
+    ctx.restore();
+    
+    // Decorative dots around the edge
+    ctx.save();
+    ctx.fillStyle = "#C9973F";
+    for (let i = 0; i < 12; i++) {
+      const angle = (i / 12) * Math.PI * 2;
+      const dotX = x + Math.cos(angle) * (radius - 4);
+      const dotY = y + Math.sin(angle) * (radius - 4);
+      ctx.beginPath();
+      ctx.arc(dotX, dotY, 2, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.restore();
+    
+    // Checkmark icon
+    ctx.save();
+    ctx.strokeStyle = "#8B6914";
+    ctx.lineWidth = 3;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+    ctx.beginPath();
+    ctx.moveTo(x - 10, y);
+    ctx.lineTo(x - 3, y + 8);
+    ctx.lineTo(x + 12, y - 7);
+    ctx.stroke();
+    ctx.restore();
   };
 
   const wrapText = (
