@@ -86,7 +86,7 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
           {/* Header */}
           <div className="relative overflow-hidden">
             {/* Background gradient with pattern */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#9333EA] via-[#7C3AED] to-[#6D28D9]"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#FF6B35] via-[#FF7B45] to-[#FF8B5C]"></div>
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-2 left-8 text-white text-6xl opacity-20">🐾</div>
               <div className="absolute bottom-1 right-32 text-white text-4xl opacity-15 rotate-12">🐾</div>
@@ -118,7 +118,7 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
                 {/* Protocol Section */}
                 <div className="text-right">
                   <div className="bg-white rounded-xl px-5 py-3 shadow-lg">
-                    <p className="text-purple-600 text-[10px] uppercase tracking-widest font-bold mb-0.5">Protocolo</p>
+                    <p className="text-orange-600 text-[10px] uppercase tracking-widest font-bold mb-0.5">Protocolo</p>
                     <p className="text-gray-800 font-black text-lg tracking-wide">{protocolNumber}</p>
                   </div>
                 </div>
@@ -317,7 +317,7 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
           </div>
 
           {/* Footer */}
-          <div className="bg-gradient-to-r from-[#9333EA] via-[#7C3AED] to-[#6D28D9] p-3">
+          <div className="bg-gradient-to-r from-[#FF6B35] via-[#FF7B45] to-[#FF8B5C] p-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <span className="text-white/80 text-xs">🐾</span>
