@@ -1,10 +1,11 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { getQuizResult } from "@/types/quiz";
 import { Share2, Download } from "lucide-react";
 import { toast } from "sonner";
+import PetPlanner from "@/components/PetPlanner";
 
 const CompleteResult = () => {
   const location = useLocation();
@@ -383,9 +384,6 @@ const CompleteResult = () => {
   };
 
 
-  const handlePrintPlanner = () => {
-    window.print();
-  };
 
   return (
     <div className="min-h-screen bg-gradient-warm py-6 sm:py-12 px-4 print:bg-white print:p-0">
@@ -592,7 +590,7 @@ const CompleteResult = () => {
           </div>
         </Card>
 
-        {/* 6. Protocolo de Saúde Preventiva */}
+        {/* 6. Protocolo de Saúde Preventiva com Planner */}
         <Card className="p-4 sm:p-8 md:p-12 shadow-medium bg-gradient-to-br from-card to-purple-50/30">
           <div className="text-center mb-6 sm:mb-10">
             <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-purple-100 rounded-xl sm:rounded-2xl mb-3 sm:mb-4">
@@ -600,14 +598,6 @@ const CompleteResult = () => {
             </div>
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-1 sm:mb-2">Protocolo de Saúde</h2>
             <p className="text-muted-foreground text-xs sm:text-base mb-4 sm:mb-6">Calendário de imunidade do seu pet</p>
-
-            <Button
-              onClick={handlePrintPlanner}
-              className="gap-2 bg-purple-600 hover:bg-purple-700 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 px-4 sm:px-8 py-4 sm:py-6 text-sm sm:text-base font-semibold"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-              Imprimir Planner
-            </Button>
           </div>
 
           <div className="grid gap-3 sm:gap-6 md:grid-cols-2 max-w-5xl mx-auto mb-5 sm:mb-8">
@@ -636,7 +626,7 @@ const CompleteResult = () => {
           </div>
 
           {/* Emergency Alert */}
-          <div className="max-w-5xl mx-auto bg-red-50 border-2 border-red-200 rounded-xl sm:rounded-3xl p-4 sm:p-6 shadow-sm">
+          <div className="max-w-5xl mx-auto bg-red-50 border-2 border-red-200 rounded-xl sm:rounded-3xl p-4 sm:p-6 shadow-sm mb-6 sm:mb-10">
             <div className="flex items-start gap-3 sm:gap-4">
               <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg sm:rounded-2xl flex items-center justify-center">
                 <span className="text-lg sm:text-2xl">🚨</span>
@@ -648,6 +638,15 @@ const CompleteResult = () => {
                 </p>
               </div>
             </div>
+          </div>
+
+          {/* Planner Section */}
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-6">
+              <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2">Seu Planner de Saúde Personalizado</h3>
+              <p className="text-muted-foreground text-xs sm:text-sm">Baixe e mantenha atualizado para acompanhar a saúde do seu pet</p>
+            </div>
+            <PetPlanner petName={petName} score={score} resultTitle={result.title} />
           </div>
         </Card>
 
@@ -811,161 +810,6 @@ const CompleteResult = () => {
             <span className="mr-2 text-xl sm:text-2xl group-hover:-rotate-180 transition-transform duration-500">↻</span>
             Refazer Avaliação
           </Button>
-        </div>
-      </div>
-
-      {/* Print Layout (Professional Medical Style) */}
-      <div className="hidden print:block w-full min-h-screen bg-white p-8 box-border font-sans">
-        <style dangerouslySetInnerHTML={{
-          __html: `
-          @media print {
-            @page {
-              margin: 0.5cm;
-              size: A4;
-            }
-            body {
-              -webkit-print-color-adjust: exact !important;
-              print-color-adjust: exact !important;
-            }
-          }
-        `}} />
-
-        {/* Header */}
-        <div className="flex items-center justify-between mb-6 pb-4 border-b-4 border-[#FF6B35]">
-          <div className="flex items-center gap-3">
-            <div className="text-6xl" style={{ filter: 'contrast(1.5) brightness(0.85) saturate(1.3)' }}>🐾</div>
-            <div className="text-[#FF6B35] text-5xl font-bold tracking-tight">PetScore</div>
-          </div>
-          <div className="text-right">
-            <h1 className="text-3xl font-bold text-gray-800">Planner de Saúde</h1>
-            <p className="text-sm text-gray-500">Protocolo nº {Math.floor(Math.random() * 10000)}/{new Date().getFullYear()}</p>
-          </div>
-        </div>
-
-        {/* Pet Info Bar */}
-        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4 mb-6 flex justify-between items-center">
-          <div className="flex gap-10">
-            <div>
-              <span className="block text-[10px] text-gray-500 uppercase font-bold tracking-wider mb-1">Nome do Pet</span>
-              <span className="text-xl font-bold text-gray-800">{petName || "________________"}</span>
-            </div>
-            <div>
-              <span className="block text-[10px] text-gray-500 uppercase font-bold tracking-wider mb-1">Score Atual</span>
-              <div className="flex items-baseline gap-1">
-                <span className="text-xl font-bold text-[#FF6B35]">{score}</span>
-                <span className="text-sm text-gray-500 font-medium">/100</span>
-              </div>
-            </div>
-            <div>
-              <span className="block text-[10px] text-gray-500 uppercase font-bold tracking-wider mb-1">Data de Emissão</span>
-              <span className="text-xl font-bold text-gray-800">{new Date().toLocaleDateString()}</span>
-            </div>
-          </div>
-          <div className="text-right bg-white px-5 py-2 rounded-xl border border-gray-200">
-            <span className="block text-[10px] text-gray-500 uppercase font-bold tracking-wider mb-1">Classificação</span>
-            <span className="text-base font-bold text-[#FF6B35]">{result.title}</span>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-12 gap-6">
-          {/* Left Column - Medical Schedule (7 cols) */}
-          <div className="col-span-7 flex flex-col gap-5">
-            {/* Vacinas */}
-            <div className="border border-gray-200 rounded-3xl overflow-hidden bg-white">
-              <div className="p-4 border-b border-gray-100 flex items-center gap-3">
-                <span className="text-lg" style={{ filter: 'contrast(1.5) brightness(0.85) saturate(1.3)' }}>💉</span>
-                <h3 className="font-bold text-gray-700 text-sm uppercase tracking-wide">Cronograma de Vacinação</h3>
-              </div>
-              <div className="p-5 space-y-4">
-                {[1, 2, 3, 4, 5].map(i => (
-                  <div key={i} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full border-2 border-gray-300 flex-shrink-0"></div>
-                    <div className="flex-1 flex items-end gap-2">
-                      <span className="text-gray-600 text-sm font-bold mb-1">Vacina:</span>
-                      <div className="flex-1 border-b-2 border-dotted border-gray-300 mb-1"></div>
-                    </div>
-                    <div className="w-28 flex items-end gap-2">
-                      <span className="text-gray-600 text-xs font-bold mb-1">Data:</span>
-                      <div className="flex-1 border-b-2 border-dotted border-gray-300 mb-1"></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Parasitas */}
-            <div className="border border-gray-200 rounded-3xl overflow-hidden bg-white">
-              <div className="p-4 border-b border-gray-100 flex items-center gap-3">
-                <span className="text-lg" style={{ filter: 'contrast(1.5) brightness(0.85) saturate(1.3)' }}>💊</span>
-                <h3 className="font-bold text-gray-700 text-sm uppercase tracking-wide">Controle Parasitário</h3>
-              </div>
-              <div className="p-5 space-y-4">
-                {[1, 2, 3, 4].map(i => (
-                  <div key={i} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full border-2 border-gray-300 flex-shrink-0"></div>
-                    <div className="flex-1 flex items-end gap-2">
-                      <span className="text-gray-600 text-sm font-bold mb-1">Produto:</span>
-                      <div className="flex-1 border-b-2 border-dotted border-gray-300 mb-1"></div>
-                    </div>
-                    <div className="w-28 flex items-end gap-2">
-                      <span className="text-gray-600 text-xs font-bold mb-1">Data:</span>
-                      <div className="flex-1 border-b-2 border-dotted border-gray-300 mb-1"></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column - Notes & Weight (5 cols) */}
-          <div className="col-span-5 flex flex-col gap-5">
-            {/* Weight Tracker */}
-            <div className="border border-gray-200 rounded-3xl bg-white p-4">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="text-lg" style={{ filter: 'contrast(1.5) brightness(0.85) saturate(1.3)' }}>⚖️</span>
-                <h3 className="font-bold text-gray-700 text-sm uppercase tracking-wide">Controle de Peso</h3>
-              </div>
-              <div className="flex gap-3">
-                <div className="flex-1 border border-gray-200 rounded-2xl p-3 text-center bg-gray-50">
-                  <span className="text-xs text-blue-600 font-bold uppercase tracking-wider block mb-2">Atual</span>
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-gray-400 text-lg">____</span>
-                    <span className="text-gray-500 font-medium text-sm">kg</span>
-                  </div>
-                </div>
-                <div className="flex-1 border border-gray-200 rounded-2xl p-3 text-center bg-gray-50">
-                  <span className="text-xs text-blue-600 font-bold uppercase tracking-wider block mb-2">Meta</span>
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-gray-400 text-lg">____</span>
-                    <span className="text-gray-500 font-medium text-sm">kg</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Notes */}
-            <div className="border border-gray-200 rounded-3xl bg-white flex flex-col overflow-hidden flex-1">
-              <div className="p-4 border-b border-gray-100 flex items-center gap-3">
-                <span className="text-lg" style={{ filter: 'contrast(1.5) brightness(0.85) saturate(1.3)' }}>📝</span>
-                <h3 className="font-bold text-gray-700 text-sm uppercase tracking-wide">Notas Clínicas</h3>
-              </div>
-              <div className="flex-1 p-5 relative min-h-[360px]">
-                <div className="absolute inset-0 top-12 px-5 space-y-5 pointer-events-none">
-                  {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(i => (
-                    <div key={i} className="border-b border-blue-100 w-full h-px"></div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Footer */}
-        <div className="mt-8 pt-4 border-t-2 border-[#FF6B35] text-center">
-          <div className="flex items-center justify-center gap-2">
-            <span className="text-sm" style={{ filter: 'contrast(1.5) brightness(0.85) saturate(1.3)' }}>🐾</span>
-            <span className="text-[#FF6B35] font-bold text-sm">www.petscore.com.br</span>
-          </div>
         </div>
       </div>
     </div>
