@@ -157,20 +157,20 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
           </div>
 
           {/* Main Content */}
-          <div className="p-5 flex-1 flex flex-col">
-            <div className="grid grid-cols-12 gap-4 flex-1">
+          <div className="p-5 flex-1 flex flex-col h-full">
+            <div className="grid grid-cols-12 gap-4 h-full">
               {/* Left Column */}
-              <div className="col-span-7 space-y-4">
+              <div className="col-span-7 flex flex-col gap-4 h-full">
                 {/* Vacinas */}
-                <div className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm">
+                <div className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm flex-1 flex flex-col">
                   <div className="bg-gradient-to-r from-blue-50 to-white p-3 border-b border-gray-100 flex items-center gap-2">
                     <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
                       <span className="text-lg">💉</span>
                     </div>
                     <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide">Cronograma de Vacinação</h3>
                   </div>
-                  <div className="p-3 space-y-2.5">
-                    {[1, 2, 3, 4].map(i => (
+                  <div className="p-3 space-y-3 flex-1">
+                    {[1, 2, 3, 4, 5, 6, 7, 8].map(i => (
                       <div key={i} className="flex items-center gap-2">
                         <div className="w-3.5 h-3.5 rounded-full border-2 border-blue-200 flex-shrink-0 bg-blue-50"></div>
                         <div className="flex-1 flex items-end gap-1">
@@ -187,15 +187,15 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
                 </div>
 
                 {/* Parasitas */}
-                <div className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm">
+                <div className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm flex-1 flex flex-col">
                   <div className="bg-gradient-to-r from-green-50 to-white p-3 border-b border-gray-100 flex items-center gap-2">
                     <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
                       <span className="text-lg">💊</span>
                     </div>
                     <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide">Controle Parasitário</h3>
                   </div>
-                  <div className="p-3 space-y-2.5">
-                    {[1, 2, 3].map(i => (
+                  <div className="p-3 space-y-3 flex-1">
+                    {[1, 2, 3, 4, 5, 6].map(i => (
                       <div key={i} className="flex items-center gap-2">
                         <div className="w-3.5 h-3.5 rounded-full border-2 border-green-200 flex-shrink-0 bg-green-50"></div>
                         <div className="flex-1 flex items-end gap-1">
@@ -212,15 +212,15 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
                 </div>
 
                 {/* Consultas */}
-                <div className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm">
+                <div className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm flex-1 flex flex-col">
                   <div className="bg-gradient-to-r from-purple-50 to-white p-3 border-b border-gray-100 flex items-center gap-2">
                     <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
                       <span className="text-lg">🩺</span>
                     </div>
                     <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide">Próximas Consultas</h3>
                   </div>
-                  <div className="p-3 space-y-2.5">
-                    {[1, 2, 3].map(i => (
+                  <div className="p-3 space-y-3 flex-1">
+                    {[1, 2, 3, 4, 5, 6].map(i => (
                       <div key={i} className="flex items-center gap-2">
                         <div className="w-3.5 h-3.5 rounded-full border-2 border-purple-200 flex-shrink-0 bg-purple-50"></div>
                         <div className="flex-1 flex items-end gap-1">
@@ -238,7 +238,7 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
               </div>
 
               {/* Right Column */}
-              <div className="col-span-5 flex flex-col gap-4">
+              <div className="col-span-5 flex flex-col gap-4 h-full">
                 {/* Weight Tracker */}
                 <div className="border border-gray-200 rounded-xl bg-white shadow-sm overflow-hidden">
                   <div className="bg-gradient-to-r from-amber-50 to-white p-2.5 border-b border-gray-100 flex items-center gap-2">
@@ -268,14 +268,14 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
                 </div>
 
                 {/* Saúde Bucal */}
-                <div className="border border-gray-200 rounded-xl bg-white shadow-sm overflow-hidden">
+                <div className="border border-gray-200 rounded-xl bg-white shadow-sm overflow-hidden flex flex-col">
                   <div className="bg-gradient-to-r from-cyan-50 to-white p-2.5 border-b border-gray-100 flex items-center gap-2">
                     <div className="w-7 h-7 bg-cyan-100 rounded-lg flex items-center justify-center">
                       <span className="text-sm">🦷</span>
                     </div>
                     <h3 className="font-bold text-gray-700 text-[10px] uppercase tracking-wide">Saúde Bucal</h3>
                   </div>
-                  <div className="p-2.5 space-y-1.5">
+                  <div className="p-2.5 space-y-2">
                     <div className="flex items-center gap-2">
                       <div className="w-3 h-3 rounded border-2 border-cyan-200 bg-cyan-50"></div>
                       <span className="text-[10px] text-gray-600">Escovação semanal</span>
@@ -284,14 +284,22 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
                       <div className="w-3 h-3 rounded border-2 border-cyan-200 bg-cyan-50"></div>
                       <span className="text-[10px] text-gray-600">Limpeza profissional</span>
                     </div>
-                    <div className="flex items-end gap-1 mt-1.5">
-                      <span className="text-gray-500 text-[9px] font-medium mb-0.5">Última:</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 rounded border-2 border-cyan-200 bg-cyan-50"></div>
+                      <span className="text-[10px] text-gray-600">Petisco dental</span>
+                    </div>
+                    <div className="flex items-end gap-1 mt-2">
+                      <span className="text-gray-500 text-[9px] font-medium mb-0.5">Última limpeza:</span>
+                      <div className="flex-1 border-b-2 border-dotted border-gray-200 mb-0.5"></div>
+                    </div>
+                    <div className="flex items-end gap-1">
+                      <span className="text-gray-500 text-[9px] font-medium mb-0.5">Próxima:</span>
                       <div className="flex-1 border-b-2 border-dotted border-gray-200 mb-0.5"></div>
                     </div>
                   </div>
                 </div>
 
-                {/* Notes - Expanded */}
+                {/* Notes - Expanded to fill remaining space */}
                 <div className="border border-gray-200 rounded-xl bg-white shadow-sm overflow-hidden flex-1 flex flex-col">
                   <div className="bg-gradient-to-r from-rose-50 to-white p-2.5 border-b border-gray-100 flex items-center gap-2">
                     <div className="w-7 h-7 bg-rose-100 rounded-lg flex items-center justify-center">
@@ -300,8 +308,8 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
                     <h3 className="font-bold text-gray-700 text-[10px] uppercase tracking-wide">Observações</h3>
                   </div>
                   <div className="p-3 flex-1 relative">
-                    <div className="absolute inset-0 px-3 py-2 space-y-4 pointer-events-none">
-                      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(i => (
+                    <div className="absolute inset-0 px-3 py-2 space-y-5 pointer-events-none">
+                      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24].map(i => (
                         <div key={i} className="border-b border-gray-100 w-full h-px"></div>
                       ))}
                     </div>
