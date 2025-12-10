@@ -129,8 +129,8 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
           </div>
 
           {/* Main Content */}
-          <div className="p-6">
-            <div className="grid grid-cols-12 gap-5">
+          <div className="p-6 flex-1 flex flex-col" style={{ minHeight: "680px" }}>
+            <div className="grid grid-cols-12 gap-5 flex-1">
               {/* Left Column */}
               <div className="col-span-7 space-y-5">
                 {/* Vacinas */}
@@ -141,17 +141,17 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
                     </div>
                     <h3 className="font-bold text-gray-700 text-sm uppercase tracking-wide">Cronograma de Vacinação</h3>
                   </div>
-                  <div className="p-5 space-y-4">
-                    {[1, 2, 3, 4, 5].map(i => (
+                  <div className="p-4 space-y-3">
+                    {[1, 2, 3, 4].map(i => (
                       <div key={i} className="flex items-center gap-3">
-                        <div className="w-5 h-5 rounded-full border-2 border-blue-200 flex-shrink-0 bg-blue-50"></div>
+                        <div className="w-4 h-4 rounded-full border-2 border-blue-200 flex-shrink-0 bg-blue-50"></div>
                         <div className="flex-1 flex items-end gap-2">
-                          <span className="text-gray-500 text-sm font-medium mb-1">Vacina:</span>
-                          <div className="flex-1 border-b-2 border-dotted border-gray-200 mb-1"></div>
+                          <span className="text-gray-500 text-xs font-medium mb-0.5">Vacina:</span>
+                          <div className="flex-1 border-b-2 border-dotted border-gray-200 mb-0.5"></div>
                         </div>
-                        <div className="w-28 flex items-end gap-2">
-                          <span className="text-gray-500 text-xs font-medium mb-1">Data:</span>
-                          <div className="flex-1 border-b-2 border-dotted border-gray-200 mb-1"></div>
+                        <div className="w-24 flex items-end gap-2">
+                          <span className="text-gray-500 text-[10px] font-medium mb-0.5">Data:</span>
+                          <div className="flex-1 border-b-2 border-dotted border-gray-200 mb-0.5"></div>
                         </div>
                       </div>
                     ))}
@@ -166,17 +166,17 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
                     </div>
                     <h3 className="font-bold text-gray-700 text-sm uppercase tracking-wide">Controle Parasitário</h3>
                   </div>
-                  <div className="p-5 space-y-4">
-                    {[1, 2, 3, 4].map(i => (
+                  <div className="p-4 space-y-3">
+                    {[1, 2, 3].map(i => (
                       <div key={i} className="flex items-center gap-3">
-                        <div className="w-5 h-5 rounded-full border-2 border-green-200 flex-shrink-0 bg-green-50"></div>
+                        <div className="w-4 h-4 rounded-full border-2 border-green-200 flex-shrink-0 bg-green-50"></div>
                         <div className="flex-1 flex items-end gap-2">
-                          <span className="text-gray-500 text-sm font-medium mb-1">Produto:</span>
-                          <div className="flex-1 border-b-2 border-dotted border-gray-200 mb-1"></div>
+                          <span className="text-gray-500 text-xs font-medium mb-0.5">Produto:</span>
+                          <div className="flex-1 border-b-2 border-dotted border-gray-200 mb-0.5"></div>
                         </div>
-                        <div className="w-28 flex items-end gap-2">
-                          <span className="text-gray-500 text-xs font-medium mb-1">Data:</span>
-                          <div className="flex-1 border-b-2 border-dotted border-gray-200 mb-1"></div>
+                        <div className="w-24 flex items-end gap-2">
+                          <span className="text-gray-500 text-[10px] font-medium mb-0.5">Data:</span>
+                          <div className="flex-1 border-b-2 border-dotted border-gray-200 mb-0.5"></div>
                         </div>
                       </div>
                     ))}
@@ -191,17 +191,17 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
                     </div>
                     <h3 className="font-bold text-gray-700 text-sm uppercase tracking-wide">Próximas Consultas</h3>
                   </div>
-                  <div className="p-5 space-y-4">
+                  <div className="p-4 space-y-3">
                     {[1, 2, 3].map(i => (
                       <div key={i} className="flex items-center gap-3">
-                        <div className="w-5 h-5 rounded-full border-2 border-purple-200 flex-shrink-0 bg-purple-50"></div>
+                        <div className="w-4 h-4 rounded-full border-2 border-purple-200 flex-shrink-0 bg-purple-50"></div>
                         <div className="flex-1 flex items-end gap-2">
-                          <span className="text-gray-500 text-sm font-medium mb-1">Tipo:</span>
-                          <div className="flex-1 border-b-2 border-dotted border-gray-200 mb-1"></div>
+                          <span className="text-gray-500 text-xs font-medium mb-0.5">Tipo:</span>
+                          <div className="flex-1 border-b-2 border-dotted border-gray-200 mb-0.5"></div>
                         </div>
-                        <div className="w-28 flex items-end gap-2">
-                          <span className="text-gray-500 text-xs font-medium mb-1">Data:</span>
-                          <div className="flex-1 border-b-2 border-dotted border-gray-200 mb-1"></div>
+                        <div className="w-24 flex items-end gap-2">
+                          <span className="text-gray-500 text-[10px] font-medium mb-0.5">Data:</span>
+                          <div className="flex-1 border-b-2 border-dotted border-gray-200 mb-0.5"></div>
                         </div>
                       </div>
                     ))}
@@ -210,29 +210,29 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
               </div>
 
               {/* Right Column */}
-              <div className="col-span-5 space-y-5">
+              <div className="col-span-5 flex flex-col gap-5">
                 {/* Weight Tracker */}
                 <div className="border border-gray-200 rounded-2xl bg-white shadow-sm overflow-hidden">
-                  <div className="bg-gradient-to-r from-amber-50 to-white p-4 border-b border-gray-100 flex items-center gap-3">
-                    <div className="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center">
-                      <span className="text-xl">⚖️</span>
+                  <div className="bg-gradient-to-r from-amber-50 to-white p-3 border-b border-gray-100 flex items-center gap-3">
+                    <div className="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center">
+                      <span className="text-lg">⚖️</span>
                     </div>
-                    <h3 className="font-bold text-gray-700 text-sm uppercase tracking-wide">Controle de Peso</h3>
+                    <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide">Controle de Peso</h3>
                   </div>
-                  <div className="p-4">
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="border border-gray-200 rounded-xl p-4 text-center bg-gradient-to-br from-gray-50 to-white">
-                        <span className="text-xs text-amber-600 font-bold uppercase tracking-wider block mb-2">Peso Atual</span>
+                  <div className="p-3">
+                    <div className="grid grid-cols-2 gap-2">
+                      <div className="border border-gray-200 rounded-xl p-3 text-center bg-gradient-to-br from-gray-50 to-white">
+                        <span className="text-[10px] text-amber-600 font-bold uppercase tracking-wider block mb-1">Peso Atual</span>
                         <div className="flex items-baseline justify-center gap-1">
-                          <span className="text-gray-300 text-2xl font-light">____</span>
-                          <span className="text-gray-400 font-medium text-sm">kg</span>
+                          <span className="text-gray-300 text-xl font-light">____</span>
+                          <span className="text-gray-400 font-medium text-xs">kg</span>
                         </div>
                       </div>
-                      <div className="border border-gray-200 rounded-xl p-4 text-center bg-gradient-to-br from-gray-50 to-white">
-                        <span className="text-xs text-amber-600 font-bold uppercase tracking-wider block mb-2">Peso Meta</span>
+                      <div className="border border-gray-200 rounded-xl p-3 text-center bg-gradient-to-br from-gray-50 to-white">
+                        <span className="text-[10px] text-amber-600 font-bold uppercase tracking-wider block mb-1">Peso Meta</span>
                         <div className="flex items-baseline justify-center gap-1">
-                          <span className="text-gray-300 text-2xl font-light">____</span>
-                          <span className="text-gray-400 font-medium text-sm">kg</span>
+                          <span className="text-gray-300 text-xl font-light">____</span>
+                          <span className="text-gray-400 font-medium text-xs">kg</span>
                         </div>
                       </div>
                     </div>
@@ -241,39 +241,39 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
 
                 {/* Saúde Bucal */}
                 <div className="border border-gray-200 rounded-2xl bg-white shadow-sm overflow-hidden">
-                  <div className="bg-gradient-to-r from-cyan-50 to-white p-4 border-b border-gray-100 flex items-center gap-3">
-                    <div className="w-10 h-10 bg-cyan-100 rounded-xl flex items-center justify-center">
-                      <span className="text-xl">🦷</span>
+                  <div className="bg-gradient-to-r from-cyan-50 to-white p-3 border-b border-gray-100 flex items-center gap-3">
+                    <div className="w-8 h-8 bg-cyan-100 rounded-lg flex items-center justify-center">
+                      <span className="text-lg">🦷</span>
                     </div>
-                    <h3 className="font-bold text-gray-700 text-sm uppercase tracking-wide">Saúde Bucal</h3>
+                    <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide">Saúde Bucal</h3>
                   </div>
-                  <div className="p-4 space-y-3">
-                    <div className="flex items-center gap-3">
-                      <div className="w-4 h-4 rounded border-2 border-cyan-200 bg-cyan-50"></div>
-                      <span className="text-sm text-gray-600">Escovação semanal</span>
+                  <div className="p-3 space-y-2">
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 rounded border-2 border-cyan-200 bg-cyan-50"></div>
+                      <span className="text-xs text-gray-600">Escovação semanal</span>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-4 h-4 rounded border-2 border-cyan-200 bg-cyan-50"></div>
-                      <span className="text-sm text-gray-600">Limpeza profissional</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 rounded border-2 border-cyan-200 bg-cyan-50"></div>
+                      <span className="text-xs text-gray-600">Limpeza profissional</span>
                     </div>
-                    <div className="flex items-end gap-2 mt-3">
-                      <span className="text-gray-500 text-xs font-medium mb-1">Última limpeza:</span>
-                      <div className="flex-1 border-b-2 border-dotted border-gray-200 mb-1"></div>
+                    <div className="flex items-end gap-2 mt-2">
+                      <span className="text-gray-500 text-[10px] font-medium mb-0.5">Última limpeza:</span>
+                      <div className="flex-1 border-b-2 border-dotted border-gray-200 mb-0.5"></div>
                     </div>
                   </div>
                 </div>
 
-                {/* Notes */}
-                <div className="border border-gray-200 rounded-2xl bg-white shadow-sm overflow-hidden flex-1">
-                  <div className="bg-gradient-to-r from-rose-50 to-white p-4 border-b border-gray-100 flex items-center gap-3">
-                    <div className="w-10 h-10 bg-rose-100 rounded-xl flex items-center justify-center">
-                      <span className="text-xl">📝</span>
+                {/* Notes - Expanded to fill remaining space */}
+                <div className="border border-gray-200 rounded-2xl bg-white shadow-sm overflow-hidden flex-1 flex flex-col">
+                  <div className="bg-gradient-to-r from-rose-50 to-white p-3 border-b border-gray-100 flex items-center gap-3">
+                    <div className="w-8 h-8 bg-rose-100 rounded-lg flex items-center justify-center">
+                      <span className="text-lg">📝</span>
                     </div>
-                    <h3 className="font-bold text-gray-700 text-sm uppercase tracking-wide">Observações</h3>
+                    <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide">Observações</h3>
                   </div>
-                  <div className="p-4 relative" style={{ minHeight: "140px" }}>
-                    <div className="absolute inset-0 top-0 px-4 py-2 space-y-4 pointer-events-none">
-                      {[1, 2, 3, 4, 5, 6].map(i => (
+                  <div className="p-4 flex-1 relative" style={{ minHeight: "280px" }}>
+                    <div className="absolute inset-0 px-4 py-2 space-y-5 pointer-events-none">
+                      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(i => (
                         <div key={i} className="border-b border-gray-100 w-full h-px"></div>
                       ))}
                     </div>
