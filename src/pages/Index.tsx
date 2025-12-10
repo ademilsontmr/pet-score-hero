@@ -83,22 +83,60 @@ const Index = () => {
       </div>
     </section>
 
-    {/* Social Proof Section */}
-    <section className="py-8 md:py-12 px-4 bg-card/50">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 sm:gap-8 md:gap-16 opacity-80">
-          <div className="flex items-center gap-2">
-            <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary" />
-            <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary" />
-            <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary" />
-            <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary" />
-            <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary" />
-            <span className="ml-2 font-semibold text-sm sm:text-base">4.9/5.0</span>
+    {/* Social Proof Section - Premium Design */}
+    <section className="py-8 md:py-14 px-4 bg-gradient-to-b from-card/80 to-background relative overflow-hidden">
+      {/* Decorative background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-secondary/5 rounded-full blur-3xl" />
+      </div>
+      
+      <div className="max-w-5xl mx-auto relative">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+          {/* Rating Card */}
+          <div className="group relative bg-card/80 backdrop-blur-sm rounded-2xl p-5 md:p-6 border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="relative flex flex-col items-center text-center gap-3">
+              <div className="flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 md:w-6 md:h-6 fill-primary text-primary drop-shadow-sm" />
+                ))}
+              </div>
+              <div>
+                <span className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text">4.9</span>
+                <span className="text-muted-foreground text-sm md:text-base font-medium">/5.0</span>
+              </div>
+              <span className="text-xs md:text-sm text-muted-foreground font-medium">Avaliação dos tutores</span>
+            </div>
           </div>
-          <div className="hidden sm:block text-muted-foreground">|</div>
-          <div className="font-semibold text-sm sm:text-base">10.247 tutores</div>
-          <div className="hidden sm:block text-muted-foreground">|</div>
-          <div className="font-semibold text-sm sm:text-base">Sem precisar criar conta</div>
+
+          {/* Users Card */}
+          <div className="group relative bg-card/80 backdrop-blur-sm rounded-2xl p-5 md:p-6 border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="relative flex flex-col items-center text-center gap-3">
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl flex items-center justify-center">
+                <Users className="w-6 h-6 md:w-7 md:h-7 text-primary" />
+              </div>
+              <div>
+                <span className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text">10.247</span>
+              </div>
+              <span className="text-xs md:text-sm text-muted-foreground font-medium">Tutores avaliados</span>
+            </div>
+          </div>
+
+          {/* No Account Card */}
+          <div className="group relative bg-card/80 backdrop-blur-sm rounded-2xl p-5 md:p-6 border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="relative flex flex-col items-center text-center gap-3">
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-green-500/20 to-green-500/5 rounded-xl flex items-center justify-center">
+                <CheckCircle2 className="w-6 h-6 md:w-7 md:h-7 text-green-600" />
+              </div>
+              <div>
+                <span className="text-lg md:text-xl font-bold text-foreground">Sem criar conta</span>
+              </div>
+              <span className="text-xs md:text-sm text-muted-foreground font-medium">Resultado instantâneo</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
