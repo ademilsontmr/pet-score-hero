@@ -200,8 +200,8 @@ const CompleteResult = () => {
         ctx.font = "bold 100px Arial";
         ctx.fillText(score.toString(), badgeX, badgeY + 35);
 
-        // Elegant subtle seal next to score (right side)
-        drawElegantSeal(ctx, badgeX + 130, badgeY - 60);
+        // Elegant medal next to score (right side)
+        drawElegantSeal(ctx, badgeX + 160, badgeY - 80);
 
         // Bottom Card for Text
         drawBottomCard(ctx);
@@ -229,8 +229,8 @@ const CompleteResult = () => {
       ctx.font = "bold 60px Arial";
       ctx.fillText("/100", centerX, centerY + 140);
 
-      // Elegant subtle seal (right side)
-      drawElegantSeal(ctx, centerX + 200, centerY - 100);
+      // Elegant medal (right side)
+      drawElegantSeal(ctx, centerX + 240, centerY - 120);
 
       drawBottomCard(ctx);
 
@@ -292,155 +292,212 @@ const CompleteResult = () => {
   };
 
   const drawElegantSeal = (ctx: CanvasRenderingContext2D, x: number, y: number) => {
-    const radius = 45;
+    const radius = 50;
     
+    // Red ribbons (drawn first, behind medal)
     ctx.save();
     
-    // Shadow
-    ctx.shadowColor = "rgba(0,0,0,0.3)";
-    ctx.shadowBlur = 12;
-    ctx.shadowOffsetY = 5;
+    // Left ribbon
+    const ribbonGradientL = ctx.createLinearGradient(x - 30, y + radius - 20, x - 10, y + radius + 70);
+    ribbonGradientL.addColorStop(0, "#B22234");
+    ribbonGradientL.addColorStop(0.3, "#8B0000");
+    ribbonGradientL.addColorStop(0.6, "#B22234");
+    ribbonGradientL.addColorStop(1, "#6B0000");
     
-    // Outer ring with gold gradient (3D effect)
-    const outerGradient = ctx.createLinearGradient(x - radius, y - radius, x + radius, y + radius);
-    outerGradient.addColorStop(0, "#F5E6A3");
-    outerGradient.addColorStop(0.3, "#D4A853");
-    outerGradient.addColorStop(0.5, "#B8860B");
-    outerGradient.addColorStop(0.7, "#D4A853");
-    outerGradient.addColorStop(1, "#8B6914");
+    ctx.fillStyle = ribbonGradientL;
+    ctx.beginPath();
+    ctx.moveTo(x - 20, y + radius - 15);
+    ctx.bezierCurveTo(x - 28, y + radius + 20, x - 35, y + radius + 45, x - 38, y + radius + 70);
+    ctx.lineTo(x - 28, y + radius + 55);
+    ctx.lineTo(x - 22, y + radius + 70);
+    ctx.bezierCurveTo(x - 15, y + radius + 40, x - 10, y + radius + 15, x - 5, y + radius - 15);
+    ctx.closePath();
+    ctx.fill();
     
+    // Gold trim on left ribbon
+    ctx.strokeStyle = "#D4A853";
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(x - 12, y + radius - 10);
+    ctx.bezierCurveTo(x - 20, y + radius + 20, x - 28, y + radius + 45, x - 30, y + radius + 65);
+    ctx.stroke();
+    
+    // Right ribbon
+    const ribbonGradientR = ctx.createLinearGradient(x + 10, y + radius - 20, x + 30, y + radius + 70);
+    ribbonGradientR.addColorStop(0, "#B22234");
+    ribbonGradientR.addColorStop(0.3, "#8B0000");
+    ribbonGradientR.addColorStop(0.6, "#B22234");
+    ribbonGradientR.addColorStop(1, "#6B0000");
+    
+    ctx.fillStyle = ribbonGradientR;
+    ctx.beginPath();
+    ctx.moveTo(x + 5, y + radius - 15);
+    ctx.bezierCurveTo(x + 10, y + radius + 15, x + 15, y + radius + 40, x + 22, y + radius + 70);
+    ctx.lineTo(x + 28, y + radius + 55);
+    ctx.lineTo(x + 38, y + radius + 70);
+    ctx.bezierCurveTo(x + 35, y + radius + 45, x + 28, y + radius + 20, x + 20, y + radius - 15);
+    ctx.closePath();
+    ctx.fill();
+    
+    // Gold trim on right ribbon
+    ctx.strokeStyle = "#D4A853";
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(x + 12, y + radius - 10);
+    ctx.bezierCurveTo(x + 20, y + radius + 20, x + 28, y + radius + 45, x + 30, y + radius + 65);
+    ctx.stroke();
+    
+    ctx.restore();
+    
+    // Medal shadow
+    ctx.save();
+    ctx.shadowColor = "rgba(0,0,0,0.4)";
+    ctx.shadowBlur = 15;
+    ctx.shadowOffsetY = 8;
     ctx.beginPath();
     ctx.arc(x, y, radius, 0, Math.PI * 2);
-    ctx.fillStyle = outerGradient;
+    ctx.fillStyle = "rgba(0,0,0,0.01)";
     ctx.fill();
     ctx.restore();
     
-    // Notched edge effect
+    // Outer silver/chrome rim
     ctx.save();
-    ctx.fillStyle = "#A67C2E";
-    for (let i = 0; i < 36; i++) {
-      const angle = (i / 36) * Math.PI * 2;
-      const notchX = x + Math.cos(angle) * (radius - 2);
-      const notchY = y + Math.sin(angle) * (radius - 2);
+    const rimGradient = ctx.createLinearGradient(x - radius, y - radius, x + radius, y + radius);
+    rimGradient.addColorStop(0, "#E8E8E8");
+    rimGradient.addColorStop(0.2, "#C0C0C0");
+    rimGradient.addColorStop(0.4, "#A0A0A0");
+    rimGradient.addColorStop(0.5, "#D8D8D8");
+    rimGradient.addColorStop(0.6, "#A0A0A0");
+    rimGradient.addColorStop(0.8, "#C0C0C0");
+    rimGradient.addColorStop(1, "#808080");
+    
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, Math.PI * 2);
+    ctx.fillStyle = rimGradient;
+    ctx.fill();
+    ctx.restore();
+    
+    // Notched edge decoration
+    ctx.save();
+    for (let i = 0; i < 48; i++) {
+      const angle = (i / 48) * Math.PI * 2;
+      const notchX = x + Math.cos(angle) * (radius - 3);
+      const notchY = y + Math.sin(angle) * (radius - 3);
+      ctx.fillStyle = i % 2 === 0 ? "#888888" : "#CCCCCC";
       ctx.beginPath();
-      ctx.arc(notchX, notchY, 2.5, 0, Math.PI * 2);
+      ctx.arc(notchX, notchY, 2, 0, Math.PI * 2);
       ctx.fill();
     }
     ctx.restore();
     
-    // Inner gold disc
+    // Inner gold medal face
     ctx.save();
-    const innerGradient = ctx.createLinearGradient(x - radius + 8, y - radius + 8, x + radius - 8, y + radius - 8);
-    innerGradient.addColorStop(0, "#F5E6A3");
-    innerGradient.addColorStop(0.4, "#E8D5A8");
-    innerGradient.addColorStop(0.6, "#D4A853");
-    innerGradient.addColorStop(1, "#C9973F");
+    const goldGradient = ctx.createRadialGradient(x - 10, y - 10, 0, x, y, radius - 6);
+    goldGradient.addColorStop(0, "#FFF8DC");
+    goldGradient.addColorStop(0.3, "#F5DEB3");
+    goldGradient.addColorStop(0.6, "#DAA520");
+    goldGradient.addColorStop(0.8, "#CD853F");
+    goldGradient.addColorStop(1, "#B8860B");
     
     ctx.beginPath();
-    ctx.arc(x, y, radius - 8, 0, Math.PI * 2);
-    ctx.fillStyle = innerGradient;
+    ctx.arc(x, y, radius - 6, 0, Math.PI * 2);
+    ctx.fillStyle = goldGradient;
     ctx.fill();
     ctx.restore();
     
-    // Inner border ring
+    // Inner decorative gold ring
     ctx.save();
     ctx.strokeStyle = "#B8860B";
     ctx.lineWidth = 2;
     ctx.beginPath();
-    ctx.arc(x, y, radius - 10, 0, Math.PI * 2);
+    ctx.arc(x, y, radius - 12, 0, Math.PI * 2);
     ctx.stroke();
     ctx.restore();
     
-    // Laurel wreath - left branch
+    // Laurel wreath
     ctx.save();
-    ctx.strokeStyle = "#A67C2E";
-    ctx.fillStyle = "#C9973F";
-    ctx.lineWidth = 1.5;
+    const leafColor = "#CD853F";
+    const leafHighlight = "#DAA520";
     
-    // Left laurel leaves
-    for (let i = 0; i < 6; i++) {
-      const leafAngle = Math.PI * 0.65 + (i * 0.12);
-      const leafX = x - 12 + Math.cos(leafAngle) * (12 + i * 2);
-      const leafY = y + 5 - Math.sin(leafAngle) * (12 + i * 2);
+    // Left branch of laurel
+    for (let i = 0; i < 7; i++) {
+      const angle = Math.PI * 0.75 + (i * 0.15);
+      const dist = 18 + i * 1.5;
+      const leafX = x + Math.cos(angle) * dist - 8;
+      const leafY = y - Math.sin(angle) * dist + 8;
       
       ctx.save();
       ctx.translate(leafX, leafY);
-      ctx.rotate(-leafAngle + Math.PI * 0.3);
+      ctx.rotate(-angle + Math.PI / 4);
+      
+      // Leaf shadow
+      ctx.fillStyle = leafColor;
       ctx.beginPath();
-      ctx.ellipse(0, 0, 6, 3, 0, 0, Math.PI * 2);
+      ctx.ellipse(1, 1, 7, 3.5, 0, 0, Math.PI * 2);
       ctx.fill();
+      
+      // Leaf
+      ctx.fillStyle = leafHighlight;
+      ctx.beginPath();
+      ctx.ellipse(0, 0, 7, 3.5, 0, 0, Math.PI * 2);
+      ctx.fill();
+      
+      // Leaf vein
+      ctx.strokeStyle = leafColor;
+      ctx.lineWidth = 0.8;
+      ctx.beginPath();
+      ctx.moveTo(-5, 0);
+      ctx.lineTo(5, 0);
       ctx.stroke();
+      
       ctx.restore();
     }
     
-    // Right laurel leaves
-    for (let i = 0; i < 6; i++) {
-      const leafAngle = Math.PI * 0.35 - (i * 0.12);
-      const leafX = x + 12 + Math.cos(leafAngle) * (12 + i * 2);
-      const leafY = y + 5 - Math.sin(leafAngle) * (12 + i * 2);
+    // Right branch of laurel
+    for (let i = 0; i < 7; i++) {
+      const angle = Math.PI * 0.25 - (i * 0.15);
+      const dist = 18 + i * 1.5;
+      const leafX = x + Math.cos(angle) * dist + 8;
+      const leafY = y - Math.sin(angle) * dist + 8;
       
       ctx.save();
       ctx.translate(leafX, leafY);
-      ctx.rotate(-leafAngle - Math.PI * 0.3);
+      ctx.rotate(-angle - Math.PI / 4);
+      
+      // Leaf shadow
+      ctx.fillStyle = leafColor;
       ctx.beginPath();
-      ctx.ellipse(0, 0, 6, 3, 0, 0, Math.PI * 2);
+      ctx.ellipse(1, 1, 7, 3.5, 0, 0, Math.PI * 2);
       ctx.fill();
+      
+      // Leaf
+      ctx.fillStyle = leafHighlight;
+      ctx.beginPath();
+      ctx.ellipse(0, 0, 7, 3.5, 0, 0, Math.PI * 2);
+      ctx.fill();
+      
+      // Leaf vein
+      ctx.strokeStyle = leafColor;
+      ctx.lineWidth = 0.8;
+      ctx.beginPath();
+      ctx.moveTo(-5, 0);
+      ctx.lineTo(5, 0);
       ctx.stroke();
+      
       ctx.restore();
     }
+    
     ctx.restore();
     
-    // Red ribbons
+    // Subtle highlight on medal
     ctx.save();
-    
-    // Left ribbon
-    const ribbonGradientL = ctx.createLinearGradient(x - 25, y + radius, x - 5, y + radius + 60);
-    ribbonGradientL.addColorStop(0, "#C41E3A");
-    ribbonGradientL.addColorStop(0.5, "#8B0000");
-    ribbonGradientL.addColorStop(1, "#C41E3A");
-    
-    ctx.fillStyle = ribbonGradientL;
+    const highlightGradient = ctx.createRadialGradient(x - 15, y - 15, 0, x - 15, y - 15, 25);
+    highlightGradient.addColorStop(0, "rgba(255,255,255,0.4)");
+    highlightGradient.addColorStop(1, "rgba(255,255,255,0)");
+    ctx.fillStyle = highlightGradient;
     ctx.beginPath();
-    ctx.moveTo(x - 18, y + radius - 10);
-    ctx.quadraticCurveTo(x - 25, y + radius + 25, x - 30, y + radius + 55);
-    ctx.lineTo(x - 20, y + radius + 45);
-    ctx.lineTo(x - 15, y + radius + 55);
-    ctx.quadraticCurveTo(x - 10, y + radius + 25, x - 8, y + radius - 10);
-    ctx.closePath();
+    ctx.arc(x - 15, y - 15, 25, 0, Math.PI * 2);
     ctx.fill();
-    
-    // Gold line on left ribbon
-    ctx.strokeStyle = "#D4A853";
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.moveTo(x - 13, y + radius - 5);
-    ctx.quadraticCurveTo(x - 17, y + radius + 25, x - 22, y + radius + 50);
-    ctx.stroke();
-    
-    // Right ribbon
-    const ribbonGradientR = ctx.createLinearGradient(x + 5, y + radius, x + 25, y + radius + 60);
-    ribbonGradientR.addColorStop(0, "#C41E3A");
-    ribbonGradientR.addColorStop(0.5, "#8B0000");
-    ribbonGradientR.addColorStop(1, "#C41E3A");
-    
-    ctx.fillStyle = ribbonGradientR;
-    ctx.beginPath();
-    ctx.moveTo(x + 8, y + radius - 10);
-    ctx.quadraticCurveTo(x + 10, y + radius + 25, x + 15, y + radius + 55);
-    ctx.lineTo(x + 20, y + radius + 45);
-    ctx.lineTo(x + 30, y + radius + 55);
-    ctx.quadraticCurveTo(x + 25, y + radius + 25, x + 18, y + radius - 10);
-    ctx.closePath();
-    ctx.fill();
-    
-    // Gold line on right ribbon
-    ctx.strokeStyle = "#D4A853";
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.moveTo(x + 13, y + radius - 5);
-    ctx.quadraticCurveTo(x + 17, y + radius + 25, x + 22, y + radius + 50);
-    ctx.stroke();
-    
     ctx.restore();
   };
 
