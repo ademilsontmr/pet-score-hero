@@ -203,12 +203,12 @@ const CompleteResult = () => {
         // Bottom Card for Text
         drawBottomCard(ctx);
 
-        // Website URL (Above the bottom bar)
+        // Website URL (On the bottom bar)
         ctx.save();
         ctx.textBaseline = "middle";
-        ctx.fillStyle = "#FF6B35"; // Brand Orange
+        ctx.fillStyle = "white";
         ctx.font = "bold 28px Arial";
-        ctx.fillText("www.petscore.com.br", canvas.width / 2, canvas.height - 70);
+        ctx.fillText("www.petscore.com.br", canvas.width / 2, canvas.height - 20);
         ctx.restore();
       };
     } else {
@@ -228,12 +228,12 @@ const CompleteResult = () => {
 
       drawBottomCard(ctx);
 
-      // Website URL (Above the bottom bar)
+      // Website URL (On the bottom bar)
       ctx.save();
       ctx.textBaseline = "middle";
-      ctx.fillStyle = "#FF6B35"; // Brand Orange
+      ctx.fillStyle = "white";
       ctx.font = "bold 28px Arial";
-      ctx.fillText("www.petscore.com.br", canvas.width / 2, canvas.height - 70);
+      ctx.fillText("www.petscore.com.br", canvas.width / 2, canvas.height - 20);
       ctx.restore();
     }
   };
