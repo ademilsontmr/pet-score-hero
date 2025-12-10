@@ -5816,6 +5816,761 @@ const articles = {
                 </div>
             </div>
         )
+    },
+    "como-acalmar-cachorro-tempestade": {
+        title: "Como Acalmar Seu Cachorro Durante Tempestades: Guia Completo do Veterinário",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Trovões, relâmpagos e ventos fortes transformam muitos cães em bolas de nervos. A fobia de tempestades afeta entre 15% e 30% dos cães, e sem tratamento adequado, tende a piorar com a idade. Como veterinário comportamentalista, vou explicar por que isso acontece e as técnicas mais eficazes para ajudar seu melhor amigo.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Por Que Cães Têm Medo de Tempestades?</h2>
+                <p>
+                    Diferente de humanos, cães percebem a tempestade muito antes dela chegar. Eles detectam:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Quedas de pressão barométrica:</strong> Sensores naturais no ouvido interno.</li>
+                    <li><strong>Eletricidade estática:</strong> O pelo acumula carga, causando desconforto.</li>
+                    <li><strong>Sons de baixa frequência:</strong> Trovões a quilômetros que humanos não escutam.</li>
+                    <li><strong>Mudanças de odor:</strong> O ozônio gerado por raios tem cheiro perceptível para cães.</li>
+                </ul>
+                <p>
+                    Ou seja, para o cão, a tempestade é uma experiência multissensorial avassaladora.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Sinais de Ansiedade de Tempestade</h2>
+                <div className="grid md:grid-cols-2 gap-4 my-6">
+                    <div className="bg-amber-50 border border-amber-200 p-4 rounded-xl">
+                        <h4 className="font-bold text-amber-700 mb-2">🟡 Sinais Leves</h4>
+                        <ul className="text-sm space-y-1">
+                            <li>Orelhas para trás</li>
+                            <li>Rabo entre as pernas</li>
+                            <li>Ofegar sem exercício</li>
+                            <li>Lamber os lábios</li>
+                        </ul>
+                    </div>
+                    <div className="bg-red-50 border border-red-200 p-4 rounded-xl">
+                        <h4 className="font-bold text-red-700 mb-2">🔴 Sinais Graves</h4>
+                        <ul className="text-sm space-y-1">
+                            <li>Tremores intensos</li>
+                            <li>Vocalização excessiva</li>
+                            <li>Tentativa de fuga</li>
+                            <li>Destruição de objetos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">8 Técnicas Comprovadas para Acalmar</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">1. Crie um Refúgio Seguro</h3>
+                <p>
+                    Monte um espaço aconchegante em um cômodo interno, longe de janelas:
+                </p>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li>Caixa de transporte aberta com cobertor familiar.</li>
+                    <li>Closet ou banheiro sem janelas.</li>
+                    <li>Deixe água e petiscos disponíveis.</li>
+                </ul>
+                <p className="text-muted-foreground italic mt-2">
+                    Importante: Nunca force o cão a ficar. O refúgio deve ser associado a coisas boas.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">2. Ruído Branco e Música Calmante</h3>
+                <p>
+                    Abafe o som dos trovões com:
+                </p>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li>Playlists específicas para cães (Spotify tem várias).</li>
+                    <li>Ventilador ou ar-condicionado ligado.</li>
+                    <li>TV em volume moderado.</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">3. Camisa de Pressão (Thunder Shirt)</h3>
+                <p>
+                    A pressão suave no corpo libera endorfina e reduz ansiedade. Estudos mostram eficácia de 80% em casos leves a moderados. Alternativa caseira: camiseta justa ou faixa elástica no tronco.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">4. Feromônios Sintéticos (Adaptil)</h3>
+                <p>
+                    Difusores ou coleiras com DAP (Dog Appeasing Pheromone) simulam o feromônio materno. Comece a usar dias antes da época de chuvas para melhor efeito.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">5. Dessensibilização Gradual</h3>
+                <p>
+                    Treinamento de longo prazo mais eficaz:
+                </p>
+                <ol className="list-decimal pl-6 space-y-2">
+                    <li>Toque sons de tempestade em volume muito baixo.</li>
+                    <li>Associe com petiscos e brincadeiras.</li>
+                    <li>Aumente gradualmente ao longo de semanas.</li>
+                    <li>Nunca avance se o cão mostrar medo.</li>
+                </ol>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">6. Suplementos Naturais</h3>
+                <div className="bg-green-50 border border-green-200 p-4 rounded-xl">
+                    <p className="font-semibold text-green-700 mb-2">Opções com evidência científica:</p>
+                    <ul className="list-disc pl-6 space-y-1 text-sm">
+                        <li><strong>L-Teanina:</strong> Aminoácido calmante do chá verde.</li>
+                        <li><strong>Alfa-casozepina:</strong> Derivado do leite, efeito ansiolítico.</li>
+                        <li><strong>CBD para pets:</strong> Consulte o veterinário para dosagem.</li>
+                    </ul>
+                </div>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">7. Mantenha-se Calmo</h3>
+                <p>
+                    Cães leem sua energia. Se você ficar ansioso, ele também ficará. Aja normalmente, sem excesso de carinho que possa reforçar o medo.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">8. Medicação (Casos Graves)</h3>
+                <p>
+                    Para fobias severas, o veterinário pode prescrever:
+                </p>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Sileo (dexmedetomidina):</strong> Gel oromucoso de ação rápida.</li>
+                    <li><strong>Trazodona:</strong> Ansiolítico de uso situacional.</li>
+                    <li><strong>Fluoxetina:</strong> Para tratamento contínuo em casos crônicos.</li>
+                </ul>
+                <p className="text-red-600 font-semibold mt-2">
+                    ⚠️ Nunca medique sem prescrição veterinária!
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">O Que NÃO Fazer</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li>❌ Punir ou gritar com o cão assustado.</li>
+                    <li>❌ Forçar exposição aos trovões.</li>
+                    <li>❌ Deixar sozinho no quintal.</li>
+                    <li>❌ Ignorar completamente (ele precisa saber que você está lá).</li>
+                </ul>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Tempestade Não Precisa Ser Terror</h3>
+                    <p className="text-lg mb-6">
+                        Com paciência e as técnicas certas, é possível reduzir significativamente o medo do seu cão. Comece hoje mesmo a preparar o refúgio seguro!
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Avaliar o Bem-Estar do Meu Pet
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "doencas-renais-gatos-guia": {
+        title: "Doenças Renais em Gatos: Prevenção, Sintomas e Tratamento Completo",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    A Doença Renal Crônica (DRC) é a principal causa de morte em gatos idosos. Estima-se que 30% a 40% dos felinos acima de 10 anos desenvolvam algum grau de insuficiência renal. Como médico veterinário especialista em nefrologia felina, vou explicar tudo o que você precisa saber para proteger seu gato.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">O Que São os Rins e Por Que Falham?</h2>
+                <p>
+                    Os rins são filtros que eliminam toxinas, regulam pressão arterial, produzem hormônios e mantêm o equilíbrio de eletrólitos. Gatos têm predisposição genética à DRC porque:
+                </p>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li>Evoluíram em desertos, bebendo pouca água.</li>
+                    <li>Urina muito concentrada sobrecarrega os néfrons.</li>
+                    <li>Alimentação inadequada por décadas agrava o quadro.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Fatores de Risco</h2>
+                <div className="grid md:grid-cols-2 gap-4 my-6">
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold mb-2">🔴 Alto Risco</h4>
+                        <ul className="text-sm space-y-1">
+                            <li>Gatos acima de 7 anos</li>
+                            <li>Raças: Persa, Abissínio, Siamês</li>
+                            <li>Dieta apenas com ração seca</li>
+                            <li>Histórico de infecção urinária</li>
+                        </ul>
+                    </div>
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold mb-2">⚠️ Risco Moderado</h4>
+                        <ul className="text-sm space-y-1">
+                            <li>Gatos entre 4-7 anos</li>
+                            <li>Obesidade</li>
+                            <li>Hipertensão</li>
+                            <li>Uso frequente de anti-inflamatórios</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Estágios da Doença Renal Crônica (IRIS)</h2>
+                <div className="overflow-x-auto">
+                    <table className="w-full text-sm border-collapse">
+                        <thead>
+                            <tr className="bg-primary/10">
+                                <th className="border p-2 text-left">Estágio</th>
+                                <th className="border p-2 text-left">Creatinina</th>
+                                <th className="border p-2 text-left">Sintomas</th>
+                                <th className="border p-2 text-left">Prognóstico</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td className="border p-2 font-bold">1</td>
+                                <td className="border p-2">&lt; 1.6 mg/dL</td>
+                                <td className="border p-2">Nenhum ou sede aumentada</td>
+                                <td className="border p-2 text-green-600">Anos com manejo</td>
+                            </tr>
+                            <tr>
+                                <td className="border p-2 font-bold">2</td>
+                                <td className="border p-2">1.6 - 2.8 mg/dL</td>
+                                <td className="border p-2">Poliúria, perda de peso leve</td>
+                                <td className="border p-2 text-yellow-600">2-4 anos com tratamento</td>
+                            </tr>
+                            <tr>
+                                <td className="border p-2 font-bold">3</td>
+                                <td className="border p-2">2.9 - 5.0 mg/dL</td>
+                                <td className="border p-2">Vômitos, desidratação, anorexia</td>
+                                <td className="border p-2 text-orange-600">1-2 anos com suporte intensivo</td>
+                            </tr>
+                            <tr>
+                                <td className="border p-2 font-bold">4</td>
+                                <td className="border p-2">&gt; 5.0 mg/dL</td>
+                                <td className="border p-2">Uremia, convulsões, coma</td>
+                                <td className="border p-2 text-red-600">Semanas a meses</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Sintomas Precoces (Não Ignore!)</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Beber mais água que o normal:</strong> Primeiro sinal visível.</li>
+                    <li><strong>Urinar em maior quantidade:</strong> Caixa de areia mais pesada.</li>
+                    <li><strong>Perda de peso gradual:</strong> Mesmo comendo normalmente.</li>
+                    <li><strong>Pelo opaco e sem brilho:</strong> Sinal de desnutrição.</li>
+                    <li><strong>Mau hálito (hálito urêmico):</strong> Cheiro de amônia.</li>
+                    <li><strong>Vômitos frequentes:</strong> Especialmente líquido claro.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Diagnóstico: Exames Essenciais</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>SDMA:</strong> Marcador mais precoce que creatinina.</li>
+                    <li><strong>Creatinina e Ureia:</strong> Marcadores clássicos de função renal.</li>
+                    <li><strong>Fósforo sérico:</strong> Elevado indica progressão.</li>
+                    <li><strong>Urinálise:</strong> Avalia concentração e presença de proteína.</li>
+                    <li><strong>Pressão arterial:</strong> Hipertensão é comum e agrava lesão renal.</li>
+                    <li><strong>Ultrassonografia:</strong> Avalia tamanho e estrutura dos rins.</li>
+                </ul>
+
+                <div className="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+                    <p className="font-bold text-blue-700">💡 Dica de Ouro:</p>
+                    <p className="text-blue-600">
+                        O exame SDMA detecta perda de função renal quando apenas 25% dos néfrons estão comprometidos. A creatinina só altera com 75% de lesão. Peça SDMA no check-up anual!
+                    </p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Tratamento e Manejo</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">1. Dieta Renal</h3>
+                <p>
+                    Rações renais têm:
+                </p>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li>Proteína de alta qualidade em quantidade controlada.</li>
+                    <li>Fósforo reduzido (essencial!).</li>
+                    <li>Ômega-3 para proteger néfrons.</li>
+                    <li>Potássio suplementado.</li>
+                </ul>
+                <p className="text-muted-foreground italic">
+                    Marcas recomendadas: Royal Canin Renal, Hills k/d, Farmina Vet Life Renal.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">2. Hidratação</h3>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li>Fontes de água corrente (gatos preferem).</li>
+                    <li>Sachês e patês (70% água) em vez de apenas ração seca.</li>
+                    <li>Fluidoterapia subcutânea em casa (veterinário ensina).</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">3. Medicamentos</h3>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Quelantes de fósforo:</strong> Ipakitine, Epakitin.</li>
+                    <li><strong>Anti-hipertensivos:</strong> Amlodipina, Telmisartana.</li>
+                    <li><strong>Estimulantes de apetite:</strong> Mirtazapina.</li>
+                    <li><strong>Antieméticos:</strong> Ondansetrona, Maropitant.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Prevenção: Como Proteger os Rins</h2>
+                <div className="grid md:grid-cols-2 gap-4 my-6">
+                    <div className="bg-green-50 p-4 rounded-xl border border-green-200">
+                        <h4 className="font-bold text-green-700 mb-2">✅ Faça</h4>
+                        <ul className="text-sm space-y-1">
+                            <li>Ofereça água fresca sempre</li>
+                            <li>Inclua sachês na dieta</li>
+                            <li>Check-up anual após 7 anos</li>
+                            <li>Check-up semestral após 10 anos</li>
+                        </ul>
+                    </div>
+                    <div className="bg-red-50 p-4 rounded-xl border border-red-200">
+                        <h4 className="font-bold text-red-700 mb-2">❌ Evite</h4>
+                        <ul className="text-sm space-y-1">
+                            <li>Apenas ração seca</li>
+                            <li>Anti-inflamatórios sem prescrição</li>
+                            <li>Ignorar perda de peso</li>
+                            <li>Adiar exames preventivos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">DRC Não é Sentença de Morte</h3>
+                    <p className="text-lg mb-6">
+                        Com diagnóstico precoce e manejo adequado, gatos com DRC podem viver anos com qualidade. O segredo está na detecção antes dos sintomas aparecerem!
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Avaliar a Saúde do Meu Gato
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "passeio-cachorro-guia-definitivo": {
+        title: "Passeio com Cachorro: O Guia Definitivo para Tutores em 2026",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    O passeio é muito mais que fazer xixi na rua. É exercício físico, estímulo mental, socialização e tempo de qualidade com você. Muitos problemas comportamentais como destruição, latido excessivo e hiperatividade são causados por passeios insuficientes ou inadequados. Vamos resolver isso de vez.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Por Que o Passeio é Tão Importante?</h2>
+                <div className="grid md:grid-cols-2 gap-4 my-6">
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold text-primary mb-2">🏃 Físico</h4>
+                        <ul className="text-sm space-y-1">
+                            <li>Previne obesidade</li>
+                            <li>Fortalece músculos e articulações</li>
+                            <li>Melhora saúde cardíaca</li>
+                            <li>Regula sistema digestivo</li>
+                        </ul>
+                    </div>
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold text-primary mb-2">🧠 Mental</h4>
+                        <ul className="text-sm space-y-1">
+                            <li>Reduz ansiedade e estresse</li>
+                            <li>Estimula cognição (cheiros!)</li>
+                            <li>Previne tédio destrutivo</li>
+                            <li>Fortalece vínculo tutor-cão</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Frequência e Duração Ideais por Porte</h2>
+                <div className="overflow-x-auto">
+                    <table className="w-full text-sm border-collapse">
+                        <thead>
+                            <tr className="bg-primary/10">
+                                <th className="border p-2 text-left">Porte</th>
+                                <th className="border p-2 text-left">Frequência</th>
+                                <th className="border p-2 text-left">Duração</th>
+                                <th className="border p-2 text-left">Exemplos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td className="border p-2 font-bold">Mini/Toy</td>
+                                <td className="border p-2">2-3x ao dia</td>
+                                <td className="border p-2">15-20 min cada</td>
+                                <td className="border p-2">Pinscher, Chihuahua, Maltês</td>
+                            </tr>
+                            <tr>
+                                <td className="border p-2 font-bold">Pequeno</td>
+                                <td className="border p-2">2-3x ao dia</td>
+                                <td className="border p-2">20-30 min cada</td>
+                                <td className="border p-2">Shih Tzu, Poodle Toy, Lhasa</td>
+                            </tr>
+                            <tr>
+                                <td className="border p-2 font-bold">Médio</td>
+                                <td className="border p-2">2x ao dia</td>
+                                <td className="border p-2">30-45 min cada</td>
+                                <td className="border p-2">Beagle, Cocker, Bulldog Francês</td>
+                            </tr>
+                            <tr>
+                                <td className="border p-2 font-bold">Grande</td>
+                                <td className="border p-2">2x ao dia</td>
+                                <td className="border p-2">45-60 min cada</td>
+                                <td className="border p-2">Labrador, Golden, Pastor Alemão</td>
+                            </tr>
+                            <tr>
+                                <td className="border p-2 font-bold">Gigante</td>
+                                <td className="border p-2">2x ao dia</td>
+                                <td className="border p-2">30-45 min cada*</td>
+                                <td className="border p-2">Dogue Alemão, São Bernardo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p className="text-muted-foreground text-sm italic">
+                    *Cães gigantes têm articulações sensíveis. Passeios moderados são preferíveis a corridas intensas.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Raças de Alta Energia: Atenção Especial</h2>
+                <div className="bg-orange-50 border-l-4 border-orange-500 p-4 my-4">
+                    <p className="font-bold text-orange-700 mb-2">🔥 Essas raças precisam de MAIS:</p>
+                    <p className="text-orange-600">
+                        Border Collie, Pastor Australiano, Husky, Jack Russell, Weimaraner, Pointer, Vizsla. Mínimo de 1h30 a 2h de atividade diária, incluindo corrida, buscar, agility ou natação.
+                    </p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Equipamentos Essenciais</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">Coleira vs. Peitoral: Qual Usar?</h3>
+                <div className="grid md:grid-cols-2 gap-4 my-6">
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold mb-2">Coleira Tradicional</h4>
+                        <p className="text-sm text-green-600">✅ Cães que já caminham bem</p>
+                        <p className="text-sm text-red-600">❌ Cães que puxam (risco cervical)</p>
+                    </div>
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold mb-2">Peitoral (Recomendado)</h4>
+                        <p className="text-sm text-green-600">✅ Distribui pressão no tórax</p>
+                        <p className="text-sm text-green-600">✅ Ideal para treino anti-puxão</p>
+                    </div>
+                </div>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">Guia: Qual Tamanho?</h3>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Guia curta (1-1.5m):</strong> Para áreas movimentadas e treino de junto.</li>
+                    <li><strong>Guia longa (3-5m):</strong> Para farejamento em parques seguros.</li>
+                    <li><strong>Guia retrátil:</strong> Controversa. Use apenas em áreas abertas e seguras.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Técnica: Como Ensinar a Não Puxar</h2>
+                <ol className="list-decimal pl-6 space-y-3">
+                    <li>
+                        <strong>Pare quando ele puxar:</strong> Vire estátua. Só ande quando a guia estiver frouxa.
+                    </li>
+                    <li>
+                        <strong>Mude de direção:</strong> Quando puxar, vire 180° e ande para o outro lado.
+                    </li>
+                    <li>
+                        <strong>Recompense posição correta:</strong> Petiscos quando ele andar ao seu lado.
+                    </li>
+                    <li>
+                        <strong>Use comando verbal:</strong> "Junto" + petisco quando estiver na posição certa.
+                    </li>
+                    <li>
+                        <strong>Consistência:</strong> TODOS da família devem fazer igual. Sempre.
+                    </li>
+                </ol>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Horários Ideais</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Verão:</strong> Antes das 9h e após 18h (evite asfalto quente).</li>
+                    <li><strong>Inverno:</strong> Qualquer horário, mas evite chuva intensa.</li>
+                    <li><strong>Teste do asfalto:</strong> Coloque a mão por 5 segundos. Se queimar, queima a pata!</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Passeio de Farejamento: O Mais Importante</h2>
+                <p>
+                    Cães enxergam o mundo pelo nariz. Um passeio de 20 minutos onde ele pode farejar à vontade vale mais que 40 minutos de caminhada rápida sem paradas.
+                </p>
+                <div className="bg-blue-50 border-l-4 border-blue-500 p-4 my-4">
+                    <p className="font-bold text-blue-700">💡 "Sniff Walks" (Passeios de Cheiro):</p>
+                    <p className="text-blue-600">
+                        Reserve pelo menos 1 passeio por dia onde o cão lidera e escolhe onde farejar. Deixe-o "ler as notícias" do bairro. Isso cansa mais que corrida!
+                    </p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Socialização Durante o Passeio</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li>Permita interação com outros cães vacinados.</li>
+                    <li>Apresente a diferentes pessoas, sons e ambientes.</li>
+                    <li>Mantenha experiências positivas (petiscos!).</li>
+                    <li>Nunca force interação se ele mostrar medo.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Checklist do Passeio Perfeito</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li>✅ Saquinhos para cocô (obrigatório!).</li>
+                    <li>✅ Água e potinho portátil.</li>
+                    <li>✅ Petiscos para reforço positivo.</li>
+                    <li>✅ Identificação na coleira + microchip.</li>
+                    <li>✅ Protetor de patas em dias muito quentes.</li>
+                </ul>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Um Bom Passeio Muda Tudo</h3>
+                    <p className="text-lg mb-6">
+                        Cães bem exercitados são cães equilibrados. Invista tempo nos passeios e veja a diferença no comportamento e na saúde do seu melhor amigo!
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Descobrir Meu PetScore
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "gato-arranhando-moveis-solucoes": {
+        title: "Gato Arranhando Móveis? 8 Soluções Definitivas que Funcionam",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Seu sofá novo virou um arranhador? Antes de se desesperar, entenda: arranhar é um comportamento NATURAL e ESSENCIAL para gatos. A questão não é eliminar o arranhado, mas redirecioná-lo. Como veterinária comportamentalista, vou explicar o porquê e como resolver de vez.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Por Que Gatos Precisam Arranhar?</h2>
+                <ul className="list-disc pl-6 space-y-3">
+                    <li><strong>Manutenção das unhas:</strong> Remove a camada externa desgastada.</li>
+                    <li><strong>Marcação territorial:</strong> Glândulas nas patas liberam feromônios.</li>
+                    <li><strong>Alongamento muscular:</strong> Estica coluna, ombros e patas.</li>
+                    <li><strong>Alívio de estresse:</strong> Funciona como "academia felina".</li>
+                </ul>
+                <p className="text-primary font-semibold mt-4">
+                    Conclusão: Você não vai impedir seu gato de arranhar. Mas pode escolher ONDE ele arranha.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">8 Soluções que Realmente Funcionam</h2>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">1. Arranhadores Adequados (O Mais Importante!)</h3>
+                <p>
+                    A maioria dos tutores erra na escolha do arranhador. Requisitos essenciais:
+                </p>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Altura mínima de 80cm:</strong> O gato precisa se esticar completamente.</li>
+                    <li><strong>Base estável:</strong> Se balançar, ele não vai usar.</li>
+                    <li><strong>Material adequado:</strong> Sisal, papelão ondulado ou madeira.</li>
+                    <li><strong>Posições variadas:</strong> Verticais E horizontais (gatos têm preferências).</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">2. Localização Estratégica</h3>
+                <p>
+                    Coloque arranhadores onde o gato QUER arranhar:
+                </p>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li>Próximo ao móvel que ele arranha (para substituir).</li>
+                    <li>Perto da cama/local de descanso (gatos arranham ao acordar).</li>
+                    <li>Em rotas de passagem frequentes.</li>
+                    <li>Próximo a janelas (território a marcar).</li>
+                </ul>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">3. Torne o Móvel Menos Atraente</h3>
+                <div className="grid md:grid-cols-2 gap-4 my-6">
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold mb-2">Barreiras Físicas</h4>
+                        <ul className="text-sm space-y-1">
+                            <li>Fita dupla-face (gatos odeiam)</li>
+                            <li>Papel alumínio (temporário)</li>
+                            <li>Protetores de sofá transparentes</li>
+                        </ul>
+                    </div>
+                    <div className="bg-card p-4 rounded-xl border">
+                        <h4 className="font-bold mb-2">Repelentes Naturais</h4>
+                        <ul className="text-sm space-y-1">
+                            <li>Spray de citronela</li>
+                            <li>Óleo de laranja diluído</li>
+                            <li>Spray anti-arranhão (pet shop)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">4. Feromônios Felinos (Feliway)</h3>
+                <p>
+                    Sprays e difusores de feromônio facial reduzem a necessidade de marcar território arranhando. Aplique nas áreas problemáticas.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">5. Reforço Positivo</h3>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li>Elogie e dê petiscos TODA vez que ele usar o arranhador.</li>
+                    <li>Esfregue catnip seco no arranhador.</li>
+                    <li>Brinque com vara de penas próximo ao arranhador.</li>
+                </ul>
+                <div className="bg-red-50 border-l-4 border-red-500 p-4 my-4">
+                    <p className="font-bold text-red-700">⚠️ NUNCA faça isso:</p>
+                    <p className="text-red-600">
+                        Não grite, bata ou borrife água. Punição causa medo, não aprendizado. O gato vai arranhar escondido ou desenvolver problemas de ansiedade.
+                    </p>
+                </div>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">6. Corte de Unhas Regular</h3>
+                <p>
+                    Unhas curtas causam menos dano. Corte a cada 2-3 semanas com cortador específico para gatos. Se não souber, peça ao veterinário para ensinar.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">7. Capinhas de Unha (Soft Paws)</h3>
+                <p>
+                    Capas de silicone atóxicas coladas nas unhas. Duram 4-6 semanas e não causam dor. Solução temporária enquanto treina o redirecionamento.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">8. Enriquecimento Ambiental</h3>
+                <p>
+                    Gatos entediados arranham mais. Ofereça:
+                </p>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li>Prateleiras e nichos em altura.</li>
+                    <li>Brinquedos interativos.</li>
+                    <li>Sessões diárias de brincadeira (15 min mínimo).</li>
+                    <li>Janelas com vista para passarinhos.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Checklist: Arranhador Ideal</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li>✅ Mínimo 80cm de altura.</li>
+                    <li>✅ Base pesada e estável.</li>
+                    <li>✅ Material: sisal ou papelão grosso.</li>
+                    <li>✅ Posição vertical E opção horizontal.</li>
+                    <li>✅ Pelo menos 1 arranhador por gato + 1 extra.</li>
+                </ul>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Sobre a Oniquectomia (NUNCA!)</h2>
+                <div className="bg-red-50 border-l-4 border-red-500 p-4 my-4">
+                    <p className="font-bold text-red-700">🚫 Cirurgia de Remoção de Unhas</p>
+                    <p className="text-red-600">
+                        A oniquectomia é a amputação da última falange dos dedos. Causa dor crônica, problemas de locomoção e comportamento. É proibida em diversos países e condenada pelo CFMV no Brasil. NUNCA é uma opção.
+                    </p>
+                </div>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Paciência é a Chave</h3>
+                    <p className="text-lg mb-6">
+                        O redirecionamento leva de 2 a 4 semanas de consistência. Não desista! Com as técnicas certas, seu sofá e seu gato podem coexistir em harmonia.
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Avaliar o Comportamento do Meu Gato
+                    </Button>
+                </div>
+            </div>
+        )
+    },
+    "microchip-pet-importancia": {
+        title: "Microchip para Pets: Por Que é Essencial em 2026",
+        content: (
+            <div className="space-y-6 text-lg leading-relaxed">
+                <p className="drop-cap">
+                    Todo ano, milhares de pets se perdem no Brasil. Coleiras caem, placas de identificação desbotam, mas o microchip é permanente. É a forma mais segura e confiável de garantir que seu pet volte para casa. Como veterinário, considero o microchip tão essencial quanto vacinas.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">O Que é o Microchip?</h2>
+                <p>
+                    Um chip de identificação por radiofrequência (RFID) do tamanho de um grão de arroz, implantado sob a pele. Cada chip possui um código único de 15 dígitos que fica registrado em um banco de dados nacional.
+                </p>
+                <div className="bg-blue-50 border-l-4 border-blue-500 p-4 my-4">
+                    <p className="font-bold text-blue-700">📱 Como funciona?</p>
+                    <p className="text-blue-600">
+                        Veterinários, abrigos e CCZs possuem leitores que escaneiam o chip e revelam o código. Com ele, acessam o cadastro do tutor no banco de dados e fazem contato.
+                    </p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Por Que Coleira Não é Suficiente?</h2>
+                <div className="grid md:grid-cols-2 gap-4 my-6">
+                    <div className="bg-red-50 p-4 rounded-xl border border-red-200">
+                        <h4 className="font-bold text-red-700 mb-2">❌ Coleira/Plaquinha</h4>
+                        <ul className="text-sm space-y-1">
+                            <li>Pode cair ou ser removida</li>
+                            <li>Texto desbota com o tempo</li>
+                            <li>Pode machucar ou enforcar</li>
+                            <li>Não comprova propriedade</li>
+                        </ul>
+                    </div>
+                    <div className="bg-green-50 p-4 rounded-xl border border-green-200">
+                        <h4 className="font-bold text-green-700 mb-2">✅ Microchip</h4>
+                        <ul className="text-sm space-y-1">
+                            <li>Permanente e indolor</li>
+                            <li>Não pode ser perdido</li>
+                            <li>Código único e rastreável</li>
+                            <li>Documento de propriedade</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Como é a Implantação?</h2>
+                <ol className="list-decimal pl-6 space-y-3">
+                    <li>
+                        <strong>Procedimento simples:</strong> Aplicado com seringa especial, sem anestesia na maioria dos casos.
+                    </li>
+                    <li>
+                        <strong>Local:</strong> Na região da nuca (entre as escápulas).
+                    </li>
+                    <li>
+                        <strong>Dor:</strong> Similar a uma injeção comum. Segundos de desconforto.
+                    </li>
+                    <li>
+                        <strong>Idade mínima:</strong> A partir de 45 dias de vida.
+                    </li>
+                    <li>
+                        <strong>Duração:</strong> Toda a vida do animal (não precisa trocar).
+                    </li>
+                </ol>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Quanto Custa?</h2>
+                <div className="bg-card p-6 rounded-xl border">
+                    <p className="text-2xl font-bold text-primary mb-2">R$ 80 a R$ 200</p>
+                    <p className="text-muted-foreground">
+                        Inclui chip, aplicação e registro no banco de dados. Algumas clínicas oferecem pacotes com vacinas + microchip.
+                    </p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Legislação: É Obrigatório?</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Brasil:</strong> Obrigatório em algumas cidades (São Paulo, Belo Horizonte, Curitiba, entre outras).</li>
+                    <li><strong>Viagens internacionais:</strong> Exigido para entrar na União Europeia, Reino Unido e diversos países.</li>
+                    <li><strong>Concursos e exposições:</strong> Obrigatório para registro em muitas federações.</li>
+                </ul>
+                <p className="text-muted-foreground italic mt-4">
+                    Consulte a legislação da sua cidade. A tendência é que se torne obrigatório nacionalmente.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Mitos e Verdades</h2>
+                <div className="space-y-4">
+                    <div className="bg-red-50 p-4 rounded-xl">
+                        <p className="font-bold text-red-700">❌ MITO: "O chip pode migrar pelo corpo"</p>
+                        <p className="text-sm">Chips modernos têm revestimento anti-migração. Casos são raríssimos e não afetam a leitura.</p>
+                    </div>
+                    <div className="bg-red-50 p-4 rounded-xl">
+                        <p className="font-bold text-red-700">❌ MITO: "O chip tem GPS"</p>
+                        <p className="text-sm">O microchip NÃO tem GPS nem bateria. Ele só é lido quando escaneado de perto.</p>
+                    </div>
+                    <div className="bg-red-50 p-4 rounded-xl">
+                        <p className="font-bold text-red-700">❌ MITO: "Pode causar câncer"</p>
+                        <p className="text-sm">Não há evidência científica. Milhões de chips implantados sem correlação com tumores.</p>
+                    </div>
+                    <div className="bg-green-50 p-4 rounded-xl">
+                        <p className="font-bold text-green-700">✅ VERDADE: "Preciso manter cadastro atualizado"</p>
+                        <p className="text-sm">O chip só funciona se seus dados estiverem corretos. Atualize telefone e endereço sempre!</p>
+                    </div>
+                </div>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Bancos de Dados no Brasil</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>ARCA Brasil:</strong> Maior rede de identificação animal do país.</li>
+                    <li><strong>Save a Pet:</strong> Integrado com Petlink internacional.</li>
+                    <li><strong>AnimallTag:</strong> Gratuito e multiplataforma.</li>
+                </ul>
+                <p className="text-primary font-semibold mt-4">
+                    Dica: Verifique qual banco a clínica usa e cadastre-se na plataforma para acessar e atualizar seus dados.
+                </p>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Passo a Passo para Microchipar</h2>
+                <ol className="list-decimal pl-6 space-y-2">
+                    <li>Escolha uma clínica veterinária confiável.</li>
+                    <li>Leve documentos (RG, comprovante de endereço).</li>
+                    <li>O veterinário aplica o chip e registra no banco de dados.</li>
+                    <li>Você recebe um certificado com o número do chip.</li>
+                    <li>Ative o cadastro online e confira seus dados.</li>
+                    <li>Atualize sempre que mudar de telefone ou endereço!</li>
+                </ol>
+
+                <h2 className="text-3xl font-bold text-primary mt-10 mb-6">Pet Perdido: O Que Fazer?</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li>Comunique a perda no banco de dados do microchip.</li>
+                    <li>Poste em grupos de animais perdidos da sua cidade.</li>
+                    <li>Avise CCZ, abrigos e pet shops da região.</li>
+                    <li>Distribua cartazes com foto e número do chip.</li>
+                </ul>
+
+                <div className="bg-primary/5 p-8 rounded-2xl mt-12 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Segurança que Não Cai</h3>
+                    <p className="text-lg mb-6">
+                        O microchip é um investimento único que protege seu pet para toda a vida. Não espere ele se perder para agir. Microchipe hoje!
+                    </p>
+                    <Button size="lg" className="w-full md:w-auto font-bold text-lg" onClick={() => window.location.href = '/quiz'}>
+                        👉 Avaliar a Segurança do Meu Pet
+                    </Button>
+                </div>
+            </div>
+        )
     }
 };
 
