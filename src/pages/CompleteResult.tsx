@@ -200,8 +200,8 @@ const CompleteResult = () => {
         ctx.font = "bold 100px Arial";
         ctx.fillText(score.toString(), badgeX, badgeY + 35);
 
-        // Elegant subtle seal next to score
-        drawElegantSeal(ctx, badgeX - 180, badgeY - 50);
+        // Elegant subtle seal next to score (right side)
+        drawElegantSeal(ctx, badgeX + 130, badgeY - 60);
 
         // Bottom Card for Text
         drawBottomCard(ctx);
@@ -229,8 +229,8 @@ const CompleteResult = () => {
       ctx.font = "bold 60px Arial";
       ctx.fillText("/100", centerX, centerY + 140);
 
-      // Elegant subtle seal
-      drawElegantSeal(ctx, centerX + 180, centerY - 100);
+      // Elegant subtle seal (right side)
+      drawElegantSeal(ctx, centerX + 200, centerY - 100);
 
       drawBottomCard(ctx);
 
