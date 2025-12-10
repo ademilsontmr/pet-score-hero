@@ -95,7 +95,7 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
         </p>
       </div>
 
-      {/* Planner Container */}
+      {/* Planner Container - A4 size: 210mm x 297mm = 794px x 1123px at 96 DPI */}
       <div 
         className={`relative overflow-x-auto pb-4 transition-all duration-300 ${
           isZoomed ? 'overflow-visible' : ''
@@ -103,10 +103,10 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
       >
         <div 
           ref={plannerRef}
-          className={`mx-auto bg-white rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 ${
+          className={`mx-auto bg-white shadow-xl overflow-hidden transition-transform duration-300 ${
             isZoomed ? 'scale-100 origin-top-left' : ''
           }`}
-          style={{ width: "800px", minWidth: "800px" }}
+          style={{ width: "794px", minWidth: "794px", height: "1123px" }}
         >
           {/* Header */}
           <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8B5C] p-5">
@@ -157,7 +157,7 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
           </div>
 
           {/* Main Content */}
-          <div className="p-5 flex-1 flex flex-col" style={{ minHeight: "600px" }}>
+          <div className="p-5 flex-1 flex flex-col">
             <div className="grid grid-cols-12 gap-4 flex-1">
               {/* Left Column */}
               <div className="col-span-7 space-y-4">
@@ -299,7 +299,7 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
                     </div>
                     <h3 className="font-bold text-gray-700 text-[10px] uppercase tracking-wide">Observações</h3>
                   </div>
-                  <div className="p-3 flex-1 relative" style={{ minHeight: "240px" }}>
+                  <div className="p-3 flex-1 relative">
                     <div className="absolute inset-0 px-3 py-2 space-y-4 pointer-events-none">
                       {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(i => (
                         <div key={i} className="border-b border-gray-100 w-full h-px"></div>
