@@ -1,5 +1,5 @@
-import { useRef, useCallback, useState } from "react";
-import { Download, ZoomIn, ZoomOut } from "lucide-react";
+import { useRef, useCallback } from "react";
+import { Download } from "lucide-react";
 import { toast } from "sonner";
 
 interface PetPlannerProps {
@@ -10,7 +10,6 @@ interface PetPlannerProps {
 
 const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
   const plannerRef = useRef<HTMLDivElement>(null);
-  const [isZoomed, setIsZoomed] = useState(false);
 
   const handleDownloadPlanner = useCallback(async () => {
     if (!plannerRef.current) return;
@@ -68,44 +67,20 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
             </div>
           </div>
         </button>
-        
-        {/* Zoom toggle for mobile */}
-        <button
-          onClick={() => setIsZoomed(!isZoomed)}
-          className="sm:hidden w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gray-100 text-gray-700 font-medium"
-        >
-          {isZoomed ? (
-            <>
-              <ZoomOut className="w-5 h-5" />
-              <span>Reduzir visualização</span>
-            </>
-          ) : (
-            <>
-              <ZoomIn className="w-5 h-5" />
-              <span>Ampliar visualização</span>
-            </>
-          )}
-        </button>
       </div>
 
       {/* Mobile Info Card */}
       <div className="sm:hidden bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-xl p-3 text-center">
         <p className="text-sm text-amber-800">
-          Deslize para ver o planner completo ou baixe para visualizar em tela cheia
+          Deslize para os lados para ver o planner completo ou baixe para visualizar em tela cheia
         </p>
       </div>
 
       {/* Planner Container - A4 size: 210mm x 297mm = 794px x 1123px at 96 DPI */}
-      <div 
-        className={`relative overflow-x-auto pb-4 transition-all duration-300 ${
-          isZoomed ? 'overflow-visible' : ''
-        }`}
-      >
+      <div className="relative overflow-x-auto pb-4">
         <div 
           ref={plannerRef}
-          className={`mx-auto bg-white shadow-xl overflow-hidden transition-transform duration-300 flex flex-col ${
-            isZoomed ? 'scale-100 origin-top-left' : ''
-          }`}
+          className="mx-auto bg-white shadow-xl overflow-hidden flex flex-col"
           style={{ width: "794px", minWidth: "794px", height: "1123px" }}
         >
           {/* Header */}
