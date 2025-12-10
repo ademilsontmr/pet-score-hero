@@ -84,25 +84,118 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
           style={{ width: "794px", minWidth: "794px", height: "1123px" }}
         >
           {/* Header */}
-          <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8B5C] p-6">
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-              {/* Logo Section */}
-              <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center" style={{ boxShadow: "0 4px 12px rgba(0,0,0,0.15)" }}>
-                  <span style={{ fontSize: "28px" }}>🐾</span>
+          <div style={{ background: "linear-gradient(135deg, #FF6B35 0%, #FF8B5C 50%, #FFa070 100%)" }}>
+            {/* Top decorative bar */}
+            <div style={{ height: "4px", background: "linear-gradient(90deg, #FFD93D 0%, #FFE566 50%, #FFD93D 100%)" }}></div>
+            
+            <div style={{ padding: "20px 24px" }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                {/* Logo Section */}
+                <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                  {/* Logo with badge */}
+                  <div style={{ position: "relative" }}>
+                    <div style={{ 
+                      width: "64px", 
+                      height: "64px", 
+                      backgroundColor: "#ffffff", 
+                      borderRadius: "16px", 
+                      display: "flex", 
+                      alignItems: "center", 
+                      justifyContent: "center",
+                      boxShadow: "0 4px 12px rgba(0,0,0,0.15), inset 0 2px 4px rgba(255,255,255,0.5)",
+                      border: "3px solid rgba(255,255,255,0.3)"
+                    }}>
+                      <span style={{ fontSize: "32px" }}>🐾</span>
+                    </div>
+                    {/* Verification badge */}
+                    <div style={{
+                      position: "absolute",
+                      bottom: "-4px",
+                      right: "-4px",
+                      width: "22px",
+                      height: "22px",
+                      backgroundColor: "#10B981",
+                      borderRadius: "50%",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      border: "2px solid #ffffff",
+                      boxShadow: "0 2px 4px rgba(0,0,0,0.2)"
+                    }}>
+                      <span style={{ color: "#ffffff", fontSize: "12px", fontWeight: "bold" }}>✓</span>
+                    </div>
+                  </div>
+                  
+                  {/* Title with decorative line */}
+                  <div>
+                    <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                      <h1 style={{ 
+                        fontSize: "28px", 
+                        fontWeight: 900, 
+                        color: "#ffffff", 
+                        letterSpacing: "-0.5px",
+                        textShadow: "0 2px 4px rgba(0,0,0,0.1)",
+                        margin: 0
+                      }}>PetScore</h1>
+                      <div style={{
+                        backgroundColor: "#FFD93D",
+                        color: "#7C2D12",
+                        fontSize: "9px",
+                        fontWeight: 800,
+                        padding: "3px 8px",
+                        borderRadius: "4px",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.5px"
+                      }}>PRO</div>
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center", gap: "8px", marginTop: "4px" }}>
+                      <div style={{ width: "24px", height: "2px", backgroundColor: "rgba(255,255,255,0.5)", borderRadius: "1px" }}></div>
+                      <p style={{ 
+                        color: "rgba(255,255,255,0.95)", 
+                        fontSize: "13px", 
+                        fontWeight: 500,
+                        margin: 0,
+                        letterSpacing: "0.3px"
+                      }}>Planner de Saúde Personalizado</p>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <h1 className="text-3xl font-black text-white tracking-tight">PetScore</h1>
-                  <p className="text-white text-sm font-medium" style={{ opacity: 0.9 }}>Planner de Saúde Personalizado</p>
+                
+                {/* Protocol Section with enhanced styling */}
+                <div style={{ 
+                  backgroundColor: "#ffffff", 
+                  borderRadius: "12px", 
+                  padding: "12px 20px",
+                  boxShadow: "0 4px 12px rgba(0,0,0,0.1), inset 0 1px 2px rgba(255,255,255,0.8)",
+                  border: "1px solid rgba(255,255,255,0.3)"
+                }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "4px" }}>
+                    <div style={{ width: "6px", height: "6px", backgroundColor: "#FF6B35", borderRadius: "50%" }}></div>
+                    <p style={{ 
+                      color: "#FF6B35", 
+                      fontSize: "9px", 
+                      textTransform: "uppercase", 
+                      letterSpacing: "1.5px", 
+                      fontWeight: 700,
+                      margin: 0
+                    }}>Protocolo</p>
+                  </div>
+                  <p style={{ 
+                    color: "#1F2937", 
+                    fontWeight: 900, 
+                    fontSize: "18px", 
+                    letterSpacing: "0.5px",
+                    margin: 0
+                  }}>{protocolNumber}</p>
                 </div>
-              </div>
-              
-              {/* Protocol Section */}
-              <div className="bg-white rounded-xl px-5 py-3" style={{ boxShadow: "0 4px 12px rgba(0,0,0,0.1)" }}>
-                <p className="text-orange-600 text-[10px] uppercase tracking-widest font-bold" style={{ marginBottom: "2px" }}>Protocolo</p>
-                <p className="text-gray-800 font-black text-lg tracking-wide">{protocolNumber}</p>
               </div>
             </div>
+            
+            {/* Bottom decorative wave pattern */}
+            <div style={{ 
+              height: "6px", 
+              background: "repeating-linear-gradient(90deg, rgba(255,255,255,0.3) 0px, rgba(255,255,255,0.3) 10px, transparent 10px, transparent 20px)" 
+            }}></div>
           </div>
 
           {/* Pet Info Bar */}
