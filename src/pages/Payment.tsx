@@ -347,6 +347,35 @@ const Payment = () => {
           </div>
         </div>
 
+        {/* What's Included - Compact */}
+        <Card className="p-4 sm:p-6 shadow-medium bg-card overflow-hidden">
+          <h2 className="text-base sm:text-lg font-bold text-foreground mb-4 flex items-center gap-2">
+            <Award className="w-5 h-5 text-primary" />
+            O que você vai receber
+          </h2>
+
+          <div className="grid gap-3">
+            {[
+              { icon: Star, title: "Score detalhado de 0 a 100", desc: "Análise completa do seu cuidado" },
+              { icon: FileText, title: "Plano de ação personalizado", desc: "Dicas práticas para melhorar" },
+              { icon: Award, title: `Certificado oficial${petName ? ` ${article} ${petName}` : ""}`, desc: petImage ? "Com a foto do seu pet" : "Para compartilhar" },
+              { icon: Heart, title: "Guias de saúde e nutrição", desc: "Conteúdo validado por especialistas" },
+              { icon: Shield, title: "Planner de Saúde Preventiva", desc: "Vacinas, exames e vermífugos" },
+            ].map((item, index) => (
+              <div key={index} className="flex items-start gap-3 p-2 sm:p-3 bg-muted/50 rounded-lg">
+                <div className="flex-shrink-0 w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <item.icon className="w-4 h-4 text-primary" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-medium text-foreground">{item.title}</p>
+                  <p className="text-xs text-muted-foreground">{item.desc}</p>
+                </div>
+                <Check className="w-4 h-4 text-green-600 flex-shrink-0 mt-1" />
+              </div>
+            ))}
+          </div>
+        </Card>
+
         {/* Form Card */}
         <Card className="p-4 sm:p-6 shadow-medium bg-card">
           <h2 className="text-base sm:text-lg font-bold text-foreground mb-4 flex items-center gap-2">
@@ -416,44 +445,8 @@ const Payment = () => {
           </div>
         </Card>
 
-        {/* What's Included - Compact */}
-        <Card className="p-4 sm:p-6 shadow-medium bg-card overflow-hidden">
-          <h2 className="text-base sm:text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-            <Award className="w-5 h-5 text-primary" />
-            O que você vai receber
-          </h2>
-
-          <div className="grid gap-3">
-            {[
-              { icon: Star, title: "Score detalhado de 0 a 100", desc: "Análise completa do seu cuidado" },
-              { icon: FileText, title: "Plano de ação personalizado", desc: "Dicas práticas para melhorar" },
-              { icon: Award, title: `Certificado oficial${petName ? ` ${article} ${petName}` : ""}`, desc: petImage ? "Com a foto do seu pet" : "Para compartilhar" },
-              { icon: Heart, title: "Guias de saúde e nutrição", desc: "Conteúdo validado por especialistas" },
-              { icon: Shield, title: "Planner de Saúde Preventiva", desc: "Vacinas, exames e vermífugos" },
-            ].map((item, index) => (
-              <div key={index} className="flex items-start gap-3 p-2 sm:p-3 bg-muted/50 rounded-lg">
-                <div className="flex-shrink-0 w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <item.icon className="w-4 h-4 text-primary" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-foreground">{item.title}</p>
-                  <p className="text-xs text-muted-foreground">{item.desc}</p>
-                </div>
-                <Check className="w-4 h-4 text-green-600 flex-shrink-0 mt-1" />
-              </div>
-            ))}
-          </div>
-        </Card>
-
         {/* Pricing Card */}
         <Card className="p-4 sm:p-6 shadow-medium bg-card border-2 border-primary/30 relative overflow-hidden">
-          {/* Badge */}
-          <div className="absolute -top-0 -right-0">
-            <div className="bg-primary text-primary-foreground text-[10px] sm:text-xs font-bold px-3 py-1 rounded-bl-lg">
-              MAIS VENDIDO
-            </div>
-          </div>
-
           <div className="text-center space-y-4">
             {/* Price */}
             <div className="pt-2">
@@ -495,7 +488,7 @@ const Payment = () => {
               ) : (
                 <>
                   <QrCode className="w-5 h-5 mr-2" />
-                  Gerar QR Code
+                  Gerar QR Code Pix
                 </>
               )}
             </Button>
