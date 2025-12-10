@@ -414,78 +414,71 @@ const CompleteResult = () => {
     ctx.stroke();
     ctx.restore();
     
-    // Laurel wreath
+    // Paw print in center
     ctx.save();
-    const leafColor = "#CD853F";
-    const leafHighlight = "#DAA520";
+    const pawColor = "#CD853F";
+    const pawHighlight = "#DAA520";
     
-    // Left branch of laurel
-    for (let i = 0; i < 7; i++) {
-      const angle = Math.PI * 0.75 + (i * 0.15);
-      const dist = 18 + i * 1.5;
-      const leafX = x + Math.cos(angle) * dist - 8;
-      const leafY = y - Math.sin(angle) * dist + 8;
-      
+    // Helper function to draw a single paw
+    const drawPaw = (px: number, py: number, scale: number, alpha: number) => {
       ctx.save();
-      ctx.translate(leafX, leafY);
-      ctx.rotate(-angle + Math.PI / 4);
+      ctx.globalAlpha = alpha;
       
-      // Leaf shadow
-      ctx.fillStyle = leafColor;
+      // Main pad (large oval at bottom)
+      ctx.fillStyle = pawColor;
       ctx.beginPath();
-      ctx.ellipse(1, 1, 7, 3.5, 0, 0, Math.PI * 2);
+      ctx.ellipse(px, py + 8 * scale, 12 * scale, 10 * scale, 0, 0, Math.PI * 2);
       ctx.fill();
       
-      // Leaf
-      ctx.fillStyle = leafHighlight;
+      // Highlight on main pad
+      ctx.fillStyle = pawHighlight;
       ctx.beginPath();
-      ctx.ellipse(0, 0, 7, 3.5, 0, 0, Math.PI * 2);
+      ctx.ellipse(px - 2 * scale, py + 6 * scale, 8 * scale, 6 * scale, -0.2, 0, Math.PI * 2);
       ctx.fill();
       
-      // Leaf vein
-      ctx.strokeStyle = leafColor;
-      ctx.lineWidth = 0.8;
-      ctx.beginPath();
-      ctx.moveTo(-5, 0);
-      ctx.lineTo(5, 0);
-      ctx.stroke();
+      // Toe pads (4 small circles at top)
+      const toePositions = [
+        { tx: -9, ty: -6 },
+        { tx: -3, ty: -12 },
+        { tx: 3, ty: -12 },
+        { tx: 9, ty: -6 }
+      ];
+      
+      toePositions.forEach((toe, i) => {
+        // Toe shadow
+        ctx.fillStyle = pawColor;
+        ctx.beginPath();
+        ctx.ellipse(
+          px + toe.tx * scale, 
+          py + toe.ty * scale, 
+          5 * scale, 
+          6 * scale, 
+          (i < 2 ? -0.3 : 0.3), 
+          0, 
+          Math.PI * 2
+        );
+        ctx.fill();
+        
+        // Toe highlight
+        ctx.fillStyle = pawHighlight;
+        ctx.beginPath();
+        ctx.ellipse(
+          px + toe.tx * scale - 1 * scale, 
+          py + toe.ty * scale - 1 * scale, 
+          3.5 * scale, 
+          4 * scale, 
+          (i < 2 ? -0.3 : 0.3), 
+          0, 
+          Math.PI * 2
+        );
+        ctx.fill();
+      });
       
       ctx.restore();
-    }
+    };
     
-    // Right branch of laurel
-    for (let i = 0; i < 7; i++) {
-      const angle = Math.PI * 0.25 - (i * 0.15);
-      const dist = 18 + i * 1.5;
-      const leafX = x + Math.cos(angle) * dist + 8;
-      const leafY = y - Math.sin(angle) * dist + 8;
-      
-      ctx.save();
-      ctx.translate(leafX, leafY);
-      ctx.rotate(-angle - Math.PI / 4);
-      
-      // Leaf shadow
-      ctx.fillStyle = leafColor;
-      ctx.beginPath();
-      ctx.ellipse(1, 1, 7, 3.5, 0, 0, Math.PI * 2);
-      ctx.fill();
-      
-      // Leaf
-      ctx.fillStyle = leafHighlight;
-      ctx.beginPath();
-      ctx.ellipse(0, 0, 7, 3.5, 0, 0, Math.PI * 2);
-      ctx.fill();
-      
-      // Leaf vein
-      ctx.strokeStyle = leafColor;
-      ctx.lineWidth = 0.8;
-      ctx.beginPath();
-      ctx.moveTo(-5, 0);
-      ctx.lineTo(5, 0);
-      ctx.stroke();
-      
-      ctx.restore();
-    }
+    // Draw main centered paw
+    drawPaw(x, y, 1.2, 0.85);
     
     ctx.restore();
     
