@@ -84,21 +84,43 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
           style={{ width: "794px", minWidth: "794px", height: "1123px" }}
         >
           {/* Header */}
-          <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8B5C] p-5">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
-                  <span className="text-3xl">🐾</span>
+          <div className="relative overflow-hidden">
+            {/* Background gradient with pattern */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#9333EA] via-[#7C3AED] to-[#6D28D9]"></div>
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-2 left-8 text-white text-6xl opacity-20">🐾</div>
+              <div className="absolute bottom-1 right-32 text-white text-4xl opacity-15 rotate-12">🐾</div>
+            </div>
+            
+            <div className="relative p-6">
+              <div className="flex items-center justify-between">
+                {/* Logo Section */}
+                <div className="flex items-center gap-4">
+                  <div className="relative">
+                    <div className="w-16 h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center transform -rotate-3">
+                      <div className="flex flex-col items-center">
+                        <span className="text-2xl">🐾</span>
+                      </div>
+                    </div>
+                    <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-amber-400 rounded-full flex items-center justify-center shadow-md">
+                      <span className="text-[10px]">✓</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h1 className="text-3xl font-black text-white tracking-tight drop-shadow-sm">PetScore</h1>
+                    <div className="flex items-center gap-2 mt-0.5">
+                      <div className="h-px w-6 bg-white/40"></div>
+                      <p className="text-white/90 text-sm font-medium tracking-wide">Planner de Saúde Personalizado</p>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <h1 className="text-2xl font-bold text-white tracking-tight">PetScore</h1>
-                  <p className="text-white/80 text-xs font-medium">Planner de Saúde Personalizado</p>
-                </div>
-              </div>
-              <div className="text-right">
-                <div className="bg-white/20 backdrop-blur-sm rounded-xl px-3 py-2">
-                  <p className="text-white/70 text-[10px] uppercase tracking-wider font-semibold">Protocolo</p>
-                  <p className="text-white font-bold text-sm">{protocolNumber}</p>
+                
+                {/* Protocol Section */}
+                <div className="text-right">
+                  <div className="bg-white rounded-xl px-5 py-3 shadow-lg">
+                    <p className="text-purple-600 text-[10px] uppercase tracking-widest font-bold mb-0.5">Protocolo</p>
+                    <p className="text-gray-800 font-black text-lg tracking-wide">{protocolNumber}</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -295,7 +317,7 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
           </div>
 
           {/* Footer */}
-          <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8B5C] p-3">
+          <div className="bg-gradient-to-r from-[#9333EA] via-[#7C3AED] to-[#6D28D9] p-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <span className="text-white/80 text-xs">🐾</span>
