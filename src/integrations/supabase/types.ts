@@ -14,7 +14,48 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      quiz_results: {
+        Row: {
+          cpf: string | null
+          created_at: string | null
+          email: string | null
+          id: string
+          name: string | null
+          payment_id: string | null
+          payment_status: string | null
+          pet_name: string | null
+          phone: string | null
+          score: number
+          updated_at: string | null
+        }
+        Insert: {
+          cpf?: string | null
+          created_at?: string | null
+          email?: string | null
+          id?: string
+          name?: string | null
+          payment_id?: string | null
+          payment_status?: string | null
+          pet_name?: string | null
+          phone?: string | null
+          score: number
+          updated_at?: string | null
+        }
+        Update: {
+          cpf?: string | null
+          created_at?: string | null
+          email?: string | null
+          id?: string
+          name?: string | null
+          payment_id?: string | null
+          payment_status?: string | null
+          pet_name?: string | null
+          phone?: string | null
+          score?: number
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
