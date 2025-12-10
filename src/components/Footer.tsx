@@ -40,21 +40,21 @@ const Footer = () => {
             </div>
 
             {/* Main Footer - Professional Layout */}
-            <div className="bg-gradient-to-b from-muted/30 to-muted/50 pt-16 pb-8 px-4">
-                <div className="max-w-5xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-12">
+            <div className="bg-gradient-to-b from-muted/20 to-muted/40 pt-20 pb-10 px-6">
+                <div className="max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-16">
                         {/* Brand Section */}
-                        <div className="space-y-6">
-                            <Link to="/" className="inline-flex items-center gap-2.5 group">
-                                <span className="text-3xl transition-transform group-hover:scale-110 duration-300">🐾</span>
-                                <span className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                        <div className="md:col-span-5 space-y-6">
+                            <Link to="/" className="inline-flex items-center gap-3 group">
+                                <span className="text-4xl transition-transform group-hover:scale-110 duration-300">🐾</span>
+                                <span className="text-3xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
                                     PetScore
                                 </span>
                             </Link>
-                            <p className="text-muted-foreground leading-relaxed text-sm">
+                            <p className="text-muted-foreground leading-relaxed text-base max-w-sm">
                                 O quiz mais divertido e revelador para tutores apaixonados. Descubra seu nível de dedicação e transforme a vida do seu pet.
                             </p>
-                            <div className="inline-flex items-center gap-2 text-sm text-muted-foreground bg-card/50 px-4 py-2 rounded-full border border-border/50">
+                            <div className="inline-flex items-center gap-2 text-sm text-muted-foreground bg-card/60 px-5 py-2.5 rounded-full border border-border/50 shadow-sm">
                                 <span>Feito com</span>
                                 <Heart className="w-4 h-4 fill-primary text-primary animate-pulse" />
                                 <span>para tutores de pets</span>
@@ -62,45 +62,45 @@ const Footer = () => {
                         </div>
 
                         {/* Links Rápidos */}
-                        <div className="space-y-5">
-                            <h3 className="font-bold text-foreground text-xs uppercase tracking-widest flex items-center gap-2">
-                                <div className="w-8 h-0.5 bg-gradient-to-r from-primary to-primary/50 rounded-full" />
+                        <div className="md:col-span-3 space-y-6">
+                            <h3 className="font-bold text-foreground text-xs uppercase tracking-widest flex items-center gap-3">
+                                <div className="w-10 h-0.5 bg-gradient-to-r from-primary to-primary/50 rounded-full" />
                                 Links Rápidos
                             </h3>
-                            <ul className="space-y-3.5">
+                            <ul className="space-y-4">
                                 <li>
                                     <button 
                                         onClick={scrollToQuiz} 
-                                        className="text-muted-foreground hover:text-primary transition-all duration-200 text-left flex items-center gap-2.5 group text-sm"
+                                        className="text-muted-foreground hover:text-primary transition-all duration-200 text-left flex items-center gap-3 group text-sm"
                                     >
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 group-hover:bg-primary group-hover:scale-125 transition-all duration-200" />
+                                        <span className="w-2 h-2 rounded-full bg-primary/40 group-hover:bg-primary group-hover:scale-125 transition-all duration-200" />
                                         Fazer o Teste
                                     </button>
                                 </li>
                                 <li>
                                     <button 
                                         onClick={() => scrollToSection('como-funciona')} 
-                                        className="text-muted-foreground hover:text-primary transition-all duration-200 text-left flex items-center gap-2.5 group text-sm"
+                                        className="text-muted-foreground hover:text-primary transition-all duration-200 text-left flex items-center gap-3 group text-sm"
                                     >
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 group-hover:bg-primary group-hover:scale-125 transition-all duration-200" />
+                                        <span className="w-2 h-2 rounded-full bg-primary/40 group-hover:bg-primary group-hover:scale-125 transition-all duration-200" />
                                         Como Funciona
                                     </button>
                                 </li>
                                 <li>
                                     <Link 
                                         to="/blog" 
-                                        className="text-muted-foreground hover:text-primary transition-all duration-200 flex items-center gap-2.5 group text-sm"
+                                        className="text-muted-foreground hover:text-primary transition-all duration-200 flex items-center gap-3 group text-sm"
                                     >
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 group-hover:bg-primary group-hover:scale-125 transition-all duration-200" />
+                                        <span className="w-2 h-2 rounded-full bg-primary/40 group-hover:bg-primary group-hover:scale-125 transition-all duration-200" />
                                         Blog
                                     </Link>
                                 </li>
                                 <li>
                                     <Link 
                                         to="/sobre" 
-                                        className="text-muted-foreground hover:text-primary transition-all duration-200 flex items-center gap-2.5 group text-sm"
+                                        className="text-muted-foreground hover:text-primary transition-all duration-200 flex items-center gap-3 group text-sm"
                                     >
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 group-hover:bg-primary group-hover:scale-125 transition-all duration-200" />
+                                        <span className="w-2 h-2 rounded-full bg-primary/40 group-hover:bg-primary group-hover:scale-125 transition-all duration-200" />
                                         Sobre o Teste
                                     </Link>
                                 </li>
@@ -108,36 +108,36 @@ const Footer = () => {
                         </div>
 
                         {/* Legal & Suporte */}
-                        <div className="space-y-5">
-                            <h3 className="font-bold text-foreground text-xs uppercase tracking-widest flex items-center gap-2">
-                                <div className="w-8 h-0.5 bg-gradient-to-r from-primary to-primary/50 rounded-full" />
+                        <div className="md:col-span-4 space-y-6">
+                            <h3 className="font-bold text-foreground text-xs uppercase tracking-widest flex items-center gap-3">
+                                <div className="w-10 h-0.5 bg-gradient-to-r from-primary to-primary/50 rounded-full" />
                                 Legal & Suporte
                             </h3>
-                            <ul className="space-y-3.5">
+                            <ul className="space-y-4">
                                 <li>
                                     <Link 
                                         to="/privacidade" 
-                                        className="text-muted-foreground hover:text-primary transition-all duration-200 flex items-center gap-2.5 group text-sm"
+                                        className="text-muted-foreground hover:text-primary transition-all duration-200 flex items-center gap-3 group text-sm"
                                     >
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 group-hover:bg-primary group-hover:scale-125 transition-all duration-200" />
+                                        <span className="w-2 h-2 rounded-full bg-primary/40 group-hover:bg-primary group-hover:scale-125 transition-all duration-200" />
                                         Política de Privacidade
                                     </Link>
                                 </li>
                                 <li>
                                     <Link 
                                         to="/termos" 
-                                        className="text-muted-foreground hover:text-primary transition-all duration-200 flex items-center gap-2.5 group text-sm"
+                                        className="text-muted-foreground hover:text-primary transition-all duration-200 flex items-center gap-3 group text-sm"
                                     >
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 group-hover:bg-primary group-hover:scale-125 transition-all duration-200" />
+                                        <span className="w-2 h-2 rounded-full bg-primary/40 group-hover:bg-primary group-hover:scale-125 transition-all duration-200" />
                                         Termos de Uso
                                     </Link>
                                 </li>
                                 <li>
                                     <Link 
                                         to="/contato" 
-                                        className="text-muted-foreground hover:text-primary transition-all duration-200 flex items-center gap-2.5 group text-sm"
+                                        className="text-muted-foreground hover:text-primary transition-all duration-200 flex items-center gap-3 group text-sm"
                                     >
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 group-hover:bg-primary group-hover:scale-125 transition-all duration-200" />
+                                        <span className="w-2 h-2 rounded-full bg-primary/40 group-hover:bg-primary group-hover:scale-125 transition-all duration-200" />
                                         Contato
                                     </Link>
                                 </li>
@@ -146,12 +146,12 @@ const Footer = () => {
                     </div>
 
                     {/* Bottom Bar */}
-                    <div className="pt-8 border-t border-border/40">
+                    <div className="pt-8 border-t border-border/30">
                         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                            <p className="text-sm text-muted-foreground">
+                            <p className="text-sm text-muted-foreground/80">
                                 © {new Date().getFullYear()} Pet Score. Todos os direitos reservados.
                             </p>
-                            <p className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <p className="flex items-center gap-2.5 text-sm text-muted-foreground/80">
                                 <span>🐶</span>
                                 <span className="font-medium">Cuidando de quem cuida</span>
                                 <span>🐱</span>
