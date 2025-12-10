@@ -292,32 +292,49 @@ const CompleteResult = () => {
   };
 
   const drawElegantSeal = (ctx: CanvasRenderingContext2D, x: number, y: number) => {
-    const radius = 35;
+    const radius = 45;
     
     ctx.save();
     
-    // Subtle shadow
-    ctx.shadowColor = "rgba(0,0,0,0.15)";
-    ctx.shadowBlur = 8;
-    ctx.shadowOffsetY = 3;
+    // Shadow
+    ctx.shadowColor = "rgba(0,0,0,0.3)";
+    ctx.shadowBlur = 12;
+    ctx.shadowOffsetY = 5;
     
-    // Outer ring with gold gradient
-    const goldGradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
-    goldGradient.addColorStop(0, "#E8D5A8");
-    goldGradient.addColorStop(0.7, "#D4A853");
-    goldGradient.addColorStop(1, "#B8860B");
+    // Outer ring with gold gradient (3D effect)
+    const outerGradient = ctx.createLinearGradient(x - radius, y - radius, x + radius, y + radius);
+    outerGradient.addColorStop(0, "#F5E6A3");
+    outerGradient.addColorStop(0.3, "#D4A853");
+    outerGradient.addColorStop(0.5, "#B8860B");
+    outerGradient.addColorStop(0.7, "#D4A853");
+    outerGradient.addColorStop(1, "#8B6914");
     
     ctx.beginPath();
     ctx.arc(x, y, radius, 0, Math.PI * 2);
-    ctx.fillStyle = goldGradient;
+    ctx.fillStyle = outerGradient;
     ctx.fill();
     ctx.restore();
     
-    // Inner circle
+    // Notched edge effect
     ctx.save();
-    const innerGradient = ctx.createRadialGradient(x, y, 0, x, y, radius - 8);
-    innerGradient.addColorStop(0, "#FFFDF5");
-    innerGradient.addColorStop(1, "#F5E6C8");
+    ctx.fillStyle = "#A67C2E";
+    for (let i = 0; i < 36; i++) {
+      const angle = (i / 36) * Math.PI * 2;
+      const notchX = x + Math.cos(angle) * (radius - 2);
+      const notchY = y + Math.sin(angle) * (radius - 2);
+      ctx.beginPath();
+      ctx.arc(notchX, notchY, 2.5, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.restore();
+    
+    // Inner gold disc
+    ctx.save();
+    const innerGradient = ctx.createLinearGradient(x - radius + 8, y - radius + 8, x + radius - 8, y + radius - 8);
+    innerGradient.addColorStop(0, "#F5E6A3");
+    innerGradient.addColorStop(0.4, "#E8D5A8");
+    innerGradient.addColorStop(0.6, "#D4A853");
+    innerGradient.addColorStop(1, "#C9973F");
     
     ctx.beginPath();
     ctx.arc(x, y, radius - 8, 0, Math.PI * 2);
@@ -325,30 +342,105 @@ const CompleteResult = () => {
     ctx.fill();
     ctx.restore();
     
-    // Decorative dots around the edge
+    // Inner border ring
     ctx.save();
+    ctx.strokeStyle = "#B8860B";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.arc(x, y, radius - 10, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.restore();
+    
+    // Laurel wreath - left branch
+    ctx.save();
+    ctx.strokeStyle = "#A67C2E";
     ctx.fillStyle = "#C9973F";
-    for (let i = 0; i < 12; i++) {
-      const angle = (i / 12) * Math.PI * 2;
-      const dotX = x + Math.cos(angle) * (radius - 4);
-      const dotY = y + Math.sin(angle) * (radius - 4);
+    ctx.lineWidth = 1.5;
+    
+    // Left laurel leaves
+    for (let i = 0; i < 6; i++) {
+      const leafAngle = Math.PI * 0.65 + (i * 0.12);
+      const leafX = x - 12 + Math.cos(leafAngle) * (12 + i * 2);
+      const leafY = y + 5 - Math.sin(leafAngle) * (12 + i * 2);
+      
+      ctx.save();
+      ctx.translate(leafX, leafY);
+      ctx.rotate(-leafAngle + Math.PI * 0.3);
       ctx.beginPath();
-      ctx.arc(dotX, dotY, 2, 0, Math.PI * 2);
+      ctx.ellipse(0, 0, 6, 3, 0, 0, Math.PI * 2);
       ctx.fill();
+      ctx.stroke();
+      ctx.restore();
+    }
+    
+    // Right laurel leaves
+    for (let i = 0; i < 6; i++) {
+      const leafAngle = Math.PI * 0.35 - (i * 0.12);
+      const leafX = x + 12 + Math.cos(leafAngle) * (12 + i * 2);
+      const leafY = y + 5 - Math.sin(leafAngle) * (12 + i * 2);
+      
+      ctx.save();
+      ctx.translate(leafX, leafY);
+      ctx.rotate(-leafAngle - Math.PI * 0.3);
+      ctx.beginPath();
+      ctx.ellipse(0, 0, 6, 3, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+      ctx.restore();
     }
     ctx.restore();
     
-    // Checkmark icon
+    // Red ribbons
     ctx.save();
-    ctx.strokeStyle = "#8B6914";
-    ctx.lineWidth = 3;
-    ctx.lineCap = "round";
-    ctx.lineJoin = "round";
+    
+    // Left ribbon
+    const ribbonGradientL = ctx.createLinearGradient(x - 25, y + radius, x - 5, y + radius + 60);
+    ribbonGradientL.addColorStop(0, "#C41E3A");
+    ribbonGradientL.addColorStop(0.5, "#8B0000");
+    ribbonGradientL.addColorStop(1, "#C41E3A");
+    
+    ctx.fillStyle = ribbonGradientL;
     ctx.beginPath();
-    ctx.moveTo(x - 10, y);
-    ctx.lineTo(x - 3, y + 8);
-    ctx.lineTo(x + 12, y - 7);
+    ctx.moveTo(x - 18, y + radius - 10);
+    ctx.quadraticCurveTo(x - 25, y + radius + 25, x - 30, y + radius + 55);
+    ctx.lineTo(x - 20, y + radius + 45);
+    ctx.lineTo(x - 15, y + radius + 55);
+    ctx.quadraticCurveTo(x - 10, y + radius + 25, x - 8, y + radius - 10);
+    ctx.closePath();
+    ctx.fill();
+    
+    // Gold line on left ribbon
+    ctx.strokeStyle = "#D4A853";
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(x - 13, y + radius - 5);
+    ctx.quadraticCurveTo(x - 17, y + radius + 25, x - 22, y + radius + 50);
     ctx.stroke();
+    
+    // Right ribbon
+    const ribbonGradientR = ctx.createLinearGradient(x + 5, y + radius, x + 25, y + radius + 60);
+    ribbonGradientR.addColorStop(0, "#C41E3A");
+    ribbonGradientR.addColorStop(0.5, "#8B0000");
+    ribbonGradientR.addColorStop(1, "#C41E3A");
+    
+    ctx.fillStyle = ribbonGradientR;
+    ctx.beginPath();
+    ctx.moveTo(x + 8, y + radius - 10);
+    ctx.quadraticCurveTo(x + 10, y + radius + 25, x + 15, y + radius + 55);
+    ctx.lineTo(x + 20, y + radius + 45);
+    ctx.lineTo(x + 30, y + radius + 55);
+    ctx.quadraticCurveTo(x + 25, y + radius + 25, x + 18, y + radius - 10);
+    ctx.closePath();
+    ctx.fill();
+    
+    // Gold line on right ribbon
+    ctx.strokeStyle = "#D4A853";
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(x + 13, y + radius - 5);
+    ctx.quadraticCurveTo(x + 17, y + radius + 25, x + 22, y + radius + 50);
+    ctx.stroke();
+    
     ctx.restore();
   };
 
