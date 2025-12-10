@@ -42,16 +42,16 @@ const Footer = () => {
             {/* Main Footer - Professional Layout */}
             <div className="bg-gradient-to-b from-muted/20 to-muted/40 pt-20 pb-10 px-6">
                 <div className="max-w-6xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-16">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 mb-16">
                         {/* Brand Section */}
-                        <div className="md:col-span-5 space-y-6">
+                        <div className="space-y-6">
                             <Link to="/" className="inline-flex items-center gap-3 group">
                                 <span className="text-4xl transition-transform group-hover:scale-110 duration-300">🐾</span>
                                 <span className="text-3xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
                                     PetScore
                                 </span>
                             </Link>
-                            <p className="text-muted-foreground leading-relaxed text-base max-w-sm">
+                            <p className="text-muted-foreground leading-relaxed text-base">
                                 O quiz mais divertido e revelador para tutores apaixonados. Descubra seu nível de dedicação e transforme a vida do seu pet.
                             </p>
                             <div className="inline-flex items-center gap-2 text-sm text-muted-foreground bg-card/60 px-5 py-2.5 rounded-full border border-border/50 shadow-sm">
@@ -62,7 +62,7 @@ const Footer = () => {
                         </div>
 
                         {/* Links Rápidos */}
-                        <div className="md:col-span-3 space-y-6">
+                        <div className="space-y-6">
                             <h3 className="font-bold text-foreground text-xs uppercase tracking-widest flex items-center gap-3">
                                 <div className="w-10 h-0.5 bg-gradient-to-r from-primary to-primary/50 rounded-full" />
                                 Links Rápidos
@@ -108,7 +108,7 @@ const Footer = () => {
                         </div>
 
                         {/* Legal & Suporte */}
-                        <div className="md:col-span-4 space-y-6">
+                        <div className="space-y-6">
                             <h3 className="font-bold text-foreground text-xs uppercase tracking-widest flex items-center gap-3">
                                 <div className="w-10 h-0.5 bg-gradient-to-r from-primary to-primary/50 rounded-full" />
                                 Legal & Suporte
