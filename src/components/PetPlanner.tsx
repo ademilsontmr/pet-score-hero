@@ -103,7 +103,7 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
       >
         <div 
           ref={plannerRef}
-          className={`mx-auto bg-white shadow-xl overflow-hidden transition-transform duration-300 ${
+          className={`mx-auto bg-white shadow-xl overflow-hidden transition-transform duration-300 flex flex-col ${
             isZoomed ? 'scale-100 origin-top-left' : ''
           }`}
           style={{ width: "794px", minWidth: "794px", height: "1123px" }}
@@ -157,10 +157,10 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
           </div>
 
           {/* Main Content */}
-          <div className="p-5 flex-1 flex flex-col h-full">
-            <div className="grid grid-cols-12 gap-4 h-full">
+          <div className="p-5 flex-1 flex flex-col overflow-hidden">
+            <div className="grid grid-cols-12 gap-4 flex-1">
               {/* Left Column */}
-              <div className="col-span-7 flex flex-col gap-4 h-full">
+              <div className="col-span-7 flex flex-col gap-4">
                 {/* Vacinas */}
                 <div className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm flex-1 flex flex-col">
                   <div className="bg-gradient-to-r from-blue-50 to-white p-3 border-b border-gray-100 flex items-center gap-2">
@@ -238,7 +238,7 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
               </div>
 
               {/* Right Column */}
-              <div className="col-span-5 flex flex-col gap-4 h-full">
+              <div className="col-span-5 flex flex-col gap-4">
                 {/* Weight Tracker */}
                 <div className="border border-gray-200 rounded-xl bg-white shadow-sm overflow-hidden">
                   <div className="bg-gradient-to-r from-amber-50 to-white p-2.5 border-b border-gray-100 flex items-center gap-2">
