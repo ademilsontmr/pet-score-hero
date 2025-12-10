@@ -410,6 +410,31 @@ const Blog = () => {
             slug: "tosa-caes-tipos-cuidados",
             title: "Tosa para Cães: Tipos, Frequência e Cuidados em 2026",
             description: "Higiênica, bebê, tesoura, máquina e stripping. Raças que não devem ser tosadas e cuidados pós-tosa."
+        },
+        {
+            slug: "como-acalmar-cachorro-tempestade",
+            title: "Como Acalmar Seu Cachorro Durante Tempestades: Guia Completo",
+            description: "Seu cão entra em pânico com trovões? Técnicas comprovadas de dessensibilização, produtos naturais e como criar um abrigo seguro."
+        },
+        {
+            slug: "doencas-renais-gatos-guia",
+            title: "Doenças Renais em Gatos: Prevenção, Sintomas e Tratamento Completo",
+            description: "30% dos gatos acima de 7 anos desenvolvem DRC. Aprenda a prevenir, identificar sinais precoces e aumentar a qualidade de vida."
+        },
+        {
+            slug: "passeio-cachorro-guia-definitivo",
+            title: "Passeio com Cachorro: O Guia Definitivo para Tutores em 2026",
+            description: "Frequência ideal, duração por porte, equipamentos essenciais e técnicas para passeios sem puxão."
+        },
+        {
+            slug: "gato-arranhando-moveis-solucoes",
+            title: "Gato Arranhando Móveis? 8 Soluções Definitivas que Funcionam",
+            description: "Entenda o comportamento natural do arranhado e aprenda técnicas para redirecionar sem punição."
+        },
+        {
+            slug: "microchip-pet-importancia",
+            title: "Microchip para Pets: Por Que é Essencial em 2026",
+            description: "Como funciona, onde implantar, custo médio e por que o microchip é a forma mais segura de identificação."
         }
     ];
 
