@@ -111,6 +111,10 @@ const CompleteResult = () => {
     ctx.fillStyle = "#FF6B35";
     ctx.fillRect(0, 0, canvas.width, 40);
 
+    // Bottom Accent Bar
+    ctx.fillStyle = "#FF6B35";
+    ctx.fillRect(0, canvas.height - 40, canvas.width, 40);
+
     ctx.textAlign = "center";
 
     // Brand Header
@@ -199,12 +203,12 @@ const CompleteResult = () => {
         // Bottom Card for Text
         drawBottomCard(ctx);
 
-        // Website URL (Below the card)
+        // Website URL (Above the bottom bar)
         ctx.save();
         ctx.textBaseline = "middle";
         ctx.fillStyle = "#FF6B35"; // Brand Orange
         ctx.font = "bold 28px Arial";
-        ctx.fillText("www.petscore.com.br", canvas.width / 2, 1325);
+        ctx.fillText("www.petscore.com.br", canvas.width / 2, canvas.height - 70);
         ctx.restore();
       };
     } else {
@@ -224,12 +228,12 @@ const CompleteResult = () => {
 
       drawBottomCard(ctx);
 
-      // Website URL (Below the card)
+      // Website URL (Above the bottom bar)
       ctx.save();
       ctx.textBaseline = "middle";
       ctx.fillStyle = "#FF6B35"; // Brand Orange
       ctx.font = "bold 28px Arial";
-      ctx.fillText("www.petscore.com.br", canvas.width / 2, 1325);
+      ctx.fillText("www.petscore.com.br", canvas.width / 2, canvas.height - 70);
       ctx.restore();
     }
   };
