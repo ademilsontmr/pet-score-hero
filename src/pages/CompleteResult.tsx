@@ -690,11 +690,6 @@ const CompleteResult = () => {
                   />
                 </div>
 
-                {/* Floating badge */}
-                <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 bg-gradient-to-br from-primary to-secondary text-primary-foreground text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full shadow-lg flex items-center gap-1 sm:gap-1.5">
-                  <span className="text-xs sm:text-sm">✨</span>
-                  Exclusivo
-                </div>
               </div>
 
               {/* Action buttons - Premium Design */}
