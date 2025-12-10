@@ -251,26 +251,26 @@ const PetPlanner = ({ petName, score, resultTitle }: PetPlannerProps) => {
                     </div>
                     <h3 className="font-bold text-gray-700 text-[10px] uppercase tracking-wide">Saúde Bucal</h3>
                   </div>
-                  <div className="p-2.5">
+                  <div style={{ padding: "10px" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
-                      <div className="w-3 h-3 rounded border-2 border-cyan-200 bg-cyan-50"></div>
-                      <span className="text-[10px] text-gray-600">Escovação semanal</span>
+                      <div style={{ width: "12px", height: "12px", minWidth: "12px", borderRadius: "2px", border: "2px solid #a5f3fc", backgroundColor: "#ecfeff", flexShrink: 0 }}></div>
+                      <span style={{ fontSize: "10px", color: "#4b5563" }}>Escovação semanal</span>
                     </div>
                     <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
-                      <div className="w-3 h-3 rounded border-2 border-cyan-200 bg-cyan-50"></div>
-                      <span className="text-[10px] text-gray-600">Limpeza profissional</span>
+                      <div style={{ width: "12px", height: "12px", minWidth: "12px", borderRadius: "2px", border: "2px solid #a5f3fc", backgroundColor: "#ecfeff", flexShrink: 0 }}></div>
+                      <span style={{ fontSize: "10px", color: "#4b5563" }}>Limpeza profissional</span>
                     </div>
                     <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
-                      <div className="w-3 h-3 rounded border-2 border-cyan-200 bg-cyan-50"></div>
-                      <span className="text-[10px] text-gray-600">Petisco dental</span>
+                      <div style={{ width: "12px", height: "12px", minWidth: "12px", borderRadius: "2px", border: "2px solid #a5f3fc", backgroundColor: "#ecfeff", flexShrink: 0 }}></div>
+                      <span style={{ fontSize: "10px", color: "#4b5563" }}>Petisco dental</span>
                     </div>
                     <div style={{ display: "flex", alignItems: "flex-end", gap: "4px", marginTop: "8px" }}>
-                      <span className="text-gray-500 text-[9px] font-medium" style={{ marginBottom: "2px" }}>Última limpeza:</span>
-                      <div className="border-b-2 border-dotted border-gray-200" style={{ flex: 1, marginBottom: "2px" }}></div>
+                      <span style={{ fontSize: "9px", color: "#6b7280", fontWeight: 500, marginBottom: "2px" }}>Última limpeza:</span>
+                      <div style={{ flex: 1, marginBottom: "2px", borderBottom: "2px dotted #e5e7eb" }}></div>
                     </div>
                     <div style={{ display: "flex", alignItems: "flex-end", gap: "4px" }}>
-                      <span className="text-gray-500 text-[9px] font-medium" style={{ marginBottom: "2px" }}>Próxima:</span>
-                      <div className="border-b-2 border-dotted border-gray-200" style={{ flex: 1, marginBottom: "2px" }}></div>
+                      <span style={{ fontSize: "9px", color: "#6b7280", fontWeight: 500, marginBottom: "2px" }}>Próxima:</span>
+                      <div style={{ flex: 1, marginBottom: "2px", borderBottom: "2px dotted #e5e7eb" }}></div>
                     </div>
                   </div>
                 </div>
