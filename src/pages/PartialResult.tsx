@@ -21,8 +21,6 @@ const PartialResult = () => {
   const [petImage, setPetImage] = useState<string | null>(null);
   const [petName, setPetName] = useState("");
   const [petGender, setPetGender] = useState<"male" | "female" | "">("");
-  const [tutorName, setTutorName] = useState("");
-  const [tutorPhone, setTutorPhone] = useState("");
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -243,41 +241,6 @@ const PartialResult = () => {
               </div>
             </div>
 
-            {/* Lead Capture */}
-            <div className="space-y-4 mb-6">
-              <div className="space-y-2">
-                <Label htmlFor="tutorName" className="text-sm font-semibold text-foreground">
-                  Seu Nome
-                </Label>
-                <Input
-                  id="tutorName"
-                  placeholder="Como você se chama?"
-                  value={tutorName}
-                  onChange={(e) => setTutorName(e.target.value)}
-                  className="h-12 bg-white border-muted focus:border-primary"
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="tutorPhone" className="text-sm font-semibold text-foreground">
-                  Seu WhatsApp
-                </Label>
-                <Input
-                  id="tutorPhone"
-                  placeholder="11 999999999"
-                  value={tutorPhone}
-                  onChange={(e) => {
-                    let value = e.target.value.replace(/\D/g, "");
-                    if (value.length > 11) value = value.slice(0, 11);
-                    if (value.length > 2) {
-                      value = `${value.slice(0, 2)} ${value.slice(2)}`;
-                    }
-                    setTutorPhone(value);
-                  }}
-                  maxLength={12}
-                  className="h-12 bg-white border-muted focus:border-primary"
-                />
-              </div>
-            </div>
 
             {/* CTA Button */}
             <Button
@@ -289,9 +252,7 @@ const PartialResult = () => {
                     score,
                     petImage,
                     petName,
-                    petGender,
-                    tutorName,
-                    tutorPhone
+                    petGender
                   }
                 });
               }}
