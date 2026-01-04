@@ -23,3 +23,5 @@ workers/
 *.njsproj
 *.sln
 *.sw?
+*.temp
+*.env

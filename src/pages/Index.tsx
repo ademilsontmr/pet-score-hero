@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useNavigate, Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
-import { Heart, TrendingUp, Award, Clock, Target, CheckCircle2, Star, Share2, Gift, Users, Zap, ChevronDown } from "lucide-react";
+import { Heart, TrendingUp, Award, Clock, Target, CheckCircle2, Star, Share2, Gift, Users, Zap, ChevronDown, Utensils, Shield, Calendar } from "lucide-react";
 import heroImage from "@/assets/hero-pets.jpg";
 import testimonial1 from "@/assets/testimonial-1.jpg";
 import testimonial2 from "@/assets/testimonial-2.jpg";
@@ -12,7 +12,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { useEffect } from "react";
 const Index = () => {
   const navigate = useNavigate();
-
   useEffect(() => {
     document.title = "Pet Score - O Quiz Oficial dos Pais de Pet";
   }, []);
@@ -42,7 +41,7 @@ const Index = () => {
             </div>
 
             <div className="space-y-6">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
                 Você é um Bom Tutor de Pet?
                 <span className="block text-primary mt-2">Descubra Agora!</span>
               </h1>
@@ -54,7 +53,7 @@ const Index = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Button size="lg" onClick={scrollToQuiz} className="text-lg px-8 py-4 h-auto shadow-sm hover:shadow-md transition-all duration-300 hover-scale">
-                🎯 Começar Quiz Grátis
+                🎯 Descobrir Meu PetScore
               </Button>
               <Button size="lg" variant="outline" onClick={() => document.getElementById('como-funciona')?.scrollIntoView({
                 behavior: 'smooth'
@@ -84,75 +83,192 @@ const Index = () => {
       </div>
     </section>
 
-    {/* Social Proof Section */}
-    <section className="py-12 px-4 bg-card/50">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
-          <div className="flex items-center gap-2">
-            <Star className="w-5 h-5 fill-primary text-primary" />
-            <Star className="w-5 h-5 fill-primary text-primary" />
-            <Star className="w-5 h-5 fill-primary text-primary" />
-            <Star className="w-5 h-5 fill-primary text-primary" />
-            <Star className="w-5 h-5 fill-primary text-primary" />
-            <span className="ml-2 font-semibold">4.9/5.0</span>
+    {/* Social Proof Section - Premium Design */}
+    <section className="py-8 md:py-14 px-4 bg-gradient-to-b from-card/80 to-background relative overflow-hidden">
+      {/* Decorative background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-secondary/5 rounded-full blur-3xl" />
+      </div>
+      
+      <div className="max-w-5xl mx-auto relative">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+          {/* Rating Card */}
+          <div className="group relative bg-card/80 backdrop-blur-sm rounded-2xl p-5 md:p-6 border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="relative flex flex-col items-center text-center gap-3">
+              <div className="flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 md:w-6 md:h-6 fill-primary text-primary drop-shadow-sm" />
+                ))}
+              </div>
+              <div>
+                <span className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text">4.9</span>
+                <span className="text-muted-foreground text-sm md:text-base font-medium">/5.0</span>
+              </div>
+              <span className="text-xs md:text-sm text-muted-foreground font-medium">Avaliação dos tutores</span>
+            </div>
           </div>
-          <div className="text-muted-foreground">|</div>
-          <div className="font-semibold">10.247 tutores</div>
-          <div className="text-muted-foreground">|</div>
-          <div className="font-semibold">Aprovado por veterinários</div>
+
+          {/* Users Card */}
+          <div className="group relative bg-card/80 backdrop-blur-sm rounded-2xl p-5 md:p-6 border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="relative flex flex-col items-center text-center gap-3">
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl flex items-center justify-center">
+                <Users className="w-6 h-6 md:w-7 md:h-7 text-primary" />
+              </div>
+              <div>
+                <span className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text">10.247</span>
+              </div>
+              <span className="text-xs md:text-sm text-muted-foreground font-medium">Tutores avaliados</span>
+            </div>
+          </div>
+
+          {/* No Account Card */}
+          <div className="group relative bg-card/80 backdrop-blur-sm rounded-2xl p-5 md:p-6 border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="relative flex flex-col items-center text-center gap-3">
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-green-500/20 to-green-500/5 rounded-xl flex items-center justify-center">
+                <CheckCircle2 className="w-6 h-6 md:w-7 md:h-7 text-green-600" />
+              </div>
+              <div>
+                <span className="text-lg md:text-xl font-bold text-foreground">Sem criar conta</span>
+              </div>
+              <span className="text-xs md:text-sm text-muted-foreground font-medium">Resultado instantâneo</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     {/* Como Funciona Section */}
-    <section id="como-funciona" className="py-20 px-4 bg-background">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16 animate-in fade-in duration-700">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+    <section id="como-funciona" className="py-24 px-4 bg-background relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
+      </div>
+
+      <div className="max-w-6xl mx-auto relative">
+        <div className="text-center mb-20 animate-in fade-in duration-700">
+          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <Zap className="w-4 h-4" />
+            Simples e Rápido
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             Como Funciona
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Sua jornada para se tornar o melhor amigo do seu pet começa aqui
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Sua jornada para se tornar o melhor amigo do seu pet começa aqui — em apenas 3 passos simples
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="text-center space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
-            <div className="bg-gradient-hero text-white rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold mx-auto shadow-medium">
-              1
-            </div>
-            <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-medium transition-all duration-300 h-full">
-              <Target className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-foreground mb-3">Responda com o Coração</h3>
-              <p className="text-muted-foreground">
-                Perguntas rápidas sobre o dia a dia que vão fazer você refletir sobre a conexão única que tem com seu pet
-              </p>
-            </div>
+        {/* Steps with connecting line */}
+        <div className="relative">
+          {/* Connecting line - hidden on mobile */}
+          <div className="hidden md:block absolute top-24 left-[16.66%] right-[16.66%] h-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-full opacity-30" />
+          <div className="hidden md:block absolute top-24 left-[16.66%] right-[16.66%] h-1">
+            <div className="h-full bg-gradient-to-r from-primary via-secondary to-accent rounded-full animate-pulse" style={{
+              width: '100%',
+              opacity: 0.6
+            }} />
           </div>
 
-          <div className="text-center space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
-            <div className="bg-gradient-hero text-white rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold mx-auto shadow-medium">
-              2
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+            {/* Step 1 */}
+            <div className="relative group animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
+              <div className="text-center space-y-6">
+                {/* Number badge */}
+                <div className="relative mx-auto w-fit">
+                  <div className="absolute inset-0 bg-gradient-hero rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
+                  <div className="relative bg-gradient-hero text-white rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold shadow-lg ring-4 ring-background">
+                    1
+                  </div>
+                </div>
+                
+                {/* Card */}
+                <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/20 transition-all duration-500 group-hover:-translate-y-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative">
+                    <div className="bg-primary/10 rounded-2xl p-4 w-fit mx-auto mb-6">
+                      <Target className="w-10 h-10 text-primary" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-foreground mb-4">Responda com o Coração</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      30 perguntas rápidas sobre o dia a dia que vão fazer você refletir sobre a conexão única com seu pet
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-medium transition-all duration-300 h-full">
-              <Zap className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-foreground mb-3">Descubra seu Perfil</h3>
-              <p className="text-muted-foreground">
-                Receba uma análise inicial gratuita e veja como seus cuidados impactam a felicidade do seu companheiro
-              </p>
+
+            {/* Step 2 */}
+            <div className="relative group animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+              <div className="text-center space-y-6">
+                {/* Number badge */}
+                <div className="relative mx-auto w-fit">
+                  <div className="absolute inset-0 bg-gradient-hero rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
+                  <div className="relative bg-gradient-hero text-white rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold shadow-lg ring-4 ring-background">
+                    2
+                  </div>
+                </div>
+                
+                {/* Card */}
+                <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-secondary/20 transition-all duration-500 group-hover:-translate-y-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative">
+                    <div className="bg-secondary/10 rounded-2xl p-4 w-fit mx-auto mb-6">
+                      <Users className="w-10 h-10 text-secondary" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-foreground mb-4">Descubra seu Perfil</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Receba sua análise personalizada e veja como seus cuidados impactam a felicidade do seu companheiro
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="relative group animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
+              <div className="text-center space-y-6">
+                {/* Number badge */}
+                <div className="relative mx-auto w-fit">
+                  <div className="absolute inset-0 bg-gradient-hero rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
+                  <div className="relative bg-gradient-hero text-white rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold shadow-lg ring-4 ring-background">
+                    3
+                  </div>
+                </div>
+                
+                {/* Card */}
+                <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/20 transition-all duration-500 group-hover:-translate-y-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative">
+                    <div className="bg-accent/10 rounded-2xl p-4 w-fit mx-auto mb-6">
+                      <Award className="w-10 h-10 text-accent" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-foreground mb-4">Transforme a Relação</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Acesse o plano completo com dicas exclusivas para elevar o nível de bem-estar do seu pet
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
 
-          <div className="text-center space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
-            <div className="bg-gradient-hero text-white rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold mx-auto shadow-medium">
-              3
+        {/* Bottom CTA */}
+        <div className="mt-16 text-center animate-in fade-in duration-700 delay-700">
+          <div className="inline-flex flex-wrap items-center justify-center gap-6 bg-card/60 backdrop-blur-sm rounded-full px-8 py-4 shadow-soft border border-border/50">
+            <div className="flex items-center gap-2 text-sm">
+              <Clock className="w-4 h-4 text-primary" />
+              <span className="text-muted-foreground">5-10 minutos</span>
             </div>
-            <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-medium transition-all duration-300 h-full">
-              <Award className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-foreground mb-3">Transforme a Relação</h3>
-              <p className="text-muted-foreground">
-                Tenha acesso ao plano completo com dicas exclusivas de especialistas para elevar o nível de bem-estar do seu pet
-              </p>
+            <div className="w-px h-4 bg-border hidden sm:block" />
+            <div className="flex items-center gap-2 text-sm">
+              <Zap className="w-4 h-4 text-secondary" />
+              <span className="text-muted-foreground">Resultado Instantâneo</span>
             </div>
           </div>
         </div>
@@ -160,91 +276,129 @@ const Index = () => {
     </section>
 
     {/* O que você vai receber */}
-    <section className="py-20 px-4 bg-gradient-warm">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16 animate-in fade-in duration-700">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+    <section className="py-24 px-4 bg-gradient-warm relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 -right-20 w-80 h-80 bg-secondary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 -left-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
+      </div>
+
+      <div className="max-w-6xl mx-auto relative">
+        <div className="text-center mb-20 animate-in fade-in duration-700">
+          <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <Gift className="w-4 h-4" />
+            Tudo Incluído
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             O Que Você Vai Descobrir
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Uma análise profunda que vai transformar a vida do seu pet
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Uma análise profunda e personalizada que vai transformar a vida do seu pet
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          <Card className="p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-left duration-700">
-            <div className="flex gap-4">
-              <div className="bg-primary text-primary-foreground rounded-2xl p-4 shrink-0 h-fit">
-                <TrendingUp className="w-8 h-8" />
-              </div>
-              <div className="space-y-3">
-                <h3 className="text-2xl font-bold text-foreground">Diagnóstico Completo (0-100)</h3>
-                <p className="text-muted-foreground text-lg">
-                  Entenda com precisão científica o nível de bem-estar que você proporciona hoje e descubra onde pode evoluir.
-                </p>
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          {/* Card 1 - Diagnóstico */}
+          <div className="group animate-in fade-in slide-in-from-left duration-700">
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/20 transition-all duration-500 group-hover:-translate-y-2 h-full">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative flex gap-5">
+                <div className="relative shrink-0">
+                  <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500" />
+                  <div className="relative bg-primary/10 rounded-2xl p-4">
+                    <TrendingUp className="w-8 h-8 text-primary" />
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-xl lg:text-2xl font-bold text-foreground">Diagnóstico Completo (0-100)</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Entenda com precisão científica o nível de bem-estar que você proporciona hoje e descubra onde pode evoluir.
+                  </p>
+                </div>
               </div>
             </div>
-          </Card>
+          </div>
 
-          <Card className="p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-right duration-700">
-            <div className="flex gap-4">
-              <div className="bg-secondary text-secondary-foreground rounded-2xl p-4 shrink-0 h-fit">
-                <Award className="w-8 h-8" />
-              </div>
-              <div className="space-y-3">
-                <h3 className="text-2xl font-bold text-foreground">Sua Identidade de Tutor</h3>
-                <p className="text-muted-foreground text-lg">
-                  Conquiste títulos exclusivos como Lendário 🏆 ou Herói do Lar ⭐ que comprovam sua dedicação e amor.
-                </p>
+          {/* Card 2 - Identidade */}
+          <div className="group animate-in fade-in slide-in-from-right duration-700">
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-secondary/20 transition-all duration-500 group-hover:-translate-y-2 h-full">
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative flex gap-5">
+                <div className="relative shrink-0">
+                  <div className="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500" />
+                  <div className="relative bg-secondary/10 rounded-2xl p-4">
+                    <Award className="w-8 h-8 text-secondary" />
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-xl lg:text-2xl font-bold text-foreground">Sua Identidade de Tutor</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Conquiste títulos exclusivos como Lendário 🏆 ou Herói do Lar ⭐ que comprovam sua dedicação e amor.
+                  </p>
+                </div>
               </div>
             </div>
-          </Card>
+          </div>
 
-          <Card className="p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-left duration-700 delay-200">
-            <div className="flex gap-4">
-              <div className="bg-accent text-accent-foreground rounded-2xl p-4 shrink-0 h-fit">
-                <Heart className="w-8 h-8" />
-              </div>
-              <div className="space-y-3">
-                <h3 className="text-2xl font-bold text-foreground">Plano de Ação Personalizado</h3>
-                <p className="text-muted-foreground text-lg">
-                  Receba um guia prático feito sob medida para a rotina e necessidades específicas do seu melhor amigo.
-                </p>
+          {/* Card 3 - Plano de Ação */}
+          <div className="group animate-in fade-in slide-in-from-left duration-700 delay-200">
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/20 transition-all duration-500 group-hover:-translate-y-2 h-full">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative flex gap-5">
+                <div className="relative shrink-0">
+                  <div className="absolute inset-0 bg-accent/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500" />
+                  <div className="relative bg-accent/10 rounded-2xl p-4">
+                    <Heart className="w-8 h-8 text-accent" />
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-xl lg:text-2xl font-bold text-foreground">Plano de Ação Personalizado</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Receba um guia prático feito sob medida para a rotina e necessidades específicas do seu melhor amigo.
+                  </p>
+                </div>
               </div>
             </div>
-          </Card>
+          </div>
 
-          <Card className="p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-right duration-700 delay-200">
-            <div className="flex gap-4">
-              <div className="bg-gradient-success text-white rounded-2xl p-4 shrink-0 h-fit">
-                <Share2 className="w-8 h-8" />
-              </div>
-              <div className="space-y-3">
-                <h3 className="text-2xl font-bold text-foreground">Recordação Exclusiva</h3>
-                <p className="text-muted-foreground text-lg">
-                  Crie uma arte única com a <strong>foto do seu pet</strong> emoldurada com sua conquista para compartilhar nas redes sociais e eternizar esse momento! 📸
-                </p>
+          {/* Card 4 - Recordação */}
+          <div className="group animate-in fade-in slide-in-from-right duration-700 delay-200">
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/20 transition-all duration-500 group-hover:-translate-y-2 h-full">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative flex gap-5">
+                <div className="relative shrink-0">
+                  <div className="absolute inset-0 bg-gradient-hero rounded-2xl blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500" />
+                  <div className="relative bg-gradient-hero rounded-2xl p-4">
+                    <Share2 className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-xl lg:text-2xl font-bold text-foreground">Recordação Exclusiva</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Crie uma arte única com a <strong>foto do seu pet</strong> emoldurada para compartilhar nas redes sociais! 📸
+                  </p>
+                </div>
               </div>
             </div>
-          </Card>
+          </div>
         </div>
       </div>
     </section>
 
     {/* Depoimentos */}
-    <section className="py-20 px-4 bg-background">
+    <section className="py-16 md:py-20 px-4 bg-background">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16 animate-in fade-in duration-700">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-12 md:mb-16 animate-in fade-in duration-700">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
             O Que Dizem Nossos Tutores
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-lg md:text-xl text-muted-foreground">
             Milhares já descobriram como melhorar o cuidado com seus pets
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <Card className="p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 duration-700">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+          <Card className="p-6 sm:p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="space-y-4">
               <div className="flex gap-1 mb-2">
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
@@ -262,7 +416,7 @@ const Index = () => {
             </div>
           </Card>
 
-          <Card className="p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
+          <Card className="p-6 sm:p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
             <div className="space-y-4">
               <div className="flex gap-1 mb-2">
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
@@ -280,7 +434,7 @@ const Index = () => {
             </div>
           </Card>
 
-          <Card className="p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400">
+          <Card className="p-6 sm:p-8 shadow-medium hover:shadow-soft transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400">
             <div className="space-y-4">
               <div className="flex gap-1 mb-2">
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
@@ -302,34 +456,54 @@ const Index = () => {
     </section>
 
     {/* FAQ Section */}
-    <section className="py-20 px-4 bg-gradient-warm">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16 animate-in fade-in duration-700">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+    <section className="py-16 md:py-24 px-4 bg-gradient-warm relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-40 -left-40 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-40 -right-40 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
+      </div>
+
+      <div className="max-w-4xl mx-auto relative">
+        <div className="text-center mb-12 md:mb-16 animate-in fade-in duration-700">
+          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <CheckCircle2 className="w-4 h-4" />
+            Tire Suas Dúvidas
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             Perguntas Frequentes
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Tire suas dúvidas antes de começar sua jornada
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            Tudo que você precisa saber antes de começar sua jornada
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="space-y-4">
-          <AccordionItem value="item-2" className="bg-card rounded-2xl px-6 shadow-soft border-none">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              Quanto tempo leva para fazer o quiz?
+        <Accordion type="single" collapsible className="space-y-3 md:space-y-4">
+          <AccordionItem value="item-2" className="group bg-card/80 backdrop-blur-sm rounded-2xl md:rounded-3xl px-4 md:px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-primary/30">
+            <AccordionTrigger className="text-base md:text-lg font-semibold hover:no-underline py-4 md:py-6 group-hover:text-primary transition-colors duration-300">
+              <div className="flex items-center gap-2 md:gap-3 text-left">
+                <div className="bg-primary/10 rounded-lg md:rounded-xl p-1.5 md:p-2 group-data-[state=open]:bg-primary/20 transition-colors duration-300 shrink-0">
+                  <Clock className="w-4 h-4 md:w-5 md:h-5 text-primary" />
+                </div>
+                Quanto tempo leva para fazer o quiz?
+              </div>
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-base">
+            <AccordionContent className="text-muted-foreground text-sm md:text-base pb-4 md:pb-6 pl-10 md:pl-14 leading-relaxed">
               Apenas 5 a 10 minutos! É o tempo de tomar um café enquanto você descobre insights valiosos
               que podem transformar a vida do seu pet. As perguntas são objetivas e você pode pausar e
               voltar quando quiser. Vale cada segundo! ☕
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-3" className="bg-card rounded-2xl px-6 shadow-soft border-none">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              Funciona para cães e gatos?
+          <AccordionItem value="item-3" className="group bg-card/80 backdrop-blur-sm rounded-2xl md:rounded-3xl px-4 md:px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-secondary/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-secondary/30">
+            <AccordionTrigger className="text-base md:text-lg font-semibold hover:no-underline py-4 md:py-6 group-hover:text-secondary transition-colors duration-300">
+              <div className="flex items-center gap-2 md:gap-3 text-left">
+                <div className="bg-secondary/10 rounded-lg md:rounded-xl p-1.5 md:p-2 group-data-[state=open]:bg-secondary/20 transition-colors duration-300 shrink-0">
+                  <Heart className="w-4 h-4 md:w-5 md:h-5 text-secondary" />
+                </div>
+                Funciona para cães e gatos?
+              </div>
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-base">
+            <AccordionContent className="text-muted-foreground text-sm md:text-base pb-4 md:pb-6 pl-10 md:pl-14 leading-relaxed">
               Absolutamente! Nosso quiz foi desenvolvido por veterinários e especialistas em comportamento
               animal para atender tanto cães quanto gatos, de todas as idades - desde filhotes cheios de
               energia até idosos que merecem cuidados especiais. Cada espécie e fase da vida tem suas
@@ -337,11 +511,16 @@ const Index = () => {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-4" className="bg-card rounded-2xl px-6 shadow-soft border-none">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              O que vou descobrir ao fazer o quiz?
+          <AccordionItem value="item-4" className="group bg-card/80 backdrop-blur-sm rounded-2xl md:rounded-3xl px-4 md:px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-accent/30">
+            <AccordionTrigger className="text-base md:text-lg font-semibold hover:no-underline py-4 md:py-6 group-hover:text-accent transition-colors duration-300">
+              <div className="flex items-center gap-2 md:gap-3 text-left">
+                <div className="bg-accent/10 rounded-lg md:rounded-xl p-1.5 md:p-2 group-data-[state=open]:bg-accent/20 transition-colors duration-300 shrink-0">
+                  <TrendingUp className="w-4 h-4 md:w-5 md:h-5 text-accent" />
+                </div>
+                O que vou descobrir ao fazer o quiz?
+              </div>
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-base">
+            <AccordionContent className="text-muted-foreground text-sm md:text-base pb-4 md:pb-6 pl-10 md:pl-14 leading-relaxed">
               Você vai receber seu <strong>PetScore oficial (0-100)</strong>, descobrir seu <strong>nível de tutor</strong>
               (de Iniciante a Lendário 🏆), e entender exatamente onde você está acertando e onde pode melhorar.
               No relatório completo, você ganha um <strong>plano de ação personalizado</strong> com dicas práticas
@@ -350,22 +529,32 @@ const Index = () => {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-5" className="bg-card rounded-2xl px-6 shadow-soft border-none">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              Posso refazer o quiz para ver minha evolução?
+          <AccordionItem value="item-5" className="group bg-card/80 backdrop-blur-sm rounded-2xl md:rounded-3xl px-4 md:px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-primary/30">
+            <AccordionTrigger className="text-base md:text-lg font-semibold hover:no-underline py-4 md:py-6 group-hover:text-primary transition-colors duration-300">
+              <div className="flex items-center gap-2 md:gap-3 text-left">
+                <div className="bg-primary/10 rounded-lg md:rounded-xl p-1.5 md:p-2 group-data-[state=open]:bg-primary/20 transition-colors duration-300 shrink-0">
+                  <Target className="w-4 h-4 md:w-5 md:h-5 text-primary" />
+                </div>
+                Posso refazer o quiz para ver minha evolução?
+              </div>
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-base">
+            <AccordionContent className="text-muted-foreground text-sm md:text-base pb-4 md:pb-6 pl-10 md:pl-14 leading-relaxed">
               Sim, e nós recomendamos! Muitos tutores refazem o quiz a cada 3 meses para acompanhar sua
               evolução e ver como as mudanças aplicadas estão impactando positivamente a vida do pet.
               É incrível ver seu score subindo e saber que você está fazendo a diferença! 📊✨
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-6" className="bg-card rounded-2xl px-6 shadow-soft border-none">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              Vou receber algo além do resultado?
+          <AccordionItem value="item-6" className="group bg-card/80 backdrop-blur-sm rounded-2xl md:rounded-3xl px-4 md:px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-secondary/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-secondary/30">
+            <AccordionTrigger className="text-base md:text-lg font-semibold hover:no-underline py-4 md:py-6 group-hover:text-secondary transition-colors duration-300">
+              <div className="flex items-center gap-2 md:gap-3 text-left">
+                <div className="bg-secondary/10 rounded-lg md:rounded-xl p-1.5 md:p-2 group-data-[state=open]:bg-secondary/20 transition-colors duration-300 shrink-0">
+                  <Gift className="w-4 h-4 md:w-5 md:h-5 text-secondary" />
+                </div>
+                Vou receber algo além do resultado?
+              </div>
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-base">
+            <AccordionContent className="text-muted-foreground text-sm md:text-base pb-4 md:pb-6 pl-10 md:pl-14 leading-relaxed">
               Sim! Além do seu score e análise, você ganha acesso a <strong>3 bônus exclusivos</strong>:
               Guia Definitivo de Alimentos (saiba o que pode e não pode), Checklist "Casa Segura" (elimine
               perigos ocultos), e Cronograma de Saúde Preventiva (nunca mais esqueça vacinas e vermífugos).
@@ -374,117 +563,137 @@ const Index = () => {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-7" className="bg-card rounded-2xl px-6 shadow-soft border-none">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              Por que devo fazer o quiz AGORA?
+          <AccordionItem value="item-7" className="group bg-card/80 backdrop-blur-sm rounded-2xl md:rounded-3xl px-4 md:px-6 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/20 transition-all duration-500 data-[state=open]:shadow-medium data-[state=open]:border-accent/30">
+            <AccordionTrigger className="text-base md:text-lg font-semibold hover:no-underline py-4 md:py-6 group-hover:text-accent transition-colors duration-300">
+              <div className="flex items-center gap-2 md:gap-3 text-left">
+                <div className="bg-accent/10 rounded-lg md:rounded-xl p-1.5 md:p-2 group-data-[state=open]:bg-accent/20 transition-colors duration-300 shrink-0">
+                  <Zap className="w-4 h-4 md:w-5 md:h-5 text-accent" />
+                </div>
+                Por que devo fazer o quiz AGORA?
+              </div>
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-base">
+            <AccordionContent className="text-muted-foreground text-sm md:text-base pb-4 md:pb-6 pl-10 md:pl-14 leading-relaxed">
               Porque cada dia conta na vida do seu pet! Descobrir pontos de melhoria hoje pode prevenir
               problemas de saúde amanhã, fortalecer o vínculo entre vocês e garantir que seu melhor amigo
-              viva mais feliz e saudável. Além disso, é grátis, rápido e você pode começar agora mesmo.
+              viva mais feliz e saudável. É rápido e você pode começar agora mesmo.
               Seu pet merece o melhor, e você merece saber se está dando isso a ele! 🐾💚
             </AccordionContent>
           </AccordionItem>
         </Accordion>
 
-        <div className="mt-12 text-center">
-          <Button
-            size="lg"
-            onClick={scrollToQuiz}
-            className="text-xl px-10 py-6 h-auto shadow-lg hover:shadow-xl transition-all duration-300 hover-scale"
-          >
-            🚀 Quero Descobrir Meu PetScore Agora!
-          </Button>
-          <p className="mt-4 text-sm text-muted-foreground">
-            ✓ Grátis • ✓ 5 minutos • ✓ Resultado na hora
-          </p>
+        {/* Bottom CTA */}
+        <div className="mt-10 md:mt-16 text-center animate-in fade-in duration-700 px-2">
+          <div className="relative inline-block group w-full sm:w-auto">
+            <div className="absolute inset-0 bg-gradient-hero rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
+            <Button size="lg" onClick={scrollToQuiz} className="relative text-base sm:text-lg md:text-xl px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 h-auto shadow-lg hover:shadow-xl transition-all duration-300 hover-scale w-full sm:w-auto whitespace-normal">
+              🚀 Descobrir Meu PetScore!
+            </Button>
+          </div>
+          <div className="mt-6 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 text-sm text-muted-foreground">
+            <span className="flex items-center gap-1.5">
+              <CheckCircle2 className="w-4 h-4 text-accent" />
+              Sem criar conta
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Clock className="w-4 h-4 text-primary" />
+              5 minutos
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Zap className="w-4 h-4 text-secondary" />
+              Resultado na hora
+            </span>
+          </div>
         </div>
       </div>
     </section>
 
     {/* Bonus Section */}
-    <section className="py-20 px-4 bg-background">
-      <div className="max-w-5xl mx-auto">
-        <Card className="overflow-hidden shadow-medium">
-          <div className="bg-gradient-hero text-white p-12 text-center">
-            <Gift className="w-16 h-16 mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              🎁 3 Presentes Inclusos
-            </h2>
-            <p className="text-xl opacity-95">
-              Ferramentas essenciais para facilitar sua rotina e proteger quem você ama:
-            </p>
-          </div>
-          <div className="p-12 space-y-6">
-            <div className="flex items-start gap-4">
-              <CheckCircle2 className="w-6 h-6 text-accent shrink-0 mt-1" />
-              <div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Guia Definitivo de Alimentos</h3>
-                <p className="text-muted-foreground">
-                  Pare de adivinhar. Tenha em mãos a lista exata do que nutre e do que intoxica seu pet, evitando emergências desnecessárias.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <CheckCircle2 className="w-6 h-6 text-accent shrink-0 mt-1" />
-              <div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Checklist "Casa Segura"</h3>
-                <p className="text-muted-foreground">
-                  Um rastreio completo para eliminar armadilhas silenciosas em sua casa. Proteja seu pet de acidentes comuns e perigosos.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <CheckCircle2 className="w-6 h-6 text-accent shrink-0 mt-1" />
-              <div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Cronograma de Saúde Preventiva</h3>
-                <p className="text-muted-foreground">
-                  Nunca mais perca uma data de vacina ou vermífugo. Um organizador prático para garantir que a saúde do seu melhor amigo esteja sempre em dia.
-                </p>
-              </div>
-            </div>
-          </div>
-        </Card>
-      </div>
-    </section>
-
-    {/* CTA Final Section */}
-    <section className="py-24 px-4 bg-primary/5 relative overflow-hidden">
-      {/* Floating elements */}
+    <section className="py-24 px-4 bg-gradient-warm relative overflow-hidden">
+      {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-20 text-9xl opacity-5 text-primary">🐾</div>
-        <div className="absolute bottom-20 right-20 text-9xl opacity-5 text-primary">🐾</div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[200px] opacity-5 text-primary">❤️</div>
+        <div className="absolute top-20 -left-40 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 -right-40 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-6xl mx-auto text-center space-y-8 relative z-10">
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight md:whitespace-nowrap">
-          Seu Pet Merece um Tutor Incrível
-        </h2>
-        <p className="text-2xl md:text-3xl text-muted-foreground leading-relaxed">
-          Descubra seu nível agora e transforme o cuidado que você oferece! 🐾
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-          <Button size="lg" onClick={scrollToQuiz} className="text-xl px-10 py-6 h-auto shadow-lg hover:shadow-xl transition-all duration-300 hover-scale">
-            🎯 Começar Quiz Grátis Agora
-          </Button>
+      <div className="max-w-5xl mx-auto relative">
+        <div className="text-center mb-16 animate-in fade-in duration-700">
+          <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <Gift className="w-4 h-4" />
+            Bônus Exclusivos
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            3 Presentes Inclusos
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            Ferramentas essenciais para facilitar sua rotina e proteger quem você ama
+          </p>
         </div>
 
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-muted-foreground">
-          <div className="flex items-center gap-2">
-            <Clock className="w-5 h-5 text-primary" />
-            <span>5-10 minutos</span>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+          {/* Card 1 - Guia de Alimentos */}
+          <div className="group animate-in fade-in slide-in-from-bottom duration-700">
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 sm:p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-primary/30 transition-all duration-500 group-hover:-translate-y-3 h-full text-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative">
+                <div className="relative mx-auto w-fit mb-6">
+                  <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500" />
+                  <div className="relative bg-primary/10 rounded-2xl p-5 group-hover:bg-primary/20 transition-colors duration-300">
+                    <Utensils className="w-10 h-10 text-primary" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Guia Definitivo de Alimentos</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  Lista exata do que nutre e do que intoxica seu pet, evitando emergências desnecessárias.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="hidden sm:block">•</div>
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-5 h-5 text-primary" />
-            <span>100% Seguro</span>
+
+          {/* Card 2 - Casa Segura */}
+          <div className="group animate-in fade-in slide-in-from-bottom duration-700 delay-150">
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 sm:p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-secondary/30 transition-all duration-500 group-hover:-translate-y-3 h-full text-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative">
+                <div className="relative mx-auto w-fit mb-6">
+                  <div className="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500" />
+                  <div className="relative bg-secondary/10 rounded-2xl p-5 group-hover:bg-secondary/20 transition-colors duration-300">
+                    <Shield className="w-10 h-10 text-secondary" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Checklist "Casa Segura"</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  Rastreio completo para eliminar armadilhas silenciosas e proteger seu pet de acidentes.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="hidden sm:block">•</div>
-          <div className="flex items-center gap-2">
-            <Star className="w-5 h-5 fill-primary text-primary" />
-            <span>10k+ Tutores Satisfeitos</span>
+
+          {/* Card 3 - Cronograma de Saúde */}
+          <div className="group animate-in fade-in slide-in-from-bottom duration-700 delay-300">
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 sm:p-8 shadow-soft border border-border/50 hover:shadow-medium hover:border-accent/30 transition-all duration-500 group-hover:-translate-y-3 h-full text-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative">
+                <div className="relative mx-auto w-fit mb-6">
+                  <div className="absolute inset-0 bg-accent/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500" />
+                  <div className="relative bg-accent/10 rounded-2xl p-5 group-hover:bg-accent/20 transition-colors duration-300">
+                    <Calendar className="w-10 h-10 text-accent" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Cronograma de Saúde</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  Nunca mais perca vacina ou vermífugo. Organizador prático para a saúde do seu pet.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom badge */}
+        <div className="mt-12 text-center animate-in fade-in duration-700 delay-500">
+          <div className="inline-flex items-center gap-3 bg-card/60 backdrop-blur-sm rounded-full px-6 py-3 shadow-soft border border-border/50">
+            <CheckCircle2 className="w-5 h-5 text-accent" />
+            <span className="text-muted-foreground font-medium">Acesso imediato após o quiz</span>
           </div>
         </div>
       </div>
