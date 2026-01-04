@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useEffect, useState, useCallback } from "react";
-import { Check, Copy, QrCode, Shield, Clock, Zap, Star, Heart, Award, FileText, Loader2 } from "lucide-react";
+import { Check, Copy, QrCode, Shield, Clock, Zap, Star, Heart, Award, FileText, Loader2, Phone } from "lucide-react";
 import { toast } from "sonner";
 import { QRCodeSVG } from "qrcode.react";
 import { Input } from "@/components/ui/input";
@@ -31,6 +31,12 @@ const Payment = () => {
   const [showPix, setShowPix] = useState(false);
   const [paymentUrl, setPaymentUrl] = useState<string>("");
   const [quizResultId, setQuizResultId] = useState<string>("");
+  const [billingId, setBillingId] = useState<string>("");
+  const [qrCodeId, setQrCodeId] = useState<string>("");
+  const [pixCopyPaste, setPixCopyPaste] = useState<string>("");
+  const [pixQrImage, setPixQrImage] = useState<string>("");
+  const [pixExpiresInState, setPixExpiresInState] = useState<number | null>(null);
+  const [petId, setPetId] = useState<string>("");
   const [timeLeft, setTimeLeft] = useState(300);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -118,17 +124,76 @@ const Payment = () => {
     return Object.keys(errors).length === 0;
   };
 
+  // Check payment status via AbacatePay API
+  const checkPaymentStatus = useCallback(async (qrCodeIdParam: string) => {
+    try {
+      const { data: sessionData } = await supabase.auth.getSession();
+      const accessToken = sessionData?.session?.access_token;
+
+      if (!accessToken) {
+        console.warn("Token de acesso não disponível");
+        return;
+      }
+
+      const response = await supabase.functions.invoke("check-payment", {
+        body: { qrCodeId: qrCodeIdParam },
+        headers: { Authorization: `Bearer ${accessToken}` },
+      });
+
+      if (response.error) {
+        console.error("Erro ao verificar status:", response.error);
+        return;
+      }
+
+      const statusData = response.data;
+      if (statusData?.status === "PAID" || statusData?.status === "paid") {
+        return true;
+      }
+      return false;
+    } catch (err) {
+      console.error("Error checking payment status:", err);
+      return false;
+    }
+  }, []);
+
   // Check payment status periodically
-  const startPaymentPolling = useCallback((resultId: string) => {
+  const startPaymentPolling = useCallback((resultId: string, billingIdParam: string) => {
     const pollInterval = setInterval(async () => {
       try {
+        // Verifica o status na API do AbacatePay
+        const isPaid = await checkPaymentStatus(billingIdParam);
+
+        if (isPaid) {
+          clearInterval(pollInterval);
+          // Atualiza o status no banco de dados
+          await supabase
+            .from("payments")
+            .update({ status: "paid" })
+            .eq("id", resultId);
+          
+          toast.success("Pagamento confirmado! Redirecionando...");
+          navigate("/resultado-completo", {
+            state: {
+              score,
+              paid: true,
+              petImage,
+              petName,
+              petGender,
+              petId,
+              quizResultId: resultId,
+            },
+          });
+          return;
+        }
+
+        // Fallback: também verifica no banco de dados
         const { data, error } = await supabase
-          .from("quiz_results")
-          .select("payment_status")
+          .from("payments")
+          .select("status")
           .eq("id", resultId)
           .maybeSingle();
 
-        if (data?.payment_status === "paid") {
+        if (data?.status === "paid") {
           clearInterval(pollInterval);
           toast.success("Pagamento confirmado! Redirecionando...");
           navigate("/resultado-completo", {
@@ -138,6 +203,7 @@ const Payment = () => {
               petImage,
               petName,
               petGender,
+              petId,
               quizResultId: resultId,
             },
           });
@@ -151,7 +217,7 @@ const Payment = () => {
     setTimeout(() => clearInterval(pollInterval), 300000);
 
     return () => clearInterval(pollInterval);
-  }, [navigate, score, petImage, petName, petGender]);
+  }, [navigate, score, petImage, petName, petGender, petId, checkPaymentStatus]);
 
   const handleGenerateQRCode = async () => {
     if (!validateForm()) {
@@ -162,32 +228,138 @@ const Payment = () => {
     setIsLoading(true);
 
     try {
-      const { data, error } = await supabase.functions.invoke("create-payment", {
-        body: {
-          name: formData.name.trim(),
-          phone: formData.phone.replace(/\D/g, ""),
-          email: formData.email.trim().toLowerCase(),
-          cpf: formData.cpf.replace(/\D/g, ""),
-          petName: petName,
-          score: score,
-        },
+      const clientPayload = {
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        cpf: formData.cpf,
+        score,
+      };
+      console.log(clientPayload);
+
+      const clientResp = await supabase.functions.invoke("create-client", {
+        body: clientPayload,
       });
 
-      if (error) {
-        console.error("Error creating payment:", error);
-        toast.error("Erro ao gerar pagamento. Tente novamente.");
+
+      if (clientResp.error) {
+        console.warn("create-client error, tentando recuperar cliente:", clientResp.error);
+        const { data: existingClient } = await supabase
+          .from("clients")
+          .select("id")
+          .eq("email", formData.email)
+          .maybeSingle();
+
+        if (existingClient?.id) {
+          console.info("Cliente existente encontrado:", existingClient.id);
+        } else {
+          toast.error("Erro ao registrar cliente. Tente novamente.");
+          return;
+        }
+      }
+
+      const createdClient = clientResp.data?.client;
+      const clientId = createdClient?.id ?? (await supabase.from("clients").select("id").eq("email", formData.email).maybeSingle()).data?.id;
+
+      if (!clientId) {
+        toast.error("Não foi possível obter o ID do cliente.");
         return;
       }
 
-      if (data?.paymentUrl) {
-        setPaymentUrl(data.paymentUrl);
-        setQuizResultId(data.quizResultId);
+      try {
+        const petResp = await supabase.functions.invoke("create-pet", {
+          body: { name: petName, gender: petGender, client_id: clientId },
+        });
+
+        if (petResp.error) {
+          console.warn("create-pet errored:", petResp.error);
+        } else {
+          const inserted = petResp.data?.data?.[0] ?? petResp.data?.data;
+          if (inserted?.id) {
+            setPetId(inserted.id);
+            console.info("Pet criado com id:", inserted.id);
+          }
+        }
+      } catch (err) {
+        console.warn("Erro ao criar pet:", err);
+      }
+
+      const { data: sessionData } = await supabase.auth.getSession();
+      const accessToken = sessionData?.session?.access_token;
+
+      let paymentResult: any = null;
+
+      if (accessToken) {
+        const payResp = await supabase.functions.invoke("create-payment", {
+          body: {
+            value: 1990,
+            client_id: clientId,
+            name: formData.name,
+            phone: formData.phone,
+            email: formData.email,
+            cpf: formData.cpf,
+            petName: petName,
+            score: score,
+            quizResultId: `${clientId}-${Date.now()}`,
+          },
+          headers: { Authorization: `Bearer ${accessToken}` },
+        });
+
+        if (payResp.error) {
+          console.warn("create-payment (function) errored:", payResp.error);
+        } else {
+          paymentResult = payResp.data;
+        }
+
+        // Extrai dados do QR Code retornados pela edge function
+        const qrCodeData = paymentResult?.qrCodeData;
+        if (qrCodeData) {
+          console.log('QRCODE DATA: ', qrCodeData);
+          if (qrCodeData.data) {
+            if (qrCodeData.data.brCode) {
+              setPixCopyPaste(qrCodeData.data.brCode);
+            }
+            if (qrCodeData.data.brCodeBase64) {
+              setPixQrImage(qrCodeData.data.brCodeBase64);
+              console.log("URL da imagem do QR Code:", qrCodeData.data.brCodeBase64);
+            }
+            if (qrCodeData.data.expiresAt) {
+              setPixExpiresInState(qrCodeData.data.expiresAt);
+            }
+          }
+          console.log("QR Code criado com sucesso:", qrCodeData);
+        }
+
+        console.log("Resposta completa do pagamento:", paymentResult);
+      }
+
+      // Se a função retornou um paymentUrl (quando integrado a gateway), usar para QR
+      if (paymentResult?.paymentUrl) {
+        setPaymentUrl(paymentResult.paymentUrl);
+      }
+
+      // Se retornou um id do pagamento, usar como quizResultId/identifier para polling/redirect
+      const paymentId = paymentResult?.payment?.id ?? paymentResult?.payment?.id ?? paymentResult?.payment?.id;
+      const billingIdFromResult = paymentResult?.billingId;
+      
+      if (paymentId) {
+        setQuizResultId(paymentId);
+        if (billingIdFromResult) {
+          setBillingId(billingIdFromResult);
+        }
         setShowPix(true);
         setTimeLeft(300);
-        toast.success("QR Code gerado com sucesso!");
-        startPaymentPolling(data.quizResultId);
+        toast.success("Pagamento criado com sucesso!");
+        startPaymentPolling(paymentId, billingIdFromResult || paymentId);
       } else {
-        toast.error("Erro ao gerar QR Code. Tente novamente.");
+        // fallback: still show pix if we have a paymentUrl
+        if (paymentResult?.paymentUrl) {
+          setShowPix(true);
+          setTimeLeft(300);
+          toast.success("QR Code gerado com sucesso!");
+        } else {
+          toast.error("Erro ao gerar QR Code. Tente novamente.");
+        }
       }
     } catch (error) {
       console.error("Error:", error);
@@ -227,9 +399,15 @@ const Payment = () => {
           <Card className="p-4 sm:p-6 bg-card shadow-medium">
             <div className="flex flex-col items-center">
               <div className="bg-white p-2 sm:p-3 rounded-xl border-2 border-border">
-                {paymentUrl ? (
+                {pixQrImage ? (
+                  <img
+                    src={pixQrImage}
+                    alt="QR Code PIX"
+                    className="w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] object-contain"
+                  />
+                ) : (pixCopyPaste || paymentUrl) ? (
                   <QRCodeSVG
-                    value={paymentUrl}
+                    value={pixCopyPaste || paymentUrl}
                     size={200}
                     level="M"
                     includeMargin={true}
@@ -246,6 +424,47 @@ const Payment = () => {
               </p>
             </div>
           </Card>
+
+          {/* Copiar código PIX / Imagem do QR */}
+          {(pixCopyPaste || pixQrImage) && (
+            <Card className="p-4 bg-card shadow-medium">
+              <div className="space-y-3">
+                {pixCopyPaste && (
+                  <div className="flex flex-col items-center gap-2">
+                    <p className="text-sm font-medium text-foreground text-center">Código PIX (Copiar e colar)</p>
+                    <div className="flex items-center gap-2 w-full">
+                      <div className="flex-1 bg-muted/50 px-3 py-2 rounded text-xs break-words">{pixCopyPaste}</div>
+                      <Button
+                        onClick={async () => {
+                          try {
+                            await navigator.clipboard.writeText(pixCopyPaste);
+                            toast.success("Código PIX copiado");
+                          } catch (err) {
+                            toast.error("Erro ao copiar código PIX");
+                          }
+                        }}
+                        className="ml-2"
+                      >
+                        <Copy className="w-4 h-4" />
+                      </Button>
+                    </div>
+                  </div>
+                )}
+
+                {pixQrImage && (
+                  <div className="text-center">
+                    <Button
+                      onClick={() => window.open(pixQrImage, "_blank")}
+                      className="w-full gap-2 bg-primary hover:bg-primary/90"
+                    >
+                      <QrCode className="w-4 h-4" />
+                      Abrir Imagem do QR
+                    </Button>
+                  </div>
+                )}
+              </div>
+            </Card>
+          )}
 
           {/* Link para pagamento */}
           {paymentUrl && (
@@ -278,13 +497,34 @@ const Payment = () => {
           </div>
 
           {/* Mensagem informativa */}
-          <div className="text-center">
+          <div className="text-center space-y-3">
             <p className="text-xs sm:text-sm text-muted-foreground">
               Após a confirmação, você será redirecionado automaticamente.
             </p>
+            
+            <Button
+              onClick={() => {
+                navigate("/resultado-completo", {
+                  state: {
+                    score,
+                    paid: true,
+                    petImage,
+                    petName,
+                      petGender,
+                      petId,
+                      quizResultId,
+                  },
+                });
+              }}
+              className="w-full gap-2 bg-green-600 hover:bg-green-700"
+            >
+              <Check className="w-4 h-4" />
+              Já realizei o pagamento
+            </Button>
+
             <Button
               variant="ghost"
-              className="mt-3 text-xs text-muted-foreground/60 underline"
+              className="mt-1 text-xs text-muted-foreground/60 underline"
               onClick={() => {
                 navigate("/resultado-completo", {
                   state: {
@@ -293,6 +533,7 @@ const Payment = () => {
                     petImage,
                     petName,
                     petGender,
+                    petId,
                     quizResultId,
                   },
                 });
@@ -503,6 +744,7 @@ const Payment = () => {
                 Política de Privacidade
               </a>
             </p>
+            <p className="text-[10px] sm:text-xs text-muted-foreground">Um projeto SmartX Digital • CNPJ 16.936.465/0001-99</p>
           </div>
         </Card>
 

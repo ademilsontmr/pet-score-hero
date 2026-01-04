@@ -5,11 +5,16 @@ import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowRight, Camera, CheckCircle2, Gift, Heart, Sparkles, Star, Trophy, Upload } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const PartialResult = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const { toast } = useToast();
   const score = location.state?.score || 0;
+
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     document.title = "Seu Resultado | PetScore";
@@ -30,6 +35,40 @@ const PartialResult = () => {
         setPetImage(reader.result as string);
       };
       reader.readAsDataURL(file);
+    }
+  };
+
+  const handleCreatePet = async () => {
+    if (!petName.trim()) {
+      toast({
+        title: "Campo obrigatório",
+        description: "Por favor, insira o nome do seu pet",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      window.scrollTo(0, 0);
+      navigate("/pagamento", {
+        state: {
+          score,
+          petImage,
+          petName,
+          petGender,
+        },
+      });
+    } catch (error) {
+      console.error("Erro ao criar pet:", error);
+      toast({
+        title: "Erro ao criar pet",
+        description: error instanceof Error ? error.message : "Tente novamente mais tarde",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -245,21 +284,12 @@ const PartialResult = () => {
             {/* CTA Button */}
             <Button
               size="lg"
-              onClick={() => {
-                window.scrollTo(0, 0);
-                navigate("/pagamento", {
-                  state: {
-                    score,
-                    petImage,
-                    petName,
-                    petGender
-                  }
-                });
-              }}
-              className="w-full h-14 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary"
+              onClick={handleCreatePet}
+              disabled={isLoading}
+              className="w-full h-14 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Ver meu Score Completo
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              {isLoading ? "Processando..." : "Ver meu Score Completo"}
+              {!isLoading && <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />}
             </Button>
 
             <p className="text-xs text-center text-muted-foreground mt-4">
